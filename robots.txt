@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aishwaryanagchandi.github.io/sitemap.xml
