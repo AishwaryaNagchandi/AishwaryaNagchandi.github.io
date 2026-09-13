@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,6 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
           rel="stylesheet">
+
 
     <style>
 
@@ -51,18 +53,12 @@
             text-decoration: none;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* ---------------- NAVIGATION ---------------- */
-
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
+
             height: 76px;
             z-index: 1000;
 
@@ -120,8 +116,6 @@
             cursor: pointer;
         }
 
-        /* ---------------- GENERAL ---------------- */
-
         main {
             padding-top: 76px;
         }
@@ -169,12 +163,15 @@
             transform: translateY(0);
         }
 
-        /* ---------------- HERO ---------------- */
+
+        /* ================= HERO ================= */
 
         .hero {
             min-height: calc(100vh - 76px);
+
             display: flex;
             align-items: center;
+
             padding-top: 100px;
             padding-bottom: 100px;
         }
@@ -211,7 +208,8 @@
             margin-top: 75px;
         }
 
-        /* ---------------- DIMENSIONS ---------------- */
+
+        /* ================= DIMENSIONS ================= */
 
         .dimensions {
             background: var(--soft);
@@ -220,7 +218,6 @@
         .dimension-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 0;
         }
 
         .dimension {
@@ -252,7 +249,8 @@
             max-width: 280px;
         }
 
-        /* ---------------- EXPERIENCE ---------------- */
+
+        /* ================= EXPERIENCE ================= */
 
         .experience-preview {
             border-top: 1px solid var(--line);
@@ -330,7 +328,8 @@
             transform: translateX(6px);
         }
 
-        /* ---------------- PROJECTS ---------------- */
+
+        /* ================= PROJECTS ================= */
 
         .projects {
             background: var(--soft);
@@ -357,16 +356,24 @@
         .project-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+
             gap: 1px;
+
             background: var(--line);
             border: 1px solid var(--line);
         }
 
         .project-card {
             background: var(--bg);
+
             padding: 45px;
             min-height: 300px;
-            transition: transform 0.3s ease, background 0.3s ease;
+
+            display: block;
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease;
         }
 
         .project-card:hover {
@@ -394,7 +401,8 @@
             font-size: 15px;
         }
 
-        /* ---------------- NUMBERS ---------------- */
+
+        /* ================= NUMBERS ================= */
 
         .numbers {
             padding-top: 95px;
@@ -404,6 +412,7 @@
         .number-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+
             border-top: 1px solid var(--line);
             border-bottom: 1px solid var(--line);
         }
@@ -432,12 +441,15 @@
             font-size: 13px;
         }
 
-        /* ---------------- CTA ---------------- */
+
+        /* ================= CTA ================= */
 
         .cta {
             min-height: 70vh;
+
             display: flex;
             align-items: center;
+
             background: var(--accent);
             color: white;
         }
@@ -466,6 +478,7 @@
 
         .cta-link {
             display: inline-block;
+
             border-bottom: 1px solid white;
             padding-bottom: 7px;
 
@@ -475,19 +488,24 @@
             text-transform: uppercase;
         }
 
-        /* ---------------- FOOTER ---------------- */
+
+        /* ================= FOOTER ================= */
 
         footer {
             padding: 35px 7vw;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             border-top: 1px solid var(--line);
+
             font-size: 12px;
             color: var(--muted);
         }
 
-        /* ---------------- RESPONSIVE ---------------- */
+
+        /* ================= MOBILE ================= */
 
         @media (max-width: 800px) {
 
@@ -497,6 +515,7 @@
 
             .nav-links {
                 display: none;
+
                 position: absolute;
                 top: 76px;
                 left: 0;
@@ -554,6 +573,7 @@
             .dimension,
             .dimension:not(:first-child) {
                 padding: 30px 0;
+
                 border-right: none;
                 border-bottom: 1px solid var(--line);
             }
@@ -606,6 +626,7 @@
             }
         }
 
+
         @media (prefers-reduced-motion: reduce) {
 
             html {
@@ -625,15 +646,20 @@
         }
 
     </style>
+
 </head>
 
+
 <body>
+
 
 <!-- ================= NAVIGATION ================= -->
 
 <nav>
 
-    <a href="index.html" class="logo">AN</a>
+    <a href="index.html" class="logo">
+        AN
+    </a>
 
     <button class="menu-btn" aria-label="Open navigation">
         ☰
@@ -642,14 +668,22 @@
     <div class="nav-links">
 
         <a href="index.html">Home</a>
+
         <a href="about.html">About</a>
+
         <a href="experience.html">Experience</a>
+
         <a href="projects.html">Projects</a>
+
         <a href="beyond.html">Beyond</a>
+
         <a href="skills.html">Skills</a>
+
         <a href="contact.html">Contact</a>
 
-        <a href="resume.pdf" class="resume-btn" target="_blank">
+        <a href="resume.pdf"
+           class="resume-btn"
+           target="_blank">
             Resume ↗
         </a>
 
@@ -659,6 +693,7 @@
 
 
 <main>
+
 
 <!-- ================= HERO ================= -->
 
@@ -816,7 +851,8 @@
                     improvement.
                 </p>
 
-                <a href="experience.html#dow" class="experience-link">
+                <a href="experience.html#dow"
+                   class="experience-link">
                     VIEW EXPERIENCE →
                 </a>
 
@@ -849,7 +885,8 @@
                     structured insights.
                 </p>
 
-                <a href="experience.html#isro" class="experience-link">
+                <a href="experience.html#isro"
+                   class="experience-link">
                     VIEW EXPERIENCE →
                 </a>
 
@@ -890,7 +927,11 @@
 
         <div class="project-grid">
 
-            <a href="projects.html" class="project-card reveal">
+
+            <!-- PRARAMBH -->
+
+            <a href="projects.html#prarambh"
+               class="project-card reveal">
 
                 <div class="project-category">
                     Finance × Entrepreneurship
@@ -909,7 +950,10 @@
             </a>
 
 
-            <a href="projects.html" class="project-card reveal">
+            <!-- NOBELZA -->
+
+            <a href="projects.html#nobelza"
+               class="project-card reveal">
 
                 <div class="project-category">
                     Strategy × Market Analysis
@@ -928,7 +972,10 @@
             </a>
 
 
-            <a href="projects.html" class="project-card reveal">
+            <!-- SECTORAL -->
+
+            <a href="projects.html#sectoral"
+               class="project-card reveal">
 
                 <div class="project-category">
                     Finance × Quantitative Analytics
@@ -947,7 +994,10 @@
             </a>
 
 
-            <a href="projects.html" class="project-card reveal">
+            <!-- MACRO -->
+
+            <a href="projects.html#macro"
+               class="project-card reveal">
 
                 <div class="project-category">
                     Analytics × Economics
@@ -986,7 +1036,7 @@
 
             <div class="number-item reveal">
 
-                <div class="number" data-target="1000">
+                <div class="number">
                     1,000+
                 </div>
 
@@ -1062,13 +1112,15 @@
             exchange ideas, I'd be happy to connect.
         </p>
 
-        <a href="contact.html" class="cta-link">
+        <a href="contact.html"
+           class="cta-link">
             Get in touch →
         </a>
 
     </div>
 
 </section>
+
 
 </main>
 
@@ -1088,11 +1140,7 @@
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
-
 <script>
-
-    /* Mobile navigation */
 
     const menuBtn = document.querySelector(".menu-btn");
     const navLinks = document.querySelector(".nav-links");
@@ -1101,8 +1149,6 @@
         navLinks.classList.toggle("active");
     });
 
-
-    /* Close mobile navigation after clicking */
 
     document.querySelectorAll(".nav-links a").forEach(link => {
 
@@ -1113,30 +1159,34 @@
     });
 
 
-    /* Scroll reveal */
+    const revealElements =
+        document.querySelectorAll(".reveal");
 
-    const revealElements = document.querySelectorAll(".reveal");
 
-    const revealObserver = new IntersectionObserver(
-        entries => {
+    const revealObserver =
+        new IntersectionObserver(
 
-            entries.forEach(entry => {
+            entries => {
 
-                if (entry.isIntersecting) {
+                entries.forEach(entry => {
 
-                    entry.target.classList.add("visible");
+                    if (entry.isIntersecting) {
 
-                    revealObserver.unobserve(entry.target);
+                        entry.target.classList.add("visible");
 
-                }
+                        revealObserver.unobserve(entry.target);
 
-            });
+                    }
 
-        },
-        {
-            threshold: 0.12
-        }
-    );
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
 
 
     revealElements.forEach(element => {
@@ -1144,6 +1194,7 @@
     });
 
 </script>
+
 
 </body>
 </html>
