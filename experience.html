@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experience | Aishwarya Nagchandi</title>
+
+    <meta name="description"
+          content="Professional experience of Aishwarya Nagchandi across business analytics, process improvement and data science.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f7f6f2;
+            color: #171717;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+
+            --background: #f7f6f2;
+            --text: #171717;
+            --muted: #686868;
+            --line: #d9d8d3;
+            --accent: #173f63;
+            --light: #eeeeea;
+            --white: #ffffff;
+
+            --max-width: 1240px;
+
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .navbar {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(247,246,242,0.88);
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(217,216,211,0.75);
+
+        }
+
+
+        .nav-inner {
+
+            max-width: var(--max-width);
+
+            height: 76px;
+
+            margin: auto;
+
+            padding: 0 32px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.08em;
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+
+        .nav-links a {
+
+            font-size: 13px;
+
+            color: #555;
+
+            transition: color 0.25s ease;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--text);
+
+        }
+
+
+        .nav-links .active {
+
+            color: var(--text);
+
+            font-weight: 600;
+
+        }
+
+
+        .nav-resume {
+
+            border: 1px solid var(--text);
+
+            padding: 9px 16px;
+
+        }
+
+
+        .nav-resume:hover {
+
+            background: var(--text);
+
+            color: white !important;
+
+        }
+
+
+        .menu-button {
+
+            display: none;
+
+            background: none;
+
+            border: none;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .experience-hero {
+
+            max-width: var(--max-width);
+
+            min-height: 80vh;
+
+            margin: auto;
+
+            padding: 170px 32px 100px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            position: relative;
+
+        }
+
+
+        .eyebrow {
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.16em;
+
+            color: var(--muted);
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .experience-hero h1 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(58px, 9vw, 125px);
+
+            line-height: 0.92;
+
+            letter-spacing: -0.055em;
+
+            font-weight: 500;
+
+            max-width: 1050px;
+
+            animation: heroReveal 1s ease forwards;
+
+        }
+
+
+        .experience-hero h1 span {
+
+            color: var(--accent);
+
+        }
+
+
+        .hero-description {
+
+            max-width: 680px;
+
+            margin-top: 38px;
+
+            font-size: 19px;
+
+            color: #4d4d4d;
+
+            animation: fadeUp 1s ease 0.3s both;
+
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        section {
+
+            padding: 120px 32px;
+
+        }
+
+
+        .section-inner {
+
+            max-width: var(--max-width);
+
+            margin: auto;
+
+        }
+
+
+        .section-label {
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.16em;
+
+            color: var(--muted);
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .section-title {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(42px, 5vw, 70px);
+
+            line-height: 1.05;
+
+            font-weight: 500;
+
+            letter-spacing: -0.035em;
+
+            max-width: 900px;
+
+        }
+
+
+        .section-text {
+
+            margin-top: 28px;
+
+            max-width: 680px;
+
+            color: var(--muted);
+
+            font-size: 17px;
+
+        }
+
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .timeline-section {
+
+            background: #eeeeea;
+
+        }
+
+
+        .timeline {
+
+            position: relative;
+
+            margin-top: 90px;
+
+        }
+
+
+        /* vertical line */
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 180px;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 1px;
+
+            background: #c9c9c5;
+
+        }
+
+
+        .timeline-item {
+
+            display: grid;
+
+            grid-template-columns: 180px 1fr;
+
+            position: relative;
+
+            padding-bottom: 120px;
+
+        }
+
+
+        .timeline-item:last-child {
+
+            padding-bottom: 0;
+
+        }
+
+
+        .timeline-date {
+
+            padding-right: 35px;
+
+            text-align: right;
+
+            font-size: 12px;
+
+            color: var(--muted);
+
+            letter-spacing: 0.06em;
+
+        }
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            left: 174px;
+
+            top: 0;
+
+            width: 13px;
+
+            height: 13px;
+
+            border: 2px solid var(--accent);
+
+            background: var(--light);
+
+            border-radius: 50%;
+
+            z-index: 2;
+
+            transition: transform 0.3s ease;
+
+        }
+
+
+        .timeline-item:hover .timeline-dot {
+
+            transform: scale(1.45);
+
+        }
+
+
+        .timeline-content {
+
+            padding-left: 70px;
+
+        }
+
+
+        .company-label {
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.14em;
+
+            color: var(--accent);
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .company-name {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1;
+
+            font-weight: 500;
+
+            letter-spacing: -0.035em;
+
+        }
+
+
+        .role {
+
+            margin-top: 12px;
+
+            font-size: 14px;
+
+            color: #4f4f4f;
+
+        }
+
+
+        .role-description {
+
+            margin-top: 30px;
+
+            max-width: 720px;
+
+            font-size: 17px;
+
+            color: var(--muted);
+
+        }
+
+
+        /* =========================
+           EXPERIENCE BLOCKS
+        ========================= */
+
+        .work-grid {
+
+            margin-top: 60px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 1px;
+
+            background: #d1d1cc;
+
+            border: 1px solid #d1d1cc;
+
+        }
+
+
+        .work-block {
+
+            background: #eeeeea;
+
+            padding: 32px;
+
+            min-height: 230px;
+
+            transition:
+
+                background 0.3s ease,
+
+                transform 0.3s ease;
+
+        }
+
+
+        .work-block:hover {
+
+            background: #f7f6f2;
+
+            transform: translateY(-5px);
+
+        }
+
+
+        .work-number {
+
+            font-size: 11px;
+
+            color: var(--accent);
+
+            letter-spacing: 0.1em;
+
+        }
+
+
+        .work-block h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 29px;
+
+            font-weight: 500;
+
+            margin-top: 35px;
+
+        }
+
+
+        .work-block p {
+
+            margin-top: 13px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            max-width: 500px;
+
+        }
+
+
+        /* =========================
+           SKILL TAGS
+        ========================= */
+
+        .skill-tags {
+
+            margin-top: 32px;
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+        }
+
+
+        .skill-tag {
+
+            border: 1px solid #c9c9c5;
+
+            padding: 7px 11px;
+
+            font-size: 10px;
+
+            color: #555;
+
+            background: rgba(255,255,255,0.25);
+
+        }
+
+
+        /* =========================
+           IIRS SECTION
+        ========================= */
+
+        .iirs-section {
+
+            background: var(--accent);
+
+            color: white;
+
+        }
+
+
+        .iirs-section .section-label {
+
+            color: #c5d0d9;
+
+        }
+
+
+        .iirs-section .company-label {
+
+            color: #b7ccdc;
+
+        }
+
+
+        .iirs-section .role {
+
+            color: #ccd5dc;
+
+        }
+
+
+        .iirs-section .role-description {
+
+            color: #c7d0d8;
+
+        }
+
+
+        .iirs-section .timeline::before {
+
+            background: rgba(255,255,255,0.25);
+
+        }
+
+
+        .iirs-section .timeline-dot {
+
+            background: var(--accent);
+
+            border-color: white;
+
+        }
+
+
+        .iirs-section .work-grid {
+
+            background: rgba(255,255,255,0.2);
+
+            border-color: rgba(255,255,255,0.2);
+
+        }
+
+
+        .iirs-section .work-block {
+
+            background: var(--accent);
+
+        }
+
+
+        .iirs-section .work-block:hover {
+
+            background: #204b70;
+
+        }
+
+
+        .iirs-section .work-number {
+
+            color: #b7ccdc;
+
+        }
+
+
+        .iirs-section .work-block p {
+
+            color: #c7d0d8;
+
+        }
+
+
+        .iirs-section .skill-tag {
+
+            border-color: rgba(255,255,255,0.3);
+
+            color: #d1dae1;
+
+        }
+
+
+        /* =========================
+           NUMBERS
+        ========================= */
+
+        .impact {
+
+            padding-top: 130px;
+
+            padding-bottom: 130px;
+
+        }
+
+
+        .impact-grid {
+
+            margin-top: 65px;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            border-top: 1px solid var(--line);
+
+            border-bottom: 1px solid var(--line);
+
+        }
+
+
+        .impact-item {
+
+            padding: 35px 20px;
+
+            border-right: 1px solid var(--line);
+
+        }
+
+
+        .impact-item:last-child {
+
+            border-right: none;
+
+        }
+
+
+        .impact-value {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 52px;
+
+            color: var(--accent);
+
+        }
+
+
+        .impact-label {
+
+            margin-top: 7px;
+
+            font-size: 12px;
+
+            color: var(--muted);
+
+        }
+
+
+        /* =========================
+           LEARNING
+        ========================= */
+
+        .learning {
+
+            background: #eeeeea;
+
+        }
+
+
+        .learning-grid {
+
+            margin-top: 65px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 1px;
+
+            background: #cecec9;
+
+            border: 1px solid #cecec9;
+
+        }
+
+
+        .learning-card {
+
+            background: #eeeeea;
+
+            padding: 38px;
+
+            min-height: 250px;
+
+        }
+
+
+        .learning-card-number {
+
+            color: var(--accent);
+
+            font-size: 11px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .learning-card h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 30px;
+
+            font-weight: 500;
+
+            line-height: 1.05;
+
+        }
+
+
+        .learning-card p {
+
+            margin-top: 17px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================
+           CLOSING STATEMENT
+        ========================= */
+
+        .closing {
+
+            min-height: 65vh;
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+        .closing-text {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(42px, 6vw, 78px);
+
+            line-height: 1.03;
+
+            letter-spacing: -0.04em;
+
+            max-width: 1050px;
+
+        }
+
+
+        .closing-text span {
+
+            color: var(--accent);
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            border-top: 1px solid var(--line);
+
+            padding: 30px 32px;
+
+            font-size: 11px;
+
+            color: var(--muted);
+
+        }
+
+
+        .footer-inner {
+
+            max-width: var(--max-width);
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+        }
+
+
+        /* =========================
+           REVEAL ANIMATION
+        ========================= */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform: translateY(35px);
+
+            transition:
+
+                opacity 0.8s ease,
+
+                transform 0.8s ease;
+
+        }
+
+
+        .reveal.visible {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+        /* =========================
+           HERO ANIMATION
+        ========================= */
+
+        @keyframes heroReveal {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(45px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(20px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+
+            .nav-links {
+
+                display: none;
+
+                position: absolute;
+
+                top: 76px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: var(--background);
+
+                padding: 25px 32px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                border-bottom: 1px solid var(--line);
+
+            }
+
+
+            .nav-links.active {
+
+                display: flex;
+
+            }
+
+
+            .menu-button {
+
+                display: block;
+
+            }
+
+
+            section {
+
+                padding: 90px 24px;
+
+            }
+
+
+            .experience-hero {
+
+                padding: 145px 24px 80px;
+
+            }
+
+
+            .experience-hero h1 {
+
+                font-size: 18vw;
+
+            }
+
+
+            .timeline {
+
+                margin-top: 60px;
+
+            }
+
+
+            .timeline::before {
+
+                left: 7px;
+
+            }
+
+
+            .timeline-item {
+
+                grid-template-columns: 1fr;
+
+                padding-bottom: 90px;
+
+            }
+
+
+            .timeline-date {
+
+                text-align: left;
+
+                padding-left: 35px;
+
+                margin-bottom: 15px;
+
+            }
+
+
+            .timeline-dot {
+
+                left: 1px;
+
+                top: 3px;
+
+            }
+
+
+            .timeline-content {
+
+                padding-left: 35px;
+
+            }
+
+
+            .work-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .impact-grid {
+
+                grid-template-columns: repeat(2,1fr);
+
+            }
+
+
+            .impact-item:nth-child(2) {
+
+                border-right: none;
+
+            }
+
+
+            .impact-item:nth-child(-n+2) {
+
+                border-bottom: 1px solid var(--line);
+
+            }
+
+
+            .learning-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .footer-inner {
+
+                flex-direction: column;
+
+                gap: 8px;
+
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+
+                scroll-behavior: auto;
+
+            }
+
+
+            * {
+
+                animation-duration: 0.01ms !important;
+
+                transition-duration: 0.01ms !important;
+
+            }
+
+
+            .reveal {
+
+                opacity: 1;
+
+                transform: none;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-inner">
+
+
+            <a href="index.html" class="logo">
+                AN
+            </a>
+
+
+            <button class="menu-button">
+                ☰
+            </button>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="experience.html" class="active">
+                    Experience
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="beyond.html">
+                    Beyond
+                </a>
+
+                <a href="skills.html">
+                    Skills
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="resume.pdf" class="nav-resume">
+                    Resume ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="experience-hero">
+
+        <div class="eyebrow">
+            Experience
+        </div>
+
+
+        <h1>
+
+            Learning by<br>
+
+            <span>working on problems.</span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            From scientific data analysis at IIRS–ISRO
+            to business analytics and process improvement
+            at Dow Chemical, my experiences have taught
+            me to approach problems with curiosity,
+            structure and evidence.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section>
+
+        <div class="section-inner reveal">
+
+            <div class="section-label">
+                01 — The Thread
+            </div>
+
+
+            <h2 class="section-title">
+
+                Different environments.
+                The same analytical mindset.
+
+            </h2>
+
+
+            <p class="section-text">
+
+                My experiences have exposed me to two
+                very different kinds of problems.
+
+                <br><br>
+
+                At IIRS–ISRO, the challenge was understanding
+                complex scientific and geospatial data.
+
+                At Dow, it was understanding business
+                processes, structuring information and
+                finding opportunities for improvement.
+
+                <br><br>
+
+                Both taught me that good analysis starts
+                with asking the right questions.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         DOW
+    ========================= -->
+
+    <section class="timeline-section">
+
+        <div class="section-inner">
+
+
+            <div class="reveal">
+
+                <div class="section-label">
+                    02 — Corporate Experience
+                </div>
+
+
+                <h2 class="section-title">
+                    Understanding how
+                    businesses actually work.
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item reveal">
+
+
+                    <div class="timeline-date">
+
+                        MAY — SEP<br>
+                        2026
+
+                    </div>
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="timeline-content">
+
+
+                        <div class="company-label">
+                            Management Internship
+                        </div>
+
+
+                        <h3 class="company-name">
+                            Dow Chemical
+                        </h3>
+
+
+                        <div class="role">
+
+                            Integrated Supply Chain Improvement
+                            · Navi Mumbai
+
+                        </div>
+
+
+                        <p class="role-description">
+
+                            Worked with the Integrated Supply
+                            Chain Improvement team across
+                            process analysis, data analytics
+                            and business improvement initiatives.
+
+                            The experience involved understanding
+                            complex workflows, working with
+                            stakeholders and translating structured
+                            information into opportunities for
+                            improvement.
+
+                        </p>
+
+
+
+                        <div class="work-grid">
+
+
+                            <div class="work-block">
+
+                                <div class="work-number">
+                                    01
+                                </div>
+
+
+                                <h3>
+                                    Process Mapping
+                                </h3>
+
+
+                                <p>
+
+                                    Analysed material allocation
+                                    workflows across business
+                                    units and regions, working
+                                    with stakeholders to understand
+                                    process variations and
+                                    identify opportunities for
+                                    standardisation.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <div class="work-block">
+
+                                <div class="work-number">
+                                    02
+                                </div>
+
+
+                                <h3>
+                                    Customer Analytics
+                                </h3>
+
+
+                                <p>
+
+                                    Worked with multi-year
+                                    customer-experience data,
+                                    using Python-based ETL
+                                    workflows and Power BI
+                                    dashboards to structure
+                                    information and identify
+                                    patterns.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <div class="work-block">
+
+                                <div class="work-number">
+                                    03
+                                </div>
+
+
+                                <h3>
+                                    Process Improvement
+                                </h3>
+
+
+                                <p>
+
+                                    Contributed to quality and
+                                    non-conformance initiatives,
+                                    analysing process information
+                                    and identifying opportunities
+                                    to reduce manual bottlenecks
+                                    through digital workflows.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <div class="work-block">
+
+                                <div class="work-number">
+                                    04
+                                </div>
+
+
+                                <h3>
+                                    Stakeholder Management
+                                </h3>
+
+
+                                <p>
+
+                                    Conducted discussions with
+                                    stakeholders to understand
+                                    current processes, validate
+                                    observations and communicate
+                                    findings clearly.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="skill-tags">
+
+                            <span class="skill-tag">
+                                Business Analysis
+                            </span>
+
+                            <span class="skill-tag">
+                                Python
+                            </span>
+
+                            <span class="skill-tag">
+                                Power BI
+                            </span>
+
+                            <span class="skill-tag">
+                                ETL
+                            </span>
+
+                            <span class="skill-tag">
+                                Process Mapping
+                            </span>
+
+                            <span class="skill-tag">
+                                Data Visualisation
+                            </span>
+
+                            <span class="skill-tag">
+                                Stakeholder Management
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         IIRS / ISRO
+    ========================= -->
+
+    <section class="iirs-section">
+
+        <div class="section-inner">
+
+
+            <div class="reveal">
+
+                <div class="section-label">
+                    03 — Technical Experience
+                </div>
+
+
+                <h2 class="section-title">
+
+                    From raw spectral data
+                    to scientific insight.
+
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item reveal">
+
+
+                    <div class="timeline-date">
+
+                        MAY — JUL<br>
+                        2025
+
+                    </div>
+
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="timeline-content">
+
+
+                        <div class="company-label">
+                            Data Analytics Summer Intern
+                        </div>
+
+
+                        <h3 class="company-name">
+                            IIRS — ISRO
+                        </h3>
+
+
+                        <div class="role">
+                            Dehradun
+                        </div>
+
+
+                        <p class="role-description">
+
+                            Worked with hyperspectral and
+                            geospatial datasets to analyse
+                            material characteristics and
+                            extract meaningful patterns
+                            using Python-based analytical
+                            techniques.
+
+                        </p>
+
+
+
+                        <div class="work-grid">
+
+
+                            <div class="work-block">
+
+                                <div class="work-number">
+                                    01
+                                </div>
+
+
+                                <h3>
+                                    Hyperspectral Analysis
+                                </h3>
+
+
+                                <p>
+
+                                    Analysed large-scale spectral
+                                    datasets across multiple
+                                    wavelength bands to identify
+                                    patterns and classify
+                                    material types.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <div class="work-block">
+
+                                <div class="work-number">
+                                    02
+                                </div>
+
+
+                                <h3>
+                                    Data Pipelines
+                                </h3>
+
+
+                                <p>
+
+                                    Built structured processing
+                                    workflows for interpreting,
+                                    transforming and visualising
+                                    geospatial information.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <div class="work-block">
+
+                                <div class="work-number">
+                                    03
+                                </div>
+
+
+                                <h3>
+                                    Machine Learning
+                                </h3>
+
+
+                                <p>
+
+                                    Used Python-based analytical
+                                    tools and machine-learning
+                                    techniques to support
+                                    material characterisation.
+
+                                </p>
+
+                            </div>
+
+
+
+                            <div class="work-block">
+
+                                <div class="work-number">
+                                    04
+                                </div>
+
+
+                                <h3>
+                                    Research Communication
+                                </h3>
+
+
+                                <p>
+
+                                    Collaborated with research
+                                    teams and translated complex
+                                    analytical outputs into
+                                    structured findings.
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="skill-tags">
+
+                            <span class="skill-tag">
+                                Python
+                            </span>
+
+                            <span class="skill-tag">
+                                NumPy
+                            </span>
+
+                            <span class="skill-tag">
+                                Pandas
+                            </span>
+
+                            <span class="skill-tag">
+                                Scikit-learn
+                            </span>
+
+                            <span class="skill-tag">
+                                Data Analysis
+                            </span>
+
+                            <span class="skill-tag">
+                                Remote Sensing
+                            </span>
+
+                            <span class="skill-tag">
+                                Machine Learning
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         IMPACT
+    ========================= -->
+
+    <section class="impact">
+
+        <div class="section-inner">
+
+
+            <div class="reveal">
+
+                <div class="section-label">
+                    04 — By the Numbers
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Scale gives context
+                    to the work.
+
+                </h2>
+
+            </div>
+
+
+            <div class="impact-grid">
+
+
+                <div class="impact-item reveal">
+
+                    <div class="impact-value">
+                        1,000+
+                    </div>
+
+                    <div class="impact-label">
+                        Spectral datasets analysed
+                    </div>
+
+                </div>
+
+
+                <div class="impact-item reveal">
+
+                    <div class="impact-value">
+                        50+
+                    </div>
+
+                    <div class="impact-label">
+                        Spectral bands
+                    </div>
+
+                </div>
+
+
+                <div class="impact-item reveal">
+
+                    <div class="impact-value">
+                        10+
+                    </div>
+
+                    <div class="impact-label">
+                        Material types classified
+                    </div>
+
+                </div>
+
+
+                <div class="impact-item reveal">
+
+                    <div class="impact-value">
+                        20+
+                    </div>
+
+                    <div class="impact-label">
+                        Stakeholder interactions
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         LEARNING
+    ========================= -->
+
+    <section class="learning">
+
+        <div class="section-inner">
+
+
+            <div class="reveal">
+
+                <div class="section-label">
+                    05 — What I Took Away
+                </div>
+
+
+                <h2 class="section-title">
+
+                    The tools matter.
+                    The thinking matters more.
+
+                </h2>
+
+            </div>
+
+
+            <div class="learning-grid">
+
+
+                <div class="learning-card reveal">
+
+                    <div class="learning-card-number">
+                        01
+                    </div>
+
+
+                    <h3>
+                        Structure before analysis.
+                    </h3>
+
+
+                    <p>
+
+                        Whether the input is a business
+                        process or a scientific dataset,
+                        creating structure makes complex
+                        problems easier to understand.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="learning-card reveal">
+
+                    <div class="learning-card-number">
+                        02
+                    </div>
+
+
+                    <h3>
+                        Context changes the answer.
+                    </h3>
+
+
+                    <p>
+
+                        Numbers only become useful when
+                        understood in the context of the
+                        people, processes and decisions
+                        behind them.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="learning-card reveal">
+
+                    <div class="learning-card-number">
+                        03
+                    </div>
+
+
+                    <h3>
+                        Communication completes analysis.
+                    </h3>
+
+
+                    <p>
+
+                        A strong insight has little value
+                        if it cannot be understood and
+                        acted upon by the people who need it.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CLOSING
+    ========================= -->
+
+    <section class="closing">
+
+        <div class="section-inner reveal">
+
+            <div class="section-label">
+                06 — What's Next
+            </div>
+
+
+            <p class="closing-text">
+
+                I'm looking for problems where
+                <span>analytical thinking</span>
+                can create meaningful
+                <span>business impact.</span>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <span>
+                © 2026 Aishwarya Nagchandi
+            </span>
+
+
+            <span>
+                Analytics × Finance × Business
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+
+        /* MOBILE NAVIGATION */
+
+        const menuButton =
+            document.querySelector(".menu-button");
+
+
+        const navLinks =
+            document.querySelector(".nav-links");
+
+
+        menuButton.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    navLinks.classList.remove("active");
+
+                });
+
+            });
+
+
+
+        /* SCROLL REVEAL */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
