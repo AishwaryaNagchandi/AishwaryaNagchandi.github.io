@@ -1,1141 +1,1196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Experience — Aishwarya Nagchandi</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #f7f6f2;
-      --text: #171717;
-      --muted: #686868;
-      --line: #d9d8d3;
-      --accent: #173f63;
-      --soft: #eeede8;
-      --white: #ffffff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: "DM Sans", sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* ---------------- NAVIGATION ---------------- */
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      padding: 22px 4vw;
-
-      background: rgba(247, 246, 242, 0.92);
-      backdrop-filter: blur(12px);
-
-      border-bottom: 1px solid rgba(217, 216, 211, 0.7);
-    }
-
-    .logo {
-      font-weight: 600;
-      font-size: 15px;
-      letter-spacing: 0.08em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-      font-size: 13px;
-    }
-
-    .nav-links a {
-      color: #555;
-      transition: color 0.25s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--text);
-    }
-
-    .resume-btn {
-      padding: 9px 15px;
-      border: 1px solid var(--text);
-      color: var(--text) !important;
-      transition: all 0.25s ease;
-    }
-
-    .resume-btn:hover {
-      background: var(--text);
-      color: var(--bg) !important;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    /* ---------------- GENERAL ---------------- */
-
-    .container {
-      width: min(1180px, 90%);
-      margin: auto;
-    }
-
-    .section {
-      padding: 120px 0;
-    }
-
-    .eyebrow {
-      font-size: 12px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 35px;
-    }
-
-    .eyebrow span {
-      color: var(--accent);
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Playfair Display", serif;
-      font-weight: 600;
-      line-height: 1.05;
-    }
-
-    p {
-      color: var(--muted);
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(35px);
-      transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ---------------- HERO ---------------- */
-
-    .hero {
-      min-height: 88vh;
-      display: flex;
-      align-items: flex-end;
-
-      padding-top: 150px;
-      padding-bottom: 100px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 0.8fr;
-      gap: 80px;
-      align-items: end;
-    }
-
-    .hero h1 {
-      font-size: clamp(60px, 8vw, 112px);
-      letter-spacing: -0.055em;
-      max-width: 1000px;
-    }
-
-    .hero-copy {
-      max-width: 450px;
-      padding-bottom: 10px;
-    }
-
-    .hero-copy p {
-      font-size: 19px;
-      line-height: 1.6;
-    }
-
-    .hero-number {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 45px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-    }
-
-    /* ---------------- THREAD ---------------- */
-
-    .thread {
-      border-top: 1px solid var(--line);
-    }
-
-    .thread-intro {
-      max-width: 1000px;
-    }
-
-    .thread-intro h2 {
-      font-size: clamp(45px, 6vw, 82px);
-      letter-spacing: -0.045em;
-      margin-bottom: 45px;
-    }
-
-    .thread-intro > p {
-      font-size: 22px;
-      line-height: 1.65;
-      max-width: 900px;
-    }
-
-    .thread-intro > p strong {
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    /* ---------------- EXPERIENCE BLOCK ---------------- */
-
-    .experience {
-      border-top: 1px solid var(--line);
-      padding: 110px 0;
-    }
-
-    .experience-header {
-      display: grid;
-      grid-template-columns: 0.25fr 1fr;
-      gap: 50px;
-      margin-bottom: 75px;
-    }
-
-    .experience-index {
-      font-size: 13px;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-    }
-
-    .experience-title h2 {
-      font-size: clamp(48px, 6vw, 80px);
-      letter-spacing: -0.045em;
-      margin-bottom: 15px;
-    }
-
-    .experience-title .role {
-      font-size: 18px;
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    .experience-meta {
-      margin-top: 12px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .experience-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-    }
-
-    .experience-content h3 {
-      font-family: "DM Sans", sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text);
-      margin-bottom: 20px;
-    }
-
-    .experience-content p {
-      font-size: 17px;
-      line-height: 1.75;
-      margin-bottom: 25px;
-    }
-
-    /* ---------------- WORK AREAS ---------------- */
-
-    .work-list {
-      margin-top: 35px;
-      border-top: 1px solid var(--line);
-    }
-
-    .work-item {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 30px;
-
-      padding: 25px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .work-item strong {
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .work-item span {
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    /* ---------------- PERSONAL LEARNING ---------------- */
-
-    .learning {
-      margin-top: 90px;
-      padding: 65px;
-      background: var(--soft);
-    }
-
-    .learning-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--accent);
-      margin-bottom: 30px;
-    }
-
-    .learning h3 {
-      font-size: clamp(35px, 4vw, 55px);
-      letter-spacing: -0.035em;
-      max-width: 800px;
-      margin-bottom: 30px;
-    }
-
-    .learning p {
-      font-size: 18px;
-      line-height: 1.8;
-      max-width: 850px;
-    }
-
-    /* ---------------- LESSONS ---------------- */
-
-    .lessons {
-      padding: 120px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .lessons-header {
-      display: grid;
-      grid-template-columns: 0.4fr 1fr;
-      gap: 50px;
-      margin-bottom: 70px;
-    }
-
-    .lessons-header h2 {
-      font-size: clamp(45px, 6vw, 75px);
-      letter-spacing: -0.045em;
-    }
-
-    .lesson-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-    }
-
-    .lesson {
-      background: var(--bg);
-      padding: 45px 35px;
-      min-height: 260px;
-    }
-
-    .lesson-number {
-      font-size: 12px;
-      color: var(--accent);
-      letter-spacing: 0.12em;
-      margin-bottom: 55px;
-    }
-
-    .lesson h3 {
-      font-size: 27px;
-      margin-bottom: 18px;
-    }
-
-    .lesson p {
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    /* ---------------- CLOSING ---------------- */
-
-    .closing {
-      padding: 150px 0;
-      text-align: center;
-    }
-
-    .closing h2 {
-      font-size: clamp(50px, 7vw, 95px);
-      letter-spacing: -0.055em;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .closing p {
-      max-width: 650px;
-      margin: 35px auto 0;
-      font-size: 18px;
-    }
-
-    /* ---------------- FOOTER ---------------- */
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 35px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-inner p {
-      font-size: 12px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 25px;
-      font-size: 12px;
-    }
-
-    .footer-links a:hover {
-      color: var(--accent);
-    }
-
-    /* ---------------- MOBILE ---------------- */
-
-    @media (max-width: 850px) {
-
-      nav {
-        padding: 18px 5%;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        width: 100%;
-
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-
-        background: var(--bg);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links a {
-        width: 100%;
-        padding: 18px 5%;
-        border-top: 1px solid var(--line);
-      }
-
-      .resume-btn {
-        border: none;
-      }
-
-      .hero {
-        min-height: auto;
-        padding-top: 130px;
-        padding-bottom: 80px;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .hero h1 {
-        font-size: clamp(52px, 14vw, 80px);
-      }
-
-      .hero-copy p {
-        font-size: 17px;
-      }
-
-      .section {
-        padding: 80px 0;
-      }
-
-      .thread-intro h2 {
-        font-size: clamp(43px, 11vw, 65px);
-      }
-
-      .thread-intro > p {
-        font-size: 18px;
-      }
-
-      .experience {
-        padding: 80px 0;
-      }
-
-      .experience-header {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        margin-bottom: 50px;
-      }
-
-      .experience-title h2 {
-        font-size: clamp(45px, 11vw, 70px);
-      }
-
-      .experience-content {
-        grid-template-columns: 1fr;
-        gap: 55px;
-      }
-
-      .work-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-
-      .learning {
-        padding: 40px 28px;
-        margin-top: 60px;
-      }
-
-      .learning h3 {
-        font-size: 38px;
-      }
-
-      .lessons-header {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .lesson-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .number-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 45px 25px;
-      }
-
-      .number {
-        font-size: 42px;
-      }
-
-      .closing {
-        padding: 100px 0;
-      }
-
-      .closing h2 {
-        font-size: clamp(48px, 13vw, 75px);
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-      }
-    }
-
-    /* ---------------- REDUCED MOTION ---------------- */
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-
-      * {
-        transition: none !important;
-      }
-    }
-  </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experience | Aishwarya Nagchandi</title>
+
+    <meta name="description"
+          content="Professional experience of Aishwarya Nagchandi across analytics, business improvement and research.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        :root {
+            --bg: #f7f6f2;
+            --text: #171717;
+            --muted: #686868;
+            --line: #d9d8d3;
+            --accent: #173f63;
+            --soft: #eeede8;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 110px;
+        }
+
+        /* Important:
+           Makes anchor links land below the fixed navbar. */
+
+        [id] {
+            scroll-margin-top: 110px;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            height: 76px;
+
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7vw;
+
+            background: rgba(247, 246, 242, 0.92);
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .logo {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            color: #4e4e4e;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .resume-btn {
+            border: 1px solid #222;
+            padding: 10px 17px;
+            transition: all 0.25s ease;
+        }
+
+        .resume-btn:hover {
+            background: var(--text);
+            color: var(--bg);
+        }
+
+        .menu-btn {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        main {
+            padding-top: 76px;
+        }
+
+        .container {
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 110px 7vw;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", serif;
+            font-weight: 600;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            margin-bottom: 35px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 82vh;
+
+            display: flex;
+            align-items: center;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .hero h1 {
+            font-size: clamp(65px, 9vw, 125px);
+            line-height: 0.92;
+            letter-spacing: -0.055em;
+            max-width: 1050px;
+        }
+
+        .hero-description {
+            margin-top: 40px;
+
+            max-width: 650px;
+
+            font-size: 18px;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+
+        /* ================= THREAD ================= */
+
+        .thread {
+            background: var(--soft);
+        }
+
+        .thread-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+        }
+
+        .thread h2 {
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .thread-text p {
+            color: var(--muted);
+            font-size: 17px;
+            margin-bottom: 22px;
+            max-width: 580px;
+        }
+
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience-section {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .experience-layout {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 80px;
+        }
+
+        .experience-meta {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .experience-meta .year {
+            font-family: "Playfair Display", serif;
+            font-size: 30px;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        .experience-content h2 {
+            font-size: clamp(48px, 6vw, 82px);
+            line-height: 0.95;
+            letter-spacing: -0.045em;
+            margin-bottom: 18px;
+        }
+
+        .role {
+            color: var(--accent);
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+        .experience-intro {
+            max-width: 760px;
+            font-size: 19px;
+            color: var(--muted);
+            line-height: 1.75;
+            margin-bottom: 55px;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+
+        .work-card {
+            background: var(--bg);
+            padding: 35px;
+            min-height: 220px;
+        }
+
+        .work-card h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .work-card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .tools {
+            margin-top: 45px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .tool {
+            border: 1px solid var(--line);
+            padding: 8px 13px;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+
+        /* ================= PERSONAL LEARNING ================= */
+
+        .personal-learning {
+            margin-top: 75px;
+            padding-top: 45px;
+            border-top: 1px solid var(--line);
+        }
+
+        .personal-learning h3 {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .personal-learning p {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+
+        /* ================= LESSONS ================= */
+
+        .lessons {
+            background: var(--soft);
+        }
+
+        .lessons-header {
+            max-width: 700px;
+            margin-bottom: 65px;
+        }
+
+        .lessons-header h2 {
+            font-size: clamp(50px, 6vw, 80px);
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .lesson {
+            padding: 40px 40px 40px 0;
+            border-right: 1px solid var(--line);
+        }
+
+        .lesson:not(:first-child) {
+            padding-left: 40px;
+        }
+
+        .lesson:last-child {
+            border-right: none;
+        }
+
+        .lesson-number {
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .lesson h3 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .lesson p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+
+        /* ================= CLOSING ================= */
+
+        .closing {
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .closing h2 {
+            max-width: 950px;
+
+            font-size: clamp(48px, 7vw, 90px);
+            line-height: 1;
+            letter-spacing: -0.045em;
+        }
+
+        .closing p {
+            max-width: 600px;
+            margin-top: 30px;
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            padding: 35px 7vw;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-top: 1px solid var(--line);
+
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                padding: 0 6vw;
+            }
+
+            .nav-links {
+                display: none;
+
+                position: absolute;
+                top: 76px;
+                left: 0;
+                right: 0;
+
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+
+                background: var(--bg);
+                border-bottom: 1px solid var(--line);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                width: 100%;
+                padding: 17px 6vw;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .nav-links .resume-btn {
+                border: none;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            section {
+                padding: 80px 6vw;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .hero h1 {
+                font-size: clamp(55px, 15vw, 90px);
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .thread-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .experience-layout {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .experience-meta {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .experience-meta .year {
+                margin-bottom: 0;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson,
+            .lesson:not(:first-child) {
+                padding: 35px 0;
+                border-right: none;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .lesson:last-child {
+                border-bottom: none;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-  <!-- ================= NAVIGATION ================= -->
 
-  <nav>
-    <a href="index.html" class="logo">AN</a>
+<!-- ================= NAVIGATION ================= -->
 
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="experience.html" class="active">Experience</a>
-      <a href="projects.html">Projects</a>
-      <a href="beyond.html">Beyond</a>
-      <a href="skills.html">Skills</a>
-      <a href="contact.html">Contact</a>
-      <a href="resume.pdf" class="resume-btn">Resume ↗</a>
-    </div>
+<nav>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  </nav>
+    <a href="index.html" class="logo">
+        AN
+    </a>
 
+    <button class="menu-btn" aria-label="Open navigation">
+        ☰
+    </button>
 
-  <!-- ================= HERO ================= -->
+    <div class="nav-links">
 
-  <header class="hero">
-    <div class="container hero-grid">
+        <a href="index.html">Home</a>
 
-      <div class="reveal">
-        <div class="eyebrow">
-          01 — <span>Experience</span>
-        </div>
+        <a href="about.html">About</a>
 
-        <h1>
-          Different environments.<br>
-          The same analytical mindset.
-        </h1>
-      </div>
+        <a href="experience.html">Experience</a>
 
-      <div class="hero-copy reveal">
-        <p>
-          My experiences have taken me from a government research
-          institution to my first corporate environment — two settings
-          with very different problems, processes and ways of working.
-        </p>
+        <a href="projects.html">Projects</a>
 
-        <div class="hero-number">
-          Learning through research, business problems and people.
-        </div>
-      </div>
+        <a href="beyond.html">Beyond</a>
+
+        <a href="skills.html">Skills</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="resume.pdf"
+           class="resume-btn"
+           target="_blank">
+            Resume ↗
+        </a>
 
     </div>
-  </header>
 
+</nav>
 
-  <!-- ================= THE THREAD ================= -->
 
-  <section class="section thread">
-    <div class="container">
+<main>
 
-      <div class="thread-intro reveal">
 
-        <div class="eyebrow">
-          02 — <span>The Thread</span>
-        </div>
+<!-- ================= HERO ================= -->
 
-        <h2>
-          Two environments.<br>
-          One analytical mindset.
-        </h2>
-
-        <p>
-          At <strong>IIRS–ISRO</strong>, I worked in a research-driven
-          government institution where the focus was on understanding
-          complex scientific and geospatial data, following structured
-          methodologies and approaching problems with precision.
-        </p>
-
-        <br>
-
-        <p>
-          At <strong>Dow</strong>, my first corporate experience, the
-          problems became more business-oriented — understanding processes,
-          collaborating with stakeholders, structuring information and
-          identifying opportunities for improvement.
-        </p>
-
-        <br>
-
-        <p>
-          The environments were different.
-          <strong>The mindset wasn't.</strong>
-        </p>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= DOW ================= -->
-
-  <section class="experience">
-    <div class="container">
-
-      <div class="experience-header reveal">
-
-        <div class="experience-index">
-          03 / 05
-        </div>
-
-        <div class="experience-title">
-
-          <h2>Dow</h2>
-
-          <div class="role">
-            Management Intern · Integrated Supply Chain
-          </div>
-
-          <div class="experience-meta">
-            May — September 2026 · Navi Mumbai
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="experience-content">
-
-        <div class="reveal">
-
-          <h3>What I worked on</h3>
-
-          <p>
-            My first corporate experience exposed me to the pace,
-            ambiguity and interconnectedness of real business problems.
-          </p>
-
-          <p>
-            I worked across process mapping, customer analytics and
-            process improvement — using data to understand how existing
-            processes worked and where opportunities for improvement
-            existed.
-          </p>
-
-          <div class="work-list">
-
-            <div class="work-item">
-              <strong>Process Mapping</strong>
-              <span>
-                Understanding complex business processes and
-                structuring information across different stakeholders.
-              </span>
-            </div>
-
-            <div class="work-item">
-              <strong>Customer Analytics</strong>
-              <span>
-                Working with multi-region survey data and using
-                Python and Power BI to turn information into
-                interpretable insights.
-              </span>
-            </div>
-
-            <div class="work-item">
-              <strong>Process Improvement</strong>
-              <span>
-                Studying process quality and identifying opportunities
-                to make workflows more structured and effective.
-              </span>
-            </div>
-
-            <div class="work-item">
-              <strong>Stakeholder Management</strong>
-              <span>
-                Learning how to ask better questions, communicate
-                findings and work with people from different functions.
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="reveal">
-
-          <h3>What I learned</h3>
-
-          <p>
-            Dow taught me that the workplace isn't always about having
-            the perfect answer. Sometimes it is about being comfortable
-            asking questions, understanding context and figuring things
-            out as you go.
-          </p>
-
-          <p>
-            I also experienced a much more open and approachable
-            environment than I had encountered in academic settings.
-            The people around me were willing to guide, explain and
-            give me the space to learn.
-          </p>
-
-          <p>
-            More importantly, I met people from very different
-            professional backgrounds and built friendships that made
-            my first corporate experience genuinely memorable.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- PERSONAL LEARNING -->
-
-      <div class="learning reveal">
-
-        <div class="learning-label">
-          Beyond the Job Description
-        </div>
-
-        <h3>
-          My first experience of what working life actually feels like.
-        </h3>
-
-        <p>
-          As a student, one of the most valuable things I took away from
-          Dow was understanding that professional growth happens through
-          people just as much as through projects. I learned to be more
-          comfortable navigating ambiguity, reaching out to people,
-          accepting feedback and learning from those with more experience.
-          The openness of the environment — and the friendships I formed
-          along the way — made the experience feel less like simply
-          completing an internship and more like taking my first step
-          into the professional world.
-        </p>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= ISRO ================= -->
-
-  <section class="experience">
-    <div class="container">
-
-      <div class="experience-header reveal">
-
-        <div class="experience-index">
-          04 / 05
-        </div>
-
-        <div class="experience-title">
-
-          <h2>IIRS–ISRO</h2>
-
-          <div class="role">
-            Data Analytics Summer Intern
-          </div>
-
-          <div class="experience-meta">
-            May — July 2025 · Dehradun
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="experience-content">
-
-        <div class="reveal">
-
-          <h3>What I worked on</h3>
-
-          <p>
-            My experience at the Indian Institute of Remote Sensing
-            introduced me to a very different kind of professional
-            environment — one centred around scientific research,
-            precision and structured processes.
-          </p>
-
-          <p>
-            I worked with spectral and geospatial datasets, using
-            Python-based data processing and machine learning techniques
-            to understand patterns within complex scientific data.
-          </p>
-
-          <div class="work-list">
-
-            <div class="work-item">
-              <strong>Spectral Analysis</strong>
-              <span>
-                Processing and analysing spectral datasets across
-                multiple bands and material categories.
-              </span>
-            </div>
-
-            <div class="work-item">
-              <strong>Data Pipelines</strong>
-              <span>
-                Using Python, NumPy and Pandas to structure and
-                streamline data processing workflows.
-              </span>
-            </div>
-
-            <div class="work-item">
-              <strong>Machine Learning</strong>
-              <span>
-                Applying analytical and machine learning approaches
-                to classify and interpret scientific datasets.
-              </span>
-            </div>
-
-            <div class="work-item">
-              <strong>Research Communication</strong>
-              <span>
-                Learning how to communicate technical findings clearly
-                within a research-oriented environment.
-              </span>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="reveal">
-
-          <h3>What I learned</h3>
-
-          <p>
-            If Dow taught me adaptability, IIRS–ISRO taught me discipline.
-            The environment was highly structured and precise, with a
-            strong emphasis on methodology, accuracy and following
-            established processes.
-          </p>
-
-          <p>
-            Working in that environment taught me the importance of
-            patience and attention to detail. I learned that good
-            analytical work is often less about speed and more about
-            being rigorous enough to trust the result.
-          </p>
-
-          <p>
-            I also had the opportunity to interact with people who had
-            deep expertise in their fields. Being around such experienced
-            and knowledgeable professionals gave me a different
-            perspective on what it means to continuously learn.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- PERSONAL LEARNING -->
-
-      <div class="learning reveal">
-
-        <div class="learning-label">
-          Beyond the Job Description
-        </div>
-
-        <h3>
-          Learning how much there is still to learn.
-        </h3>
-
-        <p>
-          Being a student in a highly structured research environment
-          made me more conscious of the value of discipline. I learned
-          to respect processes, prepare more carefully and pay attention
-          to details that can easily be overlooked. But perhaps the most
-          lasting lesson was personal: meeting people who had spent years
-          building expertise reminded me that becoming good at something
-          is a long process. The experience made me more curious,
-          more patient and more willing to learn from people who know
-          more than I do.
-        </p>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= LESSONS ================= -->
-
-  <section class="lessons">
-    <div class="container">
-
-      <div class="lessons-header reveal">
-
-        <div class="eyebrow">
-          05 — <span>What Stayed With Me</span>
-        </div>
-
-        <h2>
-          Different places.<br>
-          Different lessons.
-        </h2>
-
-      </div>
-
-
-      <div class="lesson-grid">
-
-        <div class="lesson reveal">
-
-          <div class="lesson-number">01</div>
-
-          <h3>Structure</h3>
-
-          <p>
-            ISRO taught me that rigorous processes and attention to
-            detail create the foundation for reliable analytical work.
-          </p>
-
-        </div>
-
-
-        <div class="lesson reveal">
-
-          <div class="lesson-number">02</div>
-
-          <h3>Adaptability</h3>
-
-          <p>
-            Dow taught me to work with ambiguity, ask questions,
-            communicate with different stakeholders and adapt to
-            real-world business problems.
-          </p>
-
-        </div>
-
-
-        <div class="lesson reveal">
-
-          <div class="lesson-number">03</div>
-
-          <h3>People</h3>
-
-          <p>
-            Both experiences showed me that some of the most valuable
-            learning happens through conversations with people who
-            have already walked the path before you.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= CLOSING ================= -->
-
-  <section class="closing">
+<section class="hero">
 
     <div class="container reveal">
 
-      <div class="eyebrow">
-        The takeaway
-      </div>
+        <div class="eyebrow">
+            01 — Experience
+        </div>
 
-      <h2>
-        Data can tell you what happened.
-        People and context help you understand why.
-      </h2>
+        <h1>
+            Different environments.<br>
+            The same analytical<br>
+            mindset.
+        </h1>
 
-      <p>
-        That is the perspective I want to carry into every problem
-        I work on next.
-      </p>
+        <p class="hero-description">
+            My experience has taken me from scientific research
+            to my first corporate environment — giving me different
+            perspectives on how data, processes and people come
+            together to solve problems.
+        </p>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- ================= FOOTER ================= -->
+<!-- ================= THREAD ================= -->
 
-  <footer>
+<section class="thread">
 
-    <div class="container footer-inner">
+    <div class="container">
 
-      <p>
+        <div class="section-label">
+            02 — The Thread
+        </div>
+
+        <div class="thread-grid">
+
+            <div class="reveal">
+
+                <h2>
+                    Two environments.<br>
+                    One analytical mindset.
+                </h2>
+
+            </div>
+
+            <div class="thread-text reveal">
+
+                <p>
+                    At IIRS — ISRO, I worked in a highly structured
+                    research environment where precision, methodology
+                    and patience mattered.
+                </p>
+
+                <p>
+                    At Dow Chemical, I experienced my first corporate
+                    environment — where analytical work had to connect
+                    with processes, stakeholders and practical business
+                    outcomes.
+                </p>
+
+                <p>
+                    The environments were different. The underlying
+                    lesson was similar: good analysis is not only about
+                    technical capability. It is about understanding
+                    context and communicating what the information means.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DOW ================= -->
+
+<section class="experience-section" id="dow">
+
+    <div class="container">
+
+        <div class="experience-layout">
+
+            <div class="experience-meta reveal">
+
+                <div class="year">
+                    2026
+                </div>
+
+                <div>
+                    May — September
+                </div>
+
+                <div>
+                    Navi Mumbai
+                </div>
+
+            </div>
+
+
+            <div class="experience-content reveal">
+
+                <h2>
+                    Dow Chemical
+                </h2>
+
+                <div class="role">
+                    Management Intern · Integrated Supply Chain
+                </div>
+
+                <p class="experience-intro">
+                    My first corporate experience gave me the opportunity
+                    to work across process analysis, data analytics and
+                    business improvement — learning how structured
+                    analysis can support decisions in a complex
+                    organisation.
+                </p>
+
+
+                <div class="work-grid">
+
+                    <div class="work-card">
+
+                        <h3>
+                            Process Analysis
+                        </h3>
+
+                        <p>
+                            Worked on process mapping and structured
+                            analysis to understand existing workflows,
+                            identify gaps and highlight opportunities
+                            for improvement.
+                        </p>
+
+                    </div>
+
+
+                    <div class="work-card">
+
+                        <h3>
+                            Customer Analytics
+                        </h3>
+
+                        <p>
+                            Worked with customer feedback data and
+                            analytical workflows to identify themes,
+                            patterns and areas that could support
+                            improved decision-making.
+                        </p>
+
+                    </div>
+
+
+                    <div class="work-card">
+
+                        <h3>
+                            Process Improvement
+                        </h3>
+
+                        <p>
+                            Used structured problem solving to examine
+                            process quality and identify opportunities
+                            for more efficient and consistent workflows.
+                        </p>
+
+                    </div>
+
+
+                    <div class="work-card">
+
+                        <h3>
+                            Stakeholder Management
+                        </h3>
+
+                        <p>
+                            Learned to work across different stakeholders,
+                            understand their perspectives and translate
+                            conversations into structured analytical work.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tools">
+
+                    <span class="tool">Python</span>
+                    <span class="tool">Power BI</span>
+                    <span class="tool">Data Analysis</span>
+                    <span class="tool">Process Mapping</span>
+                    <span class="tool">Business Analysis</span>
+                    <span class="tool">Stakeholder Management</span>
+
+                </div>
+
+
+                <div class="personal-learning">
+
+                    <h3>
+                        What I learned personally
+                    </h3>
+
+                    <p>
+                        Dow was my first experience of working in a
+                        corporate environment. One of the biggest
+                        lessons was realising how much learning happens
+                        through people — asking questions, observing how
+                        experienced professionals approach problems and
+                        being open to feedback.
+                    </p>
+
+                    <p>
+                        I also learned that corporate work is rarely
+                        perfectly defined. Sometimes the problem becomes
+                        clearer only after conversations with the people
+                        closest to it. That made adaptability and
+                        communication just as important as technical
+                        analysis.
+                    </p>
+
+                    <p>
+                        Beyond the work itself, the people I met made the
+                        experience memorable. The openness, approachability
+                        and friendships I found there reminded me that a
+                        good professional environment is also one where
+                        people are willing to help each other learn.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ISRO ================= -->
+
+<section class="experience-section" id="isro">
+
+    <div class="container">
+
+        <div class="experience-layout">
+
+            <div class="experience-meta reveal">
+
+                <div class="year">
+                    2025
+                </div>
+
+                <div>
+                    May — July
+                </div>
+
+                <div>
+                    Dehradun
+                </div>
+
+            </div>
+
+
+            <div class="experience-content reveal">
+
+                <h2>
+                    IIRS — ISRO
+                </h2>
+
+                <div class="role">
+                    Data Analytics Summer Intern
+                </div>
+
+                <p class="experience-intro">
+                    At the Indian Institute of Remote Sensing, I worked
+                    with hyperspectral and geospatial datasets, using
+                    Python and analytical methods to turn complex
+                    scientific data into structured insights.
+                </p>
+
+
+                <div class="work-grid">
+
+                    <div class="work-card">
+
+                        <h3>
+                            Spectral Analysis
+                        </h3>
+
+                        <p>
+                            Analysed large spectral datasets across
+                            multiple bands to identify patterns and
+                            distinguish between different material types.
+                        </p>
+
+                    </div>
+
+
+                    <div class="work-card">
+
+                        <h3>
+                            Data Pipelines
+                        </h3>
+
+                        <p>
+                            Used Python-based data processing workflows
+                            to clean, structure and analyse datasets
+                            efficiently.
+                        </p>
+
+                    </div>
+
+
+                    <div class="work-card">
+
+                        <h3>
+                            Machine Learning
+                        </h3>
+
+                        <p>
+                            Applied analytical and machine learning
+                            techniques to support classification and
+                            pattern identification within scientific
+                            datasets.
+                        </p>
+
+                    </div>
+
+
+                    <div class="work-card">
+
+                        <h3>
+                            Research Communication
+                        </h3>
+
+                        <p>
+                            Learned to communicate analytical findings
+                            within a research environment where
+                            precision and methodological clarity were
+                            essential.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tools">
+
+                    <span class="tool">Python</span>
+                    <span class="tool">NumPy</span>
+                    <span class="tool">Pandas</span>
+                    <span class="tool">Scikit-learn</span>
+                    <span class="tool">Remote Sensing</span>
+                    <span class="tool">Geospatial Data</span>
+                    <span class="tool">Machine Learning</span>
+
+                </div>
+
+
+                <div class="personal-learning">
+
+                    <h3>
+                        What I learned personally
+                    </h3>
+
+                    <p>
+                        IIRS taught me the value of structure and rigor.
+                        Working in a research environment meant that
+                        assumptions had to be questioned, methods had to
+                        be followed carefully and results needed to be
+                        supported by evidence.
+                    </p>
+
+                    <p>
+                        I also learned patience. Scientific and analytical
+                        work does not always produce an immediate answer.
+                        Sometimes the most important part of the process
+                        is understanding the data well enough before
+                        attempting to interpret it.
+                    </p>
+
+                    <p>
+                        Most importantly, working around people with deep
+                        technical knowledge taught me how much there is
+                        to learn by simply being curious, asking questions
+                        and paying attention to how experts approach
+                        difficult problems.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LESSONS ================= -->
+
+<section class="lessons">
+
+    <div class="container">
+
+        <div class="lessons-header reveal">
+
+            <div class="section-label">
+                03 — What Stayed With Me
+            </div>
+
+            <h2>
+                Three things<br>
+                that stayed with me.
+            </h2>
+
+        </div>
+
+
+        <div class="lesson-grid">
+
+            <div class="lesson reveal">
+
+                <div class="lesson-number">
+                    01
+                </div>
+
+                <h3>
+                    Structure
+                </h3>
+
+                <p>
+                    Good analysis needs a method. Whether the problem is
+                    scientific or business-oriented, a structured approach
+                    creates clarity.
+                </p>
+
+            </div>
+
+
+            <div class="lesson reveal">
+
+                <div class="lesson-number">
+                    02
+                </div>
+
+                <h3>
+                    Adaptability
+                </h3>
+
+                <p>
+                    Real problems rarely arrive perfectly defined.
+                    Being comfortable with ambiguity is part of becoming
+                    a better problem solver.
+                </p>
+
+            </div>
+
+
+            <div class="lesson reveal">
+
+                <div class="lesson-number">
+                    03
+                </div>
+
+                <h3>
+                    People
+                </h3>
+
+                <p>
+                    Technical skills matter, but much of professional
+                    growth comes from the people you work with,
+                    learn from and learn alongside.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CLOSING ================= -->
+
+<section class="closing">
+
+    <div class="container reveal">
+
+        <div class="eyebrow">
+            04 — Perspective
+        </div>
+
+        <h2>
+            Data can tell you what happened.
+            People and context help you
+            understand why.
+        </h2>
+
+        <p>
+            That is the perspective I want to carry into every
+            analytical problem I work on.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <span>
         © 2026 Aishwarya Nagchandi
-      </p>
+    </span>
 
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <span>
+        Analytics × Finance × Business
+    </span>
 
-    </div>
-
-  </footer>
+</footer>
 
 
-  <!-- ================= JAVASCRIPT ================= -->
+<!-- ================= JAVASCRIPT ================= -->
 
-  <script>
+<script>
 
-    function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("open");
-    }
+    const menuBtn = document.querySelector(".menu-btn");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 
 
-    const reveals = document.querySelectorAll(".reveal");
+    document.querySelectorAll(".nav-links a").forEach(link => {
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-
-        entries.forEach((entry) => {
-
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
         });
 
-      },
-      {
-        threshold: 0.12
-      }
+    });
+
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    revealObserver.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
     );
 
 
-    reveals.forEach((element) => {
-      observer.observe(element);
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
     });
 
-  </script>
+</script>
+
 
 </body>
 </html>
