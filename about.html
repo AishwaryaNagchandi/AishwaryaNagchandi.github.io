@@ -11,42 +11,30 @@
     <meta name="description"
           content="About Aishwarya Nagchandi — Analytics, Finance and Business.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="author" content="Aishwarya Nagchandi">
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://aishwaryanagchandi.github.io/about.html">
+
+
+    <!-- ================= FONTS ================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
           rel="stylesheet">
 
 
+    <!-- ================= STYLES ================= -->
+
     <style>
-
-        /* =========================
-           RESET
-        ========================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "DM Sans", sans-serif;
-            background: #f7f6f2;
-            color: #171717;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
 
         /* =========================
            VARIABLES
@@ -60,7 +48,66 @@
             --line: #d9d8d3;
             --accent: #173f63;
             --white: #ffffff;
+
             --max-width: 1240px;
+
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+            scroll-padding-top: 100px;
+
+            overflow-x: hidden;
+
+        }
+
+
+        body {
+
+            font-family: "DM Sans", sans-serif;
+
+            background: var(--background);
+
+            color: var(--text);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+
+            width: 100%;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        button {
+
+            font-family: inherit;
 
         }
 
@@ -83,6 +130,7 @@
             background: rgba(247, 246, 242, 0.88);
 
             backdrop-filter: blur(14px);
+
             -webkit-backdrop-filter: blur(14px);
 
             border-bottom: 1px solid rgba(217,216,211,0.75);
@@ -153,7 +201,7 @@
 
             color: var(--text);
 
-            font-weight: 600;
+            font-weight: 700;
 
         }
 
@@ -163,6 +211,10 @@
             border: 1px solid var(--text);
 
             padding: 9px 16px;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease;
 
         }
 
@@ -188,6 +240,8 @@
 
             cursor: pointer;
 
+            color: var(--text);
+
         }
 
 
@@ -196,6 +250,8 @@
         ========================= */
 
         .about-hero {
+
+            width: 100%;
 
             max-width: var(--max-width);
 
@@ -278,12 +334,16 @@
 
         section {
 
+            width: 100%;
+
             padding: 120px 32px;
 
         }
 
 
         .section-inner {
+
+            width: 100%;
 
             max-width: var(--max-width);
 
@@ -338,7 +398,7 @@
 
 
         /* =========================
-           THREE DIMENSIONS
+           INTERSECTION
         ========================= */
 
         .intersection {
@@ -354,7 +414,7 @@
 
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
 
             border-top: 1px solid #ccccca;
 
@@ -364,6 +424,8 @@
 
 
         .intersection-item {
+
+            min-width: 0;
 
             min-height: 310px;
 
@@ -417,7 +479,7 @@
 
 
         /* =========================
-           CENTER STATEMENT
+           STATEMENT
         ========================= */
 
         .statement {
@@ -477,7 +539,7 @@
 
             display: grid;
 
-            grid-template-columns: 180px 1fr;
+            grid-template-columns: 180px minmax(0, 1fr);
 
             padding: 32px 0;
 
@@ -552,7 +614,7 @@
 
             display: grid;
 
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, minmax(0, 1fr));
 
             border-top: 1px solid rgba(255,255,255,0.25);
 
@@ -561,6 +623,8 @@
 
         .trait {
 
+            min-width: 0;
+
             padding: 35px 20px;
 
             border-right: 1px solid rgba(255,255,255,0.25);
@@ -568,9 +632,18 @@
         }
 
 
+        .trait:first-child {
+
+            padding-left: 0;
+
+        }
+
+
         .trait:last-child {
 
             border-right: none;
+
+            padding-right: 0;
 
         }
 
@@ -593,6 +666,8 @@
             color: #c7d0d8;
 
             font-size: 13px;
+
+            max-width: 220px;
 
         }
 
@@ -640,6 +715,13 @@
         }
 
 
+        .currently-content {
+
+            max-width: 760px;
+
+        }
+
+
         .currently-text {
 
             font-family: "Playfair Display", serif;
@@ -649,6 +731,21 @@
             line-height: 1.1;
 
             letter-spacing: -0.03em;
+
+        }
+
+
+        .currently-detail {
+
+            margin-top: 28px;
+
+            color: var(--muted);
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            max-width: 700px;
 
         }
 
@@ -694,9 +791,7 @@
             transform: translateY(35px);
 
             transition:
-
                 opacity 0.8s ease,
-
                 transform 0.8s ease;
 
         }
@@ -763,6 +858,30 @@
 
         @media (max-width: 800px) {
 
+
+            html,
+            body {
+
+                width: 100%;
+
+                max-width: 100%;
+
+                overflow-x: hidden;
+
+            }
+
+
+            /* NAVIGATION */
+
+            .nav-inner {
+
+                height: 76px;
+
+                padding: 0 24px;
+
+            }
+
+
             .nav-links {
 
                 display: none;
@@ -773,15 +892,19 @@
 
                 left: 0;
 
+                right: 0;
+
                 width: 100%;
 
                 background: var(--background);
 
-                padding: 25px 32px;
+                padding: 0;
 
                 flex-direction: column;
 
                 align-items: flex-start;
+
+                gap: 0;
 
                 border-bottom: 1px solid var(--line);
 
@@ -795,21 +918,64 @@
             }
 
 
-            .menu-button {
+            .nav-links a {
 
-                display: block;
+                width: 100%;
+
+                padding: 17px 24px;
+
+                border-bottom: 1px solid var(--line);
 
             }
 
 
+            .nav-resume {
+
+                border: none;
+
+                border-bottom: 1px solid var(--line);
+
+            }
+
+
+            .menu-button {
+
+                display: block;
+
+                padding: 4px;
+
+            }
+
+
+            /* GENERAL */
+
             section {
+
+                width: 100%;
 
                 padding: 90px 24px;
 
             }
 
 
+            .section-inner {
+
+                width: 100%;
+
+                max-width: 100%;
+
+                min-width: 0;
+
+            }
+
+
+            /* HERO */
+
             .about-hero {
+
+                width: 100%;
+
+                min-height: auto;
 
                 padding: 145px 24px 80px;
 
@@ -820,17 +986,42 @@
 
                 font-size: 19vw;
 
+                max-width: 100%;
+
+                overflow-wrap: break-word;
+
             }
 
+
+            .hero-description {
+
+                max-width: 100%;
+
+                font-size: 17px;
+
+            }
+
+
+            /* INTERSECTION */
 
             .intersection-grid {
 
                 grid-template-columns: 1fr;
 
+                width: 100%;
+
+                margin-top: 55px;
+
             }
 
 
             .intersection-item {
+
+                width: 100%;
+
+                min-height: auto;
+
+                padding: 38px 24px;
 
                 border-right: none;
 
@@ -846,41 +1037,183 @@
             }
 
 
+            .intersection-item p {
+
+                max-width: 100%;
+
+            }
+
+
+            /* STATEMENT */
+
+            .statement {
+
+                padding-top: 100px;
+
+                padding-bottom: 100px;
+
+            }
+
+
+            .statement-text {
+
+                max-width: 100%;
+
+            }
+
+
+            /* EDUCATION */
+
+            .timeline {
+
+                margin-top: 50px;
+
+                width: 100%;
+
+            }
+
+
             .timeline-item {
 
                 grid-template-columns: 1fr;
 
                 gap: 12px;
 
+                width: 100%;
+
+                min-width: 0;
+
             }
 
+
+            .timeline-school {
+
+                font-size: 28px;
+
+                overflow-wrap: break-word;
+
+            }
+
+
+            .timeline-detail {
+
+                max-width: 100%;
+
+            }
+
+
+            /* HOW I WORK */
 
             .traits {
 
                 grid-template-columns: 1fr 1fr;
 
+                width: 100%;
+
+                margin-top: 55px;
+
             }
 
 
-            .trait {
+            .trait,
+            .trait:first-child,
+            .trait:last-child {
+
+                min-width: 0;
+
+                width: 100%;
+
+                padding: 30px 20px;
+
+                border-right: 1px solid rgba(255,255,255,0.25);
 
                 border-bottom: 1px solid rgba(255,255,255,0.25);
 
             }
 
 
-            .trait:nth-child(2) {
+            .trait:nth-child(2),
+            .trait:nth-child(4) {
 
                 border-right: none;
 
             }
 
 
+            .trait:nth-child(3),
+            .trait:nth-child(4) {
+
+                border-bottom: none;
+
+            }
+
+
+            .trait h3 {
+
+                font-size: 25px;
+
+            }
+
+
+            .trait p {
+
+                max-width: 100%;
+
+            }
+
+
+            /* CURRENTLY */
+
+            .currently {
+
+                min-height: auto;
+
+            }
+
+
             .currently-box {
+
+                width: 100%;
 
                 grid-template-columns: 1fr;
 
                 gap: 25px;
+
+            }
+
+
+            .currently-content {
+
+                min-width: 0;
+
+                max-width: 100%;
+
+            }
+
+
+            .currently-text {
+
+                font-size: clamp(30px, 9vw, 48px);
+
+                overflow-wrap: break-word;
+
+            }
+
+
+            .currently-detail {
+
+                font-size: 15px;
+
+                max-width: 100%;
+
+            }
+
+
+            /* FOOTER */
+
+            footer {
+
+                padding: 30px 24px;
 
             }
 
@@ -896,7 +1229,65 @@
         }
 
 
+        /* =========================
+           SMALL PHONES
+        ========================= */
+
+        @media (max-width: 420px) {
+
+
+            .about-hero h1 {
+
+                font-size: 18vw;
+
+            }
+
+
+            .traits {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .trait,
+            .trait:first-child,
+            .trait:last-child,
+            .trait:nth-child(2),
+            .trait:nth-child(3),
+            .trait:nth-child(4) {
+
+                border-right: none;
+
+                border-bottom: 1px solid rgba(255,255,255,0.25);
+
+                padding: 28px 0;
+
+            }
+
+
+            .trait:last-child {
+
+                border-bottom: none;
+
+            }
+
+
+            .currently-text {
+
+                font-size: 34px;
+
+            }
+
+        }
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================= */
+
         @media (prefers-reduced-motion: reduce) {
+
 
             html {
 
@@ -932,55 +1323,76 @@
 <body>
 
 
-    <!-- NAVIGATION -->
+    <!-- ================= NAVIGATION ================= -->
 
     <nav class="navbar">
 
         <div class="nav-inner">
+
 
             <a href="index.html" class="logo">
                 AN
             </a>
 
 
-            <button class="menu-button">
+            <button
+                class="menu-button"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
                 ☰
+
             </button>
 
 
             <div class="nav-links">
 
+
                 <a href="index.html">
                     Home
                 </a>
+
 
                 <a href="about.html" class="active">
                     About
                 </a>
 
+
                 <a href="experience.html">
                     Experience
                 </a>
+
 
                 <a href="projects.html">
                     Projects
                 </a>
 
+
                 <a href="beyond.html">
                     Beyond
                 </a>
+
 
                 <a href="skills.html">
                     Skills
                 </a>
 
+
                 <a href="contact.html">
                     Contact
                 </a>
 
-                <a href="resume.pdf" class="nav-resume">
+
+                <a
+                    href="resume.pdf"
+                    class="nav-resume"
+                    target="_blank"
+                    rel="noopener">
+
                     Resume ↗
+
                 </a>
+
 
             </div>
 
@@ -989,10 +1401,10 @@
     </nav>
 
 
-
-    <!-- HERO -->
+    <!-- ================= HERO ================= -->
 
     <section class="about-hero">
+
 
         <div class="eyebrow">
             About Me
@@ -1017,17 +1429,19 @@
 
         </p>
 
+
     </section>
 
 
-
-    <!-- MY STORY -->
+    <!-- ================= MY STORY ================= -->
 
     <section>
 
         <div class="section-inner">
 
+
             <div class="reveal">
+
 
                 <div class="section-label">
                     01 — My Story
@@ -1070,21 +1484,24 @@
 
                 </p>
 
+
             </div>
+
 
         </div>
 
     </section>
 
 
-
-    <!-- INTERSECTION -->
+    <!-- ================= INTERSECTION ================= -->
 
     <section class="intersection">
 
         <div class="section-inner">
 
+
             <div class="reveal">
+
 
                 <div class="section-label">
                     02 — The Intersection
@@ -1100,21 +1517,27 @@
 
                 </h2>
 
+
             </div>
 
 
             <div class="intersection-grid">
 
 
+                <!-- DATA -->
+
                 <div class="intersection-item reveal">
+
 
                     <div class="intersection-number">
                         01
                     </div>
 
+
                     <h3>
                         Data
                     </h3>
+
 
                     <p>
 
@@ -1125,19 +1548,24 @@
 
                     </p>
 
+
                 </div>
 
 
+                <!-- FINANCE -->
 
                 <div class="intersection-item reveal">
+
 
                     <div class="intersection-number">
                         02
                     </div>
 
+
                     <h3>
                         Finance
                     </h3>
+
 
                     <p>
 
@@ -1148,19 +1576,24 @@
 
                     </p>
 
+
                 </div>
 
 
+                <!-- BUSINESS -->
 
                 <div class="intersection-item reveal">
+
 
                     <div class="intersection-number">
                         03
                     </div>
 
+
                     <h3>
                         Business
                     </h3>
+
 
                     <p>
 
@@ -1171,22 +1604,24 @@
 
                     </p>
 
+
                 </div>
 
 
             </div>
+
 
         </div>
 
     </section>
 
 
-
-    <!-- STATEMENT -->
+    <!-- ================= STATEMENT ================= -->
 
     <section class="statement">
 
         <div class="section-inner reveal">
+
 
             <p class="statement-text">
 
@@ -1198,19 +1633,21 @@
 
             </p>
 
+
         </div>
 
     </section>
 
 
-
-    <!-- EDUCATION -->
+    <!-- ================= EDUCATION ================= -->
 
     <section class="education">
 
         <div class="section-inner">
 
+
             <div class="reveal">
+
 
                 <div class="section-label">
                     03 — Education
@@ -1221,13 +1658,17 @@
                     Building the foundation.
                 </h2>
 
+
             </div>
 
 
             <div class="timeline">
 
 
+                <!-- NMIMS -->
+
                 <div class="timeline-item reveal">
+
 
                     <div class="timeline-year">
                         2022 — 2027
@@ -1236,6 +1677,7 @@
 
                     <div>
 
+
                         <div class="timeline-school">
                             NMIMS · MPSTME
                         </div>
@@ -1243,19 +1685,24 @@
 
                         <div class="timeline-detail">
 
-                            MBA Tech · Finance Major
-                            · Business Intelligence Analytics
-                            Minor · Data Science Engineering
+                            Integrated MBA Tech
+                            · Finance Major
+                            · Business Intelligence & Analytics Minor
+                            · Data Science
 
                         </div>
 
+
                     </div>
+
 
                 </div>
 
 
+                <!-- CLASS XII -->
 
                 <div class="timeline-item reveal">
+
 
                     <div class="timeline-year">
                         2022
@@ -1263,6 +1710,7 @@
 
 
                     <div>
+
 
                         <div class="timeline-school">
                             Rajiv Gandhi Hr. Sec. School
@@ -1273,13 +1721,17 @@
                             Bhopal · CBSE
                         </div>
 
+
                     </div>
+
 
                 </div>
 
 
+                <!-- CLASS X -->
 
                 <div class="timeline-item reveal">
+
 
                     <div class="timeline-year">
                         2020
@@ -1287,6 +1739,7 @@
 
 
                     <div>
+
 
                         <div class="timeline-school">
                             Carmel Convent Sr. Sec. School
@@ -1297,26 +1750,30 @@
                             Bhopal · CBSE
                         </div>
 
+
                     </div>
+
 
                 </div>
 
 
             </div>
 
+
         </div>
 
     </section>
 
 
-
-    <!-- HOW I WORK -->
+    <!-- ================= HOW I WORK ================= -->
 
     <section class="working-style">
 
         <div class="section-inner">
 
+
             <div class="reveal">
+
 
                 <div class="section-label">
                     04 — How I Work
@@ -1330,17 +1787,22 @@
 
                 </h2>
 
+
             </div>
 
 
             <div class="traits">
 
 
+                <!-- CURIOUS -->
+
                 <div class="trait reveal">
+
 
                     <h3>
                         Curious
                     </h3>
+
 
                     <p>
 
@@ -1350,15 +1812,19 @@
 
                     </p>
 
+
                 </div>
 
 
+                <!-- ANALYTICAL -->
 
                 <div class="trait reveal">
+
 
                     <h3>
                         Analytical
                     </h3>
+
 
                     <p>
 
@@ -1369,15 +1835,19 @@
 
                     </p>
 
+
                 </div>
 
 
+                <!-- PRACTICAL -->
 
                 <div class="trait reveal">
+
 
                     <h3>
                         Practical
                     </h3>
+
 
                     <p>
 
@@ -1387,15 +1857,19 @@
 
                     </p>
 
+
                 </div>
 
 
+                <!-- COLLABORATIVE -->
 
                 <div class="trait reveal">
+
 
                     <h3>
                         Collaborative
                     </h3>
+
 
                     <p>
 
@@ -1405,22 +1879,24 @@
 
                     </p>
 
+
                 </div>
 
 
             </div>
+
 
         </div>
 
     </section>
 
 
-
-    <!-- CURRENTLY -->
+    <!-- ================= CURRENTLY ================= -->
 
     <section class="currently">
 
         <div class="section-inner">
+
 
             <div class="currently-box reveal">
 
@@ -1430,29 +1906,57 @@
                 </div>
 
 
-                <div class="currently-text">
+                <div class="currently-content">
 
-                    Pursuing my MBA Tech at NMIMS
-                    while building experience across
-                    analytics, finance and business
-                    problem-solving.
+
+                    <div class="currently-text">
+
+                        Pursuing a 5-year
+                        Integrated MBA Tech at
+                        MPSTME, NMIMS.
+
+                    </div>
+
+
+                    <p class="currently-detail">
+
+                        I am currently pursuing a 5-year
+                        Integrated MBA Tech at MPSTME,
+                        NMIMS, graduating in 2027. The
+                        program combines a B.Tech in Data
+                        Science with an MBA in Management,
+                        with Finance as my major and
+                        Business Intelligence & Analytics
+                        (BIA) as my minor.
+
+                        <br><br>
+
+                        This combination allows me to work
+                        at the intersection of data, finance,
+                        and business, bringing a technical
+                        perspective to analytical and
+                        strategic problems.
+
+                    </p>
+
 
                 </div>
 
 
             </div>
 
+
         </div>
 
     </section>
 
 
-
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <div class="footer-inner">
+
 
             <span>
                 © 2026 Aishwarya Nagchandi
@@ -1463,18 +1967,20 @@
                 Analytics × Finance × Business
             </span>
 
+
         </div>
 
     </footer>
 
 
-
-    <!-- JAVASCRIPT -->
+    <!-- ================= JAVASCRIPT ================= -->
 
     <script>
 
 
-        /* MOBILE MENU */
+        /* =========================
+           MOBILE MENU
+        ========================= */
 
         const menuButton =
             document.querySelector(".menu-button");
@@ -1486,26 +1992,62 @@
 
         menuButton.addEventListener("click", () => {
 
-            navLinks.classList.toggle("active");
+
+            const isOpen =
+                navLinks.classList.toggle("active");
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+
+            menuButton.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation"
+                    : "Open navigation"
+            );
+
 
         });
 
+
+        /* Close menu after navigation */
 
         document
             .querySelectorAll(".nav-links a")
             .forEach(link => {
 
+
                 link.addEventListener("click", () => {
+
 
                     navLinks.classList.remove("active");
 
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    menuButton.setAttribute(
+                        "aria-label",
+                        "Open navigation"
+                    );
+
+
                 });
+
 
             });
 
 
-
-        /* SCROLL REVEAL */
+        /* =========================
+           SCROLL REVEAL
+        ========================= */
 
         const revealElements =
             document.querySelectorAll(".reveal");
@@ -1516,19 +2058,28 @@
 
                 entries => {
 
+
                     entries.forEach(entry => {
+
 
                         if (entry.isIntersecting) {
 
-                            entry.target.classList.add("visible");
+
+                            entry.target.classList.add(
+                                "visible"
+                            );
+
 
                             observer.unobserve(
                                 entry.target
                             );
 
+
                         }
 
+
                     });
+
 
                 },
 
