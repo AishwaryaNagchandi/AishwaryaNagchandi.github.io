@@ -13,6 +13,26 @@
     <meta name="description"
           content="Selected analytical, financial and business projects by Aishwarya Nagchandi.">
 
+    <meta name="author"
+          content="Aishwarya Nagchandi">
+
+    <link rel="canonical"
+          href="https://aishwaryanagchandi.github.io/projects.html">
+
+    <meta property="og:title"
+          content="Projects | Aishwarya Nagchandi">
+
+    <meta property="og:description"
+          content="Selected analytical, financial and business projects by Aishwarya Nagchandi.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://aishwaryanagchandi.github.io/projects.html">
+
+
+    <!-- ================= FONTS ================= -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -27,8 +47,9 @@
 
     <style>
 
-        :root {
+        /* ================= ROOT ================= */
 
+        :root {
             --bg: #f7f6f2;
             --text: #171717;
             --muted: #686868;
@@ -36,74 +57,63 @@
             --accent: #173f63;
             --soft: #eeede8;
             --white: #ffffff;
-
         }
 
 
-        * {
+        /* ================= RESET ================= */
 
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-
         }
 
 
         html {
-
             scroll-behavior: smooth;
-
             scroll-padding-top: 110px;
-
         }
 
 
-        /* Makes project anchor links land below the navbar */
-
         [id] {
-
             scroll-margin-top: 110px;
-
         }
 
 
         body {
-
             background: var(--bg);
-
             color: var(--text);
 
             font-family: "DM Sans", sans-serif;
-
             line-height: 1.6;
 
             overflow-x: hidden;
-
         }
 
 
         a {
-
             color: inherit;
-
             text-decoration: none;
+        }
 
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
         }
 
 
         h1,
         h2,
         h3 {
-
             font-family: "Playfair Display", serif;
-
             font-weight: 600;
-
         }
 
 
-        nav {
+        /* ================= NAVIGATION ================= */
 
+        nav {
             position: fixed;
 
             top: 0;
@@ -115,569 +125,441 @@
             z-index: 1000;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
             padding: 0 7vw;
 
-            background:
-                rgba(247, 246, 242, 0.92);
+            background: rgba(247, 246, 242, 0.92);
 
             backdrop-filter: blur(14px);
-
             -webkit-backdrop-filter: blur(14px);
 
-            border-bottom:
-                1px solid var(--line);
-
+            border-bottom: 1px solid var(--line);
         }
 
 
         .logo {
-
             font-size: 15px;
-
             font-weight: 700;
-
             letter-spacing: 0.08em;
-
         }
 
 
         .nav-links {
-
             display: flex;
-
             align-items: center;
-
             gap: 30px;
-
         }
 
 
         .nav-links a {
-
             font-size: 13px;
-
             color: #4e4e4e;
 
-            transition:
-                color 0.25s ease;
-
+            transition: color 0.25s ease;
         }
 
 
         .nav-links a:hover {
-
             color: var(--text);
+        }
 
+
+        .nav-links a[aria-current="page"] {
+            color: var(--text);
+            font-weight: 700;
         }
 
 
         .resume-btn {
-
-            border:
-                1px solid #222;
-
-            padding:
-                10px 17px;
+            border: 1px solid #222;
+            padding: 10px 17px;
 
             transition:
-                all 0.25s ease;
-
+                background 0.25s ease,
+                color 0.25s ease;
         }
 
 
         .resume-btn:hover {
-
             background: var(--text);
-
             color: var(--bg);
-
         }
 
 
         .menu-btn {
-
             display: none;
 
             border: none;
-
             background: none;
 
+            color: var(--text);
+
             font-size: 24px;
+            line-height: 1;
 
             cursor: pointer;
-
         }
 
 
+        /* ================= MAIN ================= */
+
         main {
-
             padding-top: 76px;
-
         }
 
 
         .container {
-
             max-width: 1180px;
-
-            margin:
-                0 auto;
-
+            margin: 0 auto;
         }
 
 
         section {
-
-            padding:
-                110px 7vw;
-
+            padding: 110px 7vw;
         }
 
 
+        /* ================= TYPE ================= */
+
         .eyebrow {
-
             font-size: 12px;
-
             font-weight: 600;
 
             letter-spacing: 0.14em;
-
             text-transform: uppercase;
 
             color: var(--accent);
 
             margin-bottom: 24px;
-
         }
 
 
         .section-label {
-
             font-size: 12px;
-
             color: var(--muted);
 
             letter-spacing: 0.08em;
 
             margin-bottom: 35px;
-
         }
 
 
-        .reveal {
+        /* ================= REVEAL ================= */
 
+        .reveal {
             opacity: 0;
 
-            transform:
-                translateY(25px);
+            transform: translateY(25px);
 
             transition:
                 opacity 0.8s ease,
                 transform 0.8s ease;
-
         }
 
 
         .reveal.visible {
-
             opacity: 1;
-
-            transform:
-                translateY(0);
-
+            transform: translateY(0);
         }
 
 
         /* ================= HERO ================= */
 
         .hero {
-
-            min-height:
-                80vh;
+            min-height: 80vh;
 
             display: flex;
-
             align-items: center;
 
-            border-bottom:
-                1px solid var(--line);
-
+            border-bottom: 1px solid var(--line);
         }
 
 
         .hero h1 {
+            font-size: clamp(65px, 9vw, 125px);
 
-            font-size:
-                clamp(65px, 9vw, 125px);
+            line-height: 0.92;
 
-            line-height:
-                0.92;
+            letter-spacing: -0.055em;
 
-            letter-spacing:
-                -0.055em;
-
-            max-width:
-                1000px;
-
+            max-width: 1000px;
         }
 
 
         .hero-description {
+            max-width: 700px;
 
-            max-width:
-                700px;
+            margin-top: 40px;
 
-            margin-top:
-                40px;
+            color: var(--muted);
 
-            color:
-                var(--muted);
-
-            font-size:
-                18px;
-
-            line-height:
-                1.75;
-
+            font-size: 18px;
+            line-height: 1.75;
         }
 
 
         /* ================= PROJECT ================= */
 
         .project-section {
-
-            border-bottom:
-                1px solid var(--line);
-
+            border-bottom: 1px solid var(--line);
         }
 
 
         .project-layout {
-
             display: grid;
 
-            grid-template-columns:
-                180px 1fr;
+            grid-template-columns: 180px minmax(0, 1fr);
 
-            gap:
-                80px;
-
+            gap: 80px;
         }
 
 
         .project-number {
-
-            font-size:
-                13px;
-
-            color:
-                var(--muted);
-
+            font-size: 13px;
+            color: var(--muted);
         }
 
 
         .project-content {
-
-            max-width:
-                850px;
-
+            max-width: 850px;
+            min-width: 0;
         }
 
 
         .project-category {
+            font-size: 11px;
+            font-weight: 700;
 
-            font-size:
-                11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
 
-            font-weight:
-                700;
+            color: var(--accent);
 
-            letter-spacing:
-                0.12em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                var(--accent);
-
-            margin-bottom:
-                20px;
-
+            margin-bottom: 20px;
         }
 
 
         .project-content h2 {
+            font-size: clamp(50px, 7vw, 90px);
 
-            font-size:
-                clamp(50px, 7vw, 90px);
+            line-height: 0.95;
 
-            line-height:
-                0.95;
+            letter-spacing: -0.045em;
 
-            letter-spacing:
-                -0.045em;
+            margin-bottom: 30px;
 
-            margin-bottom:
-                30px;
-
+            overflow-wrap: anywhere;
         }
 
 
         .project-question {
+            font-size: 22px;
 
-            font-size:
-                22px;
+            line-height: 1.45;
 
-            line-height:
-                1.45;
+            max-width: 720px;
 
-            max-width:
-                720px;
-
-            margin-bottom:
-                50px;
-
+            margin-bottom: 50px;
         }
 
 
+        /* ================= PROJECT CARDS ================= */
+
         .project-grid {
+            display: grid;
 
-            display:
-                grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
 
-            grid-template-columns:
-                repeat(2, 1fr);
+            gap: 1px;
 
-            gap:
-                1px;
+            background: var(--line);
 
-            background:
-                var(--line);
+            border: 1px solid var(--line);
 
-            border:
-                1px solid var(--line);
-
+            width: 100%;
         }
 
 
         .project-card {
+            background: var(--bg);
 
-            background:
-                var(--bg);
+            padding: 35px;
 
-            padding:
-                35px;
+            min-height: 230px;
 
-            min-height:
-                230px;
-
+            min-width: 0;
         }
 
 
         .project-card h3 {
+            font-size: 30px;
 
-            font-size:
-                30px;
+            line-height: 1.1;
 
-            margin-bottom:
-                15px;
-
+            margin-bottom: 15px;
         }
 
 
         .project-card p {
+            color: var(--muted);
 
-            color:
-                var(--muted);
+            font-size: 15px;
 
-            font-size:
-                15px;
+            line-height: 1.7;
 
+            overflow-wrap: break-word;
         }
 
 
+        /* ================= OUTCOME ================= */
+
         .project-outcome {
+            margin-top: 45px;
 
-            margin-top:
-                45px;
+            padding-top: 35px;
 
-            padding-top:
-                35px;
-
-            border-top:
-                1px solid var(--line);
-
+            border-top: 1px solid var(--line);
         }
 
 
         .project-outcome h3 {
+            font-size: 32px;
 
-            font-size:
-                32px;
+            line-height: 1.1;
 
-            margin-bottom:
-                15px;
-
+            margin-bottom: 15px;
         }
 
 
         .project-outcome p {
+            color: var(--muted);
 
-            color:
-                var(--muted);
+            max-width: 750px;
 
-            max-width:
-                750px;
+            font-size: 16px;
 
-            font-size:
-                16px;
-
+            line-height: 1.75;
         }
 
 
+        /* ================= TAGS ================= */
+
         .project-tags {
+            display: flex;
 
-            display:
-                flex;
+            flex-wrap: wrap;
 
-            flex-wrap:
-                wrap;
+            gap: 9px;
 
-            gap:
-                9px;
+            margin-top: 35px;
 
-            margin-top:
-                35px;
-
+            max-width: 100%;
         }
 
 
         .tag {
+            border: 1px solid var(--line);
 
-            border:
-                1px solid var(--line);
+            padding: 8px 13px;
 
-            padding:
-                8px 13px;
+            font-size: 11px;
 
-            font-size:
-                11px;
+            color: var(--muted);
 
-            color:
-                var(--muted);
-
+            white-space: nowrap;
         }
 
 
         /* ================= MORE ================= */
 
         .more {
+            background: var(--soft);
 
-            background:
-                var(--soft);
+            min-height: 55vh;
 
-            min-height:
-                55vh;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
+            display: flex;
+            align-items: center;
         }
 
 
         .more h2 {
+            font-size: clamp(50px, 7vw, 85px);
 
-            font-size:
-                clamp(50px, 7vw, 85px);
+            line-height: 1;
 
-            line-height:
-                1;
+            letter-spacing: -0.045em;
 
-            letter-spacing:
-                -0.045em;
-
-            margin-bottom:
-                25px;
-
+            margin-bottom: 25px;
         }
 
 
         .more p {
+            color: var(--muted);
 
-            color:
-                var(--muted);
+            max-width: 650px;
 
-            max-width:
-                650px;
+            font-size: 17px;
 
-            font-size:
-                17px;
+            line-height: 1.7;
 
-            margin-bottom:
-                30px;
-
+            margin-bottom: 30px;
         }
 
 
         .github-link {
+            display: inline-block;
 
-            display:
-                inline-block;
+            border-bottom: 1px solid var(--text);
 
-            border-bottom:
-                1px solid var(--text);
+            padding-bottom: 6px;
 
-            padding-bottom:
-                6px;
+            font-size: 12px;
+            font-weight: 700;
 
-            font-size:
-                12px;
+            letter-spacing: 0.08em;
 
-            font-weight:
-                700;
-
-            letter-spacing:
-                0.08em;
-
-            text-transform:
-                uppercase;
-
+            text-transform: uppercase;
         }
 
 
         /* ================= FOOTER ================= */
 
         footer {
+            padding: 35px 7vw;
 
-            padding:
-                35px 7vw;
+            display: flex;
 
-            display:
-                flex;
+            justify-content: space-between;
+            align-items: center;
 
-            justify-content:
-                space-between;
+            border-top: 1px solid var(--line);
 
-            align-items:
-                center;
+            font-size: 12px;
 
-            border-top:
-                1px solid var(--line);
+            color: var(--muted);
+        }
 
-            font-size:
-                12px;
 
-            color:
-                var(--muted);
+        /* ================= TABLET ================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 0 6vw;
+            }
+
+
+            .nav-links {
+                gap: 20px;
+            }
+
+
+            .project-layout {
+                grid-template-columns: 130px minmax(0, 1fr);
+                gap: 50px;
+            }
 
         }
 
@@ -686,176 +568,308 @@
 
         @media (max-width: 800px) {
 
-
             nav {
-
-                padding:
-                    0 6vw;
-
+                height: 76px;
+                padding: 0 6vw;
             }
 
 
             .nav-links {
-
                 display: none;
 
                 position: absolute;
 
                 top: 76px;
-
                 left: 0;
                 right: 0;
 
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
+                flex-direction: column;
+                align-items: flex-start;
 
                 gap: 0;
 
-                background:
-                    var(--bg);
+                background: var(--bg);
 
-                border-bottom:
-                    1px solid var(--line);
-
+                border-bottom: 1px solid var(--line);
             }
 
 
             .nav-links.active {
-
                 display: flex;
-
             }
 
 
             .nav-links a {
-
                 width: 100%;
 
-                padding:
-                    17px 6vw;
+                padding: 17px 6vw;
 
-                border-bottom:
-                    1px solid var(--line);
-
+                border-bottom: 1px solid var(--line);
             }
 
 
             .nav-links .resume-btn {
-
                 border: none;
 
-                border-bottom:
-                    1px solid var(--line);
-
+                border-bottom: 1px solid var(--line);
             }
 
 
             .menu-btn {
-
                 display: block;
+            }
 
+
+            main {
+                padding-top: 76px;
             }
 
 
             section {
-
-                padding:
-                    80px 6vw;
-
+                padding: 80px 6vw;
             }
 
 
+            /* HERO */
+
             .hero {
-
-                min-height:
-                    70vh;
-
+                min-height: 70vh;
             }
 
 
             .hero h1 {
+                font-size: clamp(55px, 15vw, 90px);
 
-                font-size:
-                    clamp(55px, 15vw, 90px);
-
+                max-width: 100%;
             }
 
 
             .hero-description {
+                font-size: 16px;
 
-                font-size:
-                    16px;
-
+                max-width: 100%;
             }
 
+
+            /* PROJECT */
 
             .project-layout {
+                display: block;
 
-                grid-template-columns:
-                    1fr;
-
-                gap:
-                    25px;
-
+                width: 100%;
             }
 
 
-            .project-grid {
+            .project-number {
+                margin-bottom: 25px;
+            }
 
-                grid-template-columns:
-                    1fr;
 
+            .project-content {
+                width: 100%;
+                max-width: 100%;
+            }
+
+
+            .project-content h2 {
+                font-size: clamp(48px, 13vw, 78px);
+
+                max-width: 100%;
             }
 
 
             .project-question {
+                font-size: 19px;
 
-                font-size:
-                    19px;
+                max-width: 100%;
 
+                margin-bottom: 40px;
             }
 
 
+            /* PROJECT GRID */
+
+            .project-grid {
+                display: grid;
+
+                grid-template-columns: minmax(0, 1fr);
+
+                width: 100%;
+            }
+
+
+            .project-card {
+                width: 100%;
+
+                min-width: 0;
+
+                min-height: auto;
+
+                padding: 30px;
+            }
+
+
+            .project-card h3 {
+                font-size: 28px;
+            }
+
+
+            .project-card p {
+                font-size: 15px;
+            }
+
+
+            /* OUTCOME */
+
+            .project-outcome {
+                margin-top: 40px;
+
+                padding-top: 30px;
+            }
+
+
+            .project-outcome h3 {
+                font-size: 29px;
+            }
+
+
+            .project-outcome p {
+                font-size: 15px;
+            }
+
+
+            /* TAGS */
+
+            .project-tags {
+                gap: 8px;
+
+                width: 100%;
+            }
+
+
+            .tag {
+                white-space: normal;
+
+                max-width: 100%;
+            }
+
+
+            /* MORE */
+
+            .more {
+                min-height: 55vh;
+            }
+
+
+            .more h2 {
+                font-size: clamp(50px, 13vw, 75px);
+            }
+
+
+            .more p {
+                font-size: 16px;
+            }
+
+
+            /* FOOTER */
+
             footer {
+                flex-direction: column;
 
-                flex-direction:
-                    column;
+                align-items: flex-start;
 
-                align-items:
-                    flex-start;
-
-                gap:
-                    10px;
-
+                gap: 10px;
             }
 
         }
 
 
+        /* ================= SMALL MOBILE ================= */
+
+        @media (max-width: 480px) {
+
+            nav {
+                height: 70px;
+            }
+
+
+            .nav-links {
+                top: 70px;
+            }
+
+
+            main {
+                padding-top: 70px;
+            }
+
+
+            section {
+                padding: 70px 6vw;
+            }
+
+
+            .hero {
+                min-height: 68vh;
+            }
+
+
+            .hero h1 {
+                font-size: clamp(48px, 15vw, 70px);
+            }
+
+
+            .project-number {
+                font-size: 12px;
+            }
+
+
+            .project-content h2 {
+                font-size: clamp(45px, 14vw, 65px);
+            }
+
+
+            .project-question {
+                font-size: 18px;
+            }
+
+
+            .project-card {
+                padding: 26px;
+            }
+
+
+            .project-card h3 {
+                font-size: 26px;
+            }
+
+
+            .project-outcome h3 {
+                font-size: 27px;
+            }
+
+
+            .more h2 {
+                font-size: clamp(45px, 13vw, 65px);
+            }
+
+        }
+
+
+        /* ================= REDUCED MOTION ================= */
+
         @media (prefers-reduced-motion: reduce) {
 
             html {
-
-                scroll-behavior:
-                    auto;
-
+                scroll-behavior: auto;
             }
 
 
             .reveal {
+                opacity: 1;
 
-                opacity:
-                    1;
+                transform: none;
 
-                transform:
-                    none;
-
-                transition:
-                    none;
-
+                transition: none;
             }
 
         }
@@ -873,22 +887,22 @@
 <nav>
 
     <a href="index.html"
-       class="logo">
-
+       class="logo"
+       aria-label="Aishwarya Nagchandi — Home">
         AN
-
     </a>
 
 
     <button class="menu-btn"
-            aria-label="Open navigation">
-
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="site-navigation">
         ☰
-
     </button>
 
 
-    <div class="nav-links">
+    <div class="nav-links"
+         id="site-navigation">
 
         <a href="index.html">
             Home
@@ -902,12 +916,13 @@
             Experience
         </a>
 
-        <a href="projects.html">
+        <a href="projects.html"
+           aria-current="page">
             Projects
         </a>
 
         <a href="beyond.html">
-            Beyond
+            Beyond the Resume
         </a>
 
         <a href="skills.html">
@@ -920,10 +935,9 @@
 
         <a href="resume.pdf"
            class="resume-btn"
-           target="_blank">
-
+           target="_blank"
+           rel="noopener">
             Resume ↗
-
         </a>
 
     </div>
@@ -941,26 +955,20 @@
     <div class="container reveal">
 
         <div class="eyebrow">
-
             01 — Projects
-
         </div>
 
 
         <h1>
-
             Problems I've<br>
             tried to solve.
-
         </h1>
 
 
         <p class="hero-description">
-
             I like problems that sit between disciplines —
             where financial thinking, analytical methods and
             business context need to work together.
-
         </p>
 
     </div>
@@ -979,35 +987,26 @@
 
 
             <div class="project-number reveal">
-
                 02 / 06
-
             </div>
 
 
             <div class="project-content reveal">
 
-
                 <div class="project-category">
-
                     Finance × Entrepreneurship
-
                 </div>
 
 
                 <h2>
-
                     Project<br>
                     Prarambh
-
                 </h2>
 
 
                 <p class="project-question">
-
                     Can a sustainability-led idea be turned
                     into a financially viable business?
-
                 </p>
 
 
@@ -1021,13 +1020,11 @@
                         </h3>
 
                         <p>
-
                             The project explored the commercial
                             viability of converting recycled PET
                             bottles into affordable 3D-printing
                             filament while creating a scalable
                             business model.
-
                         </p>
 
                     </div>
@@ -1040,12 +1037,10 @@
                         </h3>
 
                         <p>
-
                             Worked as co-founder and financial lead,
                             building the financial case and connecting
                             operational assumptions with investment
                             decisions.
-
                         </p>
 
                     </div>
@@ -1058,13 +1053,11 @@
                         </h3>
 
                         <p>
-
                             Built a five-year integrated financial
                             model covering capital requirements,
                             revenue scenarios, costs and investment
                             viability using WACC, NPV, IRR and
                             payback analysis.
-
                         </p>
 
                     </div>
@@ -1077,11 +1070,9 @@
                         </h3>
 
                         <p>
-
                             Students, educational institutions,
                             makerspaces, small businesses, startups,
                             designers and hobbyists.
-
                         </p>
 
                     </div>
@@ -1096,12 +1087,10 @@
                     </h3>
 
                     <p>
-
                         The model evaluated ₹25L+ in capital
                         requirements and tested the project's
                         ability to create long-term value through
                         projected cash flows and investment metrics.
-
                     </p>
 
                 </div>
@@ -1155,35 +1144,26 @@
 
 
             <div class="project-number reveal">
-
                 03 / 06
-
             </div>
 
 
             <div class="project-content reveal">
 
-
                 <div class="project-category">
-
                     Business Strategy × Market Analysis
-
                 </div>
 
 
                 <h2>
-
                     Nobelza
-
                 </h2>
 
 
                 <p class="project-question">
-
                     How should a portable TB-testing solution
                     approach market entry in a complex and
                     competitive healthcare market?
-
                 </p>
 
 
@@ -1197,13 +1177,11 @@
                         </h3>
 
                         <p>
-
                             The project focused on understanding
                             the market opportunity and identifying
                             a practical commercialisation strategy
                             for a portable healthcare testing
                             solution.
-
                         </p>
 
                     </div>
@@ -1216,11 +1194,9 @@
                         </h3>
 
                         <p>
-
                             Conducted market sizing, competitive
                             benchmarking and demand forecasting
                             across multiple healthcare segments.
-
                         </p>
 
                     </div>
@@ -1233,12 +1209,10 @@
                         </h3>
 
                         <p>
-
                             Developed Excel-based financial and
                             risk models to evaluate potential
                             market opportunities and test commercial
                             assumptions.
-
                         </p>
 
                     </div>
@@ -1251,12 +1225,10 @@
                         </h3>
 
                         <p>
-
                             Examined pricing and distribution
                             approaches with the objective of
                             improving deployment efficiency and
                             market penetration.
-
                         </p>
 
                     </div>
@@ -1271,12 +1243,10 @@
                     </h3>
 
                     <p>
-
                         The analysis evaluated opportunities in the
                         ₹5–10 Cr range and connected market research
                         with financial feasibility, pricing and
                         distribution decisions.
-
                     </p>
 
                 </div>
@@ -1330,36 +1300,27 @@
 
 
             <div class="project-number reveal">
-
                 04 / 06
-
             </div>
 
 
             <div class="project-content reveal">
 
-
                 <div class="project-category">
-
                     Finance × Quantitative Analytics
-
                 </div>
 
 
                 <h2>
-
                     Sectoral<br>
                     Analysis
-
                 </h2>
 
 
                 <p class="project-question">
-
                     How do different sectors behave from an
                     investment perspective, and can quantitative
                     signals support better portfolio decisions?
-
                 </p>
 
 
@@ -1373,12 +1334,10 @@
                         </h3>
 
                         <p>
-
                             Compared companies across sectors
                             including Indian renewable energy and
                             pharmaceutical companies to understand
                             differences in performance and risk.
-
                         </p>
 
                     </div>
@@ -1391,12 +1350,10 @@
                         </h3>
 
                         <p>
-
                             Analysed financial ratios, beta,
                             volatility, Sharpe ratios and other
                             indicators to evaluate companies from
                             an investment perspective.
-
                         </p>
 
                     </div>
@@ -1409,12 +1366,10 @@
                         </h3>
 
                         <p>
-
                             Examined sector rotation and portfolio
                             allocation to understand how quantitative
                             measures could support investment
                             decisions.
-
                         </p>
 
                     </div>
@@ -1427,11 +1382,9 @@
                         </h3>
 
                         <p>
-
                             Explored algorithmic trading signals as
                             a way of translating market behaviour
                             into structured investment rules.
-
                         </p>
 
                     </div>
@@ -1446,12 +1399,10 @@
                     </h3>
 
                     <p>
-
                         The project connected traditional financial
                         analysis with quantitative techniques to
                         understand how risk, return and market
                         behaviour can influence portfolio decisions.
-
                     </p>
 
                 </div>
@@ -1505,37 +1456,28 @@
 
 
             <div class="project-number reveal">
-
                 05 / 06
-
             </div>
 
 
             <div class="project-content reveal">
 
-
                 <div class="project-category">
-
                     Data Analytics × Economics
-
                 </div>
 
 
                 <h2>
-
                     Budgets &<br>
                     Macroeconomic<br>
                     Outcomes
-
                 </h2>
 
 
                 <p class="project-question">
-
                     What can long-term macroeconomic data tell us
                     about the relationship between government
                     budgets, fiscal policy and economic outcomes?
-
                 </p>
 
 
@@ -1549,12 +1491,10 @@
                         </h3>
 
                         <p>
-
                             Worked with more than 20 years of
                             macroeconomic data covering GDP,
                             inflation, fiscal deficit, capital
                             expenditure and FDI.
-
                         </p>
 
                     </div>
@@ -1567,12 +1507,10 @@
                         </h3>
 
                         <p>
-
                             Structured more than 150 economic
                             indicators into an analytical framework
                             for comparing fiscal strategies and
                             economic outcomes.
-
                         </p>
 
                     </div>
@@ -1585,12 +1523,10 @@
                         </h3>
 
                         <p>
-
                             Built trend-based Excel dashboards to
                             examine relationships between fiscal
                             policy, growth patterns and investment
                             flows.
-
                         </p>
 
                     </div>
@@ -1603,12 +1539,10 @@
                         </h3>
 
                         <p>
-
                             Used historical patterns to develop a
                             structured perspective on how fiscal
                             decisions interact with broader
                             macroeconomic outcomes.
-
                         </p>
 
                     </div>
@@ -1623,12 +1557,10 @@
                     </h3>
 
                     <p>
-
                         The project strengthened my ability to work
                         with large, multi-year datasets and translate
                         economic indicators into an interpretable
                         analytical narrative.
-
                     </p>
 
                 </div>
@@ -1682,35 +1614,26 @@
 
 
             <div class="project-number reveal">
-
                 06 / 06
-
             </div>
 
 
             <div class="project-content reveal">
 
-
                 <div class="project-category">
-
                     ESG × Business Analytics
-
                 </div>
 
 
                 <h2>
-
                     Envaplax
-
                 </h2>
 
 
                 <p class="project-question">
-
                     How can fragmented sustainability disclosures
                     be turned into information that allows
                     companies to be meaningfully compared?
-
                 </p>
 
 
@@ -1724,11 +1647,9 @@
                         </h3>
 
                         <p>
-
                             Analysed more than 50 corporate BRSR
                             disclosures across multiple companies
                             and industries.
-
                         </p>
 
                     </div>
@@ -1741,11 +1662,9 @@
                         </h3>
 
                         <p>
-
                             Structured information across more than
                             10 environmental, social and governance
                             metrics.
-
                         </p>
 
                     </div>
@@ -1758,11 +1677,9 @@
                         </h3>
 
                         <p>
-
                             Developed comparative frameworks to
                             identify differences in sustainability
                             performance and disclosure patterns.
-
                         </p>
 
                     </div>
@@ -1775,11 +1692,9 @@
                         </h3>
 
                         <p>
-
                             Translated fragmented disclosures into
                             structured information that could support
                             comparison and business interpretation.
-
                         </p>
 
                     </div>
@@ -1794,12 +1709,10 @@
                     </h3>
 
                     <p>
-
                         The project combined research, data structuring
                         and comparative analysis to make sustainability
                         information more accessible for business
                         interpretation.
-
                     </p>
 
                 </div>
@@ -1845,32 +1758,27 @@
     <div class="container reveal">
 
         <div class="eyebrow">
-
             More in the Lab
-
         </div>
 
 
         <h2>
-
             More problems.<br>
             More experiments.
-
         </h2>
 
 
         <p>
-
             I continue to explore projects across analytics,
             finance, information systems and business. Some of
             the smaller experiments and technical work live on
             my GitHub.
-
         </p>
 
 
         <a href="https://github.com/AishwaryaNagchandi"
            target="_blank"
+           rel="noopener"
            class="github-link">
 
             Explore GitHub →
@@ -1893,6 +1801,7 @@
         © 2026 Aishwarya Nagchandi
     </span>
 
+
     <span>
         Analytics × Finance × Business
     </span>
@@ -1900,10 +1809,11 @@
 </footer>
 
 
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
 
-
-    /* Mobile navigation */
+    /* ================= MOBILE NAVIGATION ================= */
 
     const menuBtn =
         document.querySelector(".menu-btn");
@@ -1914,24 +1824,50 @@
 
     menuBtn.addEventListener("click", () => {
 
-        navLinks.classList.toggle("active");
+        const isOpen =
+            navLinks.classList.toggle("active");
+
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+
+        menuBtn.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation"
+                : "Open navigation"
+        );
 
     });
 
 
-    document.querySelectorAll(".nav-links a")
+    document
+        .querySelectorAll(".nav-links a")
         .forEach(link => {
 
             link.addEventListener("click", () => {
 
                 navLinks.classList.remove("active");
 
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Open navigation"
+                );
+
             });
 
         });
 
 
-    /* Scroll reveal */
+    /* ================= SCROLL REVEAL ================= */
 
     const revealElements =
         document.querySelectorAll(".reveal");
@@ -1949,6 +1885,7 @@
                         entry.target.classList.add(
                             "visible"
                         );
+
 
                         revealObserver.unobserve(
                             entry.target
@@ -1972,7 +1909,6 @@
         revealObserver.observe(element);
 
     });
-
 
 </script>
 
