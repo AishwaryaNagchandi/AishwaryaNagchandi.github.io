@@ -1,22 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Skills — Aishwarya Nagchandi</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="description"
+    content="Explore Aishwarya Nagchandi's skills across data analytics, business intelligence, finance, quantitative analysis, programming, and business problem solving."
+  >
+
+  <meta
+    name="author"
+    content="Aishwarya Nagchandi"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://aishwaryanagchandi.github.io/skills.html"
+  >
+
+  <!-- Open Graph -->
+  <meta
+    property="og:title"
+    content="Skills — Aishwarya Nagchandi"
+  >
+
+  <meta
+    property="og:description"
+    content="Analytics, business intelligence, finance, quantitative analysis, programming and business problem-solving skills."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://aishwaryanagchandi.github.io/skills.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Aishwarya Nagchandi"
+  >
+
+  <!-- Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
-
   <style>
+
+    /* =========================================================
+       ROOT
+    ========================================================= */
 
     :root {
       --bg: #f7f6f2;
@@ -27,6 +90,10 @@
       --soft: #eeede8;
     }
 
+
+    /* =========================================================
+       RESET
+    ========================================================= */
 
     * {
       margin: 0;
@@ -43,11 +110,8 @@
     body {
       background: var(--bg);
       color: var(--text);
-
       font-family: "DM Sans", sans-serif;
-
       line-height: 1.6;
-
       overflow-x: hidden;
     }
 
@@ -58,322 +122,258 @@
     }
 
 
-    /* ================= NAVIGATION ================= */
+    button {
+      font: inherit;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
 
     nav {
-
       position: fixed;
-
       top: 0;
       left: 0;
-
       width: 100%;
-
       z-index: 1000;
 
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
 
       padding: 22px 4vw;
 
       background: rgba(247, 246, 242, 0.92);
-
       backdrop-filter: blur(12px);
 
       border-bottom: 1px solid rgba(217, 216, 211, 0.7);
-
     }
 
 
     .logo {
-
       font-weight: 600;
-
       font-size: 15px;
-
       letter-spacing: 0.08em;
-
+      flex-shrink: 0;
     }
 
 
     .nav-links {
-
       display: flex;
-
       gap: 28px;
-
       align-items: center;
-
       font-size: 13px;
-
     }
 
 
     .nav-links a {
-
       color: #555;
-
       transition: color 0.25s ease;
-
+      white-space: nowrap;
     }
 
 
     .nav-links a:hover,
     .nav-links a.active {
-
       color: var(--text);
+    }
 
+
+    .nav-links a.active {
+      font-weight: 600;
     }
 
 
     .resume-btn {
-
       padding: 9px 15px;
-
       border: 1px solid var(--text);
-
       color: var(--text) !important;
-
-      transition: all 0.25s ease;
-
+      transition:
+        background 0.25s ease,
+        color 0.25s ease;
     }
 
 
     .resume-btn:hover {
-
       background: var(--text);
-
       color: var(--bg) !important;
-
     }
 
 
     .menu-toggle {
-
       display: none;
 
+      border: 0;
+      background: transparent;
+
       font-size: 24px;
+      line-height: 1;
 
       cursor: pointer;
+      color: var(--text);
 
+      padding: 4px;
     }
 
 
-
-    /* ================= GENERAL ================= */
+    /* =========================================================
+       GENERAL
+    ========================================================= */
 
     .container {
-
       width: min(1180px, 90%);
-
-      margin: auto;
-
+      margin: 0 auto;
     }
 
 
     .eyebrow {
-
       font-size: 12px;
-
       letter-spacing: 0.16em;
-
       text-transform: uppercase;
-
       color: var(--muted);
-
       margin-bottom: 35px;
-
     }
 
 
     .eyebrow span {
-
       color: var(--accent);
-
     }
 
 
     h1,
     h2,
     h3 {
-
       font-family: "Playfair Display", serif;
-
       font-weight: 600;
-
       line-height: 1.05;
-
     }
 
 
     p {
-
       color: var(--muted);
-
     }
 
 
     .reveal {
-
       opacity: 0;
-
       transform: translateY(35px);
 
       transition:
         opacity 0.8s ease,
         transform 0.8s ease;
-
     }
 
 
     .reveal.visible {
-
       opacity: 1;
-
       transform: translateY(0);
-
     }
 
 
-
-    /* ================= HERO ================= */
+    /* =========================================================
+       HERO
+    ========================================================= */
 
     .hero {
-
       min-height: 88vh;
 
       display: flex;
-
       align-items: flex-end;
 
       padding-top: 150px;
-
       padding-bottom: 100px;
-
     }
 
 
     .hero-grid {
-
       display: grid;
-
       grid-template-columns: 1fr 0.75fr;
 
       gap: 80px;
-
       align-items: end;
-
     }
 
 
     .hero h1 {
-
       font-size: clamp(65px, 9vw, 120px);
-
       letter-spacing: -0.06em;
-
       max-width: 1000px;
-
     }
 
 
     .hero-copy {
-
       max-width: 450px;
-
     }
 
 
     .hero-copy p {
-
       font-size: 19px;
-
       line-height: 1.65;
-
     }
 
 
     .hero-line {
-
       margin-top: 40px;
-
       padding-top: 18px;
 
       border-top: 1px solid var(--line);
 
       font-size: 13px;
-
       color: var(--muted);
-
     }
 
 
-
-    /* ================= INTRO ================= */
+    /* =========================================================
+       INTRO
+    ========================================================= */
 
     .intro {
-
       border-top: 1px solid var(--line);
-
       padding: 110px 0;
-
     }
 
 
     .intro-grid {
-
       display: grid;
-
       grid-template-columns: 0.3fr 1fr;
 
       gap: 70px;
-
+      align-items: start;
     }
 
 
     .intro h2 {
-
       font-size: clamp(48px, 6vw, 78px);
-
       letter-spacing: -0.05em;
-
       max-width: 950px;
-
     }
 
 
     .intro p {
-
       font-size: 21px;
-
       line-height: 1.75;
 
       max-width: 850px;
-
       margin-top: 35px;
-
     }
 
 
-
-    /* ================= SKILLS ================= */
+    /* =========================================================
+       SKILLS
+    ========================================================= */
 
     .skills-section {
-
       border-top: 1px solid var(--line);
-
-      padding: 100px 0;
-
+      padding: 20px 0 100px;
     }
 
 
     .skill-category {
+      width: min(1180px, 90%);
+      margin: 0 auto;
 
       display: grid;
-
       grid-template-columns: 0.28fr 0.72fr;
 
       gap: 70px;
@@ -381,65 +381,52 @@
       padding: 80px 0;
 
       border-bottom: 1px solid var(--line);
-
     }
 
 
     .category-number {
-
       font-size: 13px;
-
       color: var(--muted);
-
       letter-spacing: 0.08em;
+    }
 
+
+    .category-content {
+      min-width: 0;
     }
 
 
     .category-content h2 {
-
       font-size: clamp(45px, 5.5vw, 72px);
-
       letter-spacing: -0.05em;
-
       margin-bottom: 25px;
-
     }
 
 
     .category-description {
-
       font-size: 18px;
-
       color: var(--muted);
 
       max-width: 750px;
 
       line-height: 1.75;
-
       margin-bottom: 40px;
-
     }
 
 
-
-    /* ================= SKILL LIST ================= */
+    /* =========================================================
+       SKILL LIST
+    ========================================================= */
 
     .skill-list {
-
       border-top: 1px solid var(--line);
-
       max-width: 850px;
-
     }
 
 
     .skill-row {
-
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
 
       gap: 30px;
@@ -447,48 +434,38 @@
       padding: 22px 0;
 
       border-bottom: 1px solid var(--line);
-
     }
 
 
     .skill-name {
-
       font-size: 16px;
-
       font-weight: 500;
-
+      flex-shrink: 0;
     }
 
 
     .skill-context {
-
       font-size: 13px;
-
       color: var(--muted);
-
       text-align: right;
-
     }
 
 
-
-    /* ================= SKILL TAGS ================= */
+    /* =========================================================
+       SKILL TAGS
+    ========================================================= */
 
     .skill-tags {
-
       display: flex;
-
       flex-wrap: wrap;
 
       gap: 10px;
 
       max-width: 850px;
-
     }
 
 
     .skill-tag {
-
       border: 1px solid var(--line);
 
       padding: 10px 15px;
@@ -501,75 +478,56 @@
         background 0.25s ease,
         border-color 0.25s ease,
         transform 0.25s ease;
-
     }
 
 
     .skill-tag:hover {
-
       background: var(--soft);
-
       border-color: #bcbab3;
-
       transform: translateY(-2px);
-
     }
 
 
-
-    /* ================= APPLICATION ================= */
+    /* =========================================================
+       APPLICATION
+    ========================================================= */
 
     .application {
-
       background: var(--soft);
-
       padding: 130px 0;
-
     }
 
 
     .application-grid {
-
       display: grid;
-
       grid-template-columns: 0.35fr 0.65fr;
 
       gap: 80px;
 
+      align-items: start;
     }
 
 
     .application h2 {
-
       font-size: clamp(50px, 6vw, 80px);
-
       letter-spacing: -0.05em;
-
     }
 
 
     .application-content {
-
       max-width: 750px;
-
     }
 
 
     .application-content > p {
-
       font-size: 19px;
-
       line-height: 1.8;
-
       margin-bottom: 45px;
-
     }
 
 
     .application-item {
-
       display: grid;
-
       grid-template-columns: 190px 1fr;
 
       gap: 35px;
@@ -577,152 +535,117 @@
       padding: 25px 0;
 
       border-top: 1px solid var(--line);
-
     }
 
 
     .application-item:last-child {
-
       border-bottom: 1px solid var(--line);
-
     }
 
 
     .application-item strong {
-
       font-size: 14px;
-
     }
 
 
     .application-item p {
-
       font-size: 15px;
-
       line-height: 1.7;
-
     }
 
 
-
-    /* ================= FINAL STATEMENT ================= */
+    /* =========================================================
+       FINAL STATEMENT
+    ========================================================= */
 
     .statement {
-
       padding: 150px 0;
-
       text-align: center;
-
     }
 
 
     .statement h2 {
-
       font-size: clamp(50px, 7vw, 95px);
-
       letter-spacing: -0.055em;
 
       max-width: 1050px;
-
       margin: auto;
-
     }
 
 
     .statement p {
-
       max-width: 700px;
 
       margin: 35px auto 0;
 
       font-size: 18px;
-
       line-height: 1.8;
-
     }
 
 
-
-    /* ================= FOOTER ================= */
+    /* =========================================================
+       FOOTER
+    ========================================================= */
 
     footer {
-
       border-top: 1px solid var(--line);
-
       padding: 35px 0;
-
     }
 
 
     .footer-inner {
-
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
-
     }
 
 
     .footer-inner p {
-
       font-size: 12px;
-
     }
 
 
     .footer-links {
-
       display: flex;
-
       gap: 25px;
-
       font-size: 12px;
-
     }
 
 
     .footer-links a:hover {
-
       color: var(--accent);
-
     }
 
 
-
-    /* ================= MOBILE ================= */
+    /* =========================================================
+       MOBILE
+    ========================================================= */
 
     @media (max-width: 850px) {
 
+      /* ---------- Navigation ---------- */
+
       nav {
-
         padding: 18px 5%;
-
       }
 
 
       .menu-toggle {
-
         display: block;
-
       }
 
 
       .nav-links {
-
         display: none;
 
         position: absolute;
 
         top: 65px;
-
         left: 0;
 
         width: 100%;
 
         flex-direction: column;
-
         align-items: flex-start;
 
         gap: 0;
@@ -731,239 +654,325 @@
 
         border-bottom: 1px solid var(--line);
 
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
       }
 
 
       .nav-links.open {
-
         display: flex;
-
       }
 
 
       .nav-links a {
-
         width: 100%;
 
         padding: 18px 5%;
 
         border-top: 1px solid var(--line);
-
       }
 
 
       .resume-btn {
-
         border: none;
-
       }
 
 
-      .hero {
+      /* ---------- General ---------- */
 
+      .container {
+        width: 90%;
+      }
+
+
+      /* ---------- Hero ---------- */
+
+      .hero {
         min-height: auto;
 
         padding-top: 130px;
-
         padding-bottom: 80px;
-
       }
 
 
       .hero-grid {
-
         grid-template-columns: 1fr;
-
         gap: 45px;
-
       }
 
 
       .hero h1 {
-
         font-size: clamp(55px, 14vw, 85px);
+      }
 
+
+      .hero-copy {
+        max-width: 100%;
       }
 
 
       .hero-copy p {
-
         font-size: 17px;
-
       }
 
 
+      .hero-line {
+        margin-top: 30px;
+      }
+
+
+      /* ---------- Intro ---------- */
+
       .intro {
-
         padding: 80px 0;
-
       }
 
 
       .intro-grid {
-
         grid-template-columns: 1fr;
-
         gap: 20px;
-
       }
 
 
       .intro h2 {
-
         font-size: clamp(45px, 11vw, 68px);
-
       }
 
 
       .intro p {
-
         font-size: 18px;
-
       }
 
 
+      /* ---------- Skills ---------- */
+
       .skills-section {
-
-        padding: 60px 0;
-
+        padding: 0 0 60px;
       }
 
 
       .skill-category {
+        width: 90%;
 
         grid-template-columns: 1fr;
 
         gap: 20px;
 
         padding: 70px 0;
+      }
 
+
+      .category-content {
+        width: 100%;
+        min-width: 0;
       }
 
 
       .category-content h2 {
-
         font-size: clamp(45px, 11vw, 68px);
-
       }
 
 
       .category-description {
-
         font-size: 17px;
+        margin-bottom: 32px;
+      }
 
+
+      .skill-list {
+        width: 100%;
       }
 
 
       .skill-row {
-
         display: block;
 
+        width: 100%;
+
+        padding: 20px 0;
+      }
+
+
+      .skill-name {
+        display: block;
       }
 
 
       .skill-context {
+        display: block;
 
         text-align: left;
 
-        margin-top: 5px;
+        margin-top: 6px;
 
+        line-height: 1.5;
       }
 
 
       .skill-tags {
+        width: 100%;
 
         gap: 8px;
-
       }
 
 
+      .skill-tag {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+
+      /* ---------- Application ---------- */
+
       .application {
-
         padding: 90px 0;
-
       }
 
 
       .application-grid {
-
         grid-template-columns: 1fr;
-
         gap: 45px;
-
       }
 
 
       .application h2 {
-
         font-size: clamp(48px, 13vw, 75px);
+      }
 
+
+      .application-content {
+        width: 100%;
+        max-width: 100%;
+      }
+
+
+      .application-content > p {
+        font-size: 17px;
       }
 
 
       .application-item {
-
         grid-template-columns: 1fr;
 
         gap: 8px;
 
+        padding: 22px 0;
       }
 
 
+      .application-item p {
+        font-size: 15px;
+      }
+
+
+      /* ---------- Statement ---------- */
+
       .statement {
-
         padding: 100px 0;
-
       }
 
 
       .statement h2 {
-
         font-size: clamp(48px, 13vw, 75px);
-
       }
 
 
-      .footer-inner {
+      .statement p {
+        font-size: 17px;
+      }
 
+
+      /* ---------- Footer ---------- */
+
+      .footer-inner {
         flex-direction: column;
 
         align-items: flex-start;
 
         gap: 20px;
+      }
 
+
+      .footer-links {
+        flex-wrap: wrap;
+        gap: 15px 25px;
       }
 
     }
 
 
+    /* =========================================================
+       SMALL MOBILE
+    ========================================================= */
 
-    /* ================= REDUCED MOTION ================= */
+    @media (max-width: 480px) {
+
+      .hero {
+        padding-top: 115px;
+        padding-bottom: 65px;
+      }
+
+
+      .hero h1 {
+        font-size: clamp(50px, 16vw, 72px);
+      }
+
+
+      .eyebrow {
+        margin-bottom: 25px;
+      }
+
+
+      .skill-category {
+        padding: 55px 0;
+      }
+
+
+      .category-content h2 {
+        font-size: clamp(42px, 13vw, 60px);
+      }
+
+
+      .skill-tag {
+        padding: 9px 12px;
+        font-size: 12px;
+      }
+
+
+      .application {
+        padding: 75px 0;
+      }
+
+
+      .statement {
+        padding: 80px 0;
+      }
+
+    }
+
+
+    /* =========================================================
+       REDUCED MOTION
+    ========================================================= */
 
     @media (prefers-reduced-motion: reduce) {
 
       html {
-
         scroll-behavior: auto;
-
       }
 
 
       .reveal {
-
         opacity: 1;
-
         transform: none;
-
         transition: none;
-
       }
 
 
-      * {
-
+      *,
+      *::before,
+      *::after {
         transition: none !important;
-
+        animation: none !important;
       }
 
     }
@@ -976,16 +985,25 @@
 <body>
 
 
-  <!-- ================= NAVIGATION ================= -->
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================= -->
 
   <nav>
 
-    <a href="index.html" class="logo">
+    <a
+      href="index.html"
+      class="logo"
+      aria-label="Aishwarya Nagchandi — Home"
+    >
       AN
     </a>
 
 
-    <div class="nav-links" id="navLinks">
+    <div
+      class="nav-links"
+      id="navLinks"
+    >
 
       <a href="index.html">
         Home
@@ -1004,10 +1022,14 @@
       </a>
 
       <a href="beyond.html">
-        Beyond
+        Beyond the Resume
       </a>
 
-      <a href="skills.html" class="active">
+      <a
+        href="skills.html"
+        class="active"
+        aria-current="page"
+      >
         Skills
       </a>
 
@@ -1015,37 +1037,44 @@
         Contact
       </a>
 
-      <a href="resume.pdf" class="resume-btn">
+      <a
+        href="resume.pdf"
+        class="resume-btn"
+      >
         Resume ↗
       </a>
 
     </div>
 
 
-    <div
+    <button
       class="menu-toggle"
-      onclick="toggleMenu()"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="navLinks"
+      aria-expanded="false"
     >
       ☰
-    </div>
+    </button>
 
   </nav>
 
 
 
-  <!-- ================= HERO ================= -->
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
 
   <header class="hero">
 
     <div class="container hero-grid">
-
 
       <div class="reveal">
 
         <div class="eyebrow">
           01 — <span>Skills & Capabilities</span>
         </div>
-
 
         <h1>
           More than<br>
@@ -1069,19 +1098,19 @@
 
       </div>
 
-
     </div>
 
   </header>
 
 
 
-  <!-- ================= INTRO ================= -->
+  <!-- =========================================================
+       INTRO
+  ========================================================= -->
 
   <section class="intro">
 
     <div class="container intro-grid">
-
 
       <div class="eyebrow reveal">
         02 — <span>My Toolkit</span>
@@ -1111,21 +1140,21 @@
 
 
 
-  <!-- ================= SKILLS ================= -->
+  <!-- =========================================================
+       SKILLS
+  ========================================================= -->
 
   <section class="skills-section">
 
 
-    <!-- ================= ANALYTICS ================= -->
+    <!-- =======================================================
+         ANALYTICS
+    ======================================================== -->
 
     <article class="skill-category">
 
-      <div class="container">
-
-        <div class="category-number reveal">
-          03 / 07
-        </div>
-
+      <div class="category-number reveal">
+        03 / 07
       </div>
 
 
@@ -1193,16 +1222,14 @@
 
 
 
-    <!-- ================= BI ================= -->
+    <!-- =======================================================
+         BUSINESS INTELLIGENCE
+    ======================================================== -->
 
     <article class="skill-category">
 
-      <div class="container">
-
-        <div class="category-number reveal">
-          04 / 07
-        </div>
-
+      <div class="category-number reveal">
+        04 / 07
       </div>
 
 
@@ -1220,7 +1247,6 @@
 
 
         <div class="skill-list">
-
 
           <div class="skill-row">
 
@@ -1273,7 +1299,6 @@
 
           </div>
 
-
         </div>
 
       </div>
@@ -1282,16 +1307,14 @@
 
 
 
-    <!-- ================= FINANCE ================= -->
+    <!-- =======================================================
+         FINANCE
+    ======================================================== -->
 
     <article class="skill-category">
 
-      <div class="container">
-
-        <div class="category-number reveal">
-          05 / 07
-        </div>
-
+      <div class="category-number reveal">
+        05 / 07
       </div>
 
 
@@ -1358,16 +1381,14 @@
 
 
 
-    <!-- ================= SQL ================= -->
+    <!-- =======================================================
+         PROGRAMMING & DATA WORKFLOWS
+    ======================================================== -->
 
     <article class="skill-category">
 
-      <div class="container">
-
-        <div class="category-number reveal">
-          06 / 07
-        </div>
-
+      <div class="category-number reveal">
+        06 / 07
       </div>
 
 
@@ -1385,7 +1406,6 @@
 
 
         <div class="skill-list">
-
 
           <div class="skill-row">
 
@@ -1438,7 +1458,6 @@
 
           </div>
 
-
         </div>
 
       </div>
@@ -1447,16 +1466,14 @@
 
 
 
-    <!-- ================= BUSINESS ================= -->
+    <!-- =======================================================
+         BUSINESS
+    ======================================================== -->
 
     <article class="skill-category">
 
-      <div class="container">
-
-        <div class="category-number reveal">
-          07 / 07
-        </div>
-
+      <div class="category-number reveal">
+        07 / 07
       </div>
 
 
@@ -1528,7 +1545,9 @@
 
 
 
-  <!-- ================= APPLICATION ================= -->
+  <!-- =========================================================
+       APPLICATION
+  ========================================================= -->
 
   <section class="application">
 
@@ -1637,7 +1656,9 @@
 
 
 
-  <!-- ================= FINAL STATEMENT ================= -->
+  <!-- =========================================================
+       FINAL STATEMENT
+  ========================================================= -->
 
   <section class="statement">
 
@@ -1665,12 +1686,13 @@
 
 
 
-  <!-- ================= FOOTER ================= -->
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
 
   <footer>
 
     <div class="container footer-inner">
-
 
       <p>
         © 2026 Aishwarya Nagchandi
@@ -1699,24 +1721,106 @@
 
 
 
-  <!-- ================= JAVASCRIPT ================= -->
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================= -->
 
   <script>
 
+    /* =========================================================
+       MOBILE NAVIGATION
+    ========================================================= */
 
-    /* Mobile Navigation */
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
 
     function toggleMenu() {
 
-      document
-        .getElementById("navLinks")
-        .classList.toggle("open");
+      const isOpen =
+        navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
 
     }
 
 
+    menuToggle.addEventListener(
+      "click",
+      toggleMenu
+    );
 
-    /* Scroll Reveal */
+
+    /* Close menu after selecting a page */
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach((link) => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navLinks.classList.remove("open");
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuToggle.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
+          }
+        );
+
+      });
+
+
+    /* Close menu if window becomes desktop-sized */
+
+    window.addEventListener(
+      "resize",
+      () => {
+
+        if (window.innerWidth > 850) {
+
+          navLinks.classList.remove("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+        }
+
+      }
+    );
+
+
+    /* =========================================================
+       SCROLL REVEAL
+    ========================================================= */
 
     const reveals =
       document.querySelectorAll(".reveal");
@@ -1762,4 +1866,5 @@
 
 
 </body>
+
 </html>
