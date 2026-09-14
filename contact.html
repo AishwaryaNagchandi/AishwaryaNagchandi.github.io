@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
@@ -7,8 +8,36 @@
 
   <title>Contact — Aishwarya Nagchandi</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="description"
+    content="Get in touch with Aishwarya Nagchandi for opportunities across analytics, business intelligence, finance and strategy."
+  >
+
+  <meta
+    name="author"
+    content="Aishwarya Nagchandi"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://aishwaryanagchandi.github.io/contact.html"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
@@ -17,6 +46,8 @@
 
 
   <style>
+
+    /* ================= ROOT ================= */
 
     :root {
       --bg: #f7f6f2;
@@ -28,6 +59,8 @@
     }
 
 
+    /* ================= RESET ================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -37,6 +70,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
 
@@ -49,6 +83,7 @@
       line-height: 1.6;
 
       overflow-x: hidden;
+      width: 100%;
     }
 
 
@@ -58,10 +93,22 @@
     }
 
 
+    img,
+    video,
+    iframe {
+      max-width: 100%;
+    }
+
+
+    [id] {
+      scroll-margin-top: 110px;
+    }
+
+
+
     /* ================= NAVIGATION ================= */
 
     nav {
-
       position: fixed;
 
       top: 0;
@@ -84,23 +131,21 @@
       backdrop-filter: blur(12px);
 
       border-bottom: 1px solid rgba(217, 216, 211, 0.7);
-
     }
 
 
     .logo {
-
       font-weight: 600;
 
       font-size: 15px;
 
       letter-spacing: 0.08em;
 
+      flex-shrink: 0;
     }
 
 
     .nav-links {
-
       display: flex;
 
       gap: 28px;
@@ -108,57 +153,65 @@
       align-items: center;
 
       font-size: 13px;
-
     }
 
 
     .nav-links a {
-
       color: #555;
 
-      transition: color 0.25s ease;
-
+      transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
     }
 
 
     .nav-links a:hover,
     .nav-links a.active {
-
       color: var(--text);
+    }
 
+
+    .nav-links a.active {
+      font-weight: 600;
     }
 
 
     .resume-btn {
-
       padding: 9px 15px;
 
       border: 1px solid var(--text);
 
       color: var(--text) !important;
 
-      transition: all 0.25s ease;
-
+      transition:
+        background 0.25s ease,
+        color 0.25s ease;
     }
 
 
     .resume-btn:hover {
-
       background: var(--text);
 
       color: var(--bg) !important;
-
     }
 
 
     .menu-toggle {
-
       display: none;
 
       font-size: 24px;
 
+      line-height: 1;
+
       cursor: pointer;
 
+      border: 0;
+
+      background: transparent;
+
+      color: var(--text);
+
+      padding: 4px;
     }
 
 
@@ -166,16 +219,15 @@
     /* ================= GENERAL ================= */
 
     .container {
-
       width: min(1180px, 90%);
 
-      margin: auto;
+      margin: 0 auto;
 
+      min-width: 0;
     }
 
 
     .eyebrow {
-
       font-size: 12px;
 
       letter-spacing: 0.16em;
@@ -185,39 +237,34 @@
       color: var(--muted);
 
       margin-bottom: 35px;
-
     }
 
 
     .eyebrow span {
-
       color: var(--accent);
-
     }
 
 
     h1,
     h2,
     h3 {
-
       font-family: "Playfair Display", serif;
 
       font-weight: 600;
 
       line-height: 1.05;
-
     }
 
 
     p {
-
       color: var(--muted);
-
     }
 
 
-    .reveal {
 
+    /* ================= REVEAL ================= */
+
+    .reveal {
       opacity: 0;
 
       transform: translateY(35px);
@@ -225,16 +272,13 @@
       transition:
         opacity 0.8s ease,
         transform 0.8s ease;
-
     }
 
 
     .reveal.visible {
-
       opacity: 1;
 
       transform: translateY(0);
-
     }
 
 
@@ -242,7 +286,6 @@
     /* ================= HERO ================= */
 
     .hero {
-
       min-height: 88vh;
 
       display: flex;
@@ -252,12 +295,10 @@
       padding-top: 150px;
 
       padding-bottom: 110px;
-
     }
 
 
     .hero-grid {
-
       display: grid;
 
       grid-template-columns: 1fr 0.65fr;
@@ -266,38 +307,39 @@
 
       align-items: end;
 
+      min-width: 0;
+    }
+
+
+    .hero-grid > * {
+      min-width: 0;
     }
 
 
     .hero h1 {
-
       font-size: clamp(70px, 10vw, 135px);
 
       letter-spacing: -0.065em;
 
       max-width: 1000px;
-
     }
 
 
     .hero-copy {
-
       max-width: 470px;
 
+      min-width: 0;
     }
 
 
     .hero-copy p {
-
       font-size: 20px;
 
       line-height: 1.7;
-
     }
 
 
     .hero-line {
-
       margin-top: 40px;
 
       padding-top: 18px;
@@ -307,7 +349,6 @@
       font-size: 13px;
 
       color: var(--muted);
-
     }
 
 
@@ -315,51 +356,50 @@
     /* ================= CONTACT SECTION ================= */
 
     .contact-section {
-
       border-top: 1px solid var(--line);
 
       padding: 110px 0 130px;
-
     }
 
 
     .contact-grid {
-
       display: grid;
 
       grid-template-columns: 0.3fr 0.7fr;
 
       gap: 80px;
 
+      min-width: 0;
+    }
+
+
+    .contact-grid > * {
+      min-width: 0;
     }
 
 
     .contact-intro h2 {
-
       font-size: clamp(48px, 6vw, 78px);
 
       letter-spacing: -0.05em;
 
       max-width: 900px;
-
     }
 
 
     .contact-content {
-
       max-width: 850px;
 
+      min-width: 0;
     }
 
 
     .contact-content > p {
-
       font-size: 20px;
 
       line-height: 1.8;
 
       margin-bottom: 55px;
-
     }
 
 
@@ -367,17 +407,16 @@
     /* ================= CONTACT LINKS ================= */
 
     .contact-links {
-
       border-top: 1px solid var(--line);
 
+      width: 100%;
     }
 
 
     .contact-link {
-
       display: grid;
 
-      grid-template-columns: 180px 1fr auto;
+      grid-template-columns: 180px minmax(0, 1fr) auto;
 
       align-items: center;
 
@@ -387,22 +426,20 @@
 
       border-bottom: 1px solid var(--line);
 
+      min-width: 0;
+
       transition:
         padding-left 0.3s ease,
         background 0.3s ease;
-
     }
 
 
     .contact-link:hover {
-
       padding-left: 10px;
-
     }
 
 
     .contact-label {
-
       font-size: 12px;
 
       text-transform: uppercase;
@@ -410,25 +447,26 @@
       letter-spacing: 0.12em;
 
       color: var(--muted);
-
     }
 
 
     .contact-value {
-
       font-size: 18px;
 
       font-weight: 500;
 
+      min-width: 0;
+
+      overflow-wrap: anywhere;
     }
 
 
     .contact-arrow {
-
       font-size: 20px;
 
       color: var(--accent);
 
+      flex-shrink: 0;
     }
 
 
@@ -436,7 +474,6 @@
     /* ================= PHONE NOTE ================= */
 
     .phone-note {
-
       margin-top: 25px;
 
       padding: 18px 20px;
@@ -447,15 +484,19 @@
 
       max-width: 850px;
 
+      width: 100%;
     }
 
 
     .phone-note p {
-
       font-size: 13px;
 
       line-height: 1.7;
+    }
 
+
+    .phone-note strong {
+      color: var(--text);
     }
 
 
@@ -463,61 +504,57 @@
     /* ================= OPPORTUNITIES ================= */
 
     .opportunities {
-
       background: var(--soft);
 
       padding: 130px 0;
-
     }
 
 
     .opportunity-grid {
-
       display: grid;
 
       grid-template-columns: 0.35fr 0.65fr;
 
       gap: 80px;
 
+      min-width: 0;
+    }
+
+
+    .opportunity-grid > * {
+      min-width: 0;
     }
 
 
     .opportunity-grid h2 {
-
       font-size: clamp(50px, 6vw, 80px);
 
       letter-spacing: -0.05em;
-
     }
 
 
     .opportunity-content {
-
       max-width: 800px;
-
     }
 
 
     .opportunity-content > p {
-
       font-size: 19px;
 
       line-height: 1.8;
 
       margin-bottom: 45px;
-
     }
 
 
     .opportunity-list {
-
       border-top: 1px solid var(--line);
 
+      width: 100%;
     }
 
 
     .opportunity {
-
       display: flex;
 
       justify-content: space-between;
@@ -530,26 +567,23 @@
 
       border-bottom: 1px solid var(--line);
 
+      min-width: 0;
     }
 
 
     .opportunity strong {
-
       font-size: 15px;
 
       font-weight: 500;
-
     }
 
 
     .opportunity span {
-
       font-size: 13px;
 
       color: var(--muted);
 
       text-align: right;
-
     }
 
 
@@ -557,18 +591,15 @@
     /* ================= RESUME CTA ================= */
 
     .resume-section {
-
       padding: 140px 0;
 
       text-align: center;
 
       border-bottom: 1px solid var(--line);
-
     }
 
 
     .resume-section h2 {
-
       font-size: clamp(50px, 7vw, 95px);
 
       letter-spacing: -0.055em;
@@ -576,12 +607,10 @@
       max-width: 1000px;
 
       margin: auto;
-
     }
 
 
     .resume-section p {
-
       max-width: 650px;
 
       margin: 30px auto 40px;
@@ -589,12 +618,10 @@
       font-size: 18px;
 
       line-height: 1.8;
-
     }
 
 
     .large-resume-btn {
-
       display: inline-block;
 
       padding: 15px 24px;
@@ -603,17 +630,16 @@
 
       font-size: 13px;
 
-      transition: all 0.3s ease;
-
+      transition:
+        background 0.3s ease,
+        color 0.3s ease;
     }
 
 
     .large-resume-btn:hover {
-
       background: var(--text);
 
       color: var(--bg);
-
     }
 
 
@@ -621,70 +647,61 @@
     /* ================= FOOTER ================= */
 
     footer {
-
       padding: 35px 0;
-
     }
 
 
     .footer-inner {
-
       display: flex;
 
       justify-content: space-between;
 
       align-items: center;
 
+      min-width: 0;
     }
 
 
     .footer-inner p {
-
       font-size: 12px;
-
     }
 
 
     .footer-links {
-
       display: flex;
 
       gap: 25px;
 
       font-size: 12px;
 
+      flex-wrap: wrap;
     }
 
 
     .footer-links a:hover {
-
       color: var(--accent);
-
     }
 
 
 
-    /* ================= MOBILE ================= */
+    /* ================= TABLET / MOBILE ================= */
 
     @media (max-width: 850px) {
 
 
+      /* ---------- NAV ---------- */
+
       nav {
-
         padding: 18px 5%;
-
       }
 
 
       .menu-toggle {
-
         display: block;
-
       }
 
 
       .nav-links {
-
         display: none;
 
         position: absolute;
@@ -705,184 +722,411 @@
 
         border-bottom: 1px solid var(--line);
 
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
       }
 
 
       .nav-links.open {
-
         display: flex;
-
       }
 
 
       .nav-links a {
-
         width: 100%;
 
         padding: 18px 5%;
 
         border-top: 1px solid var(--line);
-
       }
 
 
       .resume-btn {
-
         border: none;
-
       }
 
 
-      .hero {
 
+      /* ---------- HERO ---------- */
+
+      .hero {
         min-height: auto;
 
         padding-top: 130px;
 
         padding-bottom: 80px;
-
       }
 
 
       .hero-grid {
-
         grid-template-columns: 1fr;
 
         gap: 45px;
 
+        width: 90%;
       }
 
 
       .hero h1 {
-
         font-size: clamp(58px, 15vw, 90px);
 
+        max-width: 100%;
+      }
+
+
+      .hero-copy {
+        width: 100%;
+
+        max-width: 600px;
       }
 
 
       .hero-copy p {
-
         font-size: 17px;
-
       }
 
 
+
+      /* ---------- CONTACT ---------- */
+
       .contact-section {
-
         padding: 80px 0 100px;
-
       }
 
 
       .contact-grid {
-
         grid-template-columns: 1fr;
 
         gap: 45px;
 
+        width: 90%;
       }
 
 
       .contact-intro h2 {
-
         font-size: clamp(45px, 11vw, 68px);
 
+        max-width: 100%;
+      }
+
+
+      .contact-content {
+        width: 100%;
+
+        max-width: 100%;
       }
 
 
       .contact-content > p {
-
         font-size: 17px;
 
+        line-height: 1.75;
+
+        margin-bottom: 45px;
       }
 
 
       .contact-link {
-
-        grid-template-columns: 1fr auto;
+        grid-template-columns: minmax(0, 1fr) auto;
 
         gap: 8px;
 
+        width: 100%;
       }
 
 
       .contact-label {
-
         grid-column: 1 / -1;
-
       }
 
 
       .contact-value {
-
         font-size: 16px;
 
+        overflow-wrap: anywhere;
       }
 
 
+      .contact-arrow {
+        align-self: center;
+      }
+
+
+      .phone-note {
+        width: 100%;
+
+        max-width: 100%;
+      }
+
+
+
+      /* ---------- OPPORTUNITIES ---------- */
+
       .opportunities {
-
         padding: 90px 0;
-
       }
 
 
       .opportunity-grid {
-
         grid-template-columns: 1fr;
 
         gap: 45px;
 
+        width: 90%;
       }
 
 
       .opportunity-grid h2 {
-
         font-size: clamp(48px, 13vw, 75px);
 
+        max-width: 100%;
+      }
+
+
+      .opportunity-content {
+        width: 100%;
+
+        max-width: 100%;
+      }
+
+
+      .opportunity-content > p {
+        font-size: 17px;
+
+        line-height: 1.75;
+
+        margin-bottom: 35px;
       }
 
 
       .opportunity {
-
         display: block;
 
+        padding: 22px 0;
+      }
+
+
+      .opportunity strong {
+        display: block;
       }
 
 
       .opportunity span {
-
         display: block;
 
         text-align: left;
 
-        margin-top: 5px;
+        margin-top: 6px;
 
+        line-height: 1.5;
       }
 
 
+
+      /* ---------- RESUME ---------- */
+
       .resume-section {
-
         padding: 100px 0;
-
       }
 
 
       .resume-section h2 {
-
         font-size: clamp(48px, 13vw, 75px);
 
+        max-width: 100%;
+      }
+
+
+      .resume-section p {
+        font-size: 17px;
+
+        max-width: 600px;
+      }
+
+
+
+      /* ---------- FOOTER ---------- */
+
+      footer {
+        padding: 30px 0;
       }
 
 
       .footer-inner {
-
         flex-direction: column;
 
         align-items: flex-start;
 
         gap: 20px;
 
+        width: 90%;
+      }
+
+
+      .footer-links {
+        gap: 18px 25px;
+      }
+
+    }
+
+
+
+    /* ================= SMALL MOBILE ================= */
+
+    @media (max-width: 420px) {
+
+
+      nav {
+        padding-left: 5%;
+
+        padding-right: 5%;
+      }
+
+
+      .hero {
+        padding-top: 120px;
+
+        padding-bottom: 65px;
+      }
+
+
+      .hero-grid {
+        width: 90%;
+      }
+
+
+      .hero h1 {
+        font-size: clamp(50px, 15vw, 66px);
+
+        letter-spacing: -0.055em;
+      }
+
+
+      .hero-copy p {
+        font-size: 16px;
+      }
+
+
+      .hero-line {
+        margin-top: 30px;
+      }
+
+
+
+      /* ---------- CONTACT ---------- */
+
+      .contact-section {
+        padding: 65px 0 80px;
+      }
+
+
+      .contact-grid {
+        width: 90%;
+
+        gap: 35px;
+      }
+
+
+      .contact-intro h2 {
+        font-size: clamp(42px, 12vw, 58px);
+      }
+
+
+      .contact-content > p {
+        font-size: 16px;
+
+        line-height: 1.7;
+      }
+
+
+      .contact-link {
+        padding: 22px 0;
+
+        gap: 7px;
+      }
+
+
+      .contact-label {
+        font-size: 11px;
+      }
+
+
+      .contact-value {
+        font-size: 15px;
+
+        line-height: 1.45;
+      }
+
+
+      .contact-arrow {
+        font-size: 18px;
+      }
+
+
+      .phone-note {
+        padding: 16px 17px;
+      }
+
+
+      .phone-note p {
+        font-size: 12px;
+      }
+
+
+
+      /* ---------- OPPORTUNITIES ---------- */
+
+      .opportunities {
+        padding: 75px 0;
+      }
+
+
+      .opportunity-grid {
+        width: 90%;
+      }
+
+
+      .opportunity-grid h2 {
+        font-size: clamp(43px, 13vw, 64px);
+      }
+
+
+      .opportunity-content > p {
+        font-size: 16px;
+      }
+
+
+      .opportunity strong {
+        font-size: 14px;
+      }
+
+
+      .opportunity span {
+        font-size: 12px;
+      }
+
+
+
+      /* ---------- RESUME ---------- */
+
+      .resume-section {
+        padding: 80px 0;
+      }
+
+
+      .resume-section h2 {
+        font-size: clamp(43px, 13vw, 64px);
+      }
+
+
+      .resume-section p {
+        font-size: 16px;
+
+        line-height: 1.7;
+      }
+
+
+      .large-resume-btn {
+        padding: 14px 21px;
       }
 
     }
@@ -894,27 +1138,21 @@
     @media (prefers-reduced-motion: reduce) {
 
       html {
-
         scroll-behavior: auto;
-
       }
 
 
       .reveal {
-
         opacity: 1;
 
         transform: none;
 
         transition: none;
-
       }
 
 
       * {
-
         transition: none !important;
-
       }
 
     }
@@ -931,54 +1169,80 @@
 
   <nav>
 
-    <a href="index.html" class="logo">
+    <a
+      href="index.html"
+      class="logo"
+      aria-label="Aishwarya Nagchandi — Home"
+    >
       AN
     </a>
 
 
-    <div class="nav-links" id="navLinks">
+    <div
+      class="nav-links"
+      id="navLinks"
+    >
 
       <a href="index.html">
         Home
       </a>
 
+
       <a href="about.html">
         About
       </a>
+
 
       <a href="experience.html">
         Experience
       </a>
 
+
       <a href="projects.html">
         Projects
       </a>
 
+
       <a href="beyond.html">
-        Beyond
+        Beyond the Resume
       </a>
+
 
       <a href="skills.html">
         Skills
       </a>
 
-      <a href="contact.html" class="active">
+
+      <a
+        href="contact.html"
+        class="active"
+        aria-current="page"
+      >
         Contact
       </a>
 
-      <a href="resume.pdf" class="resume-btn">
+
+      <a
+        href="resume.pdf"
+        class="resume-btn"
+      >
         Resume ↗
       </a>
 
     </div>
 
 
-    <div
+    <button
       class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="navLinks"
+      aria-expanded="false"
       onclick="toggleMenu()"
     >
       ☰
-    </div>
+    </button>
 
   </nav>
 
@@ -1067,6 +1331,7 @@
           <a
             href="mailto:aishwaryanagchandi84@gmail.com"
             class="contact-link"
+            aria-label="Email Aishwarya Nagchandi"
           >
 
             <span class="contact-label">
@@ -1088,10 +1353,11 @@
           <!-- LINKEDIN -->
 
           <a
-            href="https://www.linkedin.com/in/aishwarya-nagchandi-7272212a5/"
+            href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/"
             target="_blank"
             rel="noopener noreferrer"
             class="contact-link"
+            aria-label="Connect with Aishwarya Nagchandi on LinkedIn"
           >
 
             <span class="contact-label">
@@ -1117,6 +1383,7 @@
             target="_blank"
             rel="noopener noreferrer"
             class="contact-link"
+            aria-label="Request Aishwarya Nagchandi's phone number"
           >
 
             <span class="contact-label">
@@ -1142,6 +1409,7 @@
             target="_blank"
             rel="noopener noreferrer"
             class="contact-link"
+            aria-label="Visit Aishwarya Nagchandi's GitHub"
           >
 
             <span class="contact-label">
@@ -1307,6 +1575,7 @@
         View Resume ↗
       </a>
 
+
     </div>
 
   </section>
@@ -1331,15 +1600,21 @@
           Home
         </a>
 
+
         <a href="projects.html">
           Projects
         </a>
 
-        <a href="contact.html">
+
+        <a
+          href="contact.html"
+          aria-current="page"
+        >
           Contact
         </a>
 
       </div>
+
 
     </div>
 
@@ -1352,19 +1627,73 @@
   <script>
 
 
-    /* Mobile Navigation */
+    /* ================= MOBILE NAVIGATION ================= */
 
     function toggleMenu() {
 
-      document
-        .getElementById("navLinks")
-        .classList.toggle("open");
+      const navLinks =
+        document.getElementById("navLinks");
+
+      const menuToggle =
+        document.getElementById("menuToggle");
+
+      const isOpen =
+        navLinks.classList.toggle("open");
+
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
 
     }
 
 
 
-    /* Scroll Reveal */
+    /* Close mobile menu after navigation */
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+          const navLinks =
+            document.getElementById("navLinks");
+
+          const menuToggle =
+            document.getElementById("menuToggle");
+
+
+          navLinks.classList.remove("open");
+
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+
+          menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+        });
+
+      });
+
+
+
+    /* ================= SCROLL REVEAL ================= */
 
     const reveals =
       document.querySelectorAll(".reveal");
@@ -1382,6 +1711,7 @@
               entry.target
                 .classList
                 .add("visible");
+
 
               observer
                 .unobserve(entry.target);
@@ -1410,4 +1740,5 @@
 
 
 </body>
+
 </html>
