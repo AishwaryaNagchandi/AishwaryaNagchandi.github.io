@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
@@ -7,15 +8,43 @@
 
   <title>Beyond the Resume — Aishwarya Nagchandi</title>
 
+  <meta
+    name="description"
+    content="Beyond the resume — the interests, experiences and perspectives that shape Aishwarya Nagchandi."
+  >
+
+  <meta
+    name="author"
+    content="Aishwarya Nagchandi"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://aishwaryanagchandi.github.io/beyond.html"
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
+
   <style>
+
+    /* ================= ROOT ================= */
 
     :root {
       --bg: #f7f6f2;
@@ -27,6 +56,8 @@
     }
 
 
+    /* ================= RESET ================= */
+
     * {
       margin: 0;
       padding: 0;
@@ -36,6 +67,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
 
@@ -45,6 +77,7 @@
       font-family: "DM Sans", sans-serif;
       line-height: 1.6;
       overflow-x: hidden;
+      width: 100%;
     }
 
 
@@ -54,13 +87,29 @@
     }
 
 
+    img,
+    video,
+    iframe {
+      max-width: 100%;
+    }
+
+
+    /* Prevent anchored sections from hiding behind fixed nav */
+
+    [id] {
+      scroll-margin-top: 110px;
+    }
+
+
     /* ================= NAVIGATION ================= */
 
     nav {
       position: fixed;
       top: 0;
       left: 0;
+
       width: 100%;
+
       z-index: 1000;
 
       display: flex;
@@ -80,6 +129,8 @@
       font-weight: 600;
       font-size: 15px;
       letter-spacing: 0.08em;
+
+      flex-shrink: 0;
     }
 
 
@@ -87,13 +138,17 @@
       display: flex;
       gap: 28px;
       align-items: center;
+
       font-size: 13px;
     }
 
 
     .nav-links a {
       color: #555;
-      transition: color 0.25s ease;
+
+      transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
     }
 
 
@@ -103,12 +158,21 @@
     }
 
 
+    .nav-links a.active {
+      font-weight: 600;
+    }
+
+
     .resume-btn {
       padding: 9px 15px;
+
       border: 1px solid var(--text);
+
       color: var(--text) !important;
 
-      transition: all 0.25s ease;
+      transition:
+        background 0.25s ease,
+        color 0.25s ease;
     }
 
 
@@ -120,8 +184,18 @@
 
     .menu-toggle {
       display: none;
+
       font-size: 24px;
+      line-height: 1;
+
       cursor: pointer;
+
+      border: 0;
+      background: transparent;
+
+      color: var(--text);
+
+      padding: 4px;
     }
 
 
@@ -130,7 +204,9 @@
 
     .container {
       width: min(1180px, 90%);
-      margin: auto;
+      margin: 0 auto;
+
+      min-width: 0;
     }
 
 
@@ -138,7 +214,9 @@
       font-size: 12px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
+
       color: var(--muted);
+
       margin-bottom: 35px;
     }
 
@@ -152,6 +230,7 @@
     h2,
     h3 {
       font-family: "Playfair Display", serif;
+
       font-weight: 600;
       line-height: 1.05;
     }
@@ -162,8 +241,11 @@
     }
 
 
+    /* ================= REVEAL ================= */
+
     .reveal {
       opacity: 0;
+
       transform: translateY(35px);
 
       transition:
@@ -174,6 +256,7 @@
 
     .reveal.visible {
       opacity: 1;
+
       transform: translateY(0);
     }
 
@@ -194,38 +277,54 @@
 
     .hero-grid {
       display: grid;
+
       grid-template-columns: 1fr 0.75fr;
 
       gap: 80px;
+
       align-items: end;
+
+      min-width: 0;
+    }
+
+
+    .hero-grid > * {
+      min-width: 0;
     }
 
 
     .hero h1 {
       font-size: clamp(65px, 9vw, 120px);
+
       letter-spacing: -0.06em;
+
       max-width: 1000px;
     }
 
 
     .hero-copy {
       max-width: 450px;
+
+      min-width: 0;
     }
 
 
     .hero-copy p {
       font-size: 19px;
+
       line-height: 1.65;
     }
 
 
     .hero-line {
       margin-top: 40px;
+
       padding-top: 18px;
 
       border-top: 1px solid var(--line);
 
       font-size: 13px;
+
       color: var(--muted);
     }
 
@@ -235,20 +334,30 @@
 
     .intro {
       border-top: 1px solid var(--line);
+
       padding: 110px 0;
     }
 
 
     .intro-grid {
       display: grid;
+
       grid-template-columns: 0.3fr 1fr;
 
       gap: 70px;
+
+      min-width: 0;
+    }
+
+
+    .intro-grid > * {
+      min-width: 0;
     }
 
 
     .intro h2 {
       font-size: clamp(48px, 6vw, 78px);
+
       letter-spacing: -0.05em;
 
       max-width: 950px;
@@ -257,6 +366,7 @@
 
     .intro p {
       font-size: 21px;
+
       line-height: 1.75;
 
       max-width: 850px;
@@ -270,12 +380,14 @@
 
     .themes {
       border-top: 1px solid var(--line);
+
       padding: 100px 0;
     }
 
 
     .theme {
       display: grid;
+
       grid-template-columns: 0.25fr 0.75fr;
 
       gap: 60px;
@@ -283,18 +395,42 @@
       padding: 90px 0;
 
       border-bottom: 1px solid var(--line);
+
+      min-width: 0;
+
+      width: 100%;
+    }
+
+
+    .theme:last-child {
+      border-bottom: none;
+    }
+
+
+    .theme > * {
+      min-width: 0;
     }
 
 
     .theme-number {
       font-size: 13px;
+
       color: var(--muted);
+
       letter-spacing: 0.08em;
+    }
+
+
+    .theme-content {
+      min-width: 0;
+
+      width: 100%;
     }
 
 
     .theme-content h2 {
       font-size: clamp(48px, 6vw, 78px);
+
       letter-spacing: -0.05em;
 
       margin-bottom: 30px;
@@ -303,6 +439,7 @@
 
     .theme-content > p {
       font-size: 19px;
+
       line-height: 1.8;
 
       max-width: 850px;
@@ -322,6 +459,10 @@
       padding: 45px;
 
       max-width: 850px;
+
+      width: 100%;
+
+      min-width: 0;
     }
 
 
@@ -340,12 +481,14 @@
 
     .highlight h3 {
       font-size: 35px;
+
       margin-bottom: 20px;
     }
 
 
     .highlight p {
       font-size: 16px;
+
       line-height: 1.75;
     }
 
@@ -359,6 +502,8 @@
       border-top: 1px solid var(--line);
 
       max-width: 850px;
+
+      width: 100%;
     }
 
 
@@ -372,18 +517,24 @@
       padding: 20px 0;
 
       border-bottom: 1px solid var(--line);
+
+      min-width: 0;
     }
 
 
     .detail strong {
       font-size: 13px;
+
       font-weight: 600;
     }
 
 
     .detail span {
       color: var(--muted);
+
       font-size: 14px;
+
+      min-width: 0;
     }
 
 
@@ -404,6 +555,10 @@
       background: var(--line);
 
       max-width: 850px;
+
+      width: 100%;
+
+      min-width: 0;
     }
 
 
@@ -414,6 +569,8 @@
 
       min-height: 150px;
 
+      min-width: 0;
+
       transition:
         background 0.3s ease,
         transform 0.3s ease;
@@ -422,6 +579,7 @@
 
     .interest:hover {
       background: var(--soft);
+
       transform: translateY(-3px);
     }
 
@@ -465,6 +623,8 @@
 
     .statement-inner {
       max-width: 1000px;
+
+      min-width: 0;
     }
 
 
@@ -544,6 +704,8 @@
       justify-content: space-between;
 
       align-items: center;
+
+      min-width: 0;
     }
 
 
@@ -567,9 +729,11 @@
 
 
 
-    /* ================= MOBILE ================= */
+    /* ================= TABLET / MOBILE ================= */
 
     @media (max-width: 850px) {
+
+      /* ---------- NAV ---------- */
 
       nav {
         padding: 18px 5%;
@@ -600,6 +764,8 @@
         background: var(--bg);
 
         border-bottom: 1px solid var(--line);
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
       }
 
 
@@ -622,10 +788,14 @@
       }
 
 
+
+      /* ---------- HERO ---------- */
+
       .hero {
         min-height: auto;
 
         padding-top: 130px;
+
         padding-bottom: 80px;
       }
 
@@ -634,11 +804,24 @@
         grid-template-columns: 1fr;
 
         gap: 45px;
+
+        width: 90%;
       }
 
 
       .hero h1 {
         font-size: clamp(55px, 14vw, 85px);
+
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+      }
+
+
+      .hero-copy {
+        width: 100%;
+
+        max-width: 600px;
       }
 
 
@@ -646,6 +829,9 @@
         font-size: 17px;
       }
 
+
+
+      /* ---------- INTRO ---------- */
 
       .intro {
         padding: 80px 0;
@@ -656,18 +842,27 @@
         grid-template-columns: 1fr;
 
         gap: 20px;
+
+        width: 90%;
       }
 
 
       .intro h2 {
         font-size: clamp(45px, 11vw, 68px);
+
+        max-width: 100%;
       }
 
 
       .intro p {
         font-size: 18px;
+
+        max-width: 100%;
       }
 
+
+
+      /* ---------- THEMES ---------- */
 
       .themes {
         padding: 60px 0;
@@ -680,21 +875,56 @@
         gap: 20px;
 
         padding: 70px 0;
+
+        width: 90%;
+
+        margin: 0 auto;
+      }
+
+
+      .theme > .container {
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        max-width: none;
+      }
+
+
+      .theme-content {
+        width: 100%;
+
+        max-width: 100%;
       }
 
 
       .theme-content h2 {
         font-size: clamp(45px, 11vw, 68px);
+
+        max-width: 100%;
       }
 
 
       .theme-content > p {
         font-size: 17px;
+
+        max-width: 100%;
       }
 
 
+
+      /* ---------- HIGHLIGHTS ---------- */
+
       .highlight {
         padding: 30px;
+
+        margin-top: 40px;
+
+        width: 100%;
+
+        max-width: 100%;
       }
 
 
@@ -703,32 +933,80 @@
       }
 
 
+      .highlight p {
+        font-size: 15px;
+      }
+
+
+
+      /* ---------- DETAILS ---------- */
+
+      .details {
+        width: 100%;
+
+        max-width: 100%;
+      }
+
+
       .detail {
         grid-template-columns: 1fr;
 
         gap: 5px;
+
+        width: 100%;
       }
 
 
+
+      /* ---------- INTERESTS ---------- */
+
       .interest-grid {
         grid-template-columns: 1fr;
+
+        width: 100%;
+
+        max-width: 100%;
       }
 
 
       .interest {
         min-height: auto;
+
+        width: 100%;
+
+        padding: 28px;
       }
 
+
+
+      /* ---------- STATEMENT ---------- */
 
       .statement {
         padding: 100px 0;
       }
 
 
-      .statement h2 {
-        font-size: clamp(48px, 13vw, 75px);
+      .statement-inner {
+        width: 90%;
       }
 
+
+      .statement h2 {
+        font-size: clamp(48px, 13vw, 75px);
+
+        max-width: 100%;
+      }
+
+
+      .statement p {
+        font-size: 17px;
+
+        max-width: 100%;
+      }
+
+
+
+      /* ---------- CLOSING ---------- */
 
       .closing {
         padding: 100px 0;
@@ -737,8 +1015,20 @@
 
       .closing h2 {
         font-size: clamp(48px, 13vw, 75px);
+
+        max-width: 100%;
       }
 
+
+      .closing p {
+        font-size: 17px;
+
+        max-width: 100%;
+      }
+
+
+
+      /* ---------- FOOTER ---------- */
 
       .footer-inner {
         flex-direction: column;
@@ -746,6 +1036,199 @@
         align-items: flex-start;
 
         gap: 20px;
+      }
+
+
+      .footer-links {
+        flex-wrap: wrap;
+
+        gap: 18px 25px;
+      }
+
+    }
+
+
+
+    /* ================= SMALL MOBILE ================= */
+
+    @media (max-width: 420px) {
+
+      nav {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+
+      .hero {
+        padding-top: 120px;
+
+        padding-bottom: 65px;
+      }
+
+
+      .hero-grid,
+      .intro-grid,
+      .theme {
+        width: 90%;
+      }
+
+
+      .hero h1 {
+        font-size: clamp(48px, 15vw, 65px);
+
+        letter-spacing: -0.055em;
+      }
+
+
+      .hero-copy p {
+        font-size: 16px;
+      }
+
+
+      .hero-line {
+        margin-top: 30px;
+      }
+
+
+      .intro {
+        padding: 65px 0;
+      }
+
+
+      .intro h2 {
+        font-size: clamp(42px, 12vw, 58px);
+      }
+
+
+      .intro p {
+        font-size: 17px;
+
+        line-height: 1.7;
+      }
+
+
+      .themes {
+        padding: 35px 0;
+      }
+
+
+      .theme {
+        padding: 55px 0;
+
+        gap: 18px;
+      }
+
+
+      .theme-content h2 {
+        font-size: clamp(42px, 12vw, 58px);
+
+        margin-bottom: 24px;
+      }
+
+
+      .theme-content > p {
+        font-size: 16px;
+
+        line-height: 1.75;
+
+        margin-bottom: 24px;
+      }
+
+
+      .highlight {
+        padding: 25px;
+
+        margin-top: 30px;
+      }
+
+
+      .highlight h3 {
+        font-size: 27px;
+      }
+
+
+      .highlight p {
+        font-size: 14px;
+
+        line-height: 1.7;
+      }
+
+
+      .detail {
+        padding: 17px 0;
+      }
+
+
+      .detail strong {
+        font-size: 12px;
+      }
+
+
+      .detail span {
+        font-size: 13px;
+
+        line-height: 1.6;
+      }
+
+
+      .interest-grid {
+        margin-top: 40px;
+      }
+
+
+      .interest {
+        padding: 25px;
+      }
+
+
+      .interest-number {
+        margin-bottom: 17px;
+      }
+
+
+      .interest h3 {
+        font-size: 23px;
+      }
+
+
+      .interest p {
+        font-size: 13px;
+      }
+
+
+      .statement {
+        padding: 80px 0;
+      }
+
+
+      .statement h2 {
+        font-size: clamp(43px, 13vw, 65px);
+
+        margin-bottom: 35px;
+      }
+
+
+      .statement p {
+        font-size: 16px;
+
+        line-height: 1.75;
+      }
+
+
+      .closing {
+        padding: 80px 0;
+      }
+
+
+      .closing h2 {
+        font-size: clamp(43px, 13vw, 65px);
+      }
+
+
+      .closing p {
+        font-size: 16px;
+
+        margin-top: 28px;
       }
 
     }
@@ -788,54 +1271,80 @@
 
   <nav>
 
-    <a href="index.html" class="logo">
+    <a
+      href="index.html"
+      class="logo"
+      aria-label="Aishwarya Nagchandi — Home"
+    >
       AN
     </a>
 
 
-    <div class="nav-links" id="navLinks">
+    <div
+      class="nav-links"
+      id="navLinks"
+    >
 
       <a href="index.html">
         Home
       </a>
 
+
       <a href="about.html">
         About
       </a>
+
 
       <a href="experience.html">
         Experience
       </a>
 
+
       <a href="projects.html">
         Projects
       </a>
 
-      <a href="beyond.html" class="active">
-        Beyond
+
+      <a
+        href="beyond.html"
+        class="active"
+        aria-current="page"
+      >
+        Beyond the Resume
       </a>
+
 
       <a href="skills.html">
         Skills
       </a>
 
+
       <a href="contact.html">
         Contact
       </a>
 
-      <a href="resume.pdf" class="resume-btn">
+
+      <a
+        href="resume.pdf"
+        class="resume-btn"
+      >
         Resume ↗
       </a>
 
     </div>
 
 
-    <div
+    <button
       class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="navLinks"
+      aria-expanded="false"
       onclick="toggleMenu()"
     >
       ☰
-    </div>
+    </button>
 
   </nav>
 
@@ -916,6 +1425,7 @@
         </p>
 
       </div>
+
 
     </div>
 
@@ -1311,6 +1821,7 @@
           </div>
 
 
+
           <div class="interest">
 
             <div class="interest-number">
@@ -1327,6 +1838,7 @@
             </p>
 
           </div>
+
 
 
           <div class="interest">
@@ -1347,6 +1859,7 @@
           </div>
 
 
+
           <div class="interest">
 
             <div class="interest-number">
@@ -1365,6 +1878,7 @@
           </div>
 
 
+
           <div class="interest">
 
             <div class="interest-number">
@@ -1381,6 +1895,7 @@
             </p>
 
           </div>
+
 
 
           <div class="interest">
@@ -1489,15 +2004,18 @@
           Home
         </a>
 
+
         <a href="projects.html">
           Projects
         </a>
+
 
         <a href="contact.html">
           Contact
         </a>
 
       </div>
+
 
     </div>
 
@@ -1509,19 +2027,67 @@
 
   <script>
 
-    /* Mobile Navigation */
+    /* ================= MOBILE NAVIGATION ================= */
 
     function toggleMenu() {
 
-      document
-        .getElementById("navLinks")
-        .classList.toggle("open");
+      const navLinks =
+        document.getElementById("navLinks");
+
+      const menuToggle =
+        document.getElementById("menuToggle");
+
+      const isOpen =
+        navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
 
     }
 
 
+    /* Close mobile menu after selecting a page */
 
-    /* Scroll Reveal */
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+          const navLinks =
+            document.getElementById("navLinks");
+
+          const menuToggle =
+            document.getElementById("menuToggle");
+
+          navLinks.classList.remove("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+        });
+
+      });
+
+
+
+    /* ================= SCROLL REVEAL ================= */
 
     const reveals =
       document.querySelectorAll(".reveal");
@@ -1562,8 +2128,10 @@
 
     });
 
+
   </script>
 
 
 </body>
+
 </html>
