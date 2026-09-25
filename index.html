@@ -1,628 +1,2872 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Aishwarya Nagchandi | Analytics × Finance × Business</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="Aishwarya Nagchandi — Data Science, Finance and Business Analytics portfolio. Explore experience, projects, skills and analytical work.">
+    <title>
+        Aishwarya Nagchandi | Analytics × Finance × Business
+    </title>
 
-<meta name="author" content="Aishwarya Nagchandi">
-<meta name="robots" content="index, follow">
+    <meta
+        name="description"
+        content="Aishwarya Nagchandi — Analytics, Finance and Business portfolio. Explore experience, projects, skills and work across data analytics, finance, business intelligence and strategy."
+    >
 
-<link rel="canonical" href="https://aishwaryanagchandi.com/">
+    <meta
+        name="author"
+        content="Aishwarya Nagchandi"
+    >
 
-<meta property="og:title"
-content="Aishwarya Nagchandi | Analytics × Finance × Business">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-<meta property="og:description"
-content="Portfolio of Aishwarya Nagchandi across analytics, finance, business intelligence and strategy.">
+    <link
+        rel="canonical"
+        href="https://aishwaryanagchandi.com/"
+    >
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://aishwaryanagchandi.com/">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title"
-content="Aishwarya Nagchandi | Analytics × Finance × Business">
-<meta name="twitter:description"
-content="Analytics, Finance and Business portfolio of Aishwarya Nagchandi.">
+    <!-- ================= OPEN GRAPH ================= -->
 
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta
+        property="og:title"
+        content="Aishwarya Nagchandi | Analytics × Finance × Business"
+    >
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        property="og:description"
+        content="Portfolio of Aishwarya Nagchandi — Analytics, Finance, Business Intelligence and Strategy."
+    >
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-rel="stylesheet">
+    <meta
+        property="og:type"
+        content="website"
+    >
 
-<link rel="stylesheet" href="styles.css">
+    <meta
+        property="og:url"
+        content="https://aishwaryanagchandi.com/"
+    >
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfilePage",
-  "mainEntity":{
-    "@type":"Person",
-    "@id":"https://aishwaryanagchandi.com/#aishwarya-nagchandi",
-    "name":"Aishwarya Nagchandi",
-    "url":"https://aishwaryanagchandi.com/",
-    "jobTitle":"Analytics, Finance & Business Professional",
-    "description":"Aishwarya Nagchandi works at the intersection of data analytics, finance and business.",
-    "sameAs":[
-      "https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/",
-      "https://github.com/AishwaryaNagchandi"
-    ]
-  }
-}
-</script>
+    <meta
+        name="twitter:card"
+        content="summary"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Aishwarya Nagchandi | Analytics × Finance × Business"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Portfolio of Aishwarya Nagchandi — Analytics, Finance, Business Intelligence and Strategy."
+    >
+
+
+    <!-- ================= STRUCTURED DATA ================= -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+
+        "mainEntity": {
+
+            "@type": "Person",
+
+            "@id":
+                "https://aishwaryanagchandi.com/#aishwarya-nagchandani",
+
+            "name":
+                "Aishwarya Nagchandani",
+
+            "url":
+                "https://aishwaryanagchandi.com/",
+
+            "jobTitle":
+                "Analytics, Finance & Business Professional",
+
+            "description":
+                "Aishwarya Nagchandani works at the intersection of analytics, finance and business, with interests in data analytics, financial analysis, business intelligence and strategy.",
+
+            "sameAs": [
+
+                "https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/",
+
+                "https://github.com/AishwaryaNagchandi"
+
+            ]
+
+        }
+
+    }
+
+    </script>
+
+
+    <!-- ================= FONTS ================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+
+        /* =====================================================
+           ROOT
+        ===================================================== */
+
+        :root {
+
+            --bg: #f7f6f2;
+
+            --text: #171717;
+
+            --muted: #686868;
+
+            --line: #d9d8d3;
+
+            --accent: #173f63;
+
+            --soft: #eeede8;
+
+            --white: #ffffff;
+
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+            scroll-padding-top: 100px;
+
+            scrollbar-gutter: stable;
+
+        }
+
+
+        body {
+
+            background: var(--bg);
+
+            color: var(--text);
+
+            font-family:
+                "DM Sans",
+                sans-serif;
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            height: 76px;
+
+            z-index: 1000;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 7vw;
+
+            background:
+                rgba(247, 246, 242, 0.94);
+
+            backdrop-filter:
+                blur(14px);
+
+            -webkit-backdrop-filter:
+                blur(14px);
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .logo {
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.08em;
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+        }
+
+
+        .nav-links a {
+
+            font-size: 13px;
+
+            color: #4e4e4e;
+
+            transition:
+                color 0.25s ease;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--text);
+
+        }
+
+
+        .nav-links a.active {
+
+            color: var(--text);
+
+            font-weight: 600;
+
+        }
+
+
+        .resume-btn {
+
+            border:
+                1px solid #222;
+
+            padding:
+                10px 17px;
+
+            transition:
+                all 0.25s ease;
+
+        }
+
+
+        .resume-btn:hover {
+
+            background:
+                var(--text);
+
+            color:
+                var(--bg);
+
+        }
+
+
+        .menu-btn {
+
+            display: none;
+
+            border: none;
+
+            background: none;
+
+            font-size: 24px;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        main {
+
+            padding-top: 76px;
+
+        }
+
+
+        section {
+
+            padding:
+                110px 7vw;
+
+        }
+
+
+        .container {
+
+            width:
+                min(1180px, 100%);
+
+            margin:
+                0 auto;
+
+        }
+
+
+        .eyebrow {
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 0.16em;
+
+            text-transform: uppercase;
+
+            color: var(--accent);
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .section-label {
+
+            font-size: 11px;
+
+            color: var(--muted);
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        h1,
+        h2,
+        h3 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-weight: 600;
+
+        }
+
+
+        p {
+
+            color:
+                var(--muted);
+
+        }
+
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(25px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+
+        }
+
+
+        .reveal.visible {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height:
+                calc(100vh - 76px);
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            padding-top:
+                80px;
+
+            padding-bottom:
+                65px;
+
+        }
+
+
+        .hero-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.25fr 0.75fr;
+
+            gap:
+                90px;
+
+            align-items:
+                end;
+
+        }
+
+
+        .hero-left {
+
+            max-width:
+                850px;
+
+        }
+
+
+        .hero-name {
+
+            font-size:
+                11px;
+
+            font-weight:
+                600;
+
+            letter-spacing:
+                0.17em;
+
+            text-transform:
+                uppercase;
+
+            color:
+                var(--accent);
+
+            margin-bottom:
+                32px;
+
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(64px, 8.6vw, 126px);
+
+            line-height:
+                0.88;
+
+            letter-spacing:
+                -0.065em;
+
+            margin-bottom:
+                40px;
+
+        }
+
+
+        .hero h1 span {
+
+            display:
+                inline-block;
+
+        }
+
+
+        .hero-subtitle {
+
+            font-size:
+                clamp(18px, 2vw, 24px);
+
+            color:
+                var(--accent);
+
+            font-weight:
+                500;
+
+            margin-bottom:
+                25px;
+
+        }
+
+
+        .hero-description {
+
+            max-width:
+                650px;
+
+            font-size:
+                17px;
+
+            line-height:
+                1.8;
+
+            color:
+                var(--muted);
+
+        }
+
+
+        /* =====================================================
+           HERO RIGHT PANEL
+        ===================================================== */
+
+        .hero-side {
+
+            border-left:
+                1px solid var(--line);
+
+            padding-left:
+                45px;
+
+            padding-bottom:
+                5px;
+
+        }
+
+
+        .currently-label {
+
+            font-size:
+                11px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.14em;
+
+            color:
+                var(--muted);
+
+            margin-bottom:
+                22px;
+
+        }
+
+
+        .currently-title {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                32px;
+
+            line-height:
+                1.15;
+
+            margin-bottom:
+                16px;
+
+        }
+
+
+        .currently-text {
+
+            font-size:
+                15px;
+
+            line-height:
+                1.7;
+
+            color:
+                var(--muted);
+
+            margin-bottom:
+                28px;
+
+        }
+
+
+        .currently-meta {
+
+            padding-top:
+                20px;
+
+            border-top:
+                1px solid var(--line);
+
+        }
+
+
+        .meta-row {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+            padding:
+                12px 0;
+
+            border-bottom:
+                1px solid var(--line);
+
+            font-size:
+                12px;
+
+        }
+
+
+        .meta-row span:first-child {
+
+            color:
+                var(--muted);
+
+        }
+
+
+        .meta-row span:last-child {
+
+            text-align:
+                right;
+
+            font-weight:
+                500;
+
+        }
+
+
+        .hero-actions {
+
+            display:
+                flex;
+
+            gap:
+                18px;
+
+            margin-top:
+                38px;
+
+        }
+
+
+        .text-link {
+
+            display:
+                inline-block;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                0.09em;
+
+            text-transform:
+                uppercase;
+
+            border-bottom:
+                1px solid var(--text);
+
+            padding-bottom:
+                6px;
+
+            transition:
+                transform 0.25s ease;
+
+        }
+
+
+        .text-link:hover {
+
+            transform:
+                translateX(5px);
+
+        }
+
+
+        /* =====================================================
+           PROOF STRIP
+        ===================================================== */
+
+        .proof-strip {
+
+            border-top:
+                1px solid var(--line);
+
+            border-bottom:
+                1px solid var(--line);
+
+            padding:
+                28px 0;
+
+        }
+
+
+        .proof-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+        }
+
+
+        .proof-item {
+
+            padding:
+                8px 30px;
+
+            border-right:
+                1px solid var(--line);
+
+        }
+
+
+        .proof-item:first-child {
+
+            padding-left:
+                0;
+
+        }
+
+
+        .proof-item:last-child {
+
+            border-right:
+                none;
+
+        }
+
+
+        .proof-number {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                30px;
+
+            line-height:
+                1;
+
+            margin-bottom:
+                7px;
+
+        }
+
+
+        .proof-label {
+
+            font-size:
+                11px;
+
+            color:
+                var(--muted);
+
+            line-height:
+                1.4;
+
+        }
+
+
+        /* =====================================================
+           DIMENSIONS
+        ===================================================== */
+
+        .dimensions {
+
+            background:
+                var(--soft);
+
+        }
+
+
+        .dimension-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+        }
+
+
+        .dimension {
+
+            padding:
+                30px 45px 30px 0;
+
+            border-right:
+                1px solid var(--line);
+
+        }
+
+
+        .dimension:not(:first-child) {
+
+            padding-left:
+                45px;
+
+        }
+
+
+        .dimension:last-child {
+
+            border-right:
+                none;
+
+        }
+
+
+        .dimension-number {
+
+            font-size:
+                11px;
+
+            color:
+                var(--muted);
+
+            margin-bottom:
+                24px;
+
+        }
+
+
+        .dimension h3 {
+
+            font-size:
+                38px;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .dimension p {
+
+            max-width:
+                280px;
+
+            font-size:
+                15px;
+
+        }
+
+
+        /* =====================================================
+           EXPERIENCE
+        ===================================================== */
+
+        .experience-preview {
+
+            border-top:
+                1px solid var(--line);
+
+        }
+
+
+        .experience-header {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                flex-end;
+
+            margin-bottom:
+                65px;
+
+        }
+
+
+        .experience-header h2 {
+
+            font-size:
+                clamp(48px, 6vw, 78px);
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -0.04em;
+
+        }
+
+
+        .view-all {
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                0.08em;
+
+            text-transform:
+                uppercase;
+
+            border-bottom:
+                1px solid var(--text);
+
+            padding-bottom:
+                5px;
+
+        }
+
+
+        .experience-item {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                150px 1fr;
+
+            gap:
+                60px;
+
+            padding:
+                50px 0;
+
+            border-top:
+                1px solid var(--line);
+
+        }
+
+
+        .experience-year {
+
+            font-size:
+                12px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+        .experience-item h3 {
+
+            font-size:
+                clamp(34px, 4vw, 52px);
+
+            line-height:
+                1;
+
+            margin-bottom:
+                14px;
+
+        }
+
+
+        .experience-role {
+
+            color:
+                var(--accent);
+
+            font-size:
+                14px;
+
+            margin-bottom:
+                22px;
+
+        }
+
+
+        .experience-item p {
+
+            max-width:
+                650px;
+
+            font-size:
+                15px;
+
+        }
+
+
+        .experience-link {
+
+            display:
+                inline-block;
+
+            margin-top:
+                25px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                0.08em;
+
+            border-bottom:
+                1px solid var(--text);
+
+            padding-bottom:
+                6px;
+
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .projects {
+
+            background:
+                var(--soft);
+
+        }
+
+
+        .projects-header {
+
+            max-width:
+                800px;
+
+            margin-bottom:
+                60px;
+
+        }
+
+
+        .projects-header h2 {
+
+            font-size:
+                clamp(48px, 6vw, 78px);
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -0.04em;
+
+            margin-bottom:
+                25px;
+
+        }
+
+
+        .projects-header p {
+
+            font-size:
+                17px;
+
+            max-width:
+                620px;
+
+        }
+
+
+        .project-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap:
+                1px;
+
+            background:
+                var(--line);
+
+            border:
+                1px solid var(--line);
+
+        }
+
+
+        .project-card {
+
+            background:
+                var(--bg);
+
+            padding:
+                45px;
+
+            min-height:
+                285px;
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease;
+
+        }
+
+
+        .project-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            background:
+                var(--white);
+
+        }
+
+
+        .project-category {
+
+            font-size:
+                10px;
+
+            color:
+                var(--accent);
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                0.1em;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                27px;
+
+        }
+
+
+        .project-card h3 {
+
+            font-size:
+                34px;
+
+            line-height:
+                1.05;
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .project-card p {
+
+            font-size:
+                15px;
+
+        }
+
+
+        /* =====================================================
+           NUMBERS
+        ===================================================== */
+
+        .numbers {
+
+            padding-top:
+                90px;
+
+            padding-bottom:
+                90px;
+
+        }
+
+
+        .number-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            border-top:
+                1px solid var(--line);
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .number-item {
+
+            padding:
+                42px 30px 42px 0;
+
+            border-right:
+                1px solid var(--line);
+
+        }
+
+
+        .number-item:not(:first-child) {
+
+            padding-left:
+                30px;
+
+        }
+
+
+        .number-item:last-child {
+
+            border-right:
+                none;
+
+        }
+
+
+        .number {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                45px;
+
+            margin-bottom:
+                7px;
+
+        }
+
+
+        .number-label {
+
+            color:
+                var(--muted);
+
+            font-size:
+                12px;
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+
+            min-height:
+                65vh;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            background:
+                var(--accent);
+
+            color:
+                white;
+
+        }
+
+
+        .cta-content {
+
+            max-width:
+                900px;
+
+        }
+
+
+        .cta .eyebrow {
+
+            color:
+                #d5e1eb;
+
+        }
+
+
+        .cta h2 {
+
+            font-size:
+                clamp(60px, 9vw, 120px);
+
+            line-height:
+                0.92;
+
+            letter-spacing:
+                -0.05em;
+
+            margin-bottom:
+                35px;
+
+        }
+
+
+        .cta p {
+
+            color:
+                #d5dce2;
+
+            max-width:
+                600px;
+
+            font-size:
+                18px;
+
+            margin-bottom:
+                32px;
+
+        }
+
+
+        .cta-link {
+
+            display:
+                inline-block;
+
+            border-bottom:
+                1px solid white;
+
+            padding-bottom:
+                7px;
+
+            font-size:
+                11px;
+
+            font-weight:
+                700;
+
+            letter-spacing:
+                0.08em;
+
+            text-transform:
+                uppercase;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            padding:
+                35px 7vw;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            border-top:
+                1px solid var(--line);
+
+            font-size:
+                12px;
+
+            color:
+                var(--muted);
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+
+            nav {
+
+                padding:
+                    0 6vw;
+
+            }
+
+
+            .nav-links {
+
+                display:
+                    none;
+
+                position:
+                    absolute;
+
+                top:
+                    76px;
+
+                left:
+                    0;
+
+                right:
+                    0;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    0;
+
+                background:
+                    var(--bg);
+
+                border-bottom:
+                    1px solid var(--line);
+
+            }
+
+
+            .nav-links.active {
+
+                display:
+                    flex;
+
+            }
+
+
+            .nav-links a {
+
+                width:
+                    100%;
+
+                padding:
+                    17px 6vw;
+
+                border-bottom:
+                    1px solid var(--line);
+
+            }
+
+
+            .nav-links .resume-btn {
+
+                border:
+                    none;
+
+                border-bottom:
+                    1px solid var(--line);
+
+            }
+
+
+            .menu-btn {
+
+                display:
+                    block;
+
+            }
+
+
+            section {
+
+                padding:
+                    80px 6vw;
+
+            }
+
+
+            /* HERO */
+
+            .hero {
+
+                min-height:
+                    auto;
+
+                padding-top:
+                    80px;
+
+                padding-bottom:
+                    60px;
+
+            }
+
+
+            .hero-grid {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    55px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    clamp(58px, 16vw, 95px);
+
+            }
+
+
+            .hero-description {
+
+                font-size:
+                    16px;
+
+            }
+
+
+            .hero-side {
+
+                border-left:
+                    none;
+
+                border-top:
+                    1px solid var(--line);
+
+                padding:
+                    30px 0 0;
+
+            }
+
+
+            .currently-title {
+
+                font-size:
+                    29px;
+
+            }
+
+
+            .hero-actions {
+
+                margin-top:
+                    30px;
+
+            }
+
+
+            /* PROOF */
+
+            .proof-strip {
+
+                padding:
+                    0;
+
+            }
+
+
+            .proof-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .proof-item {
+
+                padding:
+                    25px 15px 25px 0;
+
+                border-bottom:
+                    1px solid var(--line);
+
+            }
+
+
+            .proof-item:nth-child(2) {
+
+                border-right:
+                    none;
+
+                padding-left:
+                    15px;
+
+            }
+
+
+            .proof-item:nth-child(3) {
+
+                padding-left:
+                    0;
+
+            }
+
+
+            .proof-item:nth-child(4) {
+
+                border-right:
+                    none;
+
+                padding-left:
+                    15px;
+
+            }
+
+
+            /* DIMENSIONS */
+
+            .dimension-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .dimension,
+            .dimension:not(:first-child) {
+
+                padding:
+                    30px 0;
+
+                border-right:
+                    none;
+
+                border-bottom:
+                    1px solid var(--line);
+
+            }
+
+
+            .dimension:last-child {
+
+                border-bottom:
+                    none;
+
+            }
+
+
+            /* EXPERIENCE */
+
+            .experience-header {
+
+                display:
+                    block;
+
+            }
+
+
+            .experience-header h2 {
+
+                margin-bottom:
+                    25px;
+
+            }
+
+
+            .experience-item {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    15px;
+
+            }
+
+
+            /* PROJECTS */
+
+            .project-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            /* NUMBERS */
+
+            .number-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .number-item {
+
+                border-bottom:
+                    1px solid var(--line);
+
+            }
+
+
+            .number-item:nth-child(2) {
+
+                border-right:
+                    none;
+
+            }
+
+
+            .number-item:nth-child(3) {
+
+                padding-left:
+                    0;
+
+            }
+
+
+            .number-item:nth-child(4) {
+
+                border-right:
+                    none;
+
+            }
+
+
+            /* FOOTER */
+
+            footer {
+
+                flex-direction:
+                    column;
+
+                gap:
+                    10px;
+
+                align-items:
+                    flex-start;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+
+                scroll-behavior:
+                    auto;
+
+            }
+
+
+            .reveal {
+
+                opacity:
+                    1;
+
+                transform:
+                    none;
+
+                transition:
+                    none;
+
+            }
+
+
+            .project-card {
+
+                transition:
+                    none;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-<nav class="site-nav">
 
-<div class="nav-inner">
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-<a href="index.html" class="logo">AN</a>
+<nav>
 
-<button class="menu-button"
-aria-label="Open navigation"
-aria-expanded="false"
-aria-controls="navLinks">
-☰
-</button>
+    <a
+        href="index.html"
+        class="logo"
+    >
+        AN
+    </a>
 
-<div class="nav-links" id="navLinks">
 
-<a href="index.html" class="active" aria-current="page">Home</a>
-<a href="about.html">About</a>
-<a href="experience.html">Experience</a>
-<a href="projects.html">Projects</a>
-<a href="beyond.html">Beyond the Resume</a>
-<a href="skills.html">Skills</a>
-<a href="contact.html">Contact</a>
+    <button
+        class="menu-btn"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
 
-<a href="resume.pdf"
-class="resume-btn"
-target="_blank"
-rel="noopener">
-Resume ↗
-</a>
 
-</div>
+    <div class="nav-links">
 
-</div>
+        <a
+            href="index.html"
+            class="active"
+            aria-current="page"
+        >
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="experience.html">
+            Experience
+        </a>
+
+        <a href="projects.html">
+            Projects
+        </a>
+
+        <a href="beyond.html">
+            Beyond the Resume
+        </a>
+
+        <a href="skills.html">
+            Skills
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="resume.pdf"
+            class="resume-btn"
+            target="_blank"
+        >
+            Resume ↗
+        </a>
+
+    </div>
 
 </nav>
 
 
 <main>
 
-<!-- HERO -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-<div class="container reveal">
+    <div class="container hero-grid">
 
-<div class="eyebrow">
-Aishwarya Nagchandi
-</div>
 
-<h1>
-Analytics ×<br>
-Finance ×<br>
-Business
-</h1>
+        <!-- LEFT -->
 
-<div class="hero-subtitle">
-Turning data into insight, and insight into decisions.
-</div>
+        <div class="hero-left reveal">
 
-<p class="hero-description">
-I work at the intersection of data analytics, finance and
-business — using structured thinking to understand problems,
-evaluate possibilities and build practical solutions.
-</p>
 
-<div class="hero-actions">
+            <div class="hero-name">
 
-<a href="experience.html" class="text-button">
-View Experience →
-</a>
+                Aishwarya Nagchandi
 
-<a href="projects.html" class="text-button">
-View Projects →
-</a>
+            </div>
 
-</div>
 
-<div class="hero-rule"></div>
+            <h1>
 
-</div>
+                Analytics
+                <span>×</span><br>
+
+                Finance
+                <span>×</span><br>
+
+                Business
+
+            </h1>
+
+
+            <div class="hero-subtitle">
+
+                Turning data into insight, and insight into decisions.
+
+            </div>
+
+
+            <p class="hero-description">
+
+                I work at the intersection of data analytics,
+                finance and business — using structured thinking
+                to understand problems, evaluate possibilities
+                and build practical solutions.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="experience.html"
+                    class="text-link"
+                >
+                    View Experience →
+                </a>
+
+
+                <a
+                    href="projects.html"
+                    class="text-link"
+                >
+                    View Projects →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <aside class="hero-side reveal">
+
+
+            <div class="currently-label">
+
+                Currently
+
+            </div>
+
+
+            <div class="currently-title">
+
+                Building at the intersection
+                of data, finance and business.
+
+            </div>
+
+
+            <p class="currently-text">
+
+                I am pursuing an Integrated MBA Tech at
+                NMIMS, combining a B.Tech in Data Science
+                with an MBA focused on Finance and
+                Business Intelligence & Analytics.
+
+            </p>
+
+
+            <div class="currently-meta">
+
+
+                <div class="meta-row">
+
+                    <span>
+                        Education
+                    </span>
+
+                    <span>
+                        MBA Tech
+                    </span>
+
+                </div>
+
+
+                <div class="meta-row">
+
+                    <span>
+                        Major
+                    </span>
+
+                    <span>
+                        Finance
+                    </span>
+
+                </div>
+
+
+                <div class="meta-row">
+
+                    <span>
+                        Minor
+                    </span>
+
+                    <span>
+                        BIA
+                    </span>
+
+                </div>
+
+
+                <div class="meta-row">
+
+                    <span>
+                        Engineering
+                    </span>
+
+                    <span>
+                        Data Science
+                    </span>
+
+                </div>
+
+
+                <div class="meta-row">
+
+                    <span>
+                        Graduation
+                    </span>
+
+                    <span>
+                        2027
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </aside>
+
+
+    </div>
 
 </section>
 
 
-<!-- WHAT I BRING -->
 
-<section class="soft-section">
+<!-- =====================================================
+     PROOF STRIP
+===================================================== -->
 
-<div class="container">
+<div class="proof-strip">
 
-<div class="section-label">
-01 — What I Bring
+    <div class="container proof-grid">
+
+
+        <div class="proof-item reveal">
+
+            <div class="proof-number">
+                1,000+
+            </div>
+
+            <div class="proof-label">
+                Spectral datasets analysed
+            </div>
+
+        </div>
+
+
+        <div class="proof-item reveal">
+
+            <div class="proof-number">
+                ₹25L+
+            </div>
+
+            <div class="proof-label">
+                Capital requirements modelled
+            </div>
+
+        </div>
+
+
+        <div class="proof-item reveal">
+
+            <div class="proof-number">
+                20+
+            </div>
+
+            <div class="proof-label">
+                Years of macroeconomic data
+            </div>
+
+        </div>
+
+
+        <div class="proof-item reveal">
+
+            <div class="proof-number">
+                4
+            </div>
+
+            <div class="proof-label">
+                Core dimensions: data, finance, business & strategy
+            </div>
+
+        </div>
+
+
+    </div>
+
 </div>
 
-<div class="three-grid">
-
-<div class="grid-item reveal">
-
-<div class="item-number">01</div>
-
-<h3>Data</h3>
-
-<p>
-Python, machine learning, statistical analysis,
-data transformation and visualization to uncover
-patterns within complex datasets.
-</p>
-
-</div>
 
 
-<div class="grid-item reveal">
+<!-- =====================================================
+     DIMENSIONS
+===================================================== -->
 
-<div class="item-number">02</div>
+<section class="dimensions">
 
-<h3>Finance</h3>
-
-<p>
-Financial modelling, valuation, investment analysis
-and quantitative methods to connect numbers with
-financial decisions.
-</p>
-
-</div>
+    <div class="container">
 
 
-<div class="grid-item reveal">
+        <div class="section-label">
 
-<div class="item-number">03</div>
+            01 — What I Bring
 
-<h3>Business</h3>
+        </div>
 
-<p>
-Business analysis, process improvement, market
-analysis and strategic problem solving to turn
-findings into action.
-</p>
 
-</div>
+        <div class="dimension-grid">
 
-</div>
 
-</div>
+            <div class="dimension reveal">
+
+                <div class="dimension-number">
+                    01
+                </div>
+
+                <h3>
+                    Data
+                </h3>
+
+                <p>
+
+                    Python, machine learning,
+                    statistical analysis, data
+                    transformation and visualization
+                    to uncover patterns within
+                    complex datasets.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="dimension reveal">
+
+                <div class="dimension-number">
+                    02
+                </div>
+
+                <h3>
+                    Finance
+                </h3>
+
+                <p>
+
+                    Financial modelling, valuation,
+                    investment analysis, quantitative
+                    finance and risk analysis to connect
+                    numbers with financial decisions.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="dimension reveal">
+
+                <div class="dimension-number">
+                    03
+                </div>
+
+                <h3>
+                    Business
+                </h3>
+
+                <p>
+
+                    Business analysis, process improvement,
+                    market analysis and strategic problem
+                    solving to turn analytical findings
+                    into action.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- CURRENTLY -->
 
-<section class="currently">
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
 
-<div class="container">
+<section class="experience-preview">
 
-<div class="currently-grid">
-
-<div class="reveal">
-
-<div class="section-label">
-02 — Currently
-</div>
-
-<div class="currently-title">
-Building across disciplines.
-</div>
-
-</div>
+    <div class="container">
 
 
-<div class="reveal">
+        <div class="experience-header reveal">
 
-<p class="currently-copy">
 
-I am currently pursuing a 5-year Integrated MBA Tech
-at MPSTME, NMIMS, Mumbai, graduating in 2027. The
-program brings together Data Science and an MBA, with
-Finance as my major and Business Intelligence &
-Analytics as my minor.
+            <div>
 
-</p>
+                <div class="section-label">
 
-<div class="currently-meta">
+                    02 — Experience
 
-<span class="meta-pill">Data Science</span>
-<span class="meta-pill">Finance Major</span>
-<span class="meta-pill">BIA Minor</span>
-<span class="meta-pill">Class of 2027</span>
+                </div>
 
-</div>
 
-</div>
+                <h2>
 
-</div>
+                    Where I've<br>
+                    learned by doing.
 
-</div>
+                </h2>
+
+            </div>
+
+
+            <a
+                href="experience.html"
+                class="view-all"
+            >
+                View all experience →
+            </a>
+
+
+        </div>
+
+
+
+        <!-- DOW -->
+
+        <div class="experience-item reveal">
+
+
+            <div class="experience-year">
+
+                2026
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Dow Chemical
+                </h3>
+
+
+                <div class="experience-role">
+
+                    Management Intern · Integrated Supply Chain
+
+                </div>
+
+
+                <p>
+
+                    Worked across process analysis,
+                    data analytics and business improvement —
+                    combining stakeholder insights with
+                    structured analysis to identify
+                    opportunities for improvement.
+
+                </p>
+
+
+                <a
+                    href="experience.html#dow"
+                    class="experience-link"
+                >
+                    View Experience →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- IIRS -->
+
+        <div class="experience-item reveal">
+
+
+            <div class="experience-year">
+
+                2025
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    IIRS — ISRO
+                </h3>
+
+
+                <div class="experience-role">
+
+                    Data Analytics Summer Intern
+
+                </div>
+
+
+                <p>
+
+                    Analysed hyperspectral and geospatial
+                    datasets using Python, translating
+                    complex scientific data into structured
+                    insights.
+
+                </p>
+
+
+                <a
+                    href="experience.html#isro"
+                    class="experience-link"
+                >
+                    View Experience →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<!-- EXPERIENCE -->
 
-<section>
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
 
-<div class="container">
+<section class="projects">
 
-<div class="preview-header reveal">
-
-<div>
-
-<div class="section-label">
-03 — Experience
-</div>
-
-<h2>
-Where I've<br>
-learned by doing.
-</h2>
-
-</div>
-
-<a href="experience.html" class="text-button">
-View all experience →
-</a>
-
-</div>
+    <div class="container">
 
 
-<div class="experience-preview-item reveal">
-
-<div class="year">2026</div>
-
-<div>
-
-<h3>Dow Chemical</h3>
-
-<div class="role">
-Management Intern · Integrated Supply Chain
-</div>
-
-<p class="preview-description">
-Worked across process analysis, customer analytics,
-process improvement and stakeholder management,
-connecting data with practical business problems.
-</p>
-
-<a href="experience.html#dow"
-class="text-button">
-View experience →
-</a>
-
-</div>
-
-</div>
+        <div class="projects-header reveal">
 
 
-<div class="experience-preview-item reveal">
+            <div class="section-label">
 
-<div class="year">2025</div>
+                03 — Selected Work
 
-<div>
+            </div>
 
-<h3>IIRS — ISRO</h3>
 
-<div class="role">
-Data Analytics Summer Intern
-</div>
+            <h2>
 
-<p class="preview-description">
-Worked with hyperspectral and geospatial datasets,
-using Python and machine learning methods to analyse
-complex scientific data.
-</p>
+                Problems I've<br>
+                tried to solve.
 
-<a href="experience.html#isro"
-class="text-button">
-View experience →
-</a>
+            </h2>
 
-</div>
 
-</div>
+            <p>
 
-</div>
+                I like problems that sit between
+                disciplines — where financial thinking,
+                analytical methods and business context
+                need to work together.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="project-grid">
+
+
+            <!-- PRARAMBH -->
+
+            <a
+                href="projects.html#prarambh"
+                class="project-card reveal"
+            >
+
+                <div class="project-category">
+
+                    Finance × Entrepreneurship
+
+                </div>
+
+
+                <h3>
+
+                    Project Prarambh
+
+                </h3>
+
+
+                <p>
+
+                    Building the financial case for a
+                    sustainability-led business, from
+                    capital requirements and revenue
+                    scenarios to investment viability.
+
+                </p>
+
+            </a>
+
+
+
+            <!-- NOBELZA -->
+
+            <a
+                href="projects.html#nobelza"
+                class="project-card reveal"
+            >
+
+                <div class="project-category">
+
+                    Strategy × Market Analysis
+
+                </div>
+
+
+                <h3>
+
+                    Nobelza
+
+                </h3>
+
+
+                <p>
+
+                    Exploring market entry, demand,
+                    competition and commercialisation
+                    for a portable healthcare testing
+                    solution.
+
+                </p>
+
+            </a>
+
+
+
+            <!-- SECTORAL -->
+
+            <a
+                href="projects.html#sectoral"
+                class="project-card reveal"
+            >
+
+                <div class="project-category">
+
+                    Finance × Quantitative Analytics
+
+                </div>
+
+
+                <h3>
+
+                    Sectoral Analysis
+
+                </h3>
+
+
+                <p>
+
+                    Comparing sectors and companies
+                    through financial ratios, risk
+                    metrics, portfolio analysis and
+                    quantitative signals.
+
+                </p>
+
+            </a>
+
+
+
+            <!-- MACRO -->
+
+            <a
+                href="projects.html#macro"
+                class="project-card reveal"
+            >
+
+                <div class="project-category">
+
+                    Analytics × Economics
+
+                </div>
+
+
+                <h3>
+
+                    Macroeconomic Outcomes
+
+                </h3>
+
+
+                <p>
+
+                    Examining long-term relationships
+                    between government budgets, fiscal
+                    policy, economic growth and
+                    investment flows.
+
+                </p>
+
+            </a>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- SELECTED WORK -->
 
-<section class="soft-section">
+<!-- =====================================================
+     NUMBERS
+===================================================== -->
 
-<div class="container">
+<section class="numbers">
 
-<div class="preview-header reveal">
-
-<div>
-
-<div class="section-label">
-04 — Selected Work
-</div>
-
-<h2>
-Problems I've<br>
-tried to solve.
-</h2>
-
-</div>
-
-<a href="projects.html" class="text-button">
-View all projects →
-</a>
-
-</div>
+    <div class="container">
 
 
-<div class="project-grid">
+        <div class="section-label">
 
-<a href="projects.html#prarambh"
-class="project-card reveal">
+            04 — By the Numbers
 
-<div class="project-category">
-Finance × Entrepreneurship
-</div>
-
-<h3>Project Prarambh</h3>
-
-<p>
-Built a five-year financial model evaluating ₹25L+
-capital requirements, investment viability and
-long-term growth scenarios.
-</p>
-
-</a>
+        </div>
 
 
-<a href="projects.html#nobelza"
-class="project-card reveal">
-
-<div class="project-category">
-Strategy × Healthcare
-</div>
-
-<h3>Nobelza</h3>
-
-<p>
-Analysed market entry for a portable TB-testing
-solution through market sizing, competition,
-demand forecasting and financial modelling.
-</p>
-
-</a>
+        <div class="number-grid">
 
 
-<a href="projects.html#macro"
-class="project-card reveal">
+            <div class="number-item reveal">
 
-<div class="project-category">
-Economics × Data Analytics
-</div>
+                <div class="number">
+                    1,000+
+                </div>
 
-<h3>Budgets & Macroeconomic Outcomes</h3>
+                <div class="number-label">
+                    Spectral datasets analysed
+                </div>
 
-<p>
-Analysed 20+ years of macroeconomic data across
-150+ indicators to study fiscal policy, growth
-patterns and investment flows.
-</p>
+            </div>
 
-</a>
 
-</div>
+            <div class="number-item reveal">
 
-</div>
+                <div class="number">
+                    50+
+                </div>
+
+                <div class="number-label">
+                    Spectral bands worked with
+                </div>
+
+            </div>
+
+
+            <div class="number-item reveal">
+
+                <div class="number">
+                    10+
+                </div>
+
+                <div class="number-label">
+                    Material types classified
+                </div>
+
+            </div>
+
+
+            <div class="number-item reveal">
+
+                <div class="number">
+                    20+
+                </div>
+
+                <div class="number-label">
+                    Years of macroeconomic data
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- NUMBERS -->
 
-<section>
+<!-- =====================================================
+     CTA
+===================================================== -->
 
-<div class="container">
+<section class="cta">
 
-<div class="section-label">
-05 — By the Numbers
-</div>
-
-<div class="numbers-grid">
-
-<div class="number-card reveal">
-
-<div class="big-number">1,000+</div>
-
-<div class="number-label">
-Spectral datasets analysed
-</div>
-
-</div>
+    <div class="container cta-content reveal">
 
 
-<div class="number-card reveal">
+        <div class="eyebrow">
 
-<div class="big-number">50+</div>
+            05 — Let's Connect
 
-<div class="number-label">
-Spectral bands
-</div>
-
-</div>
+        </div>
 
 
-<div class="number-card reveal">
+        <h2>
 
-<div class="big-number">10+</div>
+            Let's talk.
 
-<div class="number-label">
-Material classes
-</div>
-
-</div>
+        </h2>
 
 
-<div class="number-card reveal">
+        <p>
 
-<div class="big-number">20+</div>
+            Whether you're looking for an analytical
+            perspective, a business-minded problem solver,
+            or simply want to exchange ideas, I'd be happy
+            to connect.
 
-<div class="number-label">
-Years of macroeconomic data
-</div>
-
-</div>
+        </p>
 
 
-<div class="number-card reveal">
+        <a
+            href="contact.html"
+            class="cta-link"
+        >
+            Get in touch →
+        </a>
 
-<div class="big-number">₹25L+</div>
 
-<div class="number-label">
-Capital requirements modelled
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-
-<!-- CTA -->
-
-<section class="dark-section">
-
-<div class="container reveal">
-
-<div class="eyebrow">
-06 — Let's Connect
-</div>
-
-<h2>
-Good analysis<br>
-should move<br>
-something forward.
-</h2>
-
-<p>
-I'm interested in opportunities where analytical thinking
-can influence business and financial decisions.
-</p>
-
-<a href="contact.html" class="text-button">
-Start a conversation →
-</a>
-
-</div>
-
-</section>
 
 </main>
 
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
-<div class="container footer-inner">
+    <span>
 
-<p>
-© 2026 Aishwarya Nagchandi
-</p>
+        © 2026 Aishwarya Nagchandani
 
-<div class="footer-links">
+    </span>
 
-<a href="projects.html">Projects</a>
-<a href="contact.html">Contact</a>
 
-</div>
+    <span>
 
-</div>
+        Analytics × Finance × Business
+
+    </span>
 
 </footer>
 
 
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-const menuButton = document.querySelector(".menu-button");
-const navLinks = document.querySelector("#navLinks");
 
-menuButton.addEventListener("click", () => {
+    /* ================= MOBILE NAV ================= */
 
-const open = navLinks.classList.toggle("open");
+    const menuBtn =
+        document.querySelector(".menu-btn");
 
-menuButton.setAttribute("aria-expanded", open);
-
-menuButton.setAttribute(
-"aria-label",
-open ? "Close navigation" : "Open navigation"
-);
-
-document.body.classList.toggle("menu-open", open);
-
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-link.addEventListener("click", () => {
-
-navLinks.classList.remove("open");
-document.body.classList.remove("menu-open");
-
-menuButton.setAttribute("aria-expanded","false");
-menuButton.setAttribute("aria-label","Open navigation");
-
-});
-
-});
+    const navLinks =
+        document.querySelector(".nav-links");
 
 
-const observer =
-new IntersectionObserver(entries => {
+    menuBtn.addEventListener("click", () => {
 
-entries.forEach(entry => {
+        const isOpen =
+            navLinks.classList.toggle("active");
 
-if (entry.isIntersecting) {
+        menuBtn.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
 
-entry.target.classList.add("visible");
+    });
 
-observer.unobserve(entry.target);
 
-}
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
 
-});
+            link.addEventListener(
+                "click",
+                () => {
 
-},{
-threshold:.12
-});
+                    navLinks
+                        .classList
+                        .remove("active");
 
-document.querySelectorAll(".reveal").forEach(el => {
-observer.observe(el);
-});
+                    menuBtn.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+
+
+    /* ================= SCROLL REVEAL ================= */
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+        new IntersectionObserver(
+
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target
+                            .classList
+                            .add("visible");
+
+                        revealObserver
+                            .unobserve(
+                                entry.target
+                            );
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.12
+            }
+
+        );
+
+
+    revealElements.forEach(element => {
+
+        revealObserver.observe(element);
+
+    });
+
 
 </script>
 
+
 </body>
+
 </html>
