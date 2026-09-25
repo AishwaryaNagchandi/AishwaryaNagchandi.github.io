@@ -1,392 +1,1476 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact | Aishwarya Nagchandi</title>
+  <title>Contact — Aishwarya Nagchandi</title>
 
-<meta name="description"
-content="Contact Aishwarya Nagchandi for opportunities across analytics, business intelligence, finance and strategy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<meta name="robots" content="index, follow">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-<link rel="canonical"
-href="https://aishwaryanagchandi.com/contact.html">
+  <style>
 
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+    :root {
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      --bg: #f7f6f2;
+      --text: #171717;
+      --muted: #686868;
+      --line: #d9d8d3;
+      --accent: #173f63;
+      --soft: #eeede8;
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-rel="stylesheet">
+    }
 
-<link rel="stylesheet" href="styles.css">
+
+    * {
+
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+      scrollbar-gutter: stable;
+
+    }
+
+
+    body {
+
+      background: var(--bg);
+      color: var(--text);
+
+      font-family: "DM Sans", sans-serif;
+
+      line-height: 1.6;
+
+      overflow-x: hidden;
+
+    }
+
+
+    a {
+
+      color: inherit;
+      text-decoration: none;
+
+    }
+
+
+    /* ================= NAVIGATION ================= */
+
+    nav {
+
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      width: auto;
+
+      z-index: 1000;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 22px 4vw;
+
+      background: rgba(247, 246, 242, 0.92);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(217, 216, 211, 0.7);
+
+    }
+
+
+    .logo {
+
+      font-weight: 600;
+
+      font-size: 15px;
+
+      letter-spacing: 0.08em;
+
+    }
+
+
+    .nav-links {
+
+      display: flex;
+
+      gap: 28px;
+
+      align-items: center;
+
+      font-size: 13px;
+
+    }
+
+
+    .nav-links a {
+
+      color: #555;
+
+      transition: color 0.25s ease;
+
+    }
+
+
+    .nav-links a:hover,
+    .nav-links a.active {
+
+      color: var(--text);
+
+    }
+
+
+    .resume-btn {
+
+      padding: 9px 15px;
+
+      border: 1px solid var(--text);
+
+      color: var(--text) !important;
+
+      transition: all 0.25s ease;
+
+    }
+
+
+    .resume-btn:hover {
+
+      background: var(--text);
+
+      color: var(--bg) !important;
+
+    }
+
+
+    .menu-toggle {
+
+      display: none;
+
+      font-size: 24px;
+
+      cursor: pointer;
+
+    }
+
+
+    /* ================= GENERAL ================= */
+
+    .container {
+
+      width: min(1180px, 90%);
+
+      margin: auto;
+
+    }
+
+
+    .eyebrow {
+
+      font-size: 12px;
+
+      letter-spacing: 0.16em;
+
+      text-transform: uppercase;
+
+      color: var(--muted);
+
+      margin-bottom: 35px;
+
+    }
+
+
+    .eyebrow span {
+
+      color: var(--accent);
+
+    }
+
+
+    h1,
+    h2,
+    h3 {
+
+      font-family: "Playfair Display", serif;
+
+      font-weight: 600;
+
+      line-height: 1.05;
+
+    }
+
+
+    p {
+
+      color: var(--muted);
+
+    }
+
+
+    .reveal {
+
+      opacity: 0;
+
+      transform: translateY(35px);
+
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+    }
+
+
+    .reveal.visible {
+
+      opacity: 1;
+
+      transform: translateY(0);
+
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+
+      min-height: 88vh;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      padding-top: 150px;
+
+      padding-bottom: 110px;
+
+    }
+
+
+    .hero-grid {
+
+      width: min(1180px, 90%);
+
+      margin: 0 auto;
+
+      display: grid;
+
+      grid-template-columns: 1fr 0.65fr;
+
+      gap: 90px;
+
+      align-items: end;
+
+    }
+
+
+    .hero h1 {
+
+      font-size: clamp(70px, 10vw, 135px);
+
+      letter-spacing: -0.065em;
+
+      max-width: 1000px;
+
+    }
+
+
+    .hero-copy {
+
+      max-width: 470px;
+
+      justify-self: end;
+
+    }
+
+
+    .hero-copy p {
+
+      font-size: 20px;
+
+      line-height: 1.7;
+
+    }
+
+
+    .hero-line {
+
+      margin-top: 40px;
+
+      padding-top: 18px;
+
+      border-top: 1px solid var(--line);
+
+      font-size: 13px;
+
+      color: var(--muted);
+
+    }
+
+
+    /* ================= CONTACT SECTION ================= */
+
+    .contact-section {
+
+      border-top: 1px solid var(--line);
+
+      padding: 110px 0 130px;
+
+    }
+
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns: 0.3fr 0.7fr;
+
+      gap: 80px;
+
+    }
+
+
+    .contact-intro h2 {
+
+      font-size: clamp(48px, 6vw, 78px);
+
+      letter-spacing: -0.05em;
+
+      max-width: 900px;
+
+    }
+
+
+    .contact-content {
+
+      max-width: 850px;
+
+    }
+
+
+    .contact-content > p {
+
+      font-size: 20px;
+
+      line-height: 1.8;
+
+      margin-bottom: 55px;
+
+    }
+
+
+    /* ================= CONTACT LINKS ================= */
+
+    .contact-links {
+
+      border-top: 1px solid var(--line);
+
+    }
+
+
+    .contact-link {
+
+      display: grid;
+
+      grid-template-columns: 180px 1fr auto;
+
+      align-items: center;
+
+      gap: 30px;
+
+      padding: 28px 0;
+
+      border-bottom: 1px solid var(--line);
+
+      transition:
+        padding-left 0.3s ease,
+        background 0.3s ease;
+
+    }
+
+
+    .contact-link:hover {
+
+      padding-left: 10px;
+
+    }
+
+
+    .contact-label {
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.12em;
+
+      color: var(--muted);
+
+    }
+
+
+    .contact-value {
+
+      font-size: 18px;
+
+      font-weight: 500;
+
+    }
+
+
+    .contact-arrow {
+
+      font-size: 20px;
+
+      color: var(--accent);
+
+    }
+
+
+    /* ================= OPPORTUNITIES ================= */
+
+    .opportunities {
+
+      background: var(--soft);
+
+      padding: 130px 0;
+
+    }
+
+
+    .opportunity-grid {
+
+      display: grid;
+
+      grid-template-columns: 0.35fr 0.65fr;
+
+      gap: 80px;
+
+    }
+
+
+    .opportunity-grid h2 {
+
+      font-size: clamp(50px, 6vw, 80px);
+
+      letter-spacing: -0.05em;
+
+    }
+
+
+    .opportunity-content {
+
+      max-width: 800px;
+
+    }
+
+
+    .opportunity-content > p {
+
+      font-size: 19px;
+
+      line-height: 1.8;
+
+      margin-bottom: 45px;
+
+    }
+
+
+    .opportunity-list {
+
+      border-top: 1px solid var(--line);
+
+    }
+
+
+    .opportunity {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 30px;
+
+      padding: 24px 0;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .opportunity strong {
+
+      font-size: 15px;
+
+      font-weight: 500;
+
+    }
+
+
+    .opportunity span {
+
+      font-size: 13px;
+
+      color: var(--muted);
+
+      text-align: right;
+
+    }
+
+
+    /* ================= RESUME CTA ================= */
+
+    .resume-section {
+
+      padding: 140px 0;
+
+      text-align: center;
+
+      border-bottom: 1px solid var(--line);
+
+    }
+
+
+    .resume-section h2 {
+
+      font-size: clamp(50px, 7vw, 95px);
+
+      letter-spacing: -0.055em;
+
+      max-width: 1000px;
+
+      margin: auto;
+
+    }
+
+
+    .resume-section p {
+
+      max-width: 650px;
+
+      margin: 30px auto 40px;
+
+      font-size: 18px;
+
+      line-height: 1.8;
+
+    }
+
+
+    .large-resume-btn {
+
+      display: inline-block;
+
+      padding: 15px 24px;
+
+      border: 1px solid var(--text);
+
+      font-size: 13px;
+
+      transition: all 0.3s ease;
+
+    }
+
+
+    .large-resume-btn:hover {
+
+      background: var(--text);
+
+      color: var(--bg);
+
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+
+      padding: 35px 0;
+
+    }
+
+
+    .footer-inner {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+    }
+
+
+    .footer-inner p {
+
+      font-size: 12px;
+
+    }
+
+
+    .footer-links {
+
+      display: flex;
+
+      gap: 25px;
+
+      font-size: 12px;
+
+    }
+
+
+    .footer-links a:hover {
+
+      color: var(--accent);
+
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 850px) {
+
+
+      nav {
+
+        padding: 18px 5%;
+
+      }
+
+
+      .menu-toggle {
+
+        display: block;
+
+      }
+
+
+      .nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        background: var(--bg);
+
+        border-bottom: 1px solid var(--line);
+
+      }
+
+
+      .nav-links.open {
+
+        display: flex;
+
+      }
+
+
+      .nav-links a {
+
+        width: 100%;
+
+        padding: 18px 5%;
+
+        border-top: 1px solid var(--line);
+
+      }
+
+
+      .resume-btn {
+
+        border: none;
+
+      }
+
+
+      /* HERO */
+
+      .hero {
+
+        min-height: auto;
+
+        padding-top: 130px;
+
+        padding-bottom: 80px;
+
+      }
+
+
+      .hero-grid {
+
+        width: min(90%, 1180px);
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+      }
+
+
+      .hero h1 {
+
+        font-size: clamp(58px, 15vw, 90px);
+
+      }
+
+
+      .hero-copy {
+
+        justify-self: start;
+
+        max-width: 470px;
+
+      }
+
+
+      .hero-copy p {
+
+        font-size: 17px;
+
+      }
+
+
+      /* CONTACT */
+
+      .contact-section {
+
+        padding: 80px 0 100px;
+
+      }
+
+
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+      }
+
+
+      .contact-intro h2 {
+
+        font-size: clamp(45px, 11vw, 68px);
+
+      }
+
+
+      .contact-content > p {
+
+        font-size: 17px;
+
+      }
+
+
+      .contact-link {
+
+        grid-template-columns: 1fr auto;
+
+        gap: 8px;
+
+      }
+
+
+      .contact-label {
+
+        grid-column: 1 / -1;
+
+      }
+
+
+      .contact-value {
+
+        font-size: 16px;
+
+      }
+
+
+      /* OPPORTUNITIES */
+
+      .opportunities {
+
+        padding: 90px 0;
+
+      }
+
+
+      .opportunity-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+      }
+
+
+      .opportunity-grid h2 {
+
+        font-size: clamp(48px, 13vw, 75px);
+
+      }
+
+
+      .opportunity {
+
+        display: block;
+
+      }
+
+
+      .opportunity span {
+
+        display: block;
+
+        text-align: left;
+
+        margin-top: 5px;
+
+      }
+
+
+      /* RESUME */
+
+      .resume-section {
+
+        padding: 100px 0;
+
+      }
+
+
+      .resume-section h2 {
+
+        font-size: clamp(48px, 13vw, 75px);
+
+      }
+
+
+      /* FOOTER */
+
+      .footer-inner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+      }
+
+    }
+
+
+    /* ================= REDUCED MOTION ================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+
+        scroll-behavior: auto;
+
+      }
+
+
+      .reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+      }
+
+
+      * {
+
+        transition: none !important;
+
+      }
+
+    }
+
+  </style>
 
 </head>
 
+
 <body>
 
-<nav class="site-nav">
 
-<div class="nav-inner">
+  <!-- ================= NAVIGATION ================= -->
 
-<a href="index.html" class="logo">AN</a>
+  <nav>
 
-<button class="menu-button"
-aria-label="Open navigation"
-aria-expanded="false">
-☰
-</button>
+    <a href="index.html" class="logo">
+      AN
+    </a>
 
-<div class="nav-links" id="navLinks">
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="experience.html">Experience</a>
-<a href="projects.html">Projects</a>
-<a href="beyond.html">Beyond the Resume</a>
-<a href="skills.html">Skills</a>
-<a href="contact.html" class="active" aria-current="page">Contact</a>
+    <div class="nav-links" id="navLinks">
 
-<a href="resume.pdf" class="resume-btn" target="_blank">
-Resume ↗
-</a>
+      <a href="index.html">
+        Home
+      </a>
 
-</div>
+      <a href="about.html">
+        About
+      </a>
 
-</div>
+      <a href="experience.html">
+        Experience
+      </a>
 
-</nav>
+      <a href="projects.html">
+        Projects
+      </a>
 
+      <a href="beyond.html">
+        Beyond the Resume
+      </a>
 
-<main>
+      <a href="skills.html">
+        Skills
+      </a>
 
-<section class="contact-hero">
+      <a
+        href="contact.html"
+        class="active"
+        aria-current="page"
+      >
+        Contact
+      </a>
 
-<div class="container reveal">
+      <a href="resume.pdf" class="resume-btn">
+        Resume ↗
+      </a>
 
-<div class="eyebrow">
-01 — Let's Connect
-</div>
+    </div>
 
-<h1>
-Let's<br>
-talk.
-</h1>
 
-</div>
+    <div
+      class="menu-toggle"
+      onclick="toggleMenu()"
+      aria-label="Open navigation menu"
+      role="button"
+      tabindex="0"
+    >
+      ☰
+    </div>
 
+  </nav>
 
-<div class="container reveal contact-hero-copy">
 
-<p>
-If you have a problem worth solving, an opportunity worth
-discussing, or simply want to connect, I'd be happy to hear
-from you.
-</p>
 
-<div class="hero-subtitle">
-Analytics × Finance × Business
-</div>
+  <!-- ================= HERO ================= -->
 
-</div>
+  <header class="hero">
 
-</section>
+    <div class="hero-grid">
 
 
-<section>
+      <div class="reveal">
 
-<div class="container">
+        <div class="eyebrow">
 
-<div class="split">
+          01 — <span>Let's Connect</span>
 
-<div class="reveal">
+        </div>
 
-<div class="section-label">
-02 — Get in Touch
-</div>
 
-<h2>
-Start a conversation.
-</h2>
+        <h1>
+          Let's<br>
+          talk.
+        </h1>
 
-</div>
+      </div>
 
-<div class="reveal">
 
-<p style="color:var(--muted);font-size:17px;max-width:650px;">
-I am interested in meeting people working on interesting
-problems, learning about new opportunities and having
-conversations around analytics, finance, business and technology.
-</p>
+      <div class="hero-copy reveal">
 
+        <p>
 
-<div class="contact-links">
+          If you have a problem worth solving, an opportunity
+          worth discussing, or simply want to connect, I'd
+          be happy to hear from you.
 
-<a href="mailto:aishwaryanagchandi84@gmail.com"
-class="contact-link">
+        </p>
 
-<span class="contact-label">Email</span>
 
-<span class="contact-value">
-aishwaryanagchandi84@gmail.com
-</span>
+        <div class="hero-line">
 
-<span class="contact-arrow">↗</span>
+          Analytics × Finance × Business
 
-</a>
+        </div>
 
+      </div>
 
-<a href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/"
-target="_blank"
-rel="noopener"
-class="contact-link">
 
-<span class="contact-label">LinkedIn</span>
+    </div>
 
-<span class="contact-value">
-Connect professionally
-</span>
+  </header>
 
-<span class="contact-arrow">↗</span>
 
-</a>
 
+  <!-- ================= CONTACT ================= -->
 
-<a href="https://github.com/AishwaryaNagchandi"
-target="_blank"
-rel="noopener"
-class="contact-link">
+  <section class="contact-section">
 
-<span class="contact-label">GitHub</span>
+    <div class="container contact-grid">
 
-<span class="contact-value">
-View projects and technical work
-</span>
 
-<span class="contact-arrow">↗</span>
+      <div class="contact-intro reveal">
 
-</a>
+        <div class="eyebrow">
 
+          02 — <span>Get in Touch</span>
 
-<a href="resume.pdf"
-target="_blank"
-class="contact-link">
+        </div>
 
-<span class="contact-label">Resume</span>
 
-<span class="contact-value">
-View full profile
-</span>
+        <h2>
 
-<span class="contact-arrow">↗</span>
+          Start a conversation.
 
-</a>
+        </h2>
 
-</div>
+      </div>
 
-</div>
 
-</div>
+      <div class="contact-content reveal">
 
-</div>
+        <p>
 
-</section>
+          I am always interested in meeting people working on
+          interesting problems, learning about new opportunities,
+          and having conversations around analytics, finance,
+          business and technology.
 
+        </p>
 
-<section class="soft-section">
 
-<div class="container">
+        <div class="contact-links">
 
-<div class="opportunity-grid">
 
-<div class="reveal">
+          <!-- EMAIL -->
 
-<div class="section-label">
-03 — Where I Can Contribute
-</div>
+          <a
+            href="mailto:aishwaryanagchandi84@gmail.com"
+            class="contact-link"
+          >
 
-<h2>
-Problems worth<br>
-working on.
-</h2>
+            <span class="contact-label">
+              Email
+            </span>
 
-</div>
+            <span class="contact-value">
+              aishwaryanagchandi84@gmail.com
+            </span>
 
-<div class="reveal">
+            <span class="contact-arrow">
+              ↗
+            </span>
 
-<p style="color:var(--muted);font-size:17px;margin-bottom:35px;">
-I am particularly interested in opportunities where
-analytical thinking can influence real business decisions
-and where I can continue building depth across data,
-finance and business.
-</p>
+          </a>
 
-<div class="opportunity-list">
 
-<div class="opportunity">
-<strong>Analytics</strong>
-<span>Data & Business Analytics</span>
-</div>
 
-<div class="opportunity">
-<strong>Business Intelligence</strong>
-<span>BI · Reporting · Decision Support</span>
-</div>
+          <!-- LINKEDIN -->
 
-<div class="opportunity">
-<strong>Finance</strong>
-<span>Financial Analysis · Quantitative Finance</span>
-</div>
+          <a
+            href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
 
-<div class="opportunity">
-<strong>Strategy</strong>
-<span>Business Analysis · Strategic Problem Solving</span>
-</div>
+            <span class="contact-label">
+              LinkedIn
+            </span>
 
-</div>
+            <span class="contact-value">
+              Connect professionally
+            </span>
 
-</div>
+            <span class="contact-arrow">
+              ↗
+            </span>
 
-</div>
+          </a>
 
-</div>
 
-</section>
 
+          <!-- PHONE -->
 
-<section>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSc33WatLbiZwhdx6RLmS6gNjn_iPeC7ScOtmlJXgJQv566fDw/viewform?usp=dialog"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
 
-<div class="container reveal">
+            <span class="contact-label">
+              Phone
+            </span>
 
-<div class="eyebrow">
-04 — Phone
-</div>
+            <span class="contact-value">
+              Available on request
+            </span>
 
-<h2 style="font-size:clamp(48px,7vw,90px);line-height:.95;">
-Prefer a call?
-</h2>
+            <span class="contact-arrow">
+              ↗
+            </span>
 
-<p style="max-width:650px;color:var(--muted);font-size:17px;margin-top:25px;">
-I keep my phone number private on the public website.
-If you'd like to connect by phone, please share your
-details and I will review the request.
-</p>
+          </a>
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSc33WatLbiZwhdx6RLmS6gNjn_iPeC7ScOtmlJXgJQv566fDw/viewform?usp=dialog"
-target="_blank"
-rel="noopener"
-class="text-button"
-style="margin-top:30px;">
-Request phone contact →
-</a>
 
-</div>
 
-</section>
+          <!-- GITHUB -->
 
+          <a
+            href="https://github.com/AishwaryaNagchandi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
 
-<section class="dark-section">
+            <span class="contact-label">
+              GitHub
+            </span>
 
-<div class="container reveal">
+            <span class="contact-value">
+              AishwaryaNagchandi
+            </span>
 
-<div class="eyebrow">
-05 — Resume
-</div>
+            <span class="contact-arrow">
+              ↗
+            </span>
 
-<h2>
-Want the<br>
-short version?
-</h2>
+          </a>
 
-<p>
-My resume brings together my education, experience,
-projects, skills and achievements in one place.
-</p>
 
-<a href="resume.pdf"
-target="_blank"
-class="text-button">
-View Resume →
-</a>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </div>
 
-</main>
+  </section>
 
 
-<footer>
 
-<div class="container footer-inner">
+  <!-- ================= OPPORTUNITIES ================= -->
 
-<p>© 2026 Aishwarya Nagchandi</p>
+  <section class="opportunities">
 
-<div class="footer-links">
-<a href="index.html">Home</a>
-<a href="projects.html">Projects</a>
-</div>
+    <div class="container opportunity-grid">
 
-</div>
 
-</footer>
+      <div class="reveal">
 
+        <div class="eyebrow">
 
-<script>
+          03 — <span>What I'm Looking For</span>
 
-const menuButton=document.querySelector(".menu-button");
-const navLinks=document.querySelector("#navLinks");
+        </div>
 
-menuButton.addEventListener("click",()=>{
 
-const open=navLinks.classList.toggle("open");
+        <h2>
 
-menuButton.setAttribute("aria-expanded",open);
+          Where I can contribute.
 
-menuButton.setAttribute(
-"aria-label",
-open ? "Close navigation" : "Open navigation"
-);
+        </h2>
 
-});
+      </div>
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
 
-link.addEventListener("click",()=>{
+      <div class="opportunity-content reveal">
 
-navLinks.classList.remove("open");
+        <p>
 
-menuButton.setAttribute("aria-expanded","false");
+          I am particularly interested in opportunities where
+          analytical thinking can influence real business
+          decisions and where I can continue building depth
+          across data, finance and business.
 
-});
+        </p>
 
-});
 
-const observer=new IntersectionObserver(entries=>{
+        <div class="opportunity-list">
 
-entries.forEach(entry=>{
 
-if(entry.isIntersecting){
+          <div class="opportunity">
 
-entry.target.classList.add("visible");
+            <strong>
+              Analytics
+            </strong>
 
-observer.unobserve(entry.target);
+            <span>
+              Data & Business Analytics
+            </span>
 
-}
+          </div>
 
-});
 
-},{threshold:.12});
+          <div class="opportunity">
 
-document.querySelectorAll(".reveal").forEach(el=>{
-observer.observe(el);
-});
+            <strong>
+              Business Intelligence
+            </strong>
 
-</script>
+            <span>
+              BI · Reporting · Decision Support
+            </span>
+
+          </div>
+
+
+          <div class="opportunity">
+
+            <strong>
+              Finance
+            </strong>
+
+            <span>
+              Financial Analysis · Quantitative Finance
+            </span>
+
+          </div>
+
+
+          <div class="opportunity">
+
+            <strong>
+              Strategy
+            </strong>
+
+            <span>
+              Business Analysis · Strategic Problem Solving
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= RESUME CTA ================= -->
+
+  <section class="resume-section">
+
+    <div class="container reveal">
+
+
+      <div class="eyebrow">
+
+        04 — <span>Resume</span>
+
+      </div>
+
+
+      <h2>
+
+        Want the short version?
+
+      </h2>
+
+
+      <p>
+
+        My resume brings together my education, experience,
+        projects, skills and achievements in one place.
+
+      </p>
+
+
+      <a
+        href="resume.pdf"
+        class="large-resume-btn"
+      >
+
+        View Resume ↗
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+
+      <p>
+
+        © 2026 Aishwarya Nagchandi
+
+      </p>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="projects.html">
+          Projects
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+
+    /* Mobile Navigation */
+
+    function toggleMenu() {
+
+      document
+        .getElementById("navLinks")
+        .classList.toggle("open");
+
+    }
+
+
+    /* Close mobile menu after navigation */
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+          document
+            .getElementById("navLinks")
+            .classList.remove("open");
+
+        });
+
+      });
+
+
+    /* Keyboard support for mobile menu */
+
+    document
+      .querySelector(".menu-toggle")
+      .addEventListener("keydown", (event) => {
+
+        if (
+          event.key === "Enter" ||
+          event.key === " "
+        ) {
+
+          event.preventDefault();
+
+          toggleMenu();
+
+        }
+
+      });
+
+
+    /* Scroll Reveal */
+
+    const reveals =
+      document.querySelectorAll(".reveal");
+
+
+    const observer =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target
+                .classList
+                .add("visible");
+
+              observer
+                .unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    reveals.forEach((element) => {
+
+      observer.observe(element);
+
+    });
+
+
+  </script>
+
 
 </body>
+
 </html>
