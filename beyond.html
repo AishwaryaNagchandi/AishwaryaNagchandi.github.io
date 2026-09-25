@@ -1,532 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond the Resume — Aishwarya Nagchandani</title>
 
-<title>Beyond the Resume | Aishwarya Nagchandi</title>
+  <meta name="description" content="Beyond the resume — the interests, experiences and perspectives that shape Aishwarya Nagchandani.">
 
-<meta name="description" content="The interests, experiences and activities that shape Aishwarya Nagchandi beyond academics and work.">
-<meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aishwaryanagchandani.com/beyond.html">
 
-<link rel="canonical" href="https://aishwaryanagchandi.com/beyond.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /*
+      PAGE-SPECIFIC MOBILE PROTECTION
+
+      Beyond the Resume uses:
+      .theme-inner
+        ├── .container
+        │     └── .theme-number
+        └── .theme-content
+
+      On desktop this is a two-column grid.
+      On mobile it must become a completely vertical layout.
+    */
+
+    @media (max-width: 900px) {
+
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+      }
+
+      .page-beyond {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .page-beyond .theme {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      .page-beyond .theme-inner {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .page-beyond .theme-inner > .container {
+        display: block !important;
+        width: calc(100% - 12vw) !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 !important;
+      }
+
+      .page-beyond .theme-number {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 0 20px !important;
+        padding: 0 !important;
+      }
+
+      .page-beyond .theme-content {
+        display: block !important;
+        width: calc(100% - 12vw) !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 !important;
+      }
+
+      .page-beyond .theme-content h2,
+      .page-beyond .theme-content p,
+      .page-beyond .highlight,
+      .page-beyond .details,
+      .page-beyond .interest-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+      }
+
+      .page-beyond .theme-content h2 {
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+      }
+
+      .page-beyond .detail {
+        min-width: 0 !important;
+      }
+
+      .page-beyond .detail > * {
+        min-width: 0 !important;
+        max-width: 100% !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .page-beyond .theme-inner {
+        width: 100% !important;
+      }
+
+      .page-beyond .theme-inner > .container {
+        width: calc(100% - 12vw) !important;
+      }
+
+      .page-beyond .theme-content {
+        width: calc(100% - 12vw) !important;
+      }
+
+      .page-beyond .theme-content h2 {
+        font-size: clamp(40px, 11vw, 62px) !important;
+        line-height: .96 !important;
+        letter-spacing: -.04em !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="page-beyond">
 
+<header class="site-nav">
+  <div class="nav-inner">
 
-<nav class="site-nav" aria-label="Primary navigation">
+    <a href="index.html" class="nav-logo" aria-label="Aishwarya Nagchandani home">
+      AN
+    </a>
 
-<div class="nav-inner">
+    <nav class="nav-links" aria-label="Primary navigation">
 
-<a class="logo" href="index.html">AN</a>
+      <a href="index.html">Home</a>
 
-<button class="menu-button" id="menuToggle" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open navigation">
-☰
-</button>
+      <a href="about.html">About</a>
 
-<div class="nav-links" id="navLinks">
+      <a href="experience.html">Experience</a>
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="experience.html">Experience</a>
-<a href="projects.html">Projects</a>
+      <a href="projects.html">Projects</a>
 
-<a class="active" aria-current="page" href="beyond.html">
-Beyond the Resume
-</a>
+      <a href="beyond.html" aria-current="page">
+        Beyond the Resume
+      </a>
 
-<a href="skills.html">Skills</a>
-<a href="contact.html">Contact</a>
+      <a href="skills.html">Skills</a>
 
-<a class="resume-btn" href="resume.pdf" target="_blank">
-Resume ↗
-</a>
+      <a href="contact.html">Contact</a>
 
-</div>
-</div>
-</nav>
+      <a href="resume.pdf" class="resume-btn" target="_blank" rel="noopener">
+        Resume ↗
+      </a>
+
+    </nav>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-navigation">
+      <span></span>
+    </button>
+
+  </div>
+</header>
 
 
 <main>
 
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
 
-<header class="hero">
+  <section class="hero">
 
-<div class="container hero-grid">
+    <div class="hero-grid">
 
-<div class="reveal">
+      <div>
 
-<div class="eyebrow">
-01 — <span>Beyond the Resume</span>
-</div>
+        <p class="eyebrow">
+          01 — Beyond the Resume
+        </p>
 
-<h1>
-The things<br>
-that make<br>
-me, me.
-</h1>
+        <h1>
+          The things that make me, me.
+        </h1>
 
-</div>
+      </div>
 
-<div class="hero-copy reveal">
+      <div class="hero-copy">
 
-<p>
-A resume tells you what I have done. This is a little more about what I enjoy, what I keep coming back to, and the experiences that have shaped how I see the world.
-</p>
+        <p>
+          A career is only one part of a person. The experiences
+          outside classrooms, internships and projects have shaped
+          how I think, work and see the world.
+        </p>
 
-<div class="hero-line">
-Curiosity, competition, creativity and community.
-</div>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </section>
 
-</header>
 
+  <!-- =====================================================
+       INTRO
+       ===================================================== -->
 
-<section class="intro">
+  <section class="intro">
 
-<div class="container intro-grid">
+    <div class="container">
 
-<div class="eyebrow reveal">
-02 — <span>Outside the Classroom</span>
-</div>
+      <div class="intro-grid">
 
-<div class="reveal">
+        <div>
+          <p class="eyebrow">
+            02 — Outside the Classroom
+          </p>
+        </div>
 
-<h2>
-I don't think a career is built only in classrooms.
-</h2>
+        <div>
+          <h2>
+            I don't think a career is built only in classrooms.
+          </h2>
 
-<p>
-Some of my most meaningful lessons have come from places that had nothing to do with exams, assignments or job descriptions — from performing on stage, competing on a court, building ideas with a team, volunteering in my community, listening to music, and simply being curious about the world around me.
-</p>
+          <p>
+            Some of the things that have influenced me most have
+            happened away from grades and assignments — through
+            building something from scratch, competing in sport,
+            learning an art form, giving back and simply staying
+            curious.
+          </p>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </div>
 
+  </section>
 
-<section class="themes">
 
+  <!-- =====================================================
+       THEMES
+       ===================================================== -->
 
-<article class="theme">
+  <section class="themes">
 
-<div class="container theme-inner">
 
-<div class="theme-number reveal">
-03 / 06
-</div>
+    <!-- BUILDING -->
 
-<div class="theme-content reveal">
+    <article class="theme" id="building">
 
-<h2>
-Building
-</h2>
+      <div class="theme-inner">
 
-<p>
-I enjoy taking an idea from something that exists only on paper and trying to figure out whether it could actually work.
-</p>
+        <div class="container">
 
-<p>
-That curiosity has taken me into entrepreneurship, business competitions and projects where the challenge was not simply to find an answer, but to build a case for why an idea should exist in the first place.
-</p>
+          <div class="theme-number reveal">
+            03 / 06
+          </div>
 
-<div class="highlight">
+        </div>
 
-<div class="highlight-label">
-Project Prarambh
-</div>
+        <div class="theme-content reveal">
 
-<h3>
-From an idea to an investment case.
-</h3>
+          <h2>
+            Building
+          </h2>
 
-<p>
-Working as a co-founder and financial lead taught me how different an idea looks once you have to think about customers, costs, capital and returns at the same time.
-</p>
+          <p>
+            I enjoy taking an idea from something that exists
+            only on paper and trying to figure out whether it
+            could actually work.
+          </p>
 
-</div>
+          <p>
+            That curiosity has taken me into entrepreneurship,
+            business competitions and projects where the challenge
+            was not simply to find an answer, but to build a case
+            around it.
+          </p>
 
-<div class="details">
+          <div class="highlight">
 
-<div class="detail">
-<strong>Entrepreneurship</strong>
-<span>Co-founder and financial lead for Project Prarambh.</span>
-</div>
+            <div class="highlight-label">
+              Project Prarambh
+            </div>
 
-<div class="detail">
-<strong>Competitions</strong>
-<span>Finalist at IIT Bombay's Action Plan and NIT Bhopal's E-Summit.</span>
-</div>
+            <h3>
+              From an idea to a financial model.
+            </h3>
 
-<div class="detail">
-<strong>Exploring Ideas</strong>
-<span>Interested in problems where business, finance and technology intersect.</span>
-</div>
+            <p>
+              I co-founded Project Prarambh, a PET upcycled bottle
+              filament venture, and worked on the financial side of
+              the project — including capital requirements, operating
+              assumptions, WACC, NPV, IRR and scalability.
+            </p>
 
-</div>
+          </div>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</article>
+    </article>
 
 
-<article class="theme">
+    <!-- MOVING -->
 
-<div class="container theme-inner">
+    <article class="theme" id="moving">
 
-<div class="theme-number reveal">
-04 / 06
-</div>
+      <div class="theme-inner">
 
-<div class="theme-content reveal">
+        <div class="container">
 
-<h2>
-Moving
-</h2>
+          <div class="theme-number reveal">
+            04 / 06
+          </div>
 
-<p>
-I have always liked activities where progress is visible only when you keep showing up.
-</p>
+        </div>
 
-<p>
-Badminton taught me competition, while Kathak taught me patience, repetition and the discipline of doing the same thing again and again until it becomes part of you.
-</p>
+        <div class="theme-content reveal">
 
-<div class="highlight">
+          <h2>
+            Moving
+          </h2>
 
-<div class="highlight-label">
-Two very different disciplines
-</div>
+          <p>
+            I have always liked activities where progress is visible
+            only when you keep showing up.
+          </p>
 
-<h3>
-Competition &amp; consistency.
-</h3>
+          <p>
+            Badminton taught me competition, while Kathak taught me
+            something very different — patience, repetition and the
+            discipline of doing the same thing again and again until
+            it becomes part of you.
+          </p>
 
-<p>
-Being a district-level badminton player and completing a Senior Diploma in Kathak have both shaped how I think about practice: talent helps, but consistency compounds.
-</p>
+          <div class="interest-grid">
 
-</div>
+            <div class="interest">
 
-<div class="details">
+              <div class="interest-number">
+                01
+              </div>
 
-<div class="detail">
-<strong>Badminton</strong>
-<span>District-level player.</span>
-</div>
+              <h3>
+                Badminton
+              </h3>
 
-<div class="detail">
-<strong>Kathak</strong>
-<span>Senior Diploma.</span>
-</div>
+              <p>
+                District-level participation taught me consistency,
+                competition and composure.
+              </p>
 
-</div>
+            </div>
 
-</div>
+            <div class="interest">
 
-</div>
+              <div class="interest-number">
+                02
+              </div>
 
-</article>
+              <h3>
+                Kathak
+              </h3>
 
+              <p>
+                Senior Diploma training developed patience,
+                discipline and attention to detail.
+              </p>
 
-<article class="theme">
+            </div>
 
-<div class="container theme-inner">
+            <div class="interest">
 
-<div class="theme-number reveal">
-05 / 06
-</div>
+              <div class="interest-number">
+                03
+              </div>
 
-<div class="theme-content reveal">
+              <h3>
+                Practice
+              </h3>
 
-<h2>
-Giving Back
-</h2>
+              <p>
+                Both taught me that meaningful progress usually
+                comes from repetition.
+              </p>
 
-<p>
-Community work has been one of the simplest ways for me to remember that not every problem needs a sophisticated solution. Sometimes the most useful thing you can do is simply show up.
-</p>
+            </div>
 
-<p>
-During my community service work, I worked alongside volunteers to support more than 100 individuals, contributing time, resources and coordination to make the effort sustainable.
-</p>
+          </div>
 
-<div class="highlight">
+        </div>
 
-<div class="highlight-label">
-Community Service
-</div>
+      </div>
 
-<h3>
-Impact is often a team effort.
-</h3>
+    </article>
 
-<p>
-Working with volunteers taught me that meaningful outcomes rarely come from one person. Organisation, reliability and the willingness to do unglamorous work matter just as much.
-</p>
 
-</div>
+    <!-- GIVING BACK -->
 
-<div class="details">
+    <article class="theme" id="giving-back">
 
-<div class="detail">
-<strong>Community</strong>
-<span>Supported 100+ individuals.</span>
-</div>
+      <div class="theme-inner">
 
-<div class="detail">
-<strong>Collaboration</strong>
-<span>Worked alongside 10+ volunteers.</span>
-</div>
+        <div class="container">
 
-<div class="detail">
-<strong>Contribution</strong>
-<span>500+ volunteer hours and donations contributed.</span>
-</div>
+          <div class="theme-number reveal">
+            05 / 06
+          </div>
 
-</div>
+        </div>
 
-</div>
+        <div class="theme-content reveal">
 
-</div>
+          <h2>
+            Giving Back
+          </h2>
 
-</article>
+          <p>
+            Community work has been one of the simplest ways for me
+            to remember that not every problem needs a sophisticated
+            solution. Sometimes the most useful thing you can do
+            is simply show up.
+          </p>
 
+          <p>
+            During my community service experience, I coordinated
+            outreach initiatives while working with volunteers and
+            maintaining tracking systems for activities, hours and
+            donations.
+          </p>
 
-<article class="theme">
+          <div class="details">
 
-<div class="container theme-inner">
+            <div class="detail">
 
-<div class="theme-number reveal">
-06 / 06
-</div>
+              <strong>
+                Outreach
+              </strong>
 
-<div class="theme-content reveal">
+              <span>
+                Initiatives impacting 100+ individuals
+              </span>
 
-<h2>
-Exploring
-</h2>
+            </div>
 
-<p>
-I am naturally curious, and that curiosity does not always stay within the boundaries of what I am studying.
-</p>
+            <div class="detail">
 
-<p>
-I enjoy learning about things simply because they make me stop and think — whether that is understanding a new idea, listening to a song on repeat, discovering a museum I have never been to, or going down an unexpected rabbit hole about something I know very little about.
-</p>
+              <strong>
+                Collaboration
+              </strong>
 
-<div class="highlight">
+              <span>
+                Worked with 10+ volunteers
+              </span>
 
-<div class="highlight-label">
-Curiosity beyond academics
-</div>
+            </div>
 
-<h3>
-There is always something new to discover.
-</h3>
+            <div class="detail">
 
-<p>
-My interests have taken me from English Olympiads and analytical competitions to music, museums and the arts. Different interests give me different ways of looking at the world — and I think that makes me better at understanding people, ideas and problems.
-</p>
+              <strong>
+                Tracking
+              </strong>
 
-</div>
+              <span>
+                Managed records covering 500+ volunteer hours
+                and donations
+              </span>
 
+            </div>
 
-<div class="interest-grid">
+          </div>
 
-<div class="interest">
-<div class="interest-number">01</div>
-<h3>Language</h3>
-<p>
-Participated in the International English Olympiad, reaching the national level.
-</p>
-</div>
+        </div>
 
-<div class="interest">
-<div class="interest-number">02</div>
-<h3>Music</h3>
-<p>
-I love listening to songs and discovering new artists, sounds and playlists.
-</p>
-</div>
+      </div>
 
-<div class="interest">
-<div class="interest-number">03</div>
-<h3>Museums</h3>
-<p>
-Always up for exploring museums, exhibitions and places that offer a different perspective.
-</p>
-</div>
+    </article>
 
-<div class="interest">
-<div class="interest-number">04</div>
-<h3>Learning</h3>
-<p>
-Curious about ideas, disciplines and experiences outside my usual comfort zone.
-</p>
-</div>
 
-<div class="interest">
-<div class="interest-number">05</div>
-<h3>Arts</h3>
-<p>
-Kathak has given me an appreciation for performance, expression and creative discipline.
-</p>
-</div>
+    <!-- EXPLORING -->
 
-<div class="interest">
-<div class="interest-number">06</div>
-<h3>Discovery</h3>
-<p>
-I enjoy finding interesting places, ideas and experiences that I can learn something from.
-</p>
-</div>
+    <article class="theme" id="exploring">
 
-</div>
+      <div class="theme-inner">
 
-</div>
+        <div class="container">
 
-</div>
+          <div class="theme-number reveal">
+            06 / 06
+          </div>
 
-</article>
+        </div>
 
+        <div class="theme-content reveal">
 
-</section>
+          <h2>
+            Exploring
+          </h2>
 
+          <p>
+            Curiosity does not always have to have a career outcome.
+            Some interests are valuable simply because they make
+            life more interesting.
+          </p>
 
-<section class="statement">
+          <p>
+            I have participated in the International English Olympiad
+            at the national level, enjoy music and listening to songs,
+            and like exploring museums, exhibitions, arts and new
+            ways of learning.
+          </p>
 
-<div class="container statement-inner reveal">
+          <div class="interest-grid">
 
-<div class="eyebrow">
-What ties it together
-</div>
+            <div class="interest">
 
-<h2>
-I like having more than one way to look at the world.
-</h2>
+              <div class="interest-number">
+                01
+              </div>
 
-<p>
-Data taught me to look for patterns. Finance taught me to think about decisions. Sport taught me about competition and consistency. Kathak taught me patience. Music, art and museums remind me that not everything interesting can be reduced to a spreadsheet.
-</p>
+              <h3>
+                Language
+              </h3>
 
-</div>
+              <p>
+                International English Olympiad — National level.
+              </p>
 
-</section>
+            </div>
 
+            <div class="interest">
 
-<section class="closing">
+              <div class="interest-number">
+                02
+              </div>
 
-<div class="container reveal">
+              <h3>
+                Music
+              </h3>
 
-<div class="eyebrow">
-The bigger picture
-</div>
+              <p>
+                A constant source of curiosity, energy and escape.
+              </p>
 
-<h2>
-Work is one part of who I am. Curiosity is the bigger part.
-</h2>
+            </div>
 
-<p>
-And I think the best work happens when you bring both into the room.
-</p>
+            <div class="interest">
 
-</div>
+              <div class="interest-number">
+                03
+              </div>
 
-</section>
+              <h3>
+                Art & Discovery
+              </h3>
 
+              <p>
+                Museums, exhibitions and experiences that offer
+                different ways of looking at the world.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <!-- =====================================================
+       STATEMENT
+       ===================================================== -->
+
+  <section class="statement">
+
+    <div class="container">
+
+      <p class="eyebrow">
+        What stayed with me
+      </p>
+
+      <h2>
+        I like having more than one way to look at the world.
+      </h2>
+
+      <p>
+        Data helps me see patterns. Finance helps me think about
+        decisions. Sport taught me competition and consistency.
+        Kathak taught me patience. Music, art and curiosity remind
+        me that not everything meaningful needs to fit inside a
+        spreadsheet.
+      </p>
+
+    </div>
+
+  </section>
 
 </main>
 
 
 <footer class="site-footer">
 
-<div class="footer-inner">
+  <div class="footer-inner">
 
-<span>© 2026 Aishwarya Nagchandi</span>
-<span>Analytics × Finance × Business</span>
+    <span>
+      © 2026 Aishwarya Nagchandani
+    </span>
 
-<div class="footer-links">
-<a href="projects.html">Projects</a>
-<a href="contact.html">Contact</a>
-</div>
+    <div class="footer-links">
 
-</div>
+      <a href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/" target="_blank" rel="noopener">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/AishwaryaNagchandani" target="_blank" rel="noopener">
+        GitHub
+      </a>
+
+    </div>
+
+  </div>
 
 </footer>
 
 
 <script>
+  const menuButton = document.querySelector(".menu-button");
+  const navLinks = document.querySelector(".nav-links");
 
-const menuBtn=document.getElementById("menuToggle");
-const navLinks=document.getElementById("navLinks");
+  if (menuButton && navLinks) {
 
-menuBtn.addEventListener("click",()=>{
+    menuButton.addEventListener("click", () => {
 
-const open=navLinks.classList.toggle("open");
+      const isOpen = navLinks.classList.toggle("open");
 
-menuBtn.setAttribute("aria-expanded",open);
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
 
-});
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
+    });
 
-link.addEventListener("click",()=>{
+    navLinks.querySelectorAll("a").forEach(link => {
 
-navLinks.classList.remove("open");
+      link.addEventListener("click", () => {
 
-menuBtn.setAttribute("aria-expanded","false");
+        navLinks.classList.remove("open");
 
-});
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
 
-});
+        menuButton.setAttribute(
+          "aria-label",
+          "Open menu"
+        );
 
-const reveals=document.querySelectorAll(".reveal");
+      });
 
-if("IntersectionObserver" in window){
+    });
 
-const observer=new IntersectionObserver(
-
-entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("visible");
-observer.unobserve(entry.target);
-
-}
-
-});
-
-},
-
-{threshold:.08}
-
-);
-
-reveals.forEach(element=>observer.observe(element));
-
-}else{
-
-reveals.forEach(element=>element.classList.add("visible"));
-
-}
-
+  }
 </script>
 
 </body>
