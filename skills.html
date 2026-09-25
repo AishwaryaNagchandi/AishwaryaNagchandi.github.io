@@ -1,509 +1,853 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Aishwarya Nagchandani</title>
 
-<title>Skills | Aishwarya Nagchandi</title>
+  <meta name="description" content="Analytics, business intelligence, finance, quantitative analysis and business problem-solving skills of Aishwarya Nagchandani.">
 
-<meta name="description" content="Aishwarya Nagchandi’s analytical, finance, business intelligence and problem-solving capabilities.">
-<meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aishwaryanagchandani.com/skills.html">
 
-<link rel="canonical" href="https://aishwaryanagchandi.com/skills.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /*
+      PAGE-SPECIFIC MOBILE PROTECTION
+
+      Skills uses:
+      .skill-inner
+        ├── .container
+        │     └── .category-number
+        └── .category-content
+
+      Desktop = two columns.
+      Mobile = completely vertical.
+    */
+
+    @media (max-width: 900px) {
+
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+      }
+
+      .page-skills {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .page-skills .skill-category {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      .page-skills .skill-inner {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .page-skills .skill-inner > .container {
+        display: block !important;
+        width: calc(100% - 12vw) !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 !important;
+      }
+
+      .page-skills .category-number {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 0 20px !important;
+        padding: 0 !important;
+      }
+
+      .page-skills .category-content {
+        display: block !important;
+        width: calc(100% - 12vw) !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 0 !important;
+      }
+
+      .page-skills .category-content h2,
+      .page-skills .category-description,
+      .page-skills .skill-tags,
+      .page-skills .skill-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+      }
+
+      .page-skills .category-content h2 {
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+      }
+
+      .page-skills .skill-tag {
+        max-width: 100% !important;
+        overflow-wrap: anywhere !important;
+      }
+
+      .page-skills .skill-row,
+      .page-skills .skill-row > * {
+        min-width: 0 !important;
+        max-width: 100% !important;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .page-skills .skill-inner {
+        width: 100% !important;
+      }
+
+      .page-skills .skill-inner > .container {
+        width: calc(100% - 12vw) !important;
+      }
+
+      .page-skills .category-content {
+        width: calc(100% - 12vw) !important;
+      }
+
+      .page-skills .category-content h2 {
+        font-size: clamp(40px, 11vw, 62px) !important;
+        line-height: .96 !important;
+        letter-spacing: -.04em !important;
+      }
+
+    }
+
+  </style>
 </head>
+
 
 <body class="page-skills">
 
+<header class="site-nav">
 
-<nav class="site-nav" aria-label="Primary navigation">
+  <div class="nav-inner">
 
-<div class="nav-inner">
+    <a
+      href="index.html"
+      class="nav-logo"
+      aria-label="Aishwarya Nagchandani home">
+      AN
+    </a>
 
-<a class="logo" href="index.html">AN</a>
+    <nav class="nav-links" aria-label="Primary navigation">
 
-<button class="menu-button" id="menuToggle" type="button" aria-controls="navLinks" aria-expanded="false" aria-label="Open navigation">
-☰
-</button>
+      <a href="index.html">
+        Home
+      </a>
 
-<div class="nav-links" id="navLinks">
+      <a href="about.html">
+        About
+      </a>
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="experience.html">Experience</a>
-<a href="projects.html">Projects</a>
-<a href="beyond.html">Beyond the Resume</a>
+      <a href="experience.html">
+        Experience
+      </a>
 
-<a class="active" aria-current="page" href="skills.html">
-Skills
-</a>
+      <a href="projects.html">
+        Projects
+      </a>
 
-<a href="contact.html">Contact</a>
+      <a href="beyond.html">
+        Beyond the Resume
+      </a>
 
-<a class="resume-btn" href="resume.pdf" target="_blank">
-Resume ↗
-</a>
+      <a href="skills.html" aria-current="page">
+        Skills
+      </a>
 
-</div>
-</div>
-</nav>
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a
+        href="resume.pdf"
+        class="resume-btn"
+        target="_blank"
+        rel="noopener">
+        Resume ↗
+      </a>
+
+    </nav>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-navigation">
+      <span></span>
+    </button>
+
+  </div>
+
+</header>
 
 
 <main>
 
 
-<header class="hero">
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
 
-<div class="container hero-grid">
+  <section class="hero">
 
-<div class="reveal">
+    <div class="hero-grid">
 
-<div class="eyebrow">
-01 — <span>Skills &amp; Capabilities</span>
-</div>
+      <div>
 
-<h1>
-More than<br>
-tools.
-</h1>
+        <p class="eyebrow">
+          01 — Skills
+        </p>
 
-</div>
+        <h1>
+          More than tools.
+        </h1>
 
-<div class="hero-copy reveal">
+      </div>
 
-<p>
-I see skills as a means to solve problems, not as a checklist of software I know how to use.
-</p>
+      <div class="hero-copy">
 
-<div class="hero-line">
-Analytics × Finance × Business
-</div>
+        <p>
+          The tools matter, but the ability to understand a
+          problem, structure it and communicate what the data
+          actually means matters more.
+        </p>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</header>
+  </section>
 
 
-<section class="intro">
+  <!-- =====================================================
+       INTRO
+       ===================================================== -->
 
-<div class="container intro-grid">
+  <section class="intro">
 
-<div class="eyebrow reveal">
-02 — <span>My Toolkit</span>
-</div>
+    <div class="container">
 
-<div class="reveal">
+      <div class="intro-grid">
 
-<h2>
-The intersection matters more than the individual tool.
-</h2>
+        <div>
 
-<p>
-My academic background combines Finance, Business Intelligence &amp; Analytics, and Data Science. That means I am comfortable moving between a business question, a dataset and a financial decision — and translating between them.
-</p>
+          <p class="eyebrow">
+            02 — My Toolkit
+          </p>
 
-</div>
+        </div>
 
-</div>
+        <div>
 
-</section>
+          <h2>
+            The intersection matters more than the individual tool.
+          </h2>
 
+          <p>
+            My skill set sits across data science, business
+            intelligence, finance and business analysis. I am
+            most interested in the point where these disciplines
+            come together to solve a practical problem.
+          </p>
 
-<section class="skills-section">
+        </div>
 
+      </div>
 
-<article class="skill-category">
+    </div>
 
-<div class="container skill-inner">
+  </section>
 
-<div class="category-number reveal">
-03 / 07
-</div>
 
-<div class="category-content reveal">
+  <!-- =====================================================
+       SKILLS
+       ===================================================== -->
 
-<h2>
-Analytics &amp; Data
-</h2>
+  <section class="skills-section">
 
-<p class="category-description">
-Turning raw data into patterns, insights and decisions through statistical analysis, machine learning and structured data workflows.
-</p>
 
-<div class="skill-tags">
+    <!-- ANALYTICS -->
 
-<span class="skill-tag">Python</span>
-<span class="skill-tag">Pandas</span>
-<span class="skill-tag">NumPy</span>
-<span class="skill-tag">Scikit-learn</span>
-<span class="skill-tag">Machine Learning</span>
-<span class="skill-tag">NLP</span>
-<span class="skill-tag">Time Series Analysis</span>
-<span class="skill-tag">Statistical Analysis</span>
-<span class="skill-tag">Data Cleaning</span>
-<span class="skill-tag">Data Transformation</span>
+    <article class="skill-category">
 
-</div>
+      <div class="skill-inner">
 
-</div>
+        <div class="container">
 
-</div>
+          <div class="category-number reveal">
+            03 / 07
+          </div>
 
-</article>
+        </div>
 
+        <div class="category-content reveal">
 
-<article class="skill-category">
+          <h2>
+            Analytics &amp; Data
+          </h2>
 
-<div class="container skill-inner">
+          <p class="category-description">
+            Turning raw data into patterns, insights and
+            decisions through statistical analysis,
+            machine learning and structured data workflows.
+          </p>
 
-<div class="category-number reveal">
-04 / 07
-</div>
+          <div class="skill-tags">
 
-<div class="category-content reveal">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">Time Series</span>
+            <span class="skill-tag">Statistical Analysis</span>
+            <span class="skill-tag">Data Cleaning</span>
+            <span class="skill-tag">Data Transformation</span>
 
-<h2>
-Business Intelligence
-</h2>
+          </div>
 
-<p class="category-description">
-Building analytical views that make information easier to understand, compare and act upon.
-</p>
+        </div>
 
-<div class="skill-list">
+      </div>
 
-<div class="skill-row">
-<span class="skill-name">Power BI</span>
-<span class="skill-context">Dashboards · Reporting · Data storytelling</span>
-</div>
+    </article>
 
-<div class="skill-row">
-<span class="skill-name">Tableau</span>
-<span class="skill-context">Visual analytics · Interactive dashboards</span>
-</div>
 
-<div class="skill-row">
-<span class="skill-name">Excel</span>
-<span class="skill-context">Modelling · Analysis · Decision support</span>
-</div>
+    <!-- BI -->
 
-<div class="skill-row">
-<span class="skill-name">Data Visualization</span>
-<span class="skill-context">KPI design · Comparative analysis · Storytelling</span>
-</div>
+    <article class="skill-category">
 
-</div>
+      <div class="skill-inner">
 
-</div>
+        <div class="container">
 
-</div>
+          <div class="category-number reveal">
+            04 / 07
+          </div>
 
-</article>
+        </div>
 
+        <div class="category-content reveal">
 
-<article class="skill-category">
+          <h2>
+            Business Intelligence
+          </h2>
 
-<div class="container skill-inner">
+          <p class="category-description">
+            Building analytical views that make information
+            easier to understand, compare and act upon.
+          </p>
 
-<div class="category-number reveal">
-05 / 07
-</div>
+          <div class="skill-list">
 
-<div class="category-content reveal">
+            <div class="skill-row">
 
-<h2>
-Finance &amp; Quantitative Analysis
-</h2>
+              <span class="skill-name">
+                Power BI
+              </span>
 
-<p class="category-description">
-Applying financial thinking and quantitative methods to understand businesses, markets, investments and risk.
-</p>
+              <span class="skill-context">
+                Dashboarding, business reporting and customer analytics
+              </span>
 
-<div class="skill-tags">
+            </div>
 
-<span class="skill-tag">Financial Modelling</span>
-<span class="skill-tag">Corporate Finance</span>
-<span class="skill-tag">Quantitative Finance</span>
-<span class="skill-tag">Investment Analysis</span>
-<span class="skill-tag">Financial Statement Analysis</span>
-<span class="skill-tag">Valuation</span>
-<span class="skill-tag">Portfolio Analysis</span>
-<span class="skill-tag">Risk Analysis</span>
-<span class="skill-tag">Time Series</span>
-<span class="skill-tag">Algorithmic Trading</span>
+            <div class="skill-row">
 
-</div>
+              <span class="skill-name">
+                Tableau
+              </span>
 
-</div>
+              <span class="skill-context">
+                Interactive visualization and analytical storytelling
+              </span>
 
-</div>
+            </div>
 
-</article>
+            <div class="skill-row">
 
+              <span class="skill-name">
+                Excel
+              </span>
 
-<article class="skill-category">
+              <span class="skill-context">
+                Financial analysis, modelling and structured reporting
+              </span>
 
-<div class="container skill-inner">
+            </div>
 
-<div class="category-number reveal">
-06 / 07
-</div>
+            <div class="skill-row">
 
-<div class="category-content reveal">
+              <span class="skill-name">
+                Data Visualization
+              </span>
 
-<h2>
-Programming &amp; Data Workflows
-</h2>
+              <span class="skill-context">
+                Translating analytical outputs into decision-support views
+              </span>
 
-<p class="category-description">
-Comfortable working with data from collection and transformation through analysis and presentation.
-</p>
+            </div>
 
-<div class="skill-list">
+          </div>
 
-<div class="skill-row">
-<span class="skill-name">SQL</span>
-<span class="skill-context">Querying · Filtering · Aggregation</span>
-</div>
+        </div>
 
-<div class="skill-row">
-<span class="skill-name">Python</span>
-<span class="skill-context">Analysis · Automation · Machine Learning</span>
-</div>
+      </div>
 
-<div class="skill-row">
-<span class="skill-name">ETL</span>
-<span class="skill-context">Extraction · Transformation · Structured data</span>
-</div>
+    </article>
 
-<div class="skill-row">
-<span class="skill-name">Data Pipelines</span>
-<span class="skill-context">Cleaning · Processing · Validation</span>
-</div>
 
-</div>
+    <!-- FINANCE -->
 
-</div>
+    <article class="skill-category">
 
-</div>
+      <div class="skill-inner">
 
-</article>
+        <div class="container">
 
+          <div class="category-number reveal">
+            05 / 07
+          </div>
 
-<article class="skill-category">
+        </div>
 
-<div class="container skill-inner">
+        <div class="category-content reveal">
 
-<div class="category-number reveal">
-07 / 07
-</div>
+          <h2>
+            Finance &amp; Quantitative Analysis
+          </h2>
 
-<div class="category-content reveal">
+          <p class="category-description">
+            Applying financial thinking and quantitative methods
+            to understand businesses, markets, investments and risk.
+          </p>
 
-<h2>
-Business &amp; Problem Solving
-</h2>
+          <div class="skill-tags">
 
-<p class="category-description">
-The technical side only matters when it helps solve the underlying business problem. I enjoy structuring ambiguous questions and turning them into actionable analysis.
-</p>
+            <span class="skill-tag">
+              Financial Modelling
+            </span>
 
-<div class="skill-tags">
+            <span class="skill-tag">
+              Corporate Finance
+            </span>
 
-<span class="skill-tag">Business Analysis</span>
-<span class="skill-tag">Market Analysis</span>
-<span class="skill-tag">Process Optimization</span>
-<span class="skill-tag">Process Mapping</span>
-<span class="skill-tag">Customer Analytics</span>
-<span class="skill-tag">Forecasting</span>
-<span class="skill-tag">Strategic Analysis</span>
-<span class="skill-tag">Research</span>
-<span class="skill-tag">Stakeholder Management</span>
-<span class="skill-tag">Problem Structuring</span>
+            <span class="skill-tag">
+              Quantitative Finance
+            </span>
 
-</div>
+            <span class="skill-tag">
+              Investment Analysis
+            </span>
 
-</div>
+            <span class="skill-tag">
+              Financial Statement Analysis
+            </span>
 
-</div>
+            <span class="skill-tag">
+              Valuation
+            </span>
 
-</article>
+            <span class="skill-tag">
+              Portfolio Analysis
+            </span>
 
+            <span class="skill-tag">
+              Risk Analysis
+            </span>
 
-</section>
+            <span class="skill-tag">
+              Time Series
+            </span>
 
+            <span class="skill-tag">
+              Algorithmic Trading
+            </span>
 
-<section class="application">
+          </div>
 
-<div class="container application-grid">
+        </div>
 
-<div class="reveal">
+      </div>
 
-<div class="eyebrow">
-How I Apply Them
-</div>
+    </article>
 
-<h2>
-From question<br>
-to decision.
-</h2>
 
-</div>
+    <!-- PROGRAMMING -->
 
+    <article class="skill-category">
 
-<div class="application-content reveal">
+      <div class="skill-inner">
 
-<p>
-The work I enjoy most sits at the intersection of technical analysis and practical decision-making. A typical problem might move through several stages.
-</p>
+        <div class="container">
 
+          <div class="category-number reveal">
+            06 / 07
+          </div>
 
-<div class="application-item">
-<strong>01 — Understand</strong>
-<p>
-Start with the business question rather than immediately jumping into the data.
-</p>
-</div>
+        </div>
 
-<div class="application-item">
-<strong>02 — Structure</strong>
-<p>
-Break an ambiguous problem into measurable questions, variables and assumptions.
-</p>
-</div>
+        <div class="category-content reveal">
 
-<div class="application-item">
-<strong>03 — Analyse</strong>
-<p>
-Use Python, SQL, statistical methods, financial models or BI tools depending on what the problem actually requires.
-</p>
-</div>
+          <h2>
+            Programming &amp; Data Workflows
+          </h2>
 
-<div class="application-item">
-<strong>04 — Communicate</strong>
-<p>
-Turn the analysis into a clear story that stakeholders can understand and use.
-</p>
-</div>
+          <p class="category-description">
+            Structuring data workflows so that analysis is
+            reproducible, efficient and easier to maintain.
+          </p>
 
-<div class="application-item">
-<strong>05 — Decide</strong>
-<p>
-Focus on the implication of the analysis: what should happen next?
-</p>
-</div>
+          <div class="skill-tags">
 
-</div>
+            <span class="skill-tag">
+              SQL
+            </span>
 
-</div>
+            <span class="skill-tag">
+              Python
+            </span>
 
-</section>
+            <span class="skill-tag">
+              ETL
+            </span>
 
+            <span class="skill-tag">
+              Data Pipelines
+            </span>
 
-<section class="statement">
+            <span class="skill-tag">
+              Data Processing
+            </span>
 
-<div class="container reveal">
+          </div>
 
-<div class="eyebrow">
-The goal
-</div>
+        </div>
 
-<h2>
-Good analysis should make the next decision easier.
-</h2>
+      </div>
 
-<p>
-I am continuing to build depth across analytics, finance and business — while learning how to connect the three more effectively.
-</p>
+    </article>
 
-</div>
 
-</section>
+    <!-- BUSINESS -->
 
+    <article class="skill-category">
+
+      <div class="skill-inner">
+
+        <div class="container">
+
+          <div class="category-number reveal">
+            07 / 07
+          </div>
+
+        </div>
+
+        <div class="category-content reveal">
+
+          <h2>
+            Business &amp; Problem Solving
+          </h2>
+
+          <p class="category-description">
+            Connecting analytical work with the business question
+            behind it — from market understanding to process
+            improvement and stakeholder communication.
+          </p>
+
+          <div class="skill-tags">
+
+            <span class="skill-tag">
+              Business Analysis
+            </span>
+
+            <span class="skill-tag">
+              Market Analysis
+            </span>
+
+            <span class="skill-tag">
+              Process Optimization
+            </span>
+
+            <span class="skill-tag">
+              Process Mapping
+            </span>
+
+            <span class="skill-tag">
+              Customer Analytics
+            </span>
+
+            <span class="skill-tag">
+              Forecasting
+            </span>
+
+            <span class="skill-tag">
+              Strategic Analysis
+            </span>
+
+            <span class="skill-tag">
+              Research
+            </span>
+
+            <span class="skill-tag">
+              Stakeholder Management
+            </span>
+
+            <span class="skill-tag">
+              Problem Structuring
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </section>
+
+
+  <!-- =====================================================
+       HOW I APPLY THEM
+       ===================================================== -->
+
+  <section class="application">
+
+    <div class="container">
+
+      <div class="application-grid">
+
+        <div>
+
+          <p class="eyebrow">
+            How I Apply Them
+          </p>
+
+          <h2>
+            From question to decision.
+          </h2>
+
+        </div>
+
+        <div class="application-content">
+
+          <p>
+            I generally approach analytical problems as a sequence
+            rather than starting with a tool.
+          </p>
+
+          <div class="application-item">
+
+            <strong>
+              01 — Understand
+            </strong>
+
+            <p>
+              Clarify the business question and what decision
+              the analysis needs to support.
+            </p>
+
+          </div>
+
+          <div class="application-item">
+
+            <strong>
+              02 — Structure
+            </strong>
+
+            <p>
+              Identify the relevant data, assumptions, constraints
+              and analytical approach.
+            </p>
+
+          </div>
+
+          <div class="application-item">
+
+            <strong>
+              03 — Analyse
+            </strong>
+
+            <p>
+              Use the appropriate quantitative, financial or
+              analytical methods to identify patterns and evidence.
+            </p>
+
+          </div>
+
+          <div class="application-item">
+
+            <strong>
+              04 — Communicate
+            </strong>
+
+            <p>
+              Translate the analysis into a form that is clear
+              and useful to the people consuming it.
+            </p>
+
+          </div>
+
+          <div class="application-item">
+
+            <strong>
+              05 — Decide
+            </strong>
+
+            <p>
+              Connect the findings back to the original question
+              and the action that follows.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CLOSING
+       ===================================================== -->
+
+  <section class="statement">
+
+    <div class="container">
+
+      <p class="eyebrow">
+        The principle
+      </p>
+
+      <h2>
+        Good analysis should make the next decision easier.
+      </h2>
+
+      <p>
+        I am still building depth across these areas, but the
+        common thread is simple: I want the work I do to be
+        useful, understandable and connected to a real decision.
+      </p>
+
+    </div>
+
+  </section>
 
 </main>
 
 
 <footer class="site-footer">
 
-<div class="footer-inner">
+  <div class="footer-inner">
 
-<span>© 2026 Aishwarya Nagchandi</span>
-<span>Analytics × Finance × Business</span>
+    <span>
+      © 2026 Aishwarya Nagchandani
+    </span>
 
-<div class="footer-links">
-<a href="projects.html">Projects</a>
-<a href="contact.html">Contact</a>
-</div>
+    <div class="footer-links">
 
-</div>
+      <a
+        href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/"
+        target="_blank"
+        rel="noopener">
+        LinkedIn
+      </a>
+
+      <a
+        href="https://github.com/AishwaryaNagchandi"
+        target="_blank"
+        rel="noopener">
+        GitHub
+      </a>
+
+    </div>
+
+  </div>
 
 </footer>
 
 
 <script>
 
-const menuBtn=document.getElementById("menuToggle");
-const navLinks=document.getElementById("navLinks");
+  const menuButton = document.querySelector(".menu-button");
+  const navLinks = document.querySelector(".nav-links");
 
-menuBtn.addEventListener("click",()=>{
+  if (menuButton && navLinks) {
 
-const open=navLinks.classList.toggle("open");
+    menuButton.addEventListener("click", () => {
 
-menuBtn.setAttribute("aria-expanded",open);
+      const isOpen =
+        navLinks.classList.toggle("open");
 
-});
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+      );
 
-link.addEventListener("click",()=>{
+    });
 
-navLinks.classList.remove("open");
 
-menuBtn.setAttribute("aria-expanded","false");
+    navLinks.querySelectorAll("a").forEach(link => {
 
-});
+      link.addEventListener("click", () => {
 
-});
+        navLinks.classList.remove("open");
 
-const reveals=document.querySelectorAll(".reveal");
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
 
-if("IntersectionObserver" in window){
+        menuButton.setAttribute(
+          "aria-label",
+          "Open menu"
+        );
 
-const observer=new IntersectionObserver(
+      });
 
-entries=>{
+    });
 
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("visible");
-observer.unobserve(entry.target);
-
-}
-
-});
-
-},
-
-{threshold:.08}
-
-);
-
-reveals.forEach(element=>observer.observe(element));
-
-}else{
-
-reveals.forEach(element=>element.classList.add("visible"));
-
-}
+  }
 
 </script>
 
