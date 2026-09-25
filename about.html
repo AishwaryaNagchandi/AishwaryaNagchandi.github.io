@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,130 +8,99 @@
 
 <title>About | Aishwarya Nagchandi</title>
 
-<meta name="description"
-content="About Aishwarya Nagchandi — a Data Science and Finance student working across analytics, business intelligence and business strategy.">
-
+<meta name="description" content="Aishwarya Nagchandi — background, perspective and academic journey across data science, finance and business intelligence.">
 <meta name="robots" content="index, follow">
 
-<link rel="canonical"
-href="https://aishwaryanagchandi.com/about.html">
+<link rel="canonical" href="https://aishwaryanagchandi.com/about.html">
 
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-rel="stylesheet">
+<meta property="og:title" content="About | Aishwarya Nagchandi">
+<meta property="og:description" content="Aishwarya Nagchandi — background, perspective and academic journey across data science, finance and business intelligence.">
+<meta property="og:type" content="website">
 
 <link rel="stylesheet" href="styles.css">
 
 </head>
 
-<body>
 
-<nav class="site-nav">
+<body class="page-about">
+
+<nav class="site-nav" aria-label="Primary navigation">
 
 <div class="nav-inner">
 
-<a href="index.html" class="logo">AN</a>
+<a class="logo" href="index.html">AN</a>
 
-<button class="menu-button"
-aria-label="Open navigation"
-aria-expanded="false">
+<button
+class="menu-button"
+id="menuToggle"
+type="button"
+aria-controls="navLinks"
+aria-expanded="false"
+aria-label="Open navigation">
 ☰
 </button>
 
 <div class="nav-links" id="navLinks">
 
 <a href="index.html">Home</a>
-<a href="about.html" class="active" aria-current="page">About</a>
+
+<a class="active" aria-current="page" href="about.html">
+About
+</a>
+
 <a href="experience.html">Experience</a>
 <a href="projects.html">Projects</a>
 <a href="beyond.html">Beyond the Resume</a>
 <a href="skills.html">Skills</a>
 <a href="contact.html">Contact</a>
 
-<a href="resume.pdf" class="resume-btn" target="_blank">
+<a class="resume-btn" href="resume.pdf" target="_blank">
 Resume ↗
 </a>
 
 </div>
-
 </div>
-
 </nav>
 
 
 <main>
 
-<section class="about-hero">
 
-<div class="container reveal">
+<section class="about-hero">
 
 <div class="eyebrow">
 About Me
 </div>
 
 <h1>
-Where data<br>
-<span>meets decisions.</span>
+A little<br>
+<span>context.</span>
 </h1>
 
-<p>
-I'm interested in the space where analytics, finance and
-business come together — turning information into insight
-and insight into action.
+<p class="hero-description">
+I’m Aishwarya — a Data Science student pursuing an integrated MBA Tech, with a growing interest in the space between numbers, decisions and people.
 </p>
-
-</div>
 
 </section>
 
 
-<section>
+<section class="about-path">
 
-<div class="container">
-
-<div class="split">
-
-<div class="reveal">
+<div class="container about-two-col">
 
 <div class="section-label">
-01 — My Story
+01 — The Path
 </div>
+
+<div>
 
 <h2>
-Three disciplines.<br>
-One perspective.
+From building with data to thinking about decisions.
 </h2>
 
-</div>
-
-
-<div class="split-copy reveal">
-
 <p>
-My academic journey combines Finance, Business Intelligence
-& Analytics and Data Science.
+My academic journey started with Data Science: learning how to work with data, build models and approach problems systematically. Finance added another lens — value, risk, returns and the logic behind decisions. Business Intelligence &amp; Analytics brought the two closer to the questions organisations actually need answered.
 </p>
-
-<p>
-Data Science taught me how to work with data and build
-analytical solutions. Finance taught me to think about value,
-risk and returns. Business Intelligence showed me how analysis
-becomes useful when it answers the questions businesses
-actually care about.
-</p>
-
-<p>
-Together, these experiences have shaped how I approach
-problems: understand the context, work with the data,
-challenge assumptions and translate the analysis into
-something actionable.
-</p>
-
-</div>
 
 </div>
 
@@ -139,38 +109,46 @@ something actionable.
 </section>
 
 
-<section class="soft-section">
+<section class="about-perspective">
 
-<div class="container">
-
-<div class="split">
-
-<div class="reveal">
+<div class="container about-two-col">
 
 <div class="section-label">
-02 — The Intersection
+02 — What Changed My Perspective
 </div>
+
+<div>
 
 <h2>
-Data gives me evidence.<br>
-Finance gives me perspective.<br>
-Business gives it purpose.
+Different experiences taught me different things.
 </h2>
 
+<p>
+Research taught me patience and respect for evidence. Corporate work taught me adaptability, communication and the importance of context. Building projects taught me ownership — that an analysis becomes more useful when you have to explain what it means and what should happen next.
+</p>
+
+<div class="evidence-list">
+
+<div class="evidence-row">
+<strong>IIRS — ISRO</strong>
+<span>
+Scientific datasets strengthened my approach to structure, methodology and evidence.
+</span>
 </div>
 
-<div class="split-copy reveal">
+<div class="evidence-row">
+<strong>Dow Chemical</strong>
+<span>
+My first corporate environment showed me how analytics connects with processes, stakeholders and practical outcomes.
+</span>
+</div>
 
-<p>
-I enjoy problems where the answer isn't purely technical
-and isn't purely financial.
-</p>
-
-<p>
-The interesting part is often the space between the two:
-understanding the data, recognising the financial implications
-and communicating what the analysis means for a business.
-</p>
+<div class="evidence-row">
+<strong>Projects</strong>
+<span>
+Finance and strategy projects pushed me to connect analysis with commercial questions.
+</span>
+</div>
 
 </div>
 
@@ -181,209 +159,98 @@ and communicating what the analysis means for a business.
 </section>
 
 
-<section class="currently">
+<section class="about-currently">
 
-<div class="container">
-
-<div class="currently-grid">
-
-<div class="reveal">
+<div class="container about-two-col">
 
 <div class="section-label">
 03 — Currently
 </div>
 
-<div class="currently-title">
-Building depth across disciplines.
-</div>
-
-</div>
-
-<div class="reveal">
-
-<p class="currently-copy">
-I am currently pursuing a 5-year Integrated MBA Tech at
-MPSTME, NMIMS, Mumbai, graduating in 2027. The program
-brings together a B.Tech in Data Science and an MBA, with
-Finance as my major and Business Intelligence & Analytics
-as my minor.
-</p>
-
-<p class="currently-copy" style="margin-top:20px;">
-It gives me the opportunity to build across disciplines —
-combining technical understanding with financial and business
-thinking, and shaping how I approach problems through data,
-context and decisions.
-</p>
-
-<div class="currently-meta">
-
-<span class="meta-pill">MBA Tech</span>
-<span class="meta-pill">Finance Major</span>
-<span class="meta-pill">BIA Minor</span>
-<span class="meta-pill">Data Science</span>
-<span class="meta-pill">Graduating 2027</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="container">
-
-<div class="section-label">
-04 — Education
-</div>
-
-<div class="timeline">
-
-<div class="timeline-item reveal">
-
-<div class="timeline-date">
-2022 — 2027
-</div>
-
 <div>
-
-<h3>
-MBA Tech · Data Science
-</h3>
-
-<p>
-MPSTME, NMIMS, Mumbai · Finance Major ·
-Business Intelligence & Analytics Minor
-</p>
-
-</div>
-
-</div>
-
-<div class="timeline-item reveal">
-
-<div class="timeline-date">
-Academic Foundation
-</div>
-
-<div>
-
-<h3>
-Data Science + Business
-</h3>
-
-<p>
-An integrated academic path combining technical,
-analytical and business education.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="soft-section">
-
-<div class="container">
-
-<div class="section-label">
-05 — How I Work
-</div>
-
-<div class="traits">
-
-<div class="trait reveal">
-
-<h3>Curious</h3>
-
-<p>
-I like understanding why something works before deciding
-what to do with it.
-</p>
-
-</div>
-
-<div class="trait reveal">
-
-<h3>Analytical</h3>
-
-<p>
-I break complex questions into smaller, testable problems.
-</p>
-
-</div>
-
-<div class="trait reveal">
-
-<h3>Practical</h3>
-
-<p>
-The best analysis is useful when it can influence a decision.
-</p>
-
-</div>
-
-<div class="trait reveal">
-
-<h3>Collaborative</h3>
-
-<p>
-I learn quickly from people who know the problem from
-a different perspective.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="dark-section">
-
-<div class="container reveal">
-
-<div class="eyebrow">
-06 — Direction
-</div>
 
 <h2>
-Where analysis<br>
-meets action.
+Building the range before choosing the lane.
 </h2>
 
 <p>
-I'm building toward roles where analytical thinking sits close
-to business and financial decision-making — particularly
-analytics, business intelligence, finance and strategy.
+I’m pursuing a 5-year Integrated MBA Tech at NMIMS, Mumbai, combining a B.Tech in Data Science with an MBA. My major is Finance and my minor is Business Intelligence &amp; Analytics, graduating in 2027.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="about-path">
+
+<div class="container">
+
+<div class="section-label">
+04 — What I Value
+</div>
+
+<div class="value-grid">
+
+<div class="value-item">
+<strong>Ask better questions</strong>
+<p>Start with the problem, not the tool.</p>
+</div>
+
+<div class="value-item">
+<strong>Stay close to evidence</strong>
+<p>Let the data challenge the first assumption.</p>
+</div>
+
+<div class="value-item">
+<strong>Make analysis useful</strong>
+<p>Clarity matters when someone has to act on the work.</p>
+</div>
+
+<div class="value-item">
+<strong>Keep learning</strong>
+<p>Move across disciplines when the problem demands it.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="direction-strip">
+
+<div class="container">
+
+<div class="eyebrow">
+05 — Looking Ahead
+</div>
+
+<h2>
+Still figuring it out.
+</h2>
+
+<p>
+I’m building toward work where analytical thinking sits close to business and financial decisions — particularly in analytics, business intelligence, finance and strategy.
 </p>
 
 </div>
 
 </section>
+
 
 </main>
 
 
-<footer>
+<footer class="site-footer">
 
-<div class="container footer-inner">
+<div class="footer-inner">
 
-<p>© 2026 Aishwarya Nagchandi</p>
+<span>© 2026 Aishwarya Nagchandi</span>
+<span>Analytics × Finance × Business</span>
 
 <div class="footer-links">
 <a href="projects.html">Projects</a>
@@ -397,53 +264,64 @@ analytics, business intelligence, finance and strategy.
 
 <script>
 
-const menuButton=document.querySelector(".menu-button");
-const navLinks=document.querySelector("#navLinks");
+const menuBtn = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-menuButton.addEventListener("click",()=>{
+menuBtn.addEventListener("click", () => {
 
-const open=navLinks.classList.toggle("open");
+const open = navLinks.classList.toggle("open");
 
-menuButton.setAttribute("aria-expanded",open);
-
-menuButton.setAttribute(
+menuBtn.setAttribute("aria-expanded", open);
+menuBtn.setAttribute(
 "aria-label",
 open ? "Close navigation" : "Open navigation"
 );
 
 });
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
+document.querySelectorAll(".nav-links a").forEach(link => {
 
-link.addEventListener("click",()=>{
+link.addEventListener("click", () => {
 
 navLinks.classList.remove("open");
 
-menuButton.setAttribute("aria-expanded","false");
+menuBtn.setAttribute("aria-expanded", "false");
 
 });
 
 });
 
-const observer=new IntersectionObserver(entries=>{
+const reveals = document.querySelectorAll(".reveal");
 
-entries.forEach(entry=>{
+if ("IntersectionObserver" in window) {
 
-if(entry.isIntersecting){
+const observer = new IntersectionObserver(
+entries => {
+
+entries.forEach(entry => {
+
+if (entry.isIntersecting) {
 
 entry.target.classList.add("visible");
-
 observer.unobserve(entry.target);
 
 }
 
 });
 
-},{threshold:.12});
+},
+{threshold:0.08}
+);
 
-document.querySelectorAll(".reveal").forEach(el=>{
-observer.observe(el);
-});
+reveals.forEach(element => observer.observe(element));
+
+} else {
+
+reveals.forEach(element =>
+element.classList.add("visible")
+);
+
+}
 
 </script>
 
