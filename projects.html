@@ -1,1982 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<title>Projects | Aishwarya Nagchandi</title>
 
-    <title>Projects | Aishwarya Nagchandi</title>
+<meta name="description"
+content="Selected finance, analytics, business strategy, economics and ESG projects by Aishwarya Nagchandi.">
 
-    <meta name="description"
-          content="Selected analytical, financial and business projects by Aishwarya Nagchandi.">
+<meta name="robots" content="index, follow">
 
+<link rel="canonical"
+href="https://aishwaryanagchandi.com/projects.html">
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
 
-
-    <style>
-
-        :root {
-
-            --bg: #f7f6f2;
-            --text: #171717;
-            --muted: #686868;
-            --line: #d9d8d3;
-            --accent: #173f63;
-            --soft: #eeede8;
-            --white: #ffffff;
-
-        }
-
-
-        * {
-
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-
-        }
-
-
-        html {
-
-            scroll-behavior: smooth;
-
-            scroll-padding-top: 110px;
-
-        }
-
-
-        /* Makes project anchor links land below the navbar */
-
-        [id] {
-
-            scroll-margin-top: 110px;
-
-        }
-
-
-        body {
-
-            background: var(--bg);
-
-            color: var(--text);
-
-            font-family: "DM Sans", sans-serif;
-
-            line-height: 1.6;
-
-            overflow-x: hidden;
-
-        }
-
-
-        a {
-
-            color: inherit;
-
-            text-decoration: none;
-
-        }
-
-
-        h1,
-        h2,
-        h3 {
-
-            font-family: "Playfair Display", serif;
-
-            font-weight: 600;
-
-        }
-
-
-        nav {
-
-            position: fixed;
-
-            top: 0;
-            left: 0;
-            right: 0;
-
-            height: 76px;
-
-            z-index: 1000;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            padding: 0 7vw;
-
-            background:
-                rgba(247, 246, 242, 0.92);
-
-            backdrop-filter: blur(14px);
-
-            -webkit-backdrop-filter: blur(14px);
-
-            border-bottom:
-                1px solid var(--line);
-
-        }
-
-
-        .logo {
-
-            font-size: 15px;
-
-            font-weight: 700;
-
-            letter-spacing: 0.08em;
-
-        }
-
-
-        .nav-links {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 30px;
-
-        }
-
-
-        .nav-links a {
-
-            font-size: 13px;
-
-            color: #4e4e4e;
-
-            transition:
-                color 0.25s ease;
-
-        }
-
-
-        .nav-links a:hover {
-
-            color: var(--text);
-
-        }
-
-
-        .resume-btn {
-
-            border:
-                1px solid #222;
-
-            padding:
-                10px 17px;
-
-            transition:
-                all 0.25s ease;
-
-        }
-
-
-        .resume-btn:hover {
-
-            background: var(--text);
-
-            color: var(--bg);
-
-        }
-
-
-        .menu-btn {
-
-            display: none;
-
-            border: none;
-
-            background: none;
-
-            font-size: 24px;
-
-            cursor: pointer;
-
-        }
-
-
-        main {
-
-            padding-top: 76px;
-
-        }
-
-
-        .container {
-
-            max-width: 1180px;
-
-            margin:
-                0 auto;
-
-        }
-
-
-        section {
-
-            padding:
-                110px 7vw;
-
-        }
-
-
-        .eyebrow {
-
-            font-size: 12px;
-
-            font-weight: 600;
-
-            letter-spacing: 0.14em;
-
-            text-transform: uppercase;
-
-            color: var(--accent);
-
-            margin-bottom: 24px;
-
-        }
-
-
-        .section-label {
-
-            font-size: 12px;
-
-            color: var(--muted);
-
-            letter-spacing: 0.08em;
-
-            margin-bottom: 35px;
-
-        }
-
-
-        .reveal {
-
-            opacity: 0;
-
-            transform:
-                translateY(25px);
-
-            transition:
-                opacity 0.8s ease,
-                transform 0.8s ease;
-
-        }
-
-
-        .reveal.visible {
-
-            opacity: 1;
-
-            transform:
-                translateY(0);
-
-        }
-
-
-        /* ================= HERO ================= */
-
-        .hero {
-
-            min-height:
-                80vh;
-
-            display: flex;
-
-            align-items: center;
-
-            border-bottom:
-                1px solid var(--line);
-
-        }
-
-
-        .hero h1 {
-
-            font-size:
-                clamp(65px, 9vw, 125px);
-
-            line-height:
-                0.92;
-
-            letter-spacing:
-                -0.055em;
-
-            max-width:
-                1000px;
-
-        }
-
-
-        .hero-description {
-
-            max-width:
-                700px;
-
-            margin-top:
-                40px;
-
-            color:
-                var(--muted);
-
-            font-size:
-                18px;
-
-            line-height:
-                1.75;
-
-        }
-
-
-        /* ================= PROJECT ================= */
-
-        .project-section {
-
-            border-bottom:
-                1px solid var(--line);
-
-        }
-
-
-        .project-layout {
-
-            display: grid;
-
-            grid-template-columns:
-                180px 1fr;
-
-            gap:
-                80px;
-
-        }
-
-
-        .project-number {
-
-            font-size:
-                13px;
-
-            color:
-                var(--muted);
-
-        }
-
-
-        .project-content {
-
-            max-width:
-                850px;
-
-        }
-
-
-        .project-category {
-
-            font-size:
-                11px;
-
-            font-weight:
-                700;
-
-            letter-spacing:
-                0.12em;
-
-            text-transform:
-                uppercase;
-
-            color:
-                var(--accent);
-
-            margin-bottom:
-                20px;
-
-        }
-
-
-        .project-content h2 {
-
-            font-size:
-                clamp(50px, 7vw, 90px);
-
-            line-height:
-                0.95;
-
-            letter-spacing:
-                -0.045em;
-
-            margin-bottom:
-                30px;
-
-        }
-
-
-        .project-question {
-
-            font-size:
-                22px;
-
-            line-height:
-                1.45;
-
-            max-width:
-                720px;
-
-            margin-bottom:
-                50px;
-
-        }
-
-
-        .project-grid {
-
-            display:
-                grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap:
-                1px;
-
-            background:
-                var(--line);
-
-            border:
-                1px solid var(--line);
-
-        }
-
-
-        .project-card {
-
-            background:
-                var(--bg);
-
-            padding:
-                35px;
-
-            min-height:
-                230px;
-
-        }
-
-
-        .project-card h3 {
-
-            font-size:
-                30px;
-
-            margin-bottom:
-                15px;
-
-        }
-
-
-        .project-card p {
-
-            color:
-                var(--muted);
-
-            font-size:
-                15px;
-
-        }
-
-
-        .project-outcome {
-
-            margin-top:
-                45px;
-
-            padding-top:
-                35px;
-
-            border-top:
-                1px solid var(--line);
-
-        }
-
-
-        .project-outcome h3 {
-
-            font-size:
-                32px;
-
-            margin-bottom:
-                15px;
-
-        }
-
-
-        .project-outcome p {
-
-            color:
-                var(--muted);
-
-            max-width:
-                750px;
-
-            font-size:
-                16px;
-
-        }
-
-
-        .project-tags {
-
-            display:
-                flex;
-
-            flex-wrap:
-                wrap;
-
-            gap:
-                9px;
-
-            margin-top:
-                35px;
-
-        }
-
-
-        .tag {
-
-            border:
-                1px solid var(--line);
-
-            padding:
-                8px 13px;
-
-            font-size:
-                11px;
-
-            color:
-                var(--muted);
-
-        }
-
-
-        /* ================= MORE ================= */
-
-        .more {
-
-            background:
-                var(--soft);
-
-            min-height:
-                55vh;
-
-            display:
-                flex;
-
-            align-items:
-                center;
-
-        }
-
-
-        .more h2 {
-
-            font-size:
-                clamp(50px, 7vw, 85px);
-
-            line-height:
-                1;
-
-            letter-spacing:
-                -0.045em;
-
-            margin-bottom:
-                25px;
-
-        }
-
-
-        .more p {
-
-            color:
-                var(--muted);
-
-            max-width:
-                650px;
-
-            font-size:
-                17px;
-
-            margin-bottom:
-                30px;
-
-        }
-
-
-        .github-link {
-
-            display:
-                inline-block;
-
-            border-bottom:
-                1px solid var(--text);
-
-            padding-bottom:
-                6px;
-
-            font-size:
-                12px;
-
-            font-weight:
-                700;
-
-            letter-spacing:
-                0.08em;
-
-            text-transform:
-                uppercase;
-
-        }
-
-
-        /* ================= FOOTER ================= */
-
-        footer {
-
-            padding:
-                35px 7vw;
-
-            display:
-                flex;
-
-            justify-content:
-                space-between;
-
-            align-items:
-                center;
-
-            border-top:
-                1px solid var(--line);
-
-            font-size:
-                12px;
-
-            color:
-                var(--muted);
-
-        }
-
-
-        /* ================= MOBILE ================= */
-
-        @media (max-width: 800px) {
-
-
-            nav {
-
-                padding:
-                    0 6vw;
-
-            }
-
-
-            .nav-links {
-
-                display: none;
-
-                position: absolute;
-
-                top: 76px;
-
-                left: 0;
-                right: 0;
-
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
-
-                gap: 0;
-
-                background:
-                    var(--bg);
-
-                border-bottom:
-                    1px solid var(--line);
-
-            }
-
-
-            .nav-links.active {
-
-                display: flex;
-
-            }
-
-
-            .nav-links a {
-
-                width: 100%;
-
-                padding:
-                    17px 6vw;
-
-                border-bottom:
-                    1px solid var(--line);
-
-            }
-
-
-            .nav-links .resume-btn {
-
-                border: none;
-
-                border-bottom:
-                    1px solid var(--line);
-
-            }
-
-
-            .menu-btn {
-
-                display: block;
-
-            }
-
-
-            section {
-
-                padding:
-                    80px 6vw;
-
-            }
-
-
-            .hero {
-
-                min-height:
-                    70vh;
-
-            }
-
-
-            .hero h1 {
-
-                font-size:
-                    clamp(55px, 15vw, 90px);
-
-            }
-
-
-            .hero-description {
-
-                font-size:
-                    16px;
-
-            }
-
-
-            .project-layout {
-
-                grid-template-columns:
-                    1fr;
-
-                gap:
-                    25px;
-
-            }
-
-
-            .project-grid {
-
-                grid-template-columns:
-                    1fr;
-
-            }
-
-
-            .project-question {
-
-                font-size:
-                    19px;
-
-            }
-
-
-            footer {
-
-                flex-direction:
-                    column;
-
-                align-items:
-                    flex-start;
-
-                gap:
-                    10px;
-
-            }
-
-        }
-
-
-        @media (prefers-reduced-motion: reduce) {
-
-            html {
-
-                scroll-behavior:
-                    auto;
-
-            }
-
-
-            .reveal {
-
-                opacity:
-                    1;
-
-                transform:
-                    none;
-
-                transition:
-                    none;
-
-            }
-
-        }
-
-    </style>
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
-
 <body>
 
+<nav class="site-nav">
 
-<!-- ================= NAVIGATION ================= -->
+<div class="nav-inner">
 
-<nav>
+<a href="index.html" class="logo">AN</a>
 
-    <a href="index.html"
-       class="logo">
+<button class="menu-button"
+aria-label="Open navigation"
+aria-expanded="false">
+☰
+</button>
 
-        AN
+<div class="nav-links" id="navLinks">
 
-    </a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="experience.html">Experience</a>
+<a href="projects.html" class="active" aria-current="page">Projects</a>
+<a href="beyond.html">Beyond the Resume</a>
+<a href="skills.html">Skills</a>
+<a href="contact.html">Contact</a>
 
+<a href="resume.pdf" class="resume-btn" target="_blank">
+Resume ↗
+</a>
 
-    <button class="menu-btn"
-            aria-label="Open navigation">
+</div>
 
-        ☰
-
-    </button>
-
-
-    <div class="nav-links">
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="experience.html">
-            Experience
-        </a>
-
-        <a href="projects.html">
-            Projects
-        </a>
-
-        <a href="beyond.html">
-            Beyond the Resume
-        </a>
-
-        <a href="skills.html">
-            Skills
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-        <a href="resume.pdf"
-           class="resume-btn"
-           target="_blank">
-
-            Resume ↗
-
-        </a>
-
-    </div>
+</div>
 
 </nav>
 
 
 <main>
 
-
-<!-- ================= HERO ================= -->
-
 <section class="hero">
 
-    <div class="container reveal">
+<div class="container reveal">
 
-        <div class="eyebrow">
+<div class="eyebrow">
+01 — Projects
+</div>
 
-            01 — Projects
+<h1>
+Problems I've<br>
+tried to solve.
+</h1>
 
-        </div>
+<p class="hero-description">
+I like problems that sit between disciplines — where financial
+thinking, analytical methods and business context need to work
+together.
+</p>
 
-
-        <h1>
-
-            Problems I've<br>
-            tried to solve.
-
-        </h1>
-
-
-        <p class="hero-description">
-
-            I like problems that sit between disciplines —
-            where financial thinking, analytical methods and
-            business context need to work together.
-
-        </p>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= PRARAMBH ================= -->
+<!-- PRARAMBH -->
 
-<section class="project-section"
-         id="prarambh">
+<section class="project-detail" id="prarambh">
 
-    <div class="container">
+<div class="container">
 
-        <div class="project-layout">
+<div class="project-layout">
 
+<div class="project-number reveal">
+02 / 06
+</div>
 
-            <div class="project-number reveal">
+<div class="project-content reveal">
 
-                02 / 06
+<div class="project-category">
+Finance × Entrepreneurship
+</div>
 
-            </div>
+<h2>
+Project<br>
+Prarambh
+</h2>
 
+<p class="project-question">
+Can a sustainability-led idea be turned into a financially
+viable business?
+</p>
 
-            <div class="project-content reveal">
 
+<div class="project-info-grid">
 
-                <div class="project-category">
+<div class="info-card">
 
-                    Finance × Entrepreneurship
+<h3>The Problem</h3>
 
-                </div>
+<p>
+Explored the commercial viability of converting recycled PET
+bottles into affordable 3D-printing filament while developing
+a scalable business model.
+</p>
 
+</div>
 
-                <h2>
+<div class="info-card">
 
-                    Project<br>
-                    Prarambh
+<h3>My Role</h3>
 
-                </h2>
+<p>
+Worked as co-founder and financial lead, connecting operational
+assumptions with investment and funding decisions.
+</p>
 
+</div>
 
-                <p class="project-question">
+<div class="info-card">
 
-                    Can a sustainability-led idea be turned
-                    into a financially viable business?
+<h3>The Analysis</h3>
 
-                </p>
+<p>
+Built a five-year integrated financial model covering capital
+requirements, revenue scenarios, costs, WACC, NPV, IRR and
+payback analysis.
+</p>
 
+</div>
 
-                <div class="project-grid">
+<div class="info-card">
 
+<h3>The Audience</h3>
 
-                    <div class="project-card">
+<p>
+Students, educational institutions, makerspaces, small
+businesses, startups, designers and hobbyists.
+</p>
 
-                        <h3>
-                            The Problem
-                        </h3>
+</div>
 
-                        <p>
+</div>
 
-                            The project explored the commercial
-                            viability of converting recycled PET
-                            bottles into affordable 3D-printing
-                            filament while creating a scalable
-                            business model.
 
-                        </p>
+<div class="output">
 
-                    </div>
+<h3>Output</h3>
 
+<p>
+A five-year financial model evaluating ₹25L+ in capital
+requirements and testing long-term investment viability
+through projected cash flows and financial metrics.
+</p>
 
-                    <div class="project-card">
+</div>
 
-                        <h3>
-                            My Role
-                        </h3>
 
-                        <p>
+<div class="project-tags">
 
-                            Worked as co-founder and financial lead,
-                            building the financial case and connecting
-                            operational assumptions with investment
-                            decisions.
+<span class="tool">Financial Modelling</span>
+<span class="tool">WACC</span>
+<span class="tool">NPV</span>
+<span class="tool">IRR</span>
+<span class="tool">Market Analysis</span>
 
-                        </p>
+</div>
 
-                    </div>
+</div>
 
+</div>
 
-                    <div class="project-card">
-
-                        <h3>
-                            The Analysis
-                        </h3>
-
-                        <p>
-
-                            Built a five-year integrated financial
-                            model covering capital requirements,
-                            revenue scenarios, costs and investment
-                            viability using WACC, NPV, IRR and
-                            payback analysis.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>
-                            The Audience
-                        </h3>
-
-                        <p>
-
-                            Students, educational institutions,
-                            makerspaces, small businesses, startups,
-                            designers and hobbyists.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-outcome">
-
-                    <h3>
-                        Financial perspective
-                    </h3>
-
-                    <p>
-
-                        The model evaluated ₹25L+ in capital
-                        requirements and tested the project's
-                        ability to create long-term value through
-                        projected cash flows and investment metrics.
-
-                    </p>
-
-                </div>
-
-
-                <div class="project-tags">
-
-                    <span class="tag">
-                        Financial Modelling
-                    </span>
-
-                    <span class="tag">
-                        NPV
-                    </span>
-
-                    <span class="tag">
-                        IRR
-                    </span>
-
-                    <span class="tag">
-                        WACC
-                    </span>
-
-                    <span class="tag">
-                        Entrepreneurship
-                    </span>
-
-                    <span class="tag">
-                        Strategy
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= NOBELZA ================= -->
+<!-- NOBELZA -->
 
-<section class="project-section"
-         id="nobelza">
+<section class="project-detail" id="nobelza">
 
-    <div class="container">
+<div class="container">
 
-        <div class="project-layout">
+<div class="project-layout">
 
+<div class="project-number reveal">
+03 / 06
+</div>
 
-            <div class="project-number reveal">
+<div class="project-content reveal">
 
-                03 / 06
+<div class="project-category">
+Strategy × Healthcare
+</div>
 
-            </div>
+<h2>
+Nobelza
+</h2>
 
+<p class="project-question">
+How can a portable healthcare technology enter a new market
+and become commercially viable?
+</p>
 
-            <div class="project-content reveal">
 
+<div class="project-info-grid">
 
-                <div class="project-category">
+<div class="info-card">
 
-                    Business Strategy × Market Analysis
+<h3>The Problem</h3>
 
-                </div>
+<p>
+Evaluated market entry and commercialization for a portable
+TB-testing solution.
+</p>
 
+</div>
 
-                <h2>
+<div class="info-card">
 
-                    Nobelza
+<h3>My Role</h3>
 
-                </h2>
+<p>
+Led market-entry and commercialization analysis, combining
+market research with financial and risk analysis.
+</p>
 
+</div>
 
-                <p class="project-question">
+<div class="info-card">
 
-                    How should a portable TB-testing solution
-                    approach market entry in a complex and
-                    competitive healthcare market?
+<h3>The Analysis</h3>
 
-                </p>
+<p>
+Conducted market sizing, competitive benchmarking, demand
+forecasting and Excel-based financial and risk modelling.
+</p>
 
+</div>
 
-                <div class="project-grid">
+<div class="info-card">
 
+<h3>Business Lens</h3>
 
-                    <div class="project-card">
+<p>
+Examined pricing, distribution and deployment strategy for
+potential ₹5–10 Cr market opportunities.
+</p>
 
-                        <h3>
-                            The Problem
-                        </h3>
+</div>
 
-                        <p>
+</div>
 
-                            The project focused on understanding
-                            the market opportunity and identifying
-                            a practical commercialisation strategy
-                            for a portable healthcare testing
-                            solution.
 
-                        </p>
+<div class="output">
 
-                    </div>
+<h3>Output</h3>
 
+<p>
+A market-entry framework connecting market opportunity,
+competitive positioning, financial feasibility and
+distribution strategy.
+</p>
 
-                    <div class="project-card">
+</div>
 
-                        <h3>
-                            Market Analysis
-                        </h3>
 
-                        <p>
+<div class="project-tags">
 
-                            Conducted market sizing, competitive
-                            benchmarking and demand forecasting
-                            across multiple healthcare segments.
+<span class="tool">Market Sizing</span>
+<span class="tool">Competitive Analysis</span>
+<span class="tool">Forecasting</span>
+<span class="tool">Financial Modelling</span>
+<span class="tool">Risk Analysis</span>
 
-                        </p>
+</div>
 
-                    </div>
+</div>
 
+</div>
 
-                    <div class="project-card">
-
-                        <h3>
-                            Financial Analysis
-                        </h3>
-
-                        <p>
-
-                            Developed Excel-based financial and
-                            risk models to evaluate potential
-                            market opportunities and test commercial
-                            assumptions.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>
-                            Strategy
-                        </h3>
-
-                        <p>
-
-                            Examined pricing and distribution
-                            approaches with the objective of
-                            improving deployment efficiency and
-                            market penetration.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-outcome">
-
-                    <h3>
-                        Commercial perspective
-                    </h3>
-
-                    <p>
-
-                        The analysis evaluated opportunities in the
-                        ₹5–10 Cr range and connected market research
-                        with financial feasibility, pricing and
-                        distribution decisions.
-
-                    </p>
-
-                </div>
-
-
-                <div class="project-tags">
-
-                    <span class="tag">
-                        Market Sizing
-                    </span>
-
-                    <span class="tag">
-                        Competitive Analysis
-                    </span>
-
-                    <span class="tag">
-                        Forecasting
-                    </span>
-
-                    <span class="tag">
-                        Financial Modelling
-                    </span>
-
-                    <span class="tag">
-                        Risk Analysis
-                    </span>
-
-                    <span class="tag">
-                        Strategy
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= SECTORAL ================= -->
+<!-- SECTORAL -->
 
-<section class="project-section"
-         id="sectoral">
+<section class="project-detail" id="sectoral">
 
-    <div class="container">
+<div class="container">
 
-        <div class="project-layout">
+<div class="project-layout">
 
+<div class="project-number reveal">
+04 / 06
+</div>
 
-            <div class="project-number reveal">
+<div class="project-content reveal">
 
-                04 / 06
+<div class="project-category">
+Finance × Quantitative Analytics
+</div>
 
-            </div>
+<h2>
+Sectoral<br>
+Analysis
+</h2>
 
+<p class="project-question">
+How do sector characteristics translate into risk, return
+and portfolio decisions?
+</p>
 
-            <div class="project-content reveal">
 
+<div class="project-info-grid">
 
-                <div class="project-category">
+<div class="info-card">
 
-                    Finance × Quantitative Analytics
+<h3>The Scope</h3>
 
-                </div>
+<p>
+Compared 10+ listed companies across Indian renewable
+energy and pharmaceutical sectors.
+</p>
 
+</div>
 
-                <h2>
+<div class="info-card">
 
-                    Sectoral<br>
-                    Analysis
+<h3>The Analysis</h3>
 
-                </h2>
+<p>
+Used financial ratios, beta, volatility, Sharpe ratios,
+sector rotation and portfolio allocation methods.
+</p>
 
+</div>
 
-                <p class="project-question">
+<div class="info-card">
 
-                    How do different sectors behave from an
-                    investment perspective, and can quantitative
-                    signals support better portfolio decisions?
+<h3>Quantitative Lens</h3>
 
-                </p>
+<p>
+Studied risk-return relationships and market behaviour
+across sectors.
+</p>
 
+</div>
 
-                <div class="project-grid">
+<div class="info-card">
 
+<h3>Output</h3>
 
-                    <div class="project-card">
+<p>
+Developed comparative analysis supporting portfolio
+allocation and algorithmic trading signal exploration.
+</p>
 
-                        <h3>
-                            The Scope
-                        </h3>
+</div>
 
-                        <p>
+</div>
 
-                            Compared companies across sectors
-                            including Indian renewable energy and
-                            pharmaceutical companies to understand
-                            differences in performance and risk.
 
-                        </p>
+<div class="project-tags">
 
-                    </div>
+<span class="tool">Financial Ratios</span>
+<span class="tool">Beta</span>
+<span class="tool">Volatility</span>
+<span class="tool">Sharpe Ratio</span>
+<span class="tool">Portfolio Analysis</span>
 
+</div>
 
-                    <div class="project-card">
+</div>
 
-                        <h3>
-                            Financial Metrics
-                        </h3>
+</div>
 
-                        <p>
-
-                            Analysed financial ratios, beta,
-                            volatility, Sharpe ratios and other
-                            indicators to evaluate companies from
-                            an investment perspective.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>
-                            Portfolio Analysis
-                        </h3>
-
-                        <p>
-
-                            Examined sector rotation and portfolio
-                            allocation to understand how quantitative
-                            measures could support investment
-                            decisions.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>
-                            Quantitative Signals
-                        </h3>
-
-                        <p>
-
-                            Explored algorithmic trading signals as
-                            a way of translating market behaviour
-                            into structured investment rules.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-outcome">
-
-                    <h3>
-                        Investment perspective
-                    </h3>
-
-                    <p>
-
-                        The project connected traditional financial
-                        analysis with quantitative techniques to
-                        understand how risk, return and market
-                        behaviour can influence portfolio decisions.
-
-                    </p>
-
-                </div>
-
-
-                <div class="project-tags">
-
-                    <span class="tag">
-                        Quantitative Finance
-                    </span>
-
-                    <span class="tag">
-                        Financial Ratios
-                    </span>
-
-                    <span class="tag">
-                        Portfolio Analysis
-                    </span>
-
-                    <span class="tag">
-                        Risk Analysis
-                    </span>
-
-                    <span class="tag">
-                        Sharpe Ratio
-                    </span>
-
-                    <span class="tag">
-                        Algorithmic Trading
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= MACRO ================= -->
+<!-- MACRO -->
 
-<section class="project-section"
-         id="macro">
+<section class="project-detail" id="macro">
 
-    <div class="container">
+<div class="container">
 
-        <div class="project-layout">
+<div class="project-layout">
 
+<div class="project-number reveal">
+05 / 06
+</div>
 
-            <div class="project-number reveal">
+<div class="project-content reveal">
 
-                05 / 06
+<div class="project-category">
+Economics × Data Analytics
+</div>
 
-            </div>
+<h2>
+Budgets &<br>
+Macroeconomic<br>
+Outcomes
+</h2>
 
+<p class="project-question">
+What do long-term economic indicators reveal about fiscal
+policy, growth and investment flows?
+</p>
 
-            <div class="project-content reveal">
 
+<div class="project-info-grid">
 
-                <div class="project-category">
+<div class="info-card">
 
-                    Data Analytics × Economics
+<h3>The Dataset</h3>
 
-                </div>
+<p>
+Analysed 20+ years of macroeconomic data across 150+
+economic indicators.
+</p>
 
+</div>
 
-                <h2>
+<div class="info-card">
 
-                    Budgets &<br>
-                    Macroeconomic<br>
-                    Outcomes
+<h3>The Variables</h3>
 
-                </h2>
+<p>
+Studied GDP, inflation, fiscal deficit, capital expenditure,
+FDI and related economic indicators.
+</p>
 
+</div>
 
-                <p class="project-question">
+<div class="info-card">
 
-                    What can long-term macroeconomic data tell us
-                    about the relationship between government
-                    budgets, fiscal policy and economic outcomes?
+<h3>The Comparison</h3>
 
-                </p>
+<p>
+Examined macroeconomic patterns and fiscal policy under
+UPA and NDA governments.
+</p>
 
+</div>
 
-                <div class="project-grid">
+<div class="info-card">
 
+<h3>Output</h3>
 
-                    <div class="project-card">
+<p>
+Structured a long-term analytical view of growth patterns,
+fiscal policy and investment flows.
+</p>
 
-                        <h3>
-                            The Dataset
-                        </h3>
+</div>
 
-                        <p>
+</div>
 
-                            Worked with more than 20 years of
-                            macroeconomic data covering GDP,
-                            inflation, fiscal deficit, capital
-                            expenditure and FDI.
 
-                        </p>
+<div class="project-tags">
 
-                    </div>
+<span class="tool">Macroeconomics</span>
+<span class="tool">Time Series</span>
+<span class="tool">Data Analysis</span>
+<span class="tool">Fiscal Policy</span>
+<span class="tool">Economic Indicators</span>
 
+</div>
 
-                    <div class="project-card">
+</div>
 
-                        <h3>
-                            The Framework
-                        </h3>
+</div>
 
-                        <p>
-
-                            Structured more than 150 economic
-                            indicators into an analytical framework
-                            for comparing fiscal strategies and
-                            economic outcomes.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>
-                            Trend Analysis
-                        </h3>
-
-                        <p>
-
-                            Built trend-based Excel dashboards to
-                            examine relationships between fiscal
-                            policy, growth patterns and investment
-                            flows.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>
-                            Interpretation
-                        </h3>
-
-                        <p>
-
-                            Used historical patterns to develop a
-                            structured perspective on how fiscal
-                            decisions interact with broader
-                            macroeconomic outcomes.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-outcome">
-
-                    <h3>
-                        Analytical perspective
-                    </h3>
-
-                    <p>
-
-                        The project strengthened my ability to work
-                        with large, multi-year datasets and translate
-                        economic indicators into an interpretable
-                        analytical narrative.
-
-                    </p>
-
-                </div>
-
-
-                <div class="project-tags">
-
-                    <span class="tag">
-                        Excel
-                    </span>
-
-                    <span class="tag">
-                        Data Analysis
-                    </span>
-
-                    <span class="tag">
-                        Economics
-                    </span>
-
-                    <span class="tag">
-                        Trend Analysis
-                    </span>
-
-                    <span class="tag">
-                        Forecasting
-                    </span>
-
-                    <span class="tag">
-                        Policy Analysis
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= ENVAPLAX ================= -->
+<!-- ENVAPLAX -->
 
-<section class="project-section"
-         id="envaplax">
+<section class="project-detail" id="envaplax">
 
-    <div class="container">
+<div class="container">
 
-        <div class="project-layout">
+<div class="project-layout">
 
+<div class="project-number reveal">
+06 / 06
+</div>
 
-            <div class="project-number reveal">
+<div class="project-content reveal">
 
-                06 / 06
+<div class="project-category">
+ESG × Business Analytics
+</div>
 
-            </div>
+<h2>
+Envaplax
+</h2>
 
+<p class="project-question">
+How can corporate sustainability disclosures become more
+comparable and useful for analysis?
+</p>
 
-            <div class="project-content reveal">
 
+<div class="project-info-grid">
 
-                <div class="project-category">
+<div class="info-card">
 
-                    ESG × Business Analytics
+<h3>The Scope</h3>
 
-                </div>
+<p>
+Analysed 50+ corporate BRSR disclosures across 10+
+ESG metrics.
+</p>
 
+</div>
 
-                <h2>
+<div class="info-card">
 
-                    Envaplax
+<h3>The Analysis</h3>
 
-                </h2>
+<p>
+Used benchmarking frameworks to compare sustainability
+performance and identify reporting gaps.
+</p>
 
+</div>
 
-                <p class="project-question">
+<div class="info-card">
 
-                    How can fragmented sustainability disclosures
-                    be turned into information that allows
-                    companies to be meaningfully compared?
+<h3>The Output</h3>
 
-                </p>
+<p>
+Developed comparative Excel dashboards to improve clarity
+and consistency in sustainability assessment.
+</p>
 
+</div>
 
-                <div class="project-grid">
+<div class="info-card">
 
+<h3>The Lens</h3>
 
-                    <div class="project-card">
+<p>
+Connected ESG reporting with business analytics and
+comparative decision-making.
+</p>
 
-                        <h3>
-                            The Dataset
-                        </h3>
+</div>
 
-                        <p>
+</div>
 
-                            Analysed more than 50 corporate BRSR
-                            disclosures across multiple companies
-                            and industries.
 
-                        </p>
+<div class="project-tags">
 
-                    </div>
+<span class="tool">BRSR</span>
+<span class="tool">ESG Analytics</span>
+<span class="tool">Benchmarking</span>
+<span class="tool">Excel</span>
+<span class="tool">Data Analysis</span>
 
+</div>
 
-                    <div class="project-card">
+</div>
 
-                        <h3>
-                            ESG Framework
-                        </h3>
+</div>
 
-                        <p>
-
-                            Structured information across more than
-                            10 environmental, social and governance
-                            metrics.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>
-                            Benchmarking
-                        </h3>
-
-                        <p>
-
-                            Developed comparative frameworks to
-                            identify differences in sustainability
-                            performance and disclosure patterns.
-
-                        </p>
-
-                    </div>
-
-
-                    <div class="project-card">
-
-                        <h3>
-                            Business Insight
-                        </h3>
-
-                        <p>
-
-                            Translated fragmented disclosures into
-                            structured information that could support
-                            comparison and business interpretation.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="project-outcome">
-
-                    <h3>
-                        ESG perspective
-                    </h3>
-
-                    <p>
-
-                        The project combined research, data structuring
-                        and comparative analysis to make sustainability
-                        information more accessible for business
-                        interpretation.
-
-                    </p>
-
-                </div>
-
-
-                <div class="project-tags">
-
-                    <span class="tag">
-                        ESG
-                    </span>
-
-                    <span class="tag">
-                        BRSR
-                    </span>
-
-                    <span class="tag">
-                        Benchmarking
-                    </span>
-
-                    <span class="tag">
-                        Data Analysis
-                    </span>
-
-                    <span class="tag">
-                        Research
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= MORE IN LAB ================= -->
+<section class="dark-section">
 
-<section class="more">
+<div class="container reveal">
 
-    <div class="container reveal">
+<div class="eyebrow">
+The Lab
+</div>
 
-        <div class="eyebrow">
+<h2>
+More experiments<br>
+live on GitHub.
+</h2>
 
-            More in the Lab
+<p>
+Selected projects show the problems I've worked on.
+My GitHub contains additional technical work and experiments.
+</p>
 
-        </div>
+<a href="https://github.com/AishwaryaNagchandi"
+target="_blank"
+rel="noopener"
+class="text-button">
+Visit GitHub →
+</a>
 
-
-        <h2>
-
-            More problems.<br>
-            More experiments.
-
-        </h2>
-
-
-        <p>
-
-            I continue to explore projects across analytics,
-            finance, information systems and business. Some of
-            the smaller experiments and technical work live on
-            my GitHub.
-
-        </p>
-
-
-        <a href="https://github.com/AishwaryaNagchandi"
-           target="_blank"
-           class="github-link">
-
-            Explore GitHub →
-
-        </a>
-
-    </div>
+</div>
 
 </section>
-
 
 </main>
 
 
-<!-- ================= FOOTER ================= -->
-
 <footer>
 
-    <span>
-        © 2026 Aishwarya Nagchandi
-    </span>
+<div class="container footer-inner">
 
-    <span>
-        Analytics × Finance × Business
-    </span>
+<p>© 2026 Aishwarya Nagchandi</p>
+
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</div>
 
 </footer>
 
 
 <script>
 
+const menuButton = document.querySelector(".menu-button");
+const navLinks = document.querySelector("#navLinks");
 
-    /* Mobile navigation */
+menuButton.addEventListener("click", () => {
 
-    const menuBtn =
-        document.querySelector(".menu-btn");
+const open = navLinks.classList.toggle("open");
 
-    const navLinks =
-        document.querySelector(".nav-links");
+menuButton.setAttribute("aria-expanded",open);
 
+menuButton.setAttribute(
+"aria-label",
+open ? "Close navigation" : "Open navigation"
+);
 
-    menuBtn.addEventListener("click", () => {
+});
 
-        navLinks.classList.toggle("active");
+document.querySelectorAll(".nav-links a").forEach(link => {
 
-    });
+link.addEventListener("click", () => {
 
+navLinks.classList.remove("open");
 
-    document.querySelectorAll(".nav-links a")
-        .forEach(link => {
+menuButton.setAttribute("aria-expanded","false");
 
-            link.addEventListener("click", () => {
+});
 
-                navLinks.classList.remove("active");
+});
 
-            });
+const observer =
+new IntersectionObserver(entries => {
 
-        });
+entries.forEach(entry => {
 
+if(entry.isIntersecting){
 
-    /* Scroll reveal */
+entry.target.classList.add("visible");
 
-    const revealElements =
-        document.querySelectorAll(".reveal");
+observer.unobserve(entry.target);
 
+}
 
-    const revealObserver =
-        new IntersectionObserver(
+});
 
-            entries => {
+},{threshold:.12});
 
-                entries.forEach(entry => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-                        revealObserver.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-
-            {
-                threshold: 0.12
-            }
-
-        );
-
-
-    revealElements.forEach(element => {
-
-        revealObserver.observe(element);
-
-    });
-
+document.querySelectorAll(".reveal").forEach(el => {
+observer.observe(el);
+});
 
 </script>
 
-
 </body>
-
 </html>
