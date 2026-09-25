@@ -8,287 +8,1230 @@
 
 <title>Contact | Aishwarya Nagchandi</title>
 
-<meta name="description" content="Contact Aishwarya Nagchandi for analytics, business intelligence, finance and strategy opportunities.">
-<meta name="robots" content="index, follow">
+<meta name="description"
+      content="Get in touch with Aishwarya Nagchandi for opportunities across analytics, business intelligence, finance and strategy.">
 
-<link rel="canonical" href="https://aishwaryanagchandi.com/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+:root{
+    --bg:#f7f6f2;
+    --text:#171717;
+    --muted:#686868;
+    --line:#d9d8d3;
+    --accent:#173f63;
+    --soft:#eeede8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:100px;
+    scrollbar-gutter:stable;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"DM Sans",sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px, calc(100% - 14vw));
+    margin:0 auto;
+}
+
+h1,
+h2,
+h3{
+    font-family:"Playfair Display",serif;
+    font-weight:600;
+}
+
+.eyebrow{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:24px;
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:
+        opacity .75s ease,
+        transform .75s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+    right:0;
+
+    width:100%;
+
+    height:76px;
+
+    z-index:1000;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 7vw;
+
+    background:rgba(247,246,242,.94);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--line);
+}
+
+.logo{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+}
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+}
+
+.nav-links a{
+
+    font-size:13px;
+
+    color:#4e4e4e;
+
+    transition:color .25s ease;
+}
+
+.nav-links a:hover{
+    color:var(--text);
+}
+
+.nav-links a.active{
+
+    color:var(--text);
+
+    font-weight:600;
+}
+
+.resume-btn{
+
+    border:1px solid #222;
+
+    padding:10px 17px;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+.resume-btn:hover{
+
+    background:var(--text);
+
+    color:var(--bg);
+}
+
+.menu-btn{
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    font-size:24px;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+    padding-top:76px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:54vh;
+
+    display:flex;
+
+    align-items:center;
+
+    border-bottom:1px solid var(--line);
+}
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(300px,.8fr)
+        minmax(0,1.2fr);
+
+    gap:80px;
+
+    align-items:end;
+}
+
+.hero-grid > *{
+    min-width:0;
+}
+
+.hero h1{
+
+    font-size:clamp(70px,8vw,112px);
+
+    line-height:.88;
+
+    letter-spacing:-.055em;
+
+    max-width:6ch;
+}
+
+.hero-copy{
+
+    max-width:700px;
+
+    padding-bottom:7px;
+}
+
+.hero-copy p{
+
+    max-width:680px;
+
+    font-size:18px;
+
+    color:var(--muted);
+
+    line-height:1.75;
+}
+
+.hero-line{
+
+    margin-top:28px;
+
+    padding-top:18px;
+
+    border-top:1px solid var(--line);
+
+    color:var(--accent);
+
+    font-size:12px;
+
+    letter-spacing:.08em;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section{
+
+    padding:90px 0 105px;
+
+    border-bottom:1px solid var(--line);
+}
+
+.contact-grid{
+
+    display:grid;
+
+    /*
+       IMPORTANT FIX:
+       The left side is now wide enough
+       for the large Playfair heading.
+    */
+    grid-template-columns:
+        minmax(300px,.8fr)
+        minmax(0,1.2fr);
+
+    gap:80px;
+
+    align-items:start;
+}
+
+.contact-grid > *{
+    min-width:0;
+}
+
+.contact-intro{
+
+    min-width:0;
+}
+
+.contact-intro h2{
+
+    font-size:clamp(50px,5.8vw,78px);
+
+    line-height:.95;
+
+    letter-spacing:-.05em;
+
+    /*
+       Keeps the heading visually inside
+       its own column.
+    */
+    max-width:6.7ch;
+}
+
+.contact-content{
+
+    min-width:0;
+
+    max-width:850px;
+}
+
+.contact-content > p{
+
+    font-size:18px;
+
+    line-height:1.75;
+
+    color:var(--muted);
+
+    max-width:700px;
+
+    margin-bottom:42px;
+}
+
+
+/* =========================
+   CONTACT LINKS
+========================= */
+
+.contact-links{
+
+    border-top:1px solid var(--line);
+
+    width:100%;
+}
+
+.contact-link{
+
+    display:grid;
+
+    grid-template-columns:
+        125px
+        minmax(0,1fr)
+        25px;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:22px 0;
+
+    border-bottom:1px solid var(--line);
+
+    transition:
+        padding-left .25s ease,
+        background .25s ease;
+}
+
+.contact-link:hover{
+
+    padding-left:8px;
+}
+
+.contact-label{
+
+    font-size:11px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.12em;
+
+    color:var(--muted);
+}
+
+.contact-value{
+
+    font-size:16px;
+
+    font-weight:500;
+
+    min-width:0;
+
+    overflow-wrap:anywhere;
+}
+
+.contact-arrow{
+
+    font-size:20px;
+
+    color:var(--accent);
+
+    text-align:right;
+}
+
+
+/* =========================
+   OPPORTUNITIES
+========================= */
+
+.opportunities{
+
+    background:var(--soft);
+
+    padding:95px 0;
+}
+
+.opportunity-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(300px,.8fr)
+        minmax(0,1.2fr);
+
+    gap:80px;
+
+    align-items:start;
+}
+
+.opportunity-grid > *{
+    min-width:0;
+}
+
+.opportunity-grid h2{
+
+    font-size:clamp(50px,5.8vw,80px);
+
+    line-height:.95;
+
+    letter-spacing:-.05em;
+
+    max-width:6.7ch;
+}
+
+.opportunity-content{
+
+    min-width:0;
+
+    max-width:850px;
+}
+
+.opportunity-content > p{
+
+    font-size:18px;
+
+    line-height:1.75;
+
+    color:var(--muted);
+
+    max-width:700px;
+
+    margin-bottom:42px;
+}
+
+.opportunity-list{
+
+    border-top:1px solid var(--line);
+}
+
+.opportunity{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(170px,.7fr)
+        minmax(0,1.3fr);
+
+    gap:30px;
+
+    align-items:center;
+
+    padding:20px 0;
+
+    border-bottom:1px solid var(--line);
+}
+
+.opportunity strong{
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+.opportunity span{
+
+    font-size:14px;
+
+    color:var(--muted);
+}
+
+
+/* =========================
+   RESUME CTA
+========================= */
+
+.resume-section{
+
+    padding:100px 0;
+
+    border-bottom:1px solid var(--line);
+}
+
+.resume-section h2{
+
+    font-size:clamp(50px,6vw,82px);
+
+    line-height:.95;
+
+    letter-spacing:-.05em;
+
+    max-width:8ch;
+}
+
+.resume-section p{
+
+    margin-top:25px;
+
+    max-width:650px;
+
+    font-size:17px;
+
+    color:var(--muted);
+
+    line-height:1.75;
+}
+
+.resume-link{
+
+    display:inline-flex;
+
+    margin-top:30px;
+
+    border:1px solid var(--text);
+
+    padding:13px 19px;
+
+    font-size:13px;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+.resume-link:hover{
+
+    background:var(--text);
+
+    color:var(--bg);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:30px 7vw;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-top:1px solid var(--line);
+
+    font-size:12px;
+
+    color:var(--muted);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+
+        padding:0 6vw;
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:76px;
+
+        left:0;
+
+        right:0;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:0;
+
+        background:var(--bg);
+
+        border-bottom:1px solid var(--line);
+    }
+
+    .nav-links.active{
+
+        display:flex;
+    }
+
+    .nav-links a{
+
+        width:100%;
+
+        padding:16px 6vw;
+
+        border-bottom:1px solid var(--line);
+    }
+
+    .nav-links .resume-btn{
+
+        border:none;
+
+        border-bottom:1px solid var(--line);
+    }
+
+    .menu-btn{
+
+        display:block;
+    }
+
+    .container{
+
+        width:calc(100% - 12vw);
+    }
+
+
+    /* HERO */
+
+    .hero{
+
+        min-height:auto;
+
+        padding:90px 0 75px;
+    }
+
+    .hero-grid{
+
+        grid-template-columns:1fr;
+
+        gap:38px;
+    }
+
+    .hero h1{
+
+        font-size:clamp(60px,17vw,92px);
+
+        max-width:7ch;
+    }
+
+    .hero-copy{
+
+        padding-bottom:0;
+    }
+
+    .hero-copy p{
+
+        font-size:16px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section{
+
+        padding:75px 0 85px;
+    }
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+        gap:42px;
+    }
+
+    .contact-intro h2{
+
+        font-size:clamp(52px,14vw,78px);
+
+        max-width:8ch;
+    }
+
+    .contact-content > p{
+
+        font-size:16px;
+
+        margin-bottom:35px;
+    }
+
+    .contact-link{
+
+        grid-template-columns:
+            1fr
+            auto;
+
+        gap:8px;
+
+        padding:20px 0;
+    }
+
+    .contact-label{
+
+        grid-column:1 / -1;
+    }
+
+    .contact-value{
+
+        font-size:15px;
+    }
+
+
+    /* OPPORTUNITIES */
+
+    .opportunities{
+
+        padding:75px 0;
+    }
+
+    .opportunity-grid{
+
+        grid-template-columns:1fr;
+
+        gap:42px;
+    }
+
+    .opportunity-grid h2{
+
+        font-size:clamp(52px,14vw,78px);
+
+        max-width:8ch;
+    }
+
+    .opportunity-content > p{
+
+        font-size:16px;
+
+        margin-bottom:35px;
+    }
+
+    .opportunity{
+
+        grid-template-columns:1fr;
+
+        gap:5px;
+
+        padding:19px 0;
+    }
+
+    .opportunity span{
+
+        font-size:14px;
+    }
+
+
+    /* RESUME */
+
+    .resume-section{
+
+        padding:75px 0;
+    }
+
+    .resume-section h2{
+
+        font-size:clamp(50px,14vw,78px);
+    }
+
+
+    /* FOOTER */
+
+    footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+
+        scroll-behavior:auto;
+    }
+
+    .reveal{
+
+        opacity:1;
+
+        transform:none;
+
+        transition:none;
+    }
+
+    *{
+
+        transition:none !important;
+    }
+
+}
+
+</style>
 
 </head>
 
-<body class="page-contact">
+
+<body>
 
 
-<nav class="site-nav" aria-label="Primary navigation">
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-<div class="nav-inner">
+<nav>
 
-<a class="logo" href="index.html">AN</a>
+    <a href="index.html" class="logo">
+        AN
+    </a>
 
-<button
-class="menu-button"
-id="menuToggle"
-type="button"
-aria-controls="navLinks"
-aria-expanded="false"
-aria-label="Open navigation">
-☰
-</button>
+    <button
+        class="menu-btn"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
 
-<div class="nav-links" id="navLinks">
+    <div class="nav-links">
 
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="experience.html">Experience</a>
-<a href="projects.html">Projects</a>
-<a href="beyond.html">Beyond the Resume</a>
-<a href="skills.html">Skills</a>
+        <a href="index.html">
+            Home
+        </a>
 
-<a class="active" aria-current="page" href="contact.html">
-Contact
-</a>
+        <a href="about.html">
+            About
+        </a>
 
-<a class="resume-btn" href="resume.pdf" target="_blank">
-Resume ↗
-</a>
+        <a href="experience.html">
+            Experience
+        </a>
 
-</div>
-</div>
+        <a href="projects.html">
+            Projects
+        </a>
+
+        <a href="beyond.html">
+            Beyond the Resume
+        </a>
+
+        <a href="skills.html">
+            Skills
+        </a>
+
+        <a
+            href="contact.html"
+            class="active"
+            aria-current="page"
+        >
+            Contact
+        </a>
+
+        <a
+            href="resume.pdf"
+            class="resume-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Resume ↗
+        </a>
+
+    </div>
+
 </nav>
 
 
 <main>
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <header class="hero">
 
-<div class="container hero-grid">
+    <div class="container hero-grid">
 
-<div class="reveal">
+        <div class="reveal">
 
-<div class="eyebrow">
-01 — <span>Let's Connect</span>
-</div>
+            <div class="eyebrow">
+                01 — Let's Connect
+            </div>
 
-<h1>
-Let's<br>
-talk.
-</h1>
+            <h1>
+                Let's<br>
+                talk.
+            </h1>
 
-</div>
+        </div>
 
-<div class="hero-copy reveal">
 
-<p>
-If you have a problem worth solving, an opportunity worth discussing, or simply want to connect, I'd be happy to hear from you.
-</p>
+        <div class="hero-copy reveal">
 
-<div class="hero-line">
-Analytics × Finance × Business
-</div>
+            <p>
+                If you have a problem worth solving, an opportunity
+                worth discussing, or simply want to connect, I'd be
+                happy to hear from you.
+            </p>
 
-</div>
+            <div class="hero-line">
+                Analytics × Finance × Business
+            </div>
 
-</div>
+        </div>
+
+    </div>
 
 </header>
 
 
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section class="contact-section">
 
-<div class="container contact-grid">
-
-<div class="contact-intro reveal">
-
-<div class="eyebrow">
-02 — <span>Get in Touch</span>
-</div>
-
-<h2>
-Start a conversation.
-</h2>
-
-</div>
+    <div class="container contact-grid">
 
 
-<div class="contact-content reveal">
+        <div class="contact-intro reveal">
 
-<p>
-I am always interested in meeting people working on interesting problems, learning about new opportunities, and having conversations around analytics, finance, business and technology.
-</p>
+            <div class="eyebrow">
+                02 — Get in Touch
+            </div>
 
+            <h2>
+                Start a conversation.
+            </h2>
 
-<div class="contact-links">
-
-<a class="contact-link" href="mailto:aishwaryanagchandi84@gmail.com">
-
-<span class="contact-label">
-Email
-</span>
-
-<span class="contact-value">
-aishwaryanagchandi84@gmail.com
-</span>
-
-<span class="contact-arrow">
-↗
-</span>
-
-</a>
+        </div>
 
 
-<a
-class="contact-link"
-href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/"
-target="_blank"
-rel="noopener noreferrer">
+        <div class="contact-content reveal">
 
-<span class="contact-label">
-LinkedIn
-</span>
-
-<span class="contact-value">
-Connect professionally
-</span>
-
-<span class="contact-arrow">
-↗
-</span>
-
-</a>
+            <p>
+                I am always interested in meeting people working
+                on interesting problems, learning about new
+                opportunities, and having conversations around
+                analytics, finance, business and technology.
+            </p>
 
 
-<a
-class="contact-link"
-href="https://docs.google.com/forms/d/e/1FAIpQLSc33WatLbiZwhdx6RLmS6gNjn_iPeC7ScOtmlJXgJQv566fDw/viewform?usp=dialog"
-target="_blank"
-rel="noopener noreferrer">
-
-<span class="contact-label">
-Phone
-</span>
-
-<span class="contact-value">
-Request my phone number
-</span>
-
-<span class="contact-arrow">
-↗
-</span>
-
-</a>
+            <div class="contact-links">
 
 
-<a
-class="contact-link"
-href="https://github.com/AishwaryaNagchandi"
-target="_blank"
-rel="noopener noreferrer">
+                <!-- EMAIL -->
 
-<span class="contact-label">
-GitHub
-</span>
+                <a
+                    href="mailto:aishwaryanagchandi84@gmail.com"
+                    class="contact-link"
+                >
 
-<span class="contact-value">
-AishwaryaNagchandi
-</span>
+                    <span class="contact-label">
+                        Email
+                    </span>
 
-<span class="contact-arrow">
-↗
-</span>
+                    <span class="contact-value">
+                        aishwaryanagchandi84@gmail.com
+                    </span>
 
-</a>
+                    <span class="contact-arrow">
+                        ↗
+                    </span>
 
-</div>
+                </a>
 
-</div>
 
-</div>
+                <!-- LINKEDIN -->
+
+                <a
+                    href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+
+                    <span class="contact-label">
+                        LinkedIn
+                    </span>
+
+                    <span class="contact-value">
+                        Connect professionally
+                    </span>
+
+                    <span class="contact-arrow">
+                        ↗
+                    </span>
+
+                </a>
+
+
+                <!-- PHONE -->
+
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSc33WatLbiZwhdx6RLmS6gNjn_iPeC7ScOtmlJXgJQv566fDw/viewform?usp=dialog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+
+                    <span class="contact-label">
+                        Phone
+                    </span>
+
+                    <span class="contact-value">
+                        Request my phone number
+                    </span>
+
+                    <span class="contact-arrow">
+                        ↗
+                    </span>
+
+                </a>
+
+
+                <!-- GITHUB -->
+
+                <a
+                    href="https://github.com/AishwaryaNagchandi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+
+                    <span class="contact-label">
+                        GitHub
+                    </span>
+
+                    <span class="contact-value">
+                        AishwaryaNagchandi
+                    </span>
+
+                    <span class="contact-arrow">
+                        ↗
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
+
+<!-- =========================
+     OPPORTUNITIES
+========================= -->
 
 <section class="opportunities">
 
-<div class="container opportunity-grid">
-
-<div class="reveal">
-
-<div class="eyebrow">
-03 — <span>What I'm Looking For</span>
-</div>
-
-<h2>
-Where I can contribute.
-</h2>
-
-</div>
+    <div class="container opportunity-grid">
 
 
-<div class="opportunity-content reveal">
+        <div class="reveal">
 
-<p>
-I am particularly interested in opportunities where analytical thinking can influence real business decisions and where I can continue building depth across data, finance and business.
-</p>
+            <div class="eyebrow">
+                03 — What I'm Looking For
+            </div>
+
+            <h2>
+                Where I can contribute.
+            </h2>
+
+        </div>
 
 
-<div class="opportunity-list">
+        <div class="opportunity-content reveal">
 
-<div class="opportunity">
-<strong>Analytics</strong>
-<span>Data &amp; Business Analytics</span>
-</div>
+            <p>
+                I am particularly interested in opportunities where
+                analytical thinking can influence real business
+                decisions and where I can continue building depth
+                across data, finance and business.
+            </p>
 
-<div class="opportunity">
-<strong>Business Intelligence</strong>
-<span>BI · Reporting · Decision Support</span>
-</div>
 
-<div class="opportunity">
-<strong>Finance</strong>
-<span>Financial Analysis · Quantitative Finance</span>
-</div>
+            <div class="opportunity-list">
 
-<div class="opportunity">
-<strong>Strategy</strong>
-<span>Business Analysis · Strategic Problem Solving</span>
-</div>
 
-</div>
+                <div class="opportunity">
 
-</div>
+                    <strong>
+                        Analytics
+                    </strong>
 
-</div>
+                    <span>
+                        Data & Business Analytics
+                    </span>
+
+                </div>
+
+
+                <div class="opportunity">
+
+                    <strong>
+                        Business Intelligence
+                    </strong>
+
+                    <span>
+                        BI · Reporting · Decision Support
+                    </span>
+
+                </div>
+
+
+                <div class="opportunity">
+
+                    <strong>
+                        Finance
+                    </strong>
+
+                    <span>
+                        Financial Analysis · Quantitative Finance
+                    </span>
+
+                </div>
+
+
+                <div class="opportunity">
+
+                    <strong>
+                        Strategy
+                    </strong>
+
+                    <span>
+                        Business Analysis · Strategic Problem Solving
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
 
+<!-- =========================
+     RESUME CTA
+========================= -->
+
 <section class="resume-section">
 
-<div class="container reveal">
+    <div class="container reveal">
 
-<div class="eyebrow">
-04 — <span>Resume</span>
-</div>
+        <div class="eyebrow">
+            04 — Resume
+        </div>
 
-<h2>
-Want the short version?
-</h2>
+        <h2>
+            Want the short version?
+        </h2>
 
-<p>
-My resume brings together my education, experience, projects, skills and achievements in one place.
-</p>
+        <p>
+            My resume brings together my education, experience,
+            projects, skills and achievements in one place.
+        </p>
 
-<a
-class="large-resume-btn"
-href="resume.pdf"
-target="_blank"
-rel="noopener">
-View Resume ↗
-</a>
+        <a
+            href="resume.pdf"
+            class="resume-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            View Resume ↗
+        </a>
 
-</div>
+    </div>
 
 </section>
 
@@ -296,82 +1239,116 @@ View Resume ↗
 </main>
 
 
-<footer class="site-footer">
+<footer>
 
-<div class="footer-inner">
+    <span>
+        © 2026 Aishwarya Nagchandi
+    </span>
 
-<span>© 2026 Aishwarya Nagchandi</span>
-<span>Analytics × Finance × Business</span>
-
-<div class="footer-links">
-<a href="projects.html">Projects</a>
-<a href="contact.html">Contact</a>
-</div>
-
-</div>
+    <span>
+        Analytics × Finance × Business
+    </span>
 
 </footer>
 
 
 <script>
 
-const menuBtn=document.getElementById("menuToggle");
-const navLinks=document.getElementById("navLinks");
+const menuBtn =
+    document.querySelector(".menu-btn");
 
-menuBtn.addEventListener("click",()=>{
+const navLinks =
+    document.querySelector(".nav-links");
 
-const open=navLinks.classList.toggle("open");
 
-menuBtn.setAttribute("aria-expanded",open);
+if(menuBtn && navLinks){
 
-});
+    menuBtn.addEventListener("click", () => {
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
+        const open =
+            navLinks.classList.toggle("active");
 
-link.addEventListener("click",()=>{
+        menuBtn.setAttribute(
+            "aria-expanded",
+            open ? "true" : "false"
+        );
 
-navLinks.classList.remove("open");
+        menuBtn.setAttribute(
+            "aria-label",
+            open
+                ? "Close navigation"
+                : "Open navigation"
+        );
 
-menuBtn.setAttribute("aria-expanded","false");
+    });
 
-});
 
-});
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
 
-const reveals=document.querySelectorAll(".reveal");
+            link.addEventListener("click", () => {
 
-if("IntersectionObserver" in window){
+                navLinks.classList.remove("active");
 
-const observer=new IntersectionObserver(
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-entries=>{
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Open navigation"
+                );
 
-entries.forEach(entry=>{
+            });
 
-if(entry.isIntersecting){
-
-entry.target.classList.add("visible");
-observer.unobserve(entry.target);
-
-}
-
-});
-
-},
-
-{threshold:.08}
-
-);
-
-reveals.forEach(element=>observer.observe(element));
-
-}else{
-
-reveals.forEach(element=>element.classList.add("visible"));
+        });
 
 }
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("visible");
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold:.08
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
 
 </script>
 
+
 </body>
+
 </html>
