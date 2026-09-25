@@ -1,1582 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About | Aishwarya Nagchandi</title>
+<title>About | Aishwarya Nagchandi</title>
 
-    <meta name="description"
-          content="About Aishwarya Nagchandi — Analytics, Finance and Business.">
+<meta name="description"
+content="About Aishwarya Nagchandi — a Data Science and Finance student working across analytics, business intelligence and business strategy.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="robots" content="index, follow">
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
-          rel="stylesheet">
+<link rel="canonical"
+href="https://aishwaryanagchandi.com/about.html">
 
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-    <style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        /* =========================
-           RESET
-        ========================= */
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scrollbar-gutter: stable;
-        }
-
-        body {
-            font-family: "DM Sans", sans-serif;
-            background: #f7f6f2;
-            color: #171717;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-
-        /* =========================
-           VARIABLES
-        ========================= */
-
-        :root {
-
-            --background: #f7f6f2;
-            --text: #171717;
-            --muted: #686868;
-            --line: #d9d8d3;
-            --accent: #173f63;
-            --white: #ffffff;
-            --max-width: 1240px;
-
-        }
-
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
-        .navbar {
-
-            position: fixed;
-
-            top: 0;
-            left: 0;
-
-            width: 100%;
-
-            z-index: 1000;
-
-            background: rgba(247, 246, 242, 0.88);
-
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-
-            border-bottom: 1px solid rgba(217,216,211,0.75);
-
-        }
-
-
-        .nav-inner {
-
-            max-width: var(--max-width);
-
-            height: 76px;
-
-            margin: auto;
-
-            padding: 0 32px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-        }
-
-
-        .logo {
-
-            font-size: 15px;
-
-            font-weight: 700;
-
-            letter-spacing: 0.08em;
-
-        }
-
-
-        .nav-links {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 30px;
-
-        }
-
-
-        .nav-links a {
-
-            font-size: 13px;
-
-            color: #555;
-
-            transition: color 0.25s ease;
-
-        }
-
-
-        .nav-links a:hover {
-
-            color: var(--text);
-
-        }
-
-
-        .nav-links .active {
-
-            color: var(--text);
-
-            font-weight: 600;
-
-        }
-
-
-        .nav-resume {
-
-            border: 1px solid var(--text);
-
-            padding: 9px 16px;
-
-        }
-
-
-        .nav-resume:hover {
-
-            background: var(--text);
-
-            color: var(--white) !important;
-
-        }
-
-
-        .menu-button {
-
-            display: none;
-
-            background: none;
-
-            border: none;
-
-            font-size: 22px;
-
-            cursor: pointer;
-
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .about-hero {
-
-            max-width: var(--max-width);
-
-            min-height: 82vh;
-
-            margin: auto;
-
-            padding: 170px 32px 100px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-            position: relative;
-
-        }
-
-
-        .eyebrow {
-
-            font-size: 11px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 0.16em;
-
-            color: var(--muted);
-
-            margin-bottom: 25px;
-
-        }
-
-
-        .about-hero h1 {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(60px, 9vw, 125px);
-
-            line-height: 0.95;
-
-            letter-spacing: -0.055em;
-
-            font-weight: 500;
-
-            max-width: 1000px;
-
-            animation: heroReveal 1s ease forwards;
-
-        }
-
-
-        .about-hero h1 span {
-
-            color: var(--accent);
-
-        }
-
-
-        .hero-description {
-
-            max-width: 650px;
-
-            margin-top: 38px;
-
-            font-size: 20px;
-
-            color: #4d4d4d;
-
-            animation: fadeUp 1s ease 0.3s both;
-
-        }
-
-
-        /* =========================
-           GENERAL SECTIONS
-        ========================= */
-
-        section {
-
-            padding: 120px 32px;
-
-        }
-
-
-        .section-inner {
-
-            max-width: var(--max-width);
-
-            margin: auto;
-
-        }
-
-
-        .section-label {
-
-            font-size: 11px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 0.16em;
-
-            color: var(--muted);
-
-            margin-bottom: 24px;
-
-        }
-
-
-        .section-title {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(42px, 5vw, 70px);
-
-            line-height: 1.05;
-
-            font-weight: 500;
-
-            letter-spacing: -0.035em;
-
-            max-width: 850px;
-
-        }
-
-
-        .section-text {
-
-            max-width: 720px;
-
-            margin-top: 30px;
-
-            font-size: 17px;
-
-            color: var(--muted);
-
-        }
-
-
-        /* =========================
-           THREE DIMENSIONS
-        ========================= */
-
-        .intersection {
-
-            background: #eeeeea;
-
-        }
-
-
-        .intersection-grid {
-
-            margin-top: 70px;
-
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            border-top: 1px solid #ccccca;
-
-            border-bottom: 1px solid #ccccca;
-
-        }
-
-
-        .intersection-item {
-
-            min-height: 310px;
-
-            padding: 42px 30px;
-
-            border-right: 1px solid #ccccca;
-
-        }
-
-
-        .intersection-item:last-child {
-
-            border-right: none;
-
-        }
-
-
-        .intersection-number {
-
-            color: var(--accent);
-
-            font-size: 11px;
-
-            margin-bottom: 38px;
-
-        }
-
-
-        .intersection-item h3 {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: 36px;
-
-            font-weight: 500;
-
-            margin-bottom: 15px;
-
-        }
-
-
-        .intersection-item p {
-
-            color: var(--muted);
-
-            font-size: 14px;
-
-            max-width: 300px;
-
-        }
-
-
-        /* =========================
-           CENTER STATEMENT
-        ========================= */
-
-        .statement {
-
-            padding-top: 150px;
-
-            padding-bottom: 150px;
-
-        }
-
-
-        .statement-text {
-
-            max-width: 1050px;
-
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(42px, 6vw, 78px);
-
-            line-height: 1.05;
-
-            letter-spacing: -0.04em;
-
-            font-weight: 500;
-
-        }
-
-
-        .statement-text span {
-
-            color: var(--accent);
-
-        }
-
-
-        /* =========================
-           EDUCATION
-        ========================= */
-
-        .education {
-
-            border-top: 1px solid var(--line);
-
-        }
-
-
-        .timeline {
-
-            margin-top: 70px;
-
-            border-top: 1px solid var(--line);
-
-        }
-
-
-        .timeline-item {
-
-            display: grid;
-
-            grid-template-columns: 180px 1fr;
-
-            padding: 32px 0;
-
-            border-bottom: 1px solid var(--line);
-
-        }
-
-
-        .timeline-year {
-
-            font-size: 12px;
-
-            color: var(--muted);
-
-            letter-spacing: 0.08em;
-
-        }
-
-
-        .timeline-school {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: 31px;
-
-            font-weight: 500;
-
-        }
-
-
-        .timeline-detail {
-
-            margin-top: 7px;
-
-            color: var(--muted);
-
-            font-size: 14px;
-
-        }
-
-
-        /* =========================
-           HOW I WORK
-        ========================= */
-
-        .working-style {
-
-            background: var(--accent);
-
-            color: white;
-
-        }
-
-
-        .working-style .section-label {
-
-            color: #c3ced7;
-
-        }
-
-
-        .working-style .section-title {
-
-            max-width: 700px;
-
-        }
-
-
-        .traits {
-
-            margin-top: 70px;
-
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            border-top: 1px solid rgba(255,255,255,0.25);
-
-        }
-
-
-        .trait {
-
-            padding: 35px 20px;
-
-            border-right: 1px solid rgba(255,255,255,0.25);
-
-        }
-
-
-        .trait:last-child {
-
-            border-right: none;
-
-        }
-
-
-        .trait h3 {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: 27px;
-
-            font-weight: 500;
-
-            margin-bottom: 14px;
-
-        }
-
-
-        .trait p {
-
-            color: #c7d0d8;
-
-            font-size: 13px;
-
-        }
-
-
-        /* =========================
-           CURRENTLY
-        ========================= */
-
-        .currently {
-
-            min-height: 65vh;
-
-            display: flex;
-
-            align-items: center;
-
-        }
-
-
-        .currently-box {
-
-            display: grid;
-
-            grid-template-columns: 1fr 2fr;
-
-            gap: 70px;
-
-            border-top: 1px solid var(--line);
-
-            padding-top: 30px;
-
-        }
-
-
-        .currently-title {
-
-            font-size: 11px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 0.15em;
-
-            color: var(--muted);
-
-        }
-
-
-        .currently-text {
-
-            font-family: "Playfair Display", serif;
-
-            font-size: clamp(24px, 2.6vw, 36px);
-
-            line-height: 1.25;
-
-            letter-spacing: -0.02em;
-
-            max-width: 900px;
-
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-
-            border-top: 1px solid var(--line);
-
-            padding: 30px 32px;
-
-            font-size: 11px;
-
-            color: var(--muted);
-
-        }
-
-
-        .footer-inner {
-
-            max-width: var(--max-width);
-
-            margin: auto;
-
-            display: flex;
-
-            justify-content: space-between;
-
-        }
-
-
-        /* =========================
-           REVEAL
-        ========================= */
-
-        .reveal {
-
-            opacity: 0;
-
-            transform: translateY(35px);
-
-            transition:
-
-                opacity 0.8s ease,
-
-                transform 0.8s ease;
-
-        }
-
-
-        .reveal.visible {
-
-            opacity: 1;
-
-            transform: translateY(0);
-
-        }
-
-
-        /* =========================
-           ANIMATIONS
-        ========================= */
-
-        @keyframes heroReveal {
-
-            from {
-
-                opacity: 0;
-
-                transform: translateY(45px);
-
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform: translateY(0);
-
-            }
-
-        }
-
-
-        @keyframes fadeUp {
-
-            from {
-
-                opacity: 0;
-
-                transform: translateY(20px);
-
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform: translateY(0);
-
-            }
-
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 800px) {
-
-            .nav-links {
-
-                display: none;
-
-                position: absolute;
-
-                top: 76px;
-
-                left: 0;
-
-                width: 100%;
-
-                background: var(--background);
-
-                padding: 25px 32px;
-
-                flex-direction: column;
-
-                align-items: flex-start;
-
-                border-bottom: 1px solid var(--line);
-
-            }
-
-
-            .nav-links.active {
-
-                display: flex;
-
-            }
-
-
-            .menu-button {
-
-                display: block;
-
-            }
-
-
-            section {
-
-                padding: 90px 24px;
-
-            }
-
-
-            .about-hero {
-
-                padding: 145px 24px 80px;
-
-            }
-
-
-            .about-hero h1 {
-
-                font-size: 19vw;
-
-            }
-
-
-            .intersection-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-            .intersection-item {
-
-                border-right: none;
-
-                border-bottom: 1px solid #ccccca;
-
-            }
-
-
-            .intersection-item:last-child {
-
-                border-bottom: none;
-
-            }
-
-
-            .timeline-item {
-
-                grid-template-columns: 1fr;
-
-                gap: 12px;
-
-            }
-
-
-            .traits {
-
-                grid-template-columns: 1fr 1fr;
-
-            }
-
-
-            .trait {
-
-                border-bottom: 1px solid rgba(255,255,255,0.25);
-
-            }
-
-
-            .trait:nth-child(2) {
-
-                border-right: none;
-
-            }
-
-
-            .currently-box {
-
-                grid-template-columns: 1fr;
-
-                gap: 25px;
-
-            }
-
-
-            .currently-text {
-
-                font-size: clamp(24px, 7vw, 32px);
-
-                line-height: 1.25;
-
-            }
-
-
-            .footer-inner {
-
-                flex-direction: column;
-
-                gap: 8px;
-
-            }
-
-        }
-
-
-        @media (prefers-reduced-motion: reduce) {
-
-            html {
-
-                scroll-behavior: auto;
-
-            }
-
-
-            * {
-
-                animation-duration: 0.01ms !important;
-
-                transition-duration: 0.01ms !important;
-
-            }
-
-
-            .reveal {
-
-                opacity: 1;
-
-                transform: none;
-
-            }
-
-        }
-
-    </style>
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
-
 <body>
 
+<nav class="site-nav">
 
-    <!-- NAVIGATION -->
+<div class="nav-inner">
 
-    <nav class="navbar">
+<a href="index.html" class="logo">AN</a>
 
-        <div class="nav-inner">
+<button class="menu-button"
+aria-label="Open navigation"
+aria-expanded="false">
+☰
+</button>
 
-            <a href="index.html" class="logo">
-                AN
-            </a>
+<div class="nav-links" id="navLinks">
 
+<a href="index.html">Home</a>
+<a href="about.html" class="active" aria-current="page">About</a>
+<a href="experience.html">Experience</a>
+<a href="projects.html">Projects</a>
+<a href="beyond.html">Beyond the Resume</a>
+<a href="skills.html">Skills</a>
+<a href="contact.html">Contact</a>
 
-            <button class="menu-button" aria-label="Open navigation menu">
-                ☰
-            </button>
+<a href="resume.pdf" class="resume-btn" target="_blank">
+Resume ↗
+</a>
 
+</div>
 
-            <div class="nav-links">
+</div>
 
-                <a href="index.html">
-                    Home
-                </a>
+</nav>
 
-                <a href="about.html" class="active" aria-current="page">
-                    About
-                </a>
 
-                <a href="experience.html">
-                    Experience
-                </a>
+<main>
 
-                <a href="projects.html">
-                    Projects
-                </a>
+<section class="about-hero">
 
-                <a href="beyond.html">
-                    Beyond the Resume
-                </a>
+<div class="container reveal">
 
-                <a href="skills.html">
-                    Skills
-                </a>
+<div class="eyebrow">
+About Me
+</div>
 
-                <a href="contact.html">
-                    Contact
-                </a>
+<h1>
+Where data<br>
+<span>meets decisions.</span>
+</h1>
 
-                <a href="resume.pdf" class="nav-resume">
-                    Resume ↗
-                </a>
+<p>
+I'm interested in the space where analytics, finance and
+business come together — turning information into insight
+and insight into action.
+</p>
 
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </nav>
 
+<section>
 
+<div class="container">
 
-    <!-- HERO -->
+<div class="split">
 
-    <section class="about-hero">
+<div class="reveal">
 
-        <div class="eyebrow">
-            About Me
-        </div>
+<div class="section-label">
+01 — My Story
+</div>
 
+<h2>
+Three disciplines.<br>
+One perspective.
+</h2>
 
-        <h1>
+</div>
 
-            Where data<br>
 
-            <span>meets decisions.</span>
+<div class="split-copy reveal">
 
-        </h1>
+<p>
+My academic journey combines Finance, Business Intelligence
+& Analytics and Data Science.
+</p>
 
+<p>
+Data Science taught me how to work with data and build
+analytical solutions. Finance taught me to think about value,
+risk and returns. Business Intelligence showed me how analysis
+becomes useful when it answers the questions businesses
+actually care about.
+</p>
 
-        <p class="hero-description">
+<p>
+Together, these experiences have shaped how I approach
+problems: understand the context, work with the data,
+challenge assumptions and translate the analysis into
+something actionable.
+</p>
 
-            I'm interested in the space where
-            analytics, finance and business come
-            together — turning information into
-            insight and insight into action.
+</div>
 
-        </p>
+</div>
 
-    </section>
+</div>
 
+</section>
 
 
-    <!-- MY STORY -->
+<section class="soft-section">
 
-    <section>
+<div class="container">
 
-        <div class="section-inner">
+<div class="split">
 
-            <div class="reveal">
+<div class="reveal">
 
-                <div class="section-label">
-                    01 — My Story
-                </div>
+<div class="section-label">
+02 — The Intersection
+</div>
 
+<h2>
+Data gives me evidence.<br>
+Finance gives me perspective.<br>
+Business gives it purpose.
+</h2>
 
-                <h2 class="section-title">
+</div>
 
-                    Three disciplines.
-                    One perspective.
+<div class="split-copy reveal">
 
-                </h2>
+<p>
+I enjoy problems where the answer isn't purely technical
+and isn't purely financial.
+</p>
 
+<p>
+The interesting part is often the space between the two:
+understanding the data, recognising the financial implications
+and communicating what the analysis means for a business.
+</p>
 
-                <p class="section-text">
+</div>
 
-                    My academic journey combines
-                    Finance, Business Intelligence
-                    Analytics and Data Science.
+</div>
 
-                    <br><br>
+</div>
 
-                    Data Science taught me how to
-                    work with data and build analytical
-                    solutions. Finance taught me to
-                    think about value, risk and returns.
-                    Business Intelligence showed me how
-                    analysis becomes useful when it
-                    answers the questions businesses
-                    actually care about.
+</section>
 
-                    <br><br>
 
-                    Together, these experiences have
-                    shaped how I approach problems:
-                    understand the context, work with
-                    the data, challenge assumptions and
-                    translate the analysis into something
-                    actionable.
+<section class="currently">
 
-                </p>
+<div class="container">
 
-            </div>
+<div class="currently-grid">
 
-        </div>
+<div class="reveal">
 
-    </section>
+<div class="section-label">
+03 — Currently
+</div>
 
+<div class="currently-title">
+Building depth across disciplines.
+</div>
 
+</div>
 
-    <!-- INTERSECTION -->
+<div class="reveal">
 
-    <section class="intersection">
+<p class="currently-copy">
+I am currently pursuing a 5-year Integrated MBA Tech at
+MPSTME, NMIMS, Mumbai, graduating in 2027. The program
+brings together a B.Tech in Data Science and an MBA, with
+Finance as my major and Business Intelligence & Analytics
+as my minor.
+</p>
 
-        <div class="section-inner">
+<p class="currently-copy" style="margin-top:20px;">
+It gives me the opportunity to build across disciplines —
+combining technical understanding with financial and business
+thinking, and shaping how I approach problems through data,
+context and decisions.
+</p>
 
-            <div class="reveal">
+<div class="currently-meta">
 
-                <div class="section-label">
-                    02 — The Intersection
-                </div>
+<span class="meta-pill">MBA Tech</span>
+<span class="meta-pill">Finance Major</span>
+<span class="meta-pill">BIA Minor</span>
+<span class="meta-pill">Data Science</span>
+<span class="meta-pill">Graduating 2027</span>
 
+</div>
 
-                <h2 class="section-title">
+</div>
 
-                    Data gives me
-                    evidence. Finance gives
-                    me perspective. Business
-                    gives it purpose.
+</div>
 
-                </h2>
+</div>
 
-            </div>
+</section>
 
 
-            <div class="intersection-grid">
+<section>
 
+<div class="container">
 
-                <div class="intersection-item reveal">
+<div class="section-label">
+04 — Education
+</div>
 
-                    <div class="intersection-number">
-                        01
-                    </div>
+<div class="timeline">
 
-                    <h3>
-                        Data
-                    </h3>
+<div class="timeline-item reveal">
 
-                    <p>
+<div class="timeline-date">
+2022 — 2027
+</div>
 
-                        I enjoy finding patterns,
-                        structuring information and
-                        using analytical tools to make
-                        complex datasets understandable.
+<div>
 
-                    </p>
+<h3>
+MBA Tech · Data Science
+</h3>
 
-                </div>
+<p>
+MPSTME, NMIMS, Mumbai · Finance Major ·
+Business Intelligence & Analytics Minor
+</p>
 
+</div>
 
+</div>
 
-                <div class="intersection-item reveal">
+<div class="timeline-item reveal">
 
-                    <div class="intersection-number">
-                        02
-                    </div>
+<div class="timeline-date">
+Academic Foundation
+</div>
 
-                    <h3>
-                        Finance
-                    </h3>
+<div>
 
-                    <p>
+<h3>
+Data Science + Business
+</h3>
 
-                        Financial analysis gives me
-                        a framework for thinking about
-                        value, risk, returns and the
-                        economic logic behind decisions.
+<p>
+An integrated academic path combining technical,
+analytical and business education.
+</p>
 
-                    </p>
+</div>
 
-                </div>
+</div>
 
+</div>
 
+</div>
 
-                <div class="intersection-item reveal">
+</section>
 
-                    <div class="intersection-number">
-                        03
-                    </div>
 
-                    <h3>
-                        Business
-                    </h3>
+<section class="soft-section">
 
-                    <p>
+<div class="container">
 
-                        I care about the context behind
-                        the numbers — the process,
-                        customer, strategy or decision
-                        that the analysis is meant to improve.
+<div class="section-label">
+05 — How I Work
+</div>
 
-                    </p>
+<div class="traits">
 
-                </div>
+<div class="trait reveal">
 
+<h3>Curious</h3>
 
-            </div>
+<p>
+I like understanding why something works before deciding
+what to do with it.
+</p>
 
-        </div>
+</div>
 
-    </section>
+<div class="trait reveal">
 
+<h3>Analytical</h3>
 
+<p>
+I break complex questions into smaller, testable problems.
+</p>
 
-    <!-- STATEMENT -->
+</div>
 
-    <section class="statement">
+<div class="trait reveal">
 
-        <div class="section-inner reveal">
+<h3>Practical</h3>
 
-            <p class="statement-text">
+<p>
+The best analysis is useful when it can influence a decision.
+</p>
 
-                I don't just want to know
-                <span>what the data says.</span>
+</div>
 
-                I want to understand
-                <span>why it matters.</span>
+<div class="trait reveal">
 
-            </p>
+<h3>Collaborative</h3>
 
-        </div>
+<p>
+I learn quickly from people who know the problem from
+a different perspective.
+</p>
 
-    </section>
+</div>
 
+</div>
 
+</div>
 
-    <!-- EDUCATION -->
+</section>
 
-    <section class="education">
 
-        <div class="section-inner">
+<section class="dark-section">
 
-            <div class="reveal">
+<div class="container reveal">
 
-                <div class="section-label">
-                    03 — Education
-                </div>
+<div class="eyebrow">
+06 — Direction
+</div>
 
+<h2>
+Where analysis<br>
+meets action.
+</h2>
 
-                <h2 class="section-title">
-                    Building the foundation.
-                </h2>
+<p>
+I'm building toward roles where analytical thinking sits close
+to business and financial decision-making — particularly
+analytics, business intelligence, finance and strategy.
+</p>
 
-            </div>
+</div>
 
+</section>
 
-            <div class="timeline">
+</main>
 
 
-                <div class="timeline-item reveal">
+<footer>
 
-                    <div class="timeline-year">
-                        2022 — 2027
-                    </div>
+<div class="container footer-inner">
 
+<p>© 2026 Aishwarya Nagchandi</p>
 
-                    <div>
+<div class="footer-links">
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</div>
 
-                        <div class="timeline-school">
-                            NMIMS · MPSTME
-                        </div>
+</div>
 
+</footer>
 
-                        <div class="timeline-detail">
 
-                            MBA Tech · Finance Major
-                            · Business Intelligence Analytics
-                            Minor · Data Science Engineering
+<script>
 
-                        </div>
+const menuButton=document.querySelector(".menu-button");
+const navLinks=document.querySelector("#navLinks");
 
-                    </div>
+menuButton.addEventListener("click",()=>{
 
-                </div>
+const open=navLinks.classList.toggle("open");
 
+menuButton.setAttribute("aria-expanded",open);
 
+menuButton.setAttribute(
+"aria-label",
+open ? "Close navigation" : "Open navigation"
+);
 
-                <div class="timeline-item reveal">
+});
 
-                    <div class="timeline-year">
-                        2022
-                    </div>
+document.querySelectorAll(".nav-links a").forEach(link=>{
 
+link.addEventListener("click",()=>{
 
-                    <div>
+navLinks.classList.remove("open");
 
-                        <div class="timeline-school">
-                            Rajiv Gandhi Hr. Sec. School
-                        </div>
+menuButton.setAttribute("aria-expanded","false");
 
+});
 
-                        <div class="timeline-detail">
-                            Bhopal · CBSE
-                        </div>
+});
 
-                    </div>
+const observer=new IntersectionObserver(entries=>{
 
-                </div>
+entries.forEach(entry=>{
 
+if(entry.isIntersecting){
 
+entry.target.classList.add("visible");
 
-                <div class="timeline-item reveal">
+observer.unobserve(entry.target);
 
-                    <div class="timeline-year">
-                        2020
-                    </div>
+}
 
+});
 
-                    <div>
+},{threshold:.12});
 
-                        <div class="timeline-school">
-                            Carmel Convent Sr. Sec. School
-                        </div>
+document.querySelectorAll(".reveal").forEach(el=>{
+observer.observe(el);
+});
 
-
-                        <div class="timeline-detail">
-                            Bhopal · CBSE
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- HOW I WORK -->
-
-    <section class="working-style">
-
-        <div class="section-inner">
-
-            <div class="reveal">
-
-                <div class="section-label">
-                    04 — How I Work
-                </div>
-
-
-                <h2 class="section-title">
-
-                    Curiosity is where
-                    good analysis begins.
-
-                </h2>
-
-            </div>
-
-
-            <div class="traits">
-
-
-                <div class="trait reveal">
-
-                    <h3>
-                        Curious
-                    </h3>
-
-                    <p>
-
-                        I like understanding how
-                        things work before trying
-                        to improve them.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="trait reveal">
-
-                    <h3>
-                        Analytical
-                    </h3>
-
-                    <p>
-
-                        I enjoy breaking ambiguous
-                        problems into structured
-                        questions and finding evidence
-                        in the data.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="trait reveal">
-
-                    <h3>
-                        Practical
-                    </h3>
-
-                    <p>
-
-                        I care about whether an
-                        analysis actually helps
-                        someone make a better decision.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="trait reveal">
-
-                    <h3>
-                        Collaborative
-                    </h3>
-
-                    <p>
-
-                        I value different perspectives
-                        and enjoy working across
-                        functions to solve problems.
-
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- CURRENTLY -->
-
-    <section class="currently">
-
-        <div class="section-inner">
-
-            <div class="currently-box reveal">
-
-
-                <div class="currently-title">
-                    Currently
-                </div>
-
-
-                <div class="currently-text">
-
-                    I am currently pursuing a 5-year
-                    Integrated MBA Tech at MPSTME,
-                    NMIMS, Mumbai, graduating in 2027.
-
-                    <br><br>
-
-                    The program brings together a
-                    B.Tech in Data Science and an MBA,
-                    with Finance as my major and
-                    Business Intelligence &amp; Analytics
-                    (BIA) as my minor.
-
-                    <br><br>
-
-                    It gives me the opportunity to build
-                    across disciplines — combining
-                    technical understanding with
-                    financial and business thinking,
-                    and shaping how I approach problems:
-                    through data, context and decisions.
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-inner">
-
-            <span>
-                © 2026 Aishwarya Nagchandi
-            </span>
-
-
-            <span>
-                Analytics × Finance × Business
-            </span>
-
-        </div>
-
-    </footer>
-
-
-
-    <!-- JAVASCRIPT -->
-
-    <script>
-
-
-        /* MOBILE MENU */
-
-        const menuButton =
-            document.querySelector(".menu-button");
-
-
-        const navLinks =
-            document.querySelector(".nav-links");
-
-
-        menuButton.addEventListener("click", () => {
-
-            navLinks.classList.toggle("active");
-
-        });
-
-
-        document
-            .querySelectorAll(".nav-links a")
-            .forEach(link => {
-
-                link.addEventListener("click", () => {
-
-                    navLinks.classList.remove("active");
-
-                });
-
-            });
-
-
-
-        /* SCROLL REVEAL */
-
-        const revealElements =
-            document.querySelectorAll(".reveal");
-
-
-        const observer =
-            new IntersectionObserver(
-
-                entries => {
-
-                    entries.forEach(entry => {
-
-                        if (entry.isIntersecting) {
-
-                            entry.target.classList.add("visible");
-
-                            observer.unobserve(
-                                entry.target
-                            );
-
-                        }
-
-                    });
-
-                },
-
-                {
-                    threshold: 0.12
-                }
-
-            );
-
-
-        revealElements.forEach(element => {
-
-            observer.observe(element);
-
-        });
-
-
-    </script>
-
+</script>
 
 </body>
-
 </html>
