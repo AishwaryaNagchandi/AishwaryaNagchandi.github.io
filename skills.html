@@ -2,1766 +2,526 @@
 <html lang="en">
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Skills — Aishwarya Nagchandi</title>
+<title>Skills | Aishwarya Nagchandi</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description"
+content="Skills and capabilities of Aishwarya Nagchandi across data analytics, business intelligence, finance, quantitative analysis and business strategy.">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
+<meta name="robots" content="index, follow">
 
+<link rel="canonical"
+href="https://aishwaryanagchandi.com/skills.html">
 
-  <style>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-    :root {
-      --bg: #f7f6f2;
-      --text: #171717;
-      --muted: #686868;
-      --line: #d9d8d3;
-      --accent: #173f63;
-      --soft: #eeede8;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+rel="stylesheet">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-
-    html {
-      scroll-behavior: smooth;
-      scrollbar-gutter: stable;
-    }
-
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-
-      font-family: "DM Sans", sans-serif;
-
-      line-height: 1.6;
-
-      overflow-x: hidden;
-    }
-
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-
-    /* ================= NAVIGATION ================= */
-
-    nav {
-
-      position: fixed;
-
-      top: 0;
-      left: 0;
-      right: 0;
-
-      width: auto;
-
-      z-index: 1000;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      padding: 22px 4vw;
-
-      background: rgba(247, 246, 242, 0.92);
-
-      backdrop-filter: blur(12px);
-
-      border-bottom: 1px solid rgba(217, 216, 211, 0.7);
-
-    }
-
-
-    .logo {
-
-      font-weight: 600;
-
-      font-size: 15px;
-
-      letter-spacing: 0.08em;
-
-    }
-
-
-    .nav-links {
-
-      display: flex;
-
-      gap: 28px;
-
-      align-items: center;
-
-      font-size: 13px;
-
-    }
-
-
-    .nav-links a {
-
-      color: #555;
-
-      transition: color 0.25s ease;
-
-    }
-
-
-    .nav-links a:hover,
-    .nav-links a.active {
-
-      color: var(--text);
-
-    }
-
-
-    .resume-btn {
-
-      padding: 9px 15px;
-
-      border: 1px solid var(--text);
-
-      color: var(--text) !important;
-
-      transition: all 0.25s ease;
-
-    }
-
-
-    .resume-btn:hover {
-
-      background: var(--text);
-
-      color: var(--bg) !important;
-
-    }
-
-
-    .menu-toggle {
-
-      display: none;
-
-      font-size: 24px;
-
-      cursor: pointer;
-
-    }
-
-
-
-    /* ================= GENERAL ================= */
-
-    .container {
-
-      width: min(1180px, 90%);
-
-      margin: auto;
-
-    }
-
-
-    .eyebrow {
-
-      font-size: 12px;
-
-      letter-spacing: 0.16em;
-
-      text-transform: uppercase;
-
-      color: var(--muted);
-
-      margin-bottom: 35px;
-
-    }
-
-
-    .eyebrow span {
-
-      color: var(--accent);
-
-    }
-
-
-    h1,
-    h2,
-    h3 {
-
-      font-family: "Playfair Display", serif;
-
-      font-weight: 600;
-
-      line-height: 1.05;
-
-    }
-
-
-    p {
-
-      color: var(--muted);
-
-    }
-
-
-    .reveal {
-
-      opacity: 0;
-
-      transform: translateY(35px);
-
-      transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-
-    }
-
-
-    .reveal.visible {
-
-      opacity: 1;
-
-      transform: translateY(0);
-
-    }
-
-
-
-    /* ================= HERO ================= */
-
-    .hero {
-
-      min-height: 88vh;
-
-      display: flex;
-
-      align-items: flex-end;
-
-      padding-top: 150px;
-
-      padding-bottom: 100px;
-
-    }
-
-
-    .hero-grid {
-
-      display: grid;
-
-      grid-template-columns: 1fr 0.75fr;
-
-      gap: 80px;
-
-      align-items: end;
-
-    }
-
-
-    .hero h1 {
-
-      font-size: clamp(65px, 9vw, 120px);
-
-      letter-spacing: -0.06em;
-
-      max-width: 1000px;
-
-    }
-
-
-    .hero-copy {
-
-      max-width: 450px;
-
-    }
-
-
-    .hero-copy p {
-
-      font-size: 19px;
-
-      line-height: 1.65;
-
-    }
-
-
-    .hero-line {
-
-      margin-top: 40px;
-
-      padding-top: 18px;
-
-      border-top: 1px solid var(--line);
-
-      font-size: 13px;
-
-      color: var(--muted);
-
-    }
-
-
-
-    /* ================= INTRO ================= */
-
-    .intro {
-
-      border-top: 1px solid var(--line);
-
-      padding: 110px 0;
-
-    }
-
-
-    .intro-grid {
-
-      display: grid;
-
-      grid-template-columns: 0.3fr 1fr;
-
-      gap: 70px;
-
-    }
-
-
-    .intro h2 {
-
-      font-size: clamp(48px, 6vw, 78px);
-
-      letter-spacing: -0.05em;
-
-      max-width: 950px;
-
-    }
-
-
-    .intro p {
-
-      font-size: 21px;
-
-      line-height: 1.75;
-
-      max-width: 850px;
-
-      margin-top: 35px;
-
-    }
-
-
-
-    /* ================= SKILLS ================= */
-
-    .skills-section {
-
-      border-top: 1px solid var(--line);
-
-      padding: 100px 0;
-
-    }
-
-
-    .skill-category {
-
-      display: grid;
-
-      grid-template-columns: 0.28fr 0.72fr;
-
-      gap: 70px;
-
-      padding: 80px 0;
-
-      border-bottom: 1px solid var(--line);
-
-    }
-
-
-    .category-number {
-
-      font-size: 13px;
-
-      color: var(--muted);
-
-      letter-spacing: 0.08em;
-
-    }
-
-
-    .category-content h2 {
-
-      font-size: clamp(45px, 5.5vw, 72px);
-
-      letter-spacing: -0.05em;
-
-      margin-bottom: 25px;
-
-    }
-
-
-    .category-description {
-
-      font-size: 18px;
-
-      color: var(--muted);
-
-      max-width: 750px;
-
-      line-height: 1.75;
-
-      margin-bottom: 40px;
-
-    }
-
-
-
-    /* ================= SKILL LIST ================= */
-
-    .skill-list {
-
-      border-top: 1px solid var(--line);
-
-      max-width: 850px;
-
-    }
-
-
-    .skill-row {
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      gap: 30px;
-
-      padding: 22px 0;
-
-      border-bottom: 1px solid var(--line);
-
-    }
-
-
-    .skill-name {
-
-      font-size: 16px;
-
-      font-weight: 500;
-
-    }
-
-
-    .skill-context {
-
-      font-size: 13px;
-
-      color: var(--muted);
-
-      text-align: right;
-
-    }
-
-
-
-    /* ================= SKILL TAGS ================= */
-
-    .skill-tags {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 10px;
-
-      max-width: 850px;
-
-    }
-
-
-    .skill-tag {
-
-      border: 1px solid var(--line);
-
-      padding: 10px 15px;
-
-      font-size: 13px;
-
-      background: var(--bg);
-
-      transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease;
-
-    }
-
-
-    .skill-tag:hover {
-
-      background: var(--soft);
-
-      border-color: #bcbab3;
-
-      transform: translateY(-2px);
-
-    }
-
-
-
-    /* ================= APPLICATION ================= */
-
-    .application {
-
-      background: var(--soft);
-
-      padding: 130px 0;
-
-    }
-
-
-    .application-grid {
-
-      display: grid;
-
-      grid-template-columns: 0.35fr 0.65fr;
-
-      gap: 80px;
-
-    }
-
-
-    .application h2 {
-
-      font-size: clamp(50px, 6vw, 80px);
-
-      letter-spacing: -0.05em;
-
-    }
-
-
-    .application-content {
-
-      max-width: 750px;
-
-    }
-
-
-    .application-content > p {
-
-      font-size: 19px;
-
-      line-height: 1.8;
-
-      margin-bottom: 45px;
-
-    }
-
-
-    .application-item {
-
-      display: grid;
-
-      grid-template-columns: 190px 1fr;
-
-      gap: 35px;
-
-      padding: 25px 0;
-
-      border-top: 1px solid var(--line);
-
-    }
-
-
-    .application-item:last-child {
-
-      border-bottom: 1px solid var(--line);
-
-    }
-
-
-    .application-item strong {
-
-      font-size: 14px;
-
-    }
-
-
-    .application-item p {
-
-      font-size: 15px;
-
-      line-height: 1.7;
-
-    }
-
-
-
-    /* ================= FINAL STATEMENT ================= */
-
-    .statement {
-
-      padding: 150px 0;
-
-      text-align: center;
-
-    }
-
-
-    .statement h2 {
-
-      font-size: clamp(50px, 7vw, 95px);
-
-      letter-spacing: -0.055em;
-
-      max-width: 1050px;
-
-      margin: auto;
-
-    }
-
-
-    .statement p {
-
-      max-width: 700px;
-
-      margin: 35px auto 0;
-
-      font-size: 18px;
-
-      line-height: 1.8;
-
-    }
-
-
-
-    /* ================= FOOTER ================= */
-
-    footer {
-
-      border-top: 1px solid var(--line);
-
-      padding: 35px 0;
-
-    }
-
-
-    .footer-inner {
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-    }
-
-
-    .footer-inner p {
-
-      font-size: 12px;
-
-    }
-
-
-    .footer-links {
-
-      display: flex;
-
-      gap: 25px;
-
-      font-size: 12px;
-
-    }
-
-
-    .footer-links a:hover {
-
-      color: var(--accent);
-
-    }
-
-
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 850px) {
-
-      nav {
-
-        padding: 18px 5%;
-
-      }
-
-
-      .menu-toggle {
-
-        display: block;
-
-      }
-
-
-      .nav-links {
-
-        display: none;
-
-        position: absolute;
-
-        top: 65px;
-
-        left: 0;
-
-        width: 100%;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 0;
-
-        background: var(--bg);
-
-        border-bottom: 1px solid var(--line);
-
-      }
-
-
-      .nav-links.open {
-
-        display: flex;
-
-      }
-
-
-      .nav-links a {
-
-        width: 100%;
-
-        padding: 18px 5%;
-
-        border-top: 1px solid var(--line);
-
-      }
-
-
-      .resume-btn {
-
-        border: none;
-
-      }
-
-
-      .hero {
-
-        min-height: auto;
-
-        padding-top: 130px;
-
-        padding-bottom: 80px;
-
-      }
-
-
-      .hero-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-
-      }
-
-
-      .hero h1 {
-
-        font-size: clamp(55px, 14vw, 85px);
-
-      }
-
-
-      .hero-copy p {
-
-        font-size: 17px;
-
-      }
-
-
-      .intro {
-
-        padding: 80px 0;
-
-      }
-
-
-      .intro-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-      }
-
-
-      .intro h2 {
-
-        font-size: clamp(45px, 11vw, 68px);
-
-      }
-
-
-      .intro p {
-
-        font-size: 18px;
-
-      }
-
-
-      .skills-section {
-
-        padding: 60px 0;
-
-      }
-
-
-      .skill-category {
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-        padding: 70px 0;
-
-      }
-
-
-      .category-content h2 {
-
-        font-size: clamp(45px, 11vw, 68px);
-
-      }
-
-
-      .category-description {
-
-        font-size: 17px;
-
-      }
-
-
-      .skill-row {
-
-        display: block;
-
-      }
-
-
-      .skill-context {
-
-        text-align: left;
-
-        margin-top: 5px;
-
-      }
-
-
-      .skill-tags {
-
-        gap: 8px;
-
-      }
-
-
-      .application {
-
-        padding: 90px 0;
-
-      }
-
-
-      .application-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-
-      }
-
-
-      .application h2 {
-
-        font-size: clamp(48px, 13vw, 75px);
-
-      }
-
-
-      .application-item {
-
-        grid-template-columns: 1fr;
-
-        gap: 8px;
-
-      }
-
-
-      .statement {
-
-        padding: 100px 0;
-
-      }
-
-
-      .statement h2 {
-
-        font-size: clamp(48px, 13vw, 75px);
-
-      }
-
-
-      .footer-inner {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 20px;
-
-      }
-
-    }
-
-
-
-    /* ================= REDUCED MOTION ================= */
-
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-
-        scroll-behavior: auto;
-
-      }
-
-
-      .reveal {
-
-        opacity: 1;
-
-        transform: none;
-
-        transition: none;
-
-      }
-
-
-      * {
-
-        transition: none !important;
-
-      }
-
-    }
-
-  </style>
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
-
 <body>
 
+<nav class="site-nav">
 
-  <!-- ================= NAVIGATION ================= -->
+<div class="nav-inner">
 
-  <nav>
+<a href="index.html" class="logo">AN</a>
 
-    <a href="index.html" class="logo">
-      AN
-    </a>
+<button class="menu-button"
+aria-label="Open navigation"
+aria-expanded="false">
+☰
+</button>
 
+<div class="nav-links" id="navLinks">
 
-    <div class="nav-links" id="navLinks">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="experience.html">Experience</a>
+<a href="projects.html">Projects</a>
+<a href="beyond.html">Beyond the Resume</a>
+<a href="skills.html" class="active" aria-current="page">Skills</a>
+<a href="contact.html">Contact</a>
 
-      <a href="index.html">
-        Home
-      </a>
+<a href="resume.pdf" class="resume-btn" target="_blank">
+Resume ↗
+</a>
 
-      <a href="about.html">
-        About
-      </a>
+</div>
 
-      <a href="experience.html">
-        Experience
-      </a>
+</div>
 
-      <a href="projects.html">
-        Projects
-      </a>
+</nav>
 
-      <a href="beyond.html">
-        Beyond the Resume
-      </a>
 
-      <a href="skills.html" class="active" aria-current="page">
-        Skills
-      </a>
+<main>
 
-      <a href="contact.html">
-        Contact
-      </a>
+<section class="hero">
 
-      <a href="resume.pdf" class="resume-btn">
-        Resume ↗
-      </a>
+<div class="container reveal">
 
-    </div>
+<div class="eyebrow">
+01 — Skills & Capabilities
+</div>
 
+<h1>
+More than<br>
+tools.
+</h1>
 
-    <div
-      class="menu-toggle"
-      onclick="toggleMenu()"
-    >
-      ☰
-    </div>
+<p class="hero-description">
+I see skills as a means to solve problems, not as a checklist
+of software I know how to use.
+</p>
 
-  </nav>
+</div>
 
+</section>
 
 
-  <!-- ================= HERO ================= -->
+<section class="soft-section">
 
-  <header class="hero">
+<div class="container">
 
-    <div class="container hero-grid">
+<div class="split">
 
+<div class="reveal">
 
-      <div class="reveal">
+<div class="section-label">
+02 — My Toolkit
+</div>
 
-        <div class="eyebrow">
-          01 — <span>Skills & Capabilities</span>
-        </div>
+<h2>
+The intersection matters more than the individual tool.
+</h2>
 
+</div>
 
-        <h1>
-          More than<br>
-          tools.
-        </h1>
+<div class="split-copy reveal">
 
-      </div>
+<p>
+My background combines Finance, Business Intelligence &
+Analytics and Data Science. That means I am comfortable
+moving between a business question, a dataset and a
+financial decision.
+</p>
 
+<p>
+The examples below show where I have applied these skills,
+rather than assigning arbitrary proficiency percentages.
+</p>
 
-      <div class="hero-copy reveal">
+</div>
 
-        <p>
-          I see skills as a means to solve problems, not
-          as a checklist of software I know how to use.
-        </p>
+</div>
 
+</div>
 
-        <div class="hero-line">
-          Analytics × Finance × Business
-        </div>
+</section>
 
-      </div>
 
+<section>
 
-    </div>
+<div class="container">
 
-  </header>
+<div class="skill-category">
 
+<div class="reveal">
 
+<div class="section-label">
+03 — Analytics & Data
+</div>
 
-  <!-- ================= INTRO ================= -->
+<h2>
+Finding<br>
+patterns.
+</h2>
 
-  <section class="intro">
+</div>
 
-    <div class="container intro-grid">
+<div class="reveal">
 
+<p class="skill-description">
+Tools and methods I have used to clean, transform,
+analyse and interpret data.
+</p>
 
-      <div class="eyebrow reveal">
-        02 — <span>My Toolkit</span>
-      </div>
+<div class="skill-list">
 
+<div class="skill-row">
+<div class="skill-name">Python</div>
+<div class="skill-context">IIRS · data analysis · machine learning · ETL</div>
+</div>
 
-      <div class="reveal">
+<div class="skill-row">
+<div class="skill-name">Pandas / NumPy</div>
+<div class="skill-context">Data transformation and analytical workflows</div>
+</div>
 
-        <h2>
-          The intersection matters more than the individual tool.
-        </h2>
+<div class="skill-row">
+<div class="skill-name">Scikit-learn</div>
+<div class="skill-context">Classification and machine learning workflows</div>
+</div>
 
+<div class="skill-row">
+<div class="skill-name">Machine Learning</div>
+<div class="skill-context">IIRS · classification · pattern identification</div>
+</div>
 
-        <p>
-          My academic background combines Finance, Business
-          Intelligence & Analytics, and Data Science. That means
-          I am comfortable moving between a business question,
-          a dataset and a financial decision — and translating
-          between them.
-        </p>
+<div class="skill-row">
+<div class="skill-name">NLP</div>
+<div class="skill-context">Text and language-oriented analytical work</div>
+</div>
 
-      </div>
+<div class="skill-row">
+<div class="skill-name">Time Series</div>
+<div class="skill-context">Financial and macroeconomic analysis</div>
+</div>
 
-    </div>
+</div>
 
-  </section>
+</div>
 
+</div>
 
 
-  <!-- ================= SKILLS ================= -->
+<div class="skill-category">
 
-  <section class="skills-section">
+<div class="reveal">
 
+<div class="section-label">
+04 — Business Intelligence
+</div>
 
-    <!-- ================= ANALYTICS ================= -->
+<h2>
+Making<br>
+data usable.
+</h2>
 
-    <article class="skill-category">
+</div>
 
-      <div class="container">
+<div class="reveal">
 
-        <div class="category-number reveal">
-          03 / 07
-        </div>
+<p class="skill-description">
+Turning datasets into dashboards, reporting structures and
+decision-support outputs.
+</p>
 
-      </div>
+<div class="skill-list">
 
+<div class="skill-row">
+<div class="skill-name">Power BI</div>
+<div class="skill-context">Customer analytics · dashboards · decision support</div>
+</div>
 
-      <div class="category-content reveal">
+<div class="skill-row">
+<div class="skill-name">Tableau</div>
+<div class="skill-context">Data visualization and business analytics</div>
+</div>
 
-        <h2>
-          Analytics & Data
-        </h2>
+<div class="skill-row">
+<div class="skill-name">Excel</div>
+<div class="skill-context">Financial modelling · analysis · dashboards</div>
+</div>
 
+<div class="skill-row">
+<div class="skill-name">Data Visualization</div>
+<div class="skill-context">Communicating patterns and analytical findings</div>
+</div>
 
-        <p class="category-description">
-          Turning raw data into patterns, insights and
-          decisions through statistical analysis,
-          machine learning and structured data workflows.
-        </p>
+</div>
 
+</div>
 
-        <div class="skill-tags">
+</div>
 
-          <span class="skill-tag">
-            Python
-          </span>
 
-          <span class="skill-tag">
-            Pandas
-          </span>
+<div class="skill-category">
 
-          <span class="skill-tag">
-            NumPy
-          </span>
+<div class="reveal">
 
-          <span class="skill-tag">
-            Scikit-learn
-          </span>
+<div class="section-label">
+05 — Finance & Quantitative Analysis
+</div>
 
-          <span class="skill-tag">
-            Machine Learning
-          </span>
+<h2>
+Numbers<br>
+with context.
+</h2>
 
-          <span class="skill-tag">
-            NLP
-          </span>
+</div>
 
-          <span class="skill-tag">
-            Time Series Analysis
-          </span>
+<div class="reveal">
 
-          <span class="skill-tag">
-            Statistical Analysis
-          </span>
+<p class="skill-description">
+Financial and quantitative methods used to evaluate value,
+risk, returns and investment decisions.
+</p>
 
-          <span class="skill-tag">
-            Data Cleaning
-          </span>
+<div class="skill-list">
 
-          <span class="skill-tag">
-            Data Transformation
-          </span>
+<div class="skill-row">
+<div class="skill-name">Financial Modelling</div>
+<div class="skill-context">Project Prarambh · five-year integrated model</div>
+</div>
 
-        </div>
+<div class="skill-row">
+<div class="skill-name">Valuation</div>
+<div class="skill-context">Investment and financial analysis</div>
+</div>
 
-      </div>
+<div class="skill-row">
+<div class="skill-name">Corporate Finance</div>
+<div class="skill-context">WACC · NPV · IRR · capital decisions</div>
+</div>
 
-    </article>
+<div class="skill-row">
+<div class="skill-name">Investment Analysis</div>
+<div class="skill-context">Sectoral analysis · risk-return assessment</div>
+</div>
 
+<div class="skill-row">
+<div class="skill-name">Risk Analysis</div>
+<div class="skill-context">Financial and market risk assessment</div>
+</div>
 
+<div class="skill-row">
+<div class="skill-name">Portfolio Analysis</div>
+<div class="skill-context">Sector comparison · allocation frameworks</div>
+</div>
 
-    <!-- ================= BI ================= -->
+</div>
 
-    <article class="skill-category">
+</div>
 
-      <div class="container">
+</div>
 
-        <div class="category-number reveal">
-          04 / 07
-        </div>
 
-      </div>
+<div class="skill-category">
 
+<div class="reveal">
 
-      <div class="category-content reveal">
+<div class="section-label">
+06 — Business & Problem Solving
+</div>
 
-        <h2>
-          Business Intelligence
-        </h2>
+<h2>
+Turning<br>
+analysis into action.
+</h2>
 
+</div>
 
-        <p class="category-description">
-          Building analytical views that make information
-          easier to understand, compare and act upon.
-        </p>
+<div class="reveal">
 
+<div class="skill-list">
 
-        <div class="skill-list">
+<div class="skill-row">
+<div class="skill-name">Business Analysis</div>
+<div class="skill-context">Dow · process and customer analytics</div>
+</div>
 
+<div class="skill-row">
+<div class="skill-name">Market Analysis</div>
+<div class="skill-context">Nobelza · market entry and competitive analysis</div>
+</div>
 
-          <div class="skill-row">
+<div class="skill-row">
+<div class="skill-name">Process Optimization</div>
+<div class="skill-context">Dow · workflow analysis and improvement</div>
+</div>
 
-            <span class="skill-name">
-              Power BI
-            </span>
+<div class="skill-row">
+<div class="skill-name">Forecasting</div>
+<div class="skill-context">Demand and macroeconomic analysis</div>
+</div>
 
-            <span class="skill-context">
-              Dashboards · Reporting · Data storytelling
-            </span>
+<div class="skill-row">
+<div class="skill-name">Strategic Analysis</div>
+<div class="skill-context">Market, financial and business problem solving</div>
+</div>
 
-          </div>
+<div class="skill-row">
+<div class="skill-name">Stakeholder Management</div>
+<div class="skill-context">Corporate and project environments</div>
+</div>
 
+</div>
 
-          <div class="skill-row">
+</div>
 
-            <span class="skill-name">
-              Tableau
-            </span>
+</div>
 
-            <span class="skill-context">
-              Visual analytics · Interactive dashboards
-            </span>
+</div>
 
-          </div>
+</section>
 
 
-          <div class="skill-row">
+<section class="soft-section">
 
-            <span class="skill-name">
-              Excel
-            </span>
+<div class="container">
 
-            <span class="skill-context">
-              Modelling · Analysis · Decision support
-            </span>
+<div class="application-grid">
 
-          </div>
+<div class="reveal">
 
+<div class="section-label">
+07 — Skills in Practice
+</div>
 
-          <div class="skill-row">
+<h2>
+Where I've<br>
+demonstrated them.
+</h2>
 
-            <span class="skill-name">
-              Data Visualization
-            </span>
+</div>
 
-            <span class="skill-context">
-              KPI design · Comparative analysis · Storytelling
-            </span>
+<div class="application-list reveal">
 
-          </div>
+<div class="application-item">
+<strong>Python</strong>
+<span>IIRS · Data workflows · ML</span>
+</div>
 
+<div class="application-item">
+<strong>Power BI</strong>
+<span>Dow · Customer analytics</span>
+</div>
 
-        </div>
+<div class="application-item">
+<strong>Financial Modelling</strong>
+<span>Project Prarambh</span>
+</div>
 
-      </div>
+<div class="application-item">
+<strong>Market Analysis</strong>
+<span>Nobelza</span>
+</div>
 
-    </article>
+<div class="application-item">
+<strong>Time Series</strong>
+<span>Finance and macroeconomic analysis</span>
+</div>
 
+<div class="application-item">
+<strong>ESG Analytics</strong>
+<span>Envaplax</span>
+</div>
 
+<div class="application-item">
+<strong>SQL</strong>
+<span>Academic and data workflows</span>
+</div>
 
-    <!-- ================= FINANCE ================= -->
+</div>
 
-    <article class="skill-category">
+</div>
 
-      <div class="container">
+</div>
 
-        <div class="category-number reveal">
-          05 / 07
-        </div>
+</section>
 
-      </div>
 
+<section class="dark-section">
 
-      <div class="category-content reveal">
+<div class="container reveal">
 
-        <h2>
-          Finance & Quantitative Analysis
-        </h2>
+<div class="eyebrow">
+08 — The Goal
+</div>
 
+<h2>
+Good analysis should make<br>
+the next decision easier.
+</h2>
 
-        <p class="category-description">
-          Applying financial thinking and quantitative methods
-          to understand businesses, markets, investments and risk.
-        </p>
+<p>
+I am continuing to build depth across analytics, finance and
+business — while learning how to connect the three more effectively.
+</p>
 
+</div>
 
-        <div class="skill-tags">
+</section>
 
-          <span class="skill-tag">
-            Financial Modelling
-          </span>
+</main>
 
-          <span class="skill-tag">
-            Corporate Finance
-          </span>
 
-          <span class="skill-tag">
-            Quantitative Finance
-          </span>
+<footer>
 
-          <span class="skill-tag">
-            Investment Analysis
-          </span>
+<div class="container footer-inner">
 
-          <span class="skill-tag">
-            Financial Statement Analysis
-          </span>
+<p>© 2026 Aishwarya Nagchandi</p>
 
-          <span class="skill-tag">
-            Valuation
-          </span>
+<div class="footer-links">
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</div>
 
-          <span class="skill-tag">
-            Portfolio Analysis
-          </span>
+</div>
 
-          <span class="skill-tag">
-            Risk Analysis
-          </span>
+</footer>
 
-          <span class="skill-tag">
-            Time Series
-          </span>
 
-          <span class="skill-tag">
-            Algorithmic Trading
-          </span>
+<script>
 
-        </div>
+const menuButton=document.querySelector(".menu-button");
+const navLinks=document.querySelector("#navLinks");
 
-      </div>
+menuButton.addEventListener("click",()=>{
 
-    </article>
+const open=navLinks.classList.toggle("open");
 
+menuButton.setAttribute("aria-expanded",open);
 
+menuButton.setAttribute(
+"aria-label",
+open ? "Close navigation" : "Open navigation"
+);
 
-    <!-- ================= SQL ================= -->
+});
 
-    <article class="skill-category">
+document.querySelectorAll(".nav-links a").forEach(link=>{
 
-      <div class="container">
+link.addEventListener("click",()=>{
 
-        <div class="category-number reveal">
-          06 / 07
-        </div>
+navLinks.classList.remove("open");
 
-      </div>
+menuButton.setAttribute("aria-expanded","false");
 
+});
 
-      <div class="category-content reveal">
+});
 
-        <h2>
-          Programming & Data Workflows
-        </h2>
+const observer=new IntersectionObserver(entries=>{
 
+entries.forEach(entry=>{
 
-        <p class="category-description">
-          Comfortable working with data from collection and
-          transformation through analysis and presentation.
-        </p>
+if(entry.isIntersecting){
 
+entry.target.classList.add("visible");
 
-        <div class="skill-list">
+observer.unobserve(entry.target);
 
+}
 
-          <div class="skill-row">
+});
 
-            <span class="skill-name">
-              SQL
-            </span>
+},{threshold:.12});
 
-            <span class="skill-context">
-              Querying · Filtering · Aggregation
-            </span>
+document.querySelectorAll(".reveal").forEach(el=>{
+observer.observe(el);
+});
 
-          </div>
-
-
-          <div class="skill-row">
-
-            <span class="skill-name">
-              Python
-            </span>
-
-            <span class="skill-context">
-              Analysis · Automation · Machine Learning
-            </span>
-
-          </div>
-
-
-          <div class="skill-row">
-
-            <span class="skill-name">
-              ETL
-            </span>
-
-            <span class="skill-context">
-              Extraction · Transformation · Structured data
-            </span>
-
-          </div>
-
-
-          <div class="skill-row">
-
-            <span class="skill-name">
-              Data Pipelines
-            </span>
-
-            <span class="skill-context">
-              Cleaning · Processing · Validation
-            </span>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </article>
-
-
-
-    <!-- ================= BUSINESS ================= -->
-
-    <article class="skill-category">
-
-      <div class="container">
-
-        <div class="category-number reveal">
-          07 / 07
-        </div>
-
-      </div>
-
-
-      <div class="category-content reveal">
-
-        <h2>
-          Business & Problem Solving
-        </h2>
-
-
-        <p class="category-description">
-          The technical side only matters when it helps solve
-          the underlying business problem. I enjoy structuring
-          ambiguous questions and turning them into actionable
-          analysis.
-        </p>
-
-
-        <div class="skill-tags">
-
-          <span class="skill-tag">
-            Business Analysis
-          </span>
-
-          <span class="skill-tag">
-            Market Analysis
-          </span>
-
-          <span class="skill-tag">
-            Process Optimization
-          </span>
-
-          <span class="skill-tag">
-            Process Mapping
-          </span>
-
-          <span class="skill-tag">
-            Customer Analytics
-          </span>
-
-          <span class="skill-tag">
-            Forecasting
-          </span>
-
-          <span class="skill-tag">
-            Strategic Analysis
-          </span>
-
-          <span class="skill-tag">
-            Research
-          </span>
-
-          <span class="skill-tag">
-            Stakeholder Management
-          </span>
-
-          <span class="skill-tag">
-            Problem Structuring
-          </span>
-
-        </div>
-
-      </div>
-
-    </article>
-
-
-  </section>
-
-
-
-  <!-- ================= APPLICATION ================= -->
-
-  <section class="application">
-
-    <div class="container application-grid">
-
-
-      <div class="reveal">
-
-        <div class="eyebrow">
-          How I Apply Them
-        </div>
-
-
-        <h2>
-          From question<br>
-          to decision.
-        </h2>
-
-      </div>
-
-
-      <div class="application-content reveal">
-
-        <p>
-          The work I enjoy most sits at the intersection of
-          technical analysis and practical decision-making.
-          A typical problem might move through several stages.
-        </p>
-
-
-        <div class="application-item">
-
-          <strong>
-            01 — Understand
-          </strong>
-
-          <p>
-            Start with the business question rather than
-            immediately jumping into the data.
-          </p>
-
-        </div>
-
-
-        <div class="application-item">
-
-          <strong>
-            02 — Structure
-          </strong>
-
-          <p>
-            Break an ambiguous problem into measurable
-            questions, variables and assumptions.
-          </p>
-
-        </div>
-
-
-        <div class="application-item">
-
-          <strong>
-            03 — Analyse
-          </strong>
-
-          <p>
-            Use Python, SQL, statistical methods, financial
-            models or BI tools depending on what the problem
-            actually requires.
-          </p>
-
-        </div>
-
-
-        <div class="application-item">
-
-          <strong>
-            04 — Communicate
-          </strong>
-
-          <p>
-            Turn the analysis into a clear story that
-            stakeholders can understand and use.
-          </p>
-
-        </div>
-
-
-        <div class="application-item">
-
-          <strong>
-            05 — Decide
-          </strong>
-
-          <p>
-            Focus on the implication of the analysis:
-            what should happen next?
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ================= FINAL STATEMENT ================= -->
-
-  <section class="statement">
-
-    <div class="container reveal">
-
-      <div class="eyebrow">
-        The goal
-      </div>
-
-
-      <h2>
-        Good analysis should make the next decision easier.
-      </h2>
-
-
-      <p>
-        I am continuing to build depth across analytics,
-        finance and business — while learning how to connect
-        the three more effectively.
-      </p>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ================= FOOTER ================= -->
-
-  <footer>
-
-    <div class="container footer-inner">
-
-
-      <p>
-        © 2026 Aishwarya Nagchandi
-      </p>
-
-
-      <div class="footer-links">
-
-        <a href="index.html">
-          Home
-        </a>
-
-        <a href="projects.html">
-          Projects
-        </a>
-
-        <a href="contact.html">
-          Contact
-        </a>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-
-
-  <!-- ================= JAVASCRIPT ================= -->
-
-  <script>
-
-
-    /* Mobile Navigation */
-
-    function toggleMenu() {
-
-      document
-        .getElementById("navLinks")
-        .classList.toggle("open");
-
-    }
-
-
-
-    /* Scroll Reveal */
-
-    const reveals =
-      document.querySelectorAll(".reveal");
-
-
-    const observer =
-      new IntersectionObserver(
-
-        (entries) => {
-
-          entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-              entry.target
-                .classList
-                .add("visible");
-
-              observer
-                .unobserve(entry.target);
-
-            }
-
-          });
-
-        },
-
-        {
-          threshold: 0.12
-        }
-
-      );
-
-
-    reveals.forEach((element) => {
-
-      observer.observe(element);
-
-    });
-
-
-  </script>
-
+</script>
 
 </body>
 </html>
