@@ -1,556 +1,745 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Experience | Aishwarya Nagchandi</title>
+
+<meta name="description"
+      content="Professional experience of Aishwarya Nagchandi across analytics, business improvement and research.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet">
+
+<style>
+
+:root {
+    --bg: #f7f6f2;
+    --text: #171717;
+    --muted: #686868;
+    --line: #d9d8d3;
+    --accent: #173f63;
+    --soft: #eeede8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 110px;
+    scrollbar-gutter: stable;
+}
+
+[id] {
+    scroll-margin-top: 110px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+
+    height: 76px;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7vw;
+
+    background: rgba(247, 246, 242, 0.92);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: #4e4e4e;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text);
+}
+
+.nav-links a.active {
+    font-weight: 600;
+}
+
+.resume-btn {
+    border: 1px solid #222;
+    padding: 10px 17px;
+    transition: all 0.25s ease;
+}
+
+.resume-btn:hover {
+    background: var(--text);
+    color: var(--bg);
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* ================= GENERAL ================= */
+
+main {
+    padding-top: 76px;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 110px 7vw;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 24px;
+}
+
+.section-label {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 35px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 82vh;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.hero h1 {
+    font-size: clamp(65px, 9vw, 125px);
+    line-height: 0.92;
+    letter-spacing: -0.055em;
+    max-width: 1050px;
+}
+
+.hero-description {
+    margin-top: 40px;
+
+    max-width: 650px;
+
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+
+/* ================= THREAD ================= */
+
+.thread {
+    background: var(--soft);
+}
+
+.thread-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.thread h2 {
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.thread-text p {
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 22px;
+    max-width: 580px;
+}
+
+
+/* ================= MAJOR EXPERIENCE INTRO ================= */
+
+.major-intro {
+    max-width: 760px;
+    margin-bottom: 0;
+}
+
+.major-intro h2 {
+    font-size: clamp(50px, 6vw, 80px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.major-intro p {
+    margin-top: 25px;
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 650px;
+}
+
+
+/* ================= MAJOR EXPERIENCE ================= */
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+.experience-section {
+    border-bottom: 1px solid var(--line);
+}
 
-    <title>Experience | Aishwarya Nagchandi</title>
+.experience-layout {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 80px;
+}
 
-    <meta name="description"
-          content="Professional experience of Aishwarya Nagchandi across analytics, business improvement and research.">
+.experience-meta {
+    color: var(--muted);
+    font-size: 13px;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.experience-meta .year {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: var(--text);
+    margin-bottom: 12px;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet">
-
-
-    <style>
-
-        :root {
-            --bg: #f7f6f2;
-            --text: #171717;
-            --muted: #686868;
-            --line: #d9d8d3;
-            --accent: #173f63;
-            --soft: #eeede8;
-            --white: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 110px;
-        }
-
-        /* Important:
-           Makes anchor links land below the fixed navbar. */
-
-        [id] {
-            scroll-margin-top: 110px;
-        }
-
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: "DM Sans", sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-
-            height: 76px;
-
-            z-index: 1000;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 7vw;
-
-            background: rgba(247, 246, 242, 0.92);
-
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-
-            border-bottom: 1px solid var(--line);
-        }
-
-        .logo {
-            font-size: 15px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            font-size: 13px;
-            color: #4e4e4e;
-            transition: color 0.25s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text);
-        }
-
-        .resume-btn {
-            border: 1px solid #222;
-            padding: 10px 17px;
-            transition: all 0.25s ease;
-        }
-
-        .resume-btn:hover {
-            background: var(--text);
-            color: var(--bg);
-        }
-
-        .menu-btn {
-            display: none;
-            border: none;
-            background: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        main {
-            padding-top: 76px;
-        }
-
-        .container {
-            max-width: 1180px;
-            margin: 0 auto;
-        }
-
-        section {
-            padding: 110px 7vw;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: "Playfair Display", serif;
-            font-weight: 600;
-        }
-
-        .eyebrow {
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 24px;
-        }
-
-        .section-label {
-            font-size: 12px;
-            color: var(--muted);
-            letter-spacing: 0.08em;
-            margin-bottom: 35px;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(25px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-
-        /* ================= HERO ================= */
-
-        .hero {
-            min-height: 82vh;
-
-            display: flex;
-            align-items: center;
-
-            border-bottom: 1px solid var(--line);
-        }
-
-        .hero h1 {
-            font-size: clamp(65px, 9vw, 125px);
-            line-height: 0.92;
-            letter-spacing: -0.055em;
-            max-width: 1050px;
-        }
-
-        .hero-description {
-            margin-top: 40px;
-
-            max-width: 650px;
-
-            font-size: 18px;
-            color: var(--muted);
-            line-height: 1.75;
-        }
-
-
-        /* ================= THREAD ================= */
-
-        .thread {
-            background: var(--soft);
-        }
-
-        .thread-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 100px;
-        }
-
-        .thread h2 {
-            font-size: clamp(48px, 6vw, 78px);
-            line-height: 1;
-            letter-spacing: -0.04em;
-        }
-
-        .thread-text p {
-            color: var(--muted);
-            font-size: 17px;
-            margin-bottom: 22px;
-            max-width: 580px;
-        }
-
-
-        /* ================= EXPERIENCE ================= */
-
-        .experience-section {
-            border-bottom: 1px solid var(--line);
-        }
-
-        .experience-layout {
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 80px;
-        }
-
-        .experience-meta {
-            color: var(--muted);
-            font-size: 13px;
-        }
-
-        .experience-meta .year {
-            font-family: "Playfair Display", serif;
-            font-size: 30px;
-            color: var(--text);
-            margin-bottom: 12px;
-        }
-
-        .experience-content h2 {
-            font-size: clamp(48px, 6vw, 82px);
-            line-height: 0.95;
-            letter-spacing: -0.045em;
-            margin-bottom: 18px;
-        }
-
-        .role {
-            color: var(--accent);
-            font-size: 15px;
-            font-weight: 500;
-            margin-bottom: 35px;
-        }
-
-        .experience-intro {
-            max-width: 760px;
-            font-size: 19px;
-            color: var(--muted);
-            line-height: 1.75;
-            margin-bottom: 55px;
-        }
-
-        .work-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1px;
-            background: var(--line);
-            border: 1px solid var(--line);
-        }
-
-        .work-card {
-            background: var(--bg);
-            padding: 35px;
-            min-height: 220px;
-        }
-
-        .work-card h3 {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        .work-card p {
-            color: var(--muted);
-            font-size: 15px;
-        }
-
-        .tools {
-            margin-top: 45px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
-        }
-
-        .tool {
-            border: 1px solid var(--line);
-            padding: 8px 13px;
-            font-size: 11px;
-            color: var(--muted);
-        }
-
-
-        /* ================= PERSONAL LEARNING ================= */
-
-        .personal-learning {
-            margin-top: 75px;
-            padding-top: 45px;
-            border-top: 1px solid var(--line);
-        }
-
-        .personal-learning h3 {
-            font-size: 38px;
-            margin-bottom: 25px;
-        }
-
-        .personal-learning p {
-            max-width: 760px;
-            color: var(--muted);
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-
-        /* ================= LESSONS ================= */
-
-        .lessons {
-            background: var(--soft);
-        }
-
-        .lessons-header {
-            max-width: 700px;
-            margin-bottom: 65px;
-        }
-
-        .lessons-header h2 {
-            font-size: clamp(50px, 6vw, 80px);
-            line-height: 1;
-            letter-spacing: -0.04em;
-        }
-
-        .lesson-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .lesson {
-            padding: 40px 40px 40px 0;
-            border-right: 1px solid var(--line);
-        }
-
-        .lesson:not(:first-child) {
-            padding-left: 40px;
-        }
-
-        .lesson:last-child {
-            border-right: none;
-        }
-
-        .lesson-number {
-            font-size: 12px;
-            color: var(--muted);
-            margin-bottom: 25px;
-        }
-
-        .lesson h3 {
-            font-size: 34px;
-            margin-bottom: 15px;
-        }
-
-        .lesson p {
-            color: var(--muted);
-            font-size: 15px;
-        }
-
-
-        /* ================= CLOSING ================= */
-
-        .closing {
-            min-height: 65vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .closing h2 {
-            max-width: 950px;
-
-            font-size: clamp(48px, 7vw, 90px);
-            line-height: 1;
-            letter-spacing: -0.045em;
-        }
-
-        .closing p {
-            max-width: 600px;
-            margin-top: 30px;
-            color: var(--muted);
-            font-size: 17px;
-        }
-
-
-        /* ================= FOOTER ================= */
-
-        footer {
-            padding: 35px 7vw;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            border-top: 1px solid var(--line);
-
-            font-size: 12px;
-            color: var(--muted);
-        }
-
-
-        /* ================= MOBILE ================= */
-
-        @media (max-width: 800px) {
-
-            nav {
-                padding: 0 6vw;
-            }
-
-            .nav-links {
-                display: none;
-
-                position: absolute;
-                top: 76px;
-                left: 0;
-                right: 0;
-
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0;
-
-                background: var(--bg);
-                border-bottom: 1px solid var(--line);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links a {
-                width: 100%;
-                padding: 17px 6vw;
-                border-bottom: 1px solid var(--line);
-            }
-
-            .nav-links .resume-btn {
-                border: none;
-                border-bottom: 1px solid var(--line);
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
-            section {
-                padding: 80px 6vw;
-            }
-
-            .hero {
-                min-height: 75vh;
-            }
-
-            .hero h1 {
-                font-size: clamp(55px, 15vw, 90px);
-            }
-
-            .hero-description {
-                font-size: 16px;
-            }
-
-            .thread-grid {
-                grid-template-columns: 1fr;
-                gap: 45px;
-            }
-
-            .experience-layout {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-
-            .experience-meta {
-                display: flex;
-                gap: 15px;
-                align-items: center;
-            }
-
-            .experience-meta .year {
-                margin-bottom: 0;
-            }
-
-            .work-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .lesson-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .lesson,
-            .lesson:not(:first-child) {
-                padding: 35px 0;
-                border-right: none;
-                border-bottom: 1px solid var(--line);
-            }
-
-            .lesson:last-child {
-                border-bottom: none;
-            }
-
-            footer {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-
-        }
-
-
-        @media (prefers-reduced-motion: reduce) {
-
-            html {
-                scroll-behavior: auto;
-            }
-
-            .reveal {
-                opacity: 1;
-                transform: none;
-                transition: none;
-            }
-
-        }
-
-    </style>
+.experience-content h2 {
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+    margin-bottom: 18px;
+}
+
+.role {
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.experience-intro {
+    max-width: 760px;
+    font-size: 19px;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 55px;
+}
+
+
+/* ================= WORK GRID ================= */
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1px;
+
+    background: var(--line);
+
+    border: 1px solid var(--line);
+}
+
+.work-card {
+    background: var(--bg);
+
+    padding: 35px;
+
+    min-height: 220px;
+}
+
+.work-card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.work-card p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* ================= TOOLS ================= */
+
+.tools {
+    margin-top: 45px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.tool {
+    border: 1px solid var(--line);
+
+    padding: 8px 13px;
+
+    font-size: 11px;
+
+    color: var(--muted);
+}
+
+
+/* ================= PERSONAL LEARNING ================= */
+
+.personal-learning {
+    margin-top: 75px;
+
+    padding-top: 45px;
+
+    border-top: 1px solid var(--line);
+}
+
+.personal-learning h3 {
+    font-size: 38px;
+
+    margin-bottom: 25px;
+}
+
+.personal-learning p {
+    max-width: 760px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= ADDITIONAL EXPERIENCE ================= */
+
+.additional {
+    background: var(--soft);
+}
+
+.additional-header {
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.additional-header h2 {
+    font-size: clamp(50px, 6vw, 80px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.additional-header p {
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+.additional-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.additional-card {
+    padding: 50px 50px 50px 0;
+}
+
+.additional-card + .additional-card {
+    border-left: 1px solid var(--line);
+
+    padding-left: 50px;
+}
+
+.additional-meta {
+    font-size: 12px;
+
+    color: var(--muted);
+
+    letter-spacing: 0.05em;
+
+    margin-bottom: 25px;
+}
+
+.additional-card h3 {
+    font-size: 38px;
+
+    line-height: 1;
+
+    margin-bottom: 12px;
+}
+
+.additional-role {
+    font-size: 14px;
+
+    color: var(--accent);
+
+    margin-bottom: 25px;
+}
+
+.additional-card p {
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    max-width: 500px;
+}
+
+
+/* ================= LESSONS ================= */
+
+.lessons {
+    background: var(--bg);
+}
+
+.lessons-header {
+    max-width: 700px;
+
+    margin-bottom: 65px;
+}
+
+.lessons-header h2 {
+    font-size: clamp(50px, 6vw, 80px);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+}
+
+.lesson-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.lesson {
+    padding: 40px 40px 40px 0;
+
+    border-right: 1px solid var(--line);
+}
+
+.lesson:not(:first-child) {
+    padding-left: 40px;
+}
+
+.lesson:last-child {
+    border-right: none;
+}
+
+.lesson-number {
+    font-size: 12px;
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+.lesson h3 {
+    font-size: 34px;
+
+    margin-bottom: 15px;
+}
+
+.lesson p {
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+
+/* ================= CLOSING ================= */
+
+.closing {
+    min-height: 65vh;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.closing h2 {
+    max-width: 950px;
+
+    font-size: clamp(48px, 7vw, 90px);
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+}
+
+.closing p {
+    max-width: 600px;
+
+    margin-top: 30px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 35px 7vw;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid var(--line);
+
+    font-size: 12px;
+
+    color: var(--muted);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 0 6vw;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        background: var(--bg);
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+
+        padding: 17px 6vw;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .nav-links .resume-btn {
+        border: none;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    section {
+        padding: 80px 6vw;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero h1 {
+        font-size: clamp(55px, 15vw, 90px);
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .thread-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .experience-layout {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .experience-meta {
+        display: flex;
+
+        gap: 15px;
+
+        align-items: center;
+    }
+
+    .experience-meta .year {
+        margin-bottom: 0;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .additional-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .additional-card,
+    .additional-card + .additional-card {
+        padding: 35px 0;
+    }
+
+    .additional-card + .additional-card {
+        border-left: none;
+
+        border-top: 1px solid var(--line);
+    }
+
+    .lesson-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson,
+    .lesson:not(:first-child) {
+        padding: 35px 0;
+
+        border-right: none;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .lesson:last-child {
+        border-bottom: none;
+    }
+
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -566,30 +755,57 @@
         AN
     </a>
 
-    <button class="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">
+
+    <button
+        class="menu-btn"
+        aria-label="Open navigation"
+        aria-expanded="false">
+
         ☰
+
     </button>
+
 
     <div class="nav-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            Home
+        </a>
 
-        <a href="about.html">About</a>
+        <a href="about.html">
+            About
+        </a>
 
-        <a href="experience.html">Experience</a>
+        <a href="experience.html"
+           class="active"
+           aria-current="page">
 
-        <a href="projects.html">Projects</a>
+            Experience
 
-        <a href="beyond.html">Beyond the Resume</a>
+        </a>
 
-        <a href="skills.html">Skills</a>
+        <a href="projects.html">
+            Projects
+        </a>
 
-        <a href="contact.html">Contact</a>
+        <a href="beyond.html">
+            Beyond the Resume
+        </a>
+
+        <a href="skills.html">
+            Skills
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
 
         <a href="resume.pdf"
            class="resume-btn"
            target="_blank">
+
             Resume ↗
+
         </a>
 
     </div>
@@ -617,10 +833,12 @@
         </h1>
 
         <p class="hero-description">
+
             My experience has taken me from scientific research
             to my first corporate environment — giving me different
             perspectives on how data, processes and people come
             together to solve problems.
+
         </p>
 
     </div>
@@ -638,6 +856,7 @@
             02 — The Thread
         </div>
 
+
         <div class="thread-grid">
 
             <div class="reveal">
@@ -648,6 +867,7 @@
                 </h2>
 
             </div>
+
 
             <div class="thread-text reveal">
 
@@ -672,6 +892,35 @@
                 </p>
 
             </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAJOR EXPERIENCES INTRO ================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="major-intro reveal">
+
+            <div class="section-label">
+                03 — Major Experiences
+            </div>
+
+            <h2>
+                The experiences that shaped how I work.
+            </h2>
+
+            <p>
+                My two major professional experiences exposed me to
+                very different environments — corporate operations at
+                Dow and scientific research at IIRS–ISRO.
+            </p>
 
         </div>
 
@@ -716,15 +965,18 @@
                 </div>
 
                 <p class="experience-intro">
+
                     My first corporate experience gave me the opportunity
                     to work across process analysis, data analytics and
                     business improvement — learning how structured
                     analysis can support decisions in a complex
                     organisation.
+
                 </p>
 
 
                 <div class="work-grid">
+
 
                     <div class="work-card">
 
@@ -792,12 +1044,29 @@
 
                 <div class="tools">
 
-                    <span class="tool">Python</span>
-                    <span class="tool">Power BI</span>
-                    <span class="tool">Data Analysis</span>
-                    <span class="tool">Process Mapping</span>
-                    <span class="tool">Business Analysis</span>
-                    <span class="tool">Stakeholder Management</span>
+                    <span class="tool">
+                        Python
+                    </span>
+
+                    <span class="tool">
+                        Power BI
+                    </span>
+
+                    <span class="tool">
+                        Data Analysis
+                    </span>
+
+                    <span class="tool">
+                        Process Mapping
+                    </span>
+
+                    <span class="tool">
+                        Business Analysis
+                    </span>
+
+                    <span class="tool">
+                        Stakeholder Management
+                    </span>
 
                 </div>
 
@@ -845,7 +1114,7 @@
 </section>
 
 
-<!-- ================= ISRO ================= -->
+<!-- ================= IIRS ================= -->
 
 <section class="experience-section" id="isro">
 
@@ -881,14 +1150,17 @@
                 </div>
 
                 <p class="experience-intro">
+
                     At the Indian Institute of Remote Sensing, I worked
                     with hyperspectral and geospatial datasets, using
                     Python and analytical methods to turn complex
                     scientific data into structured insights.
+
                 </p>
 
 
                 <div class="work-grid">
+
 
                     <div class="work-card">
 
@@ -956,13 +1228,33 @@
 
                 <div class="tools">
 
-                    <span class="tool">Python</span>
-                    <span class="tool">NumPy</span>
-                    <span class="tool">Pandas</span>
-                    <span class="tool">Scikit-learn</span>
-                    <span class="tool">Remote Sensing</span>
-                    <span class="tool">Geospatial Data</span>
-                    <span class="tool">Machine Learning</span>
+                    <span class="tool">
+                        Python
+                    </span>
+
+                    <span class="tool">
+                        NumPy
+                    </span>
+
+                    <span class="tool">
+                        Pandas
+                    </span>
+
+                    <span class="tool">
+                        Scikit-learn
+                    </span>
+
+                    <span class="tool">
+                        Remote Sensing
+                    </span>
+
+                    <span class="tool">
+                        Geospatial Data
+                    </span>
+
+                    <span class="tool">
+                        Machine Learning
+                    </span>
 
                 </div>
 
@@ -1008,6 +1300,96 @@
 </section>
 
 
+<!-- ================= ADDITIONAL EXPERIENCE ================= -->
+
+<section class="additional">
+
+    <div class="container">
+
+        <div class="additional-header reveal">
+
+            <div class="section-label">
+                04 — Additional Experience
+            </div>
+
+            <h2>
+                Other experiences that added to the picture.
+            </h2>
+
+            <p>
+                These experiences were smaller in scope, but each
+                contributed something different to how I approach
+                work, learning and collaboration.
+            </p>
+
+        </div>
+
+
+        <div class="additional-grid">
+
+
+            <!-- SOUL AI -->
+
+            <div class="additional-card reveal">
+
+                <div class="additional-meta">
+                    JULY 2024 — OCTOBER 2024
+                </div>
+
+                <h3>
+                    Soul AI
+                </h3>
+
+                <div class="additional-role">
+                    Data Annotator
+                </div>
+
+                <p>
+                    Led training and validation of LLM models using
+                    10,000+ market research data points, ensuring
+                    accuracy and consistency of outputs. Designed
+                    structured evaluation pipelines and improved data
+                    workflows to enhance model performance and
+                    real-world applicability.
+                </p>
+
+            </div>
+
+
+            <!-- GOVT. P.S. BASKHEDI -->
+
+            <div class="additional-card reveal">
+
+                <div class="additional-meta">
+                    MAY 2024 — JULY 2024
+                </div>
+
+                <h3>
+                    Govt. P.S. Baskhedi
+                </h3>
+
+                <div class="additional-role">
+                    Summer Helper · Community Service
+                </div>
+
+                <p>
+                    Coordinated outreach initiatives impacting 100+
+                    individuals while collaborating with 10+ volunteers
+                    to execute programs efficiently. Managed tracking
+                    systems for 500+ volunteer hours and donations,
+                    improving record accuracy and operational
+                    organization.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- ================= LESSONS ================= -->
 
 <section class="lessons">
@@ -1017,7 +1399,7 @@
         <div class="lessons-header reveal">
 
             <div class="section-label">
-                03 — What Stayed With Me
+                05 — What Stayed With Me
             </div>
 
             <h2>
@@ -1029,6 +1411,7 @@
 
 
         <div class="lesson-grid">
+
 
             <div class="lesson reveal">
 
@@ -1100,7 +1483,7 @@
     <div class="container reveal">
 
         <div class="eyebrow">
-            04 — Perspective
+            06 — Perspective
         </div>
 
         <h2>
@@ -1141,26 +1524,56 @@
 
 <script>
 
-    const menuBtn = document.querySelector(".menu-btn");
-    const navLinks = document.querySelector(".nav-links");
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-    menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+
+menuBtn.addEventListener("click", () => {
+
+    const open = navLinks.classList.toggle("active");
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        open
+    );
+
+    menuBtn.setAttribute(
+        "aria-label",
+        open
+            ? "Close navigation"
+            : "Open navigation"
+    );
+
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuBtn.setAttribute(
+            "aria-label",
+            "Open navigation"
+        );
+
     });
 
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-        });
-
-    });
+});
 
 
-    const revealElements = document.querySelectorAll(".reveal");
+const revealElements =
+    document.querySelectorAll(".reveal");
 
-    const revealObserver = new IntersectionObserver(
+
+const revealObserver =
+    new IntersectionObserver(
 
         entries => {
 
@@ -1168,9 +1581,13 @@
 
                 if (entry.isIntersecting) {
 
-                    entry.target.classList.add("visible");
+                    entry.target.classList.add(
+                        "visible"
+                    );
 
-                    revealObserver.unobserve(entry.target);
+                    revealObserver.unobserve(
+                        entry.target
+                    );
 
                 }
 
@@ -1185,9 +1602,11 @@
     );
 
 
-    revealElements.forEach(element => {
-        revealObserver.observe(element);
-    });
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
 
 </script>
 
