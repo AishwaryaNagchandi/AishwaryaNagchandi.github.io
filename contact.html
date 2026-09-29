@@ -1,15 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Contact | Aishwarya Nagchandi</title>
+<meta name="theme-color" content="#f7f6f2">
 
 <meta name="description"
-      content="Get in touch with Aishwarya Nagchandi for opportunities across analytics, business intelligence, finance and strategy.">
+      content="Contact Aishwarya Nagchandi for analytics, finance, business intelligence and strategy opportunities.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical"
+      href="https://aishwaryanagchandi.com/contact.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact | Aishwarya Nagchandi">
+<meta property="og:description"
+      content="Contact Aishwarya Nagchandi for analytics, finance, business intelligence and strategy opportunities.">
+<meta property="og:url"
+      content="https://aishwaryanagchandi.com/contact.html">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,1338 +30,363 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet">
 
+<link rel="stylesheet" href="styles.css">
 
-<style>
+<script src="script.js" defer></script>
 
-:root{
-    --bg:#f7f6f2;
-    --text:#171717;
-    --muted:#686868;
-    --line:#d9d8d3;
-    --accent:#173f63;
-    --soft:#eeede8;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-    scroll-padding-top:100px;
-    scrollbar-gutter:stable;
-}
-
-body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:"DM Sans",sans-serif;
-    line-height:1.6;
-    overflow-x:hidden;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-.container{
-    width:min(1180px, calc(100% - 14vw));
-    margin:0 auto;
-}
-
-h1,
-h2,
-h3{
-    font-family:"Playfair Display",serif;
-    font-weight:600;
-}
-
-.eyebrow{
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--accent);
-    margin-bottom:24px;
-}
-
-.reveal{
-    opacity:0;
-    transform:translateY(24px);
-    transition:
-        opacity .75s ease,
-        transform .75s ease;
-}
-
-.reveal.visible{
-    opacity:1;
-    transform:translateY(0);
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-    right:0;
-
-    width:100%;
-
-    height:76px;
-
-    z-index:1000;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:0 7vw;
-
-    background:rgba(247,246,242,.94);
-
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-
-    border-bottom:1px solid var(--line);
-}
-
-.logo{
-
-    font-size:15px;
-
-    font-weight:700;
-
-    letter-spacing:.08em;
-}
-
-.nav-links{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:30px;
-}
-
-.nav-links a{
-
-    font-size:13px;
-
-    color:#4e4e4e;
-
-    transition:color .25s ease;
-}
-
-.nav-links a:hover{
-    color:var(--text);
-}
-
-.nav-links a.active{
-
-    color:var(--text);
-
-    font-weight:600;
-}
-
-.resume-btn{
-
-    border:1px solid #222;
-
-    padding:10px 17px;
-
-    transition:
-        background .25s ease,
-        color .25s ease;
-}
-
-.resume-btn:hover{
-
-    background:var(--text);
-
-    color:var(--bg);
-}
-
-.menu-btn{
-
-    display:none;
-
-    border:none;
-
-    background:none;
-
-    font-size:24px;
-
-    cursor:pointer;
-}
-
-
-/* =========================
-   MAIN
-========================= */
-
-main{
-    padding-top:76px;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-
-    min-height:54vh;
-
-    display:flex;
-
-    align-items:center;
-
-    border-bottom:1px solid var(--line);
-}
-
-.hero-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        minmax(300px,.8fr)
-        minmax(0,1.2fr);
-
-    gap:80px;
-
-    align-items:end;
-}
-
-.hero-grid > *{
-    min-width:0;
-}
-
-.hero h1{
-
-    font-size:clamp(70px,8vw,112px);
-
-    line-height:.88;
-
-    letter-spacing:-.055em;
-
-    max-width:6ch;
-}
-
-.hero-copy{
-
-    max-width:700px;
-
-    padding-bottom:7px;
-}
-
-.hero-copy p{
-
-    max-width:680px;
-
-    font-size:18px;
-
-    color:var(--muted);
-
-    line-height:1.75;
-}
-
-.hero-line{
-
-    margin-top:28px;
-
-    padding-top:18px;
-
-    border-top:1px solid var(--line);
-
-    color:var(--accent);
-
-    font-size:12px;
-
-    letter-spacing:.08em;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-section{
-
-    padding:90px 0 105px;
-
-    border-bottom:1px solid var(--line);
-}
-
-.contact-grid{
-
-    display:grid;
-
-    /*
-       IMPORTANT FIX:
-       The left side is now wide enough
-       for the large Playfair heading.
-    */
-    grid-template-columns:
-        minmax(300px,.8fr)
-        minmax(0,1.2fr);
-
-    gap:80px;
-
-    align-items:start;
-}
-
-.contact-grid > *{
-    min-width:0;
-}
-
-.contact-intro{
-
-    min-width:0;
-}
-
-.contact-intro h2{
-
-    font-size:clamp(50px,5.8vw,78px);
-
-    line-height:.95;
-
-    letter-spacing:-.05em;
-
-    /*
-       Keeps the heading visually inside
-       its own column.
-    */
-    max-width:6.7ch;
-}
-
-.contact-content{
-
-    min-width:0;
-
-    max-width:850px;
-}
-
-.contact-content > p{
-
-    font-size:18px;
-
-    line-height:1.75;
-
-    color:var(--muted);
-
-    max-width:700px;
-
-    margin-bottom:42px;
-}
-
-
-/* =========================
-   CONTACT LINKS
-========================= */
-
-.contact-links{
-
-    border-top:1px solid var(--line);
-
-    width:100%;
-}
-
-.contact-link{
-
-    display:grid;
-
-    grid-template-columns:
-        125px
-        minmax(0,1fr)
-        25px;
-
-    align-items:center;
-
-    gap:22px;
-
-    padding:22px 0;
-
-    border-bottom:1px solid var(--line);
-
-    transition:
-        padding-left .25s ease,
-        background .25s ease;
-}
-
-.contact-link:hover{
-
-    padding-left:8px;
-}
-
-.contact-label{
-
-    font-size:11px;
-
-    text-transform:uppercase;
-
-    letter-spacing:.12em;
-
-    color:var(--muted);
-}
-
-.contact-value{
-
-    font-size:16px;
-
-    font-weight:500;
-
-    min-width:0;
-
-    overflow-wrap:anywhere;
-}
-
-.contact-arrow{
-
-    font-size:20px;
-
-    color:var(--accent);
-
-    text-align:right;
-}
-
-
-/* =========================
-   OPPORTUNITIES
-========================= */
-
-.opportunities{
-
-    background:var(--soft);
-
-    padding:95px 0;
-}
-
-.opportunity-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        minmax(300px,.8fr)
-        minmax(0,1.2fr);
-
-    gap:80px;
-
-    align-items:start;
-}
-
-.opportunity-grid > *{
-    min-width:0;
-}
-
-.opportunity-grid h2{
-
-    font-size:clamp(50px,5.8vw,80px);
-
-    line-height:.95;
-
-    letter-spacing:-.05em;
-
-    max-width:6.7ch;
-}
-
-.opportunity-content{
-
-    min-width:0;
-
-    max-width:850px;
-}
-
-.opportunity-content > p{
-
-    font-size:18px;
-
-    line-height:1.75;
-
-    color:var(--muted);
-
-    max-width:700px;
-
-    margin-bottom:42px;
-}
-
-.opportunity-list{
-
-    border-top:1px solid var(--line);
-}
-
-.opportunity{
-
-    display:grid;
-
-    grid-template-columns:
-        minmax(170px,.7fr)
-        minmax(0,1.3fr);
-
-    gap:30px;
-
-    align-items:center;
-
-    padding:20px 0;
-
-    border-bottom:1px solid var(--line);
-}
-
-.opportunity strong{
-
-    font-size:14px;
-
-    font-weight:600;
-}
-
-.opportunity span{
-
-    font-size:14px;
-
-    color:var(--muted);
-}
-
-
-/* =========================
-   RESUME CTA
-========================= */
-
-.resume-section{
-
-    padding:100px 0;
-
-    border-bottom:1px solid var(--line);
-}
-
-.resume-section h2{
-
-    font-size:clamp(50px,6vw,82px);
-
-    line-height:.95;
-
-    letter-spacing:-.05em;
-
-    max-width:8ch;
-}
-
-.resume-section p{
-
-    margin-top:25px;
-
-    max-width:650px;
-
-    font-size:17px;
-
-    color:var(--muted);
-
-    line-height:1.75;
-}
-
-.resume-link{
-
-    display:inline-flex;
-
-    margin-top:30px;
-
-    border:1px solid var(--text);
-
-    padding:13px 19px;
-
-    font-size:13px;
-
-    transition:
-        background .25s ease,
-        color .25s ease;
-}
-
-.resume-link:hover{
-
-    background:var(--text);
-
-    color:var(--bg);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-    padding:30px 7vw;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    border-top:1px solid var(--line);
-
-    font-size:12px;
-
-    color:var(--muted);
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:800px){
-
-    nav{
-
-        padding:0 6vw;
-    }
-
-    .nav-links{
-
-        display:none;
-
-        position:absolute;
-
-        top:76px;
-
-        left:0;
-
-        right:0;
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:0;
-
-        background:var(--bg);
-
-        border-bottom:1px solid var(--line);
-    }
-
-    .nav-links.active{
-
-        display:flex;
-    }
-
-    .nav-links a{
-
-        width:100%;
-
-        padding:16px 6vw;
-
-        border-bottom:1px solid var(--line);
-    }
-
-    .nav-links .resume-btn{
-
-        border:none;
-
-        border-bottom:1px solid var(--line);
-    }
-
-    .menu-btn{
-
-        display:block;
-    }
-
-    .container{
-
-        width:calc(100% - 12vw);
-    }
-
-
-    /* HERO */
-
-    .hero{
-
-        min-height:auto;
-
-        padding:90px 0 75px;
-    }
-
-    .hero-grid{
-
-        grid-template-columns:1fr;
-
-        gap:38px;
-    }
-
-    .hero h1{
-
-        font-size:clamp(60px,17vw,92px);
-
-        max-width:7ch;
-    }
-
-    .hero-copy{
-
-        padding-bottom:0;
-    }
-
-    .hero-copy p{
-
-        font-size:16px;
-    }
-
-
-    /* CONTACT */
-
-    .contact-section{
-
-        padding:75px 0 85px;
-    }
-
-    .contact-grid{
-
-        grid-template-columns:1fr;
-
-        gap:42px;
-    }
-
-    .contact-intro h2{
-
-        font-size:clamp(52px,14vw,78px);
-
-        max-width:8ch;
-    }
-
-    .contact-content > p{
-
-        font-size:16px;
-
-        margin-bottom:35px;
-    }
-
-    .contact-link{
-
-        grid-template-columns:
-            1fr
-            auto;
-
-        gap:8px;
-
-        padding:20px 0;
-    }
-
-    .contact-label{
-
-        grid-column:1 / -1;
-    }
-
-    .contact-value{
-
-        font-size:15px;
-    }
-
-
-    /* OPPORTUNITIES */
-
-    .opportunities{
-
-        padding:75px 0;
-    }
-
-    .opportunity-grid{
-
-        grid-template-columns:1fr;
-
-        gap:42px;
-    }
-
-    .opportunity-grid h2{
-
-        font-size:clamp(52px,14vw,78px);
-
-        max-width:8ch;
-    }
-
-    .opportunity-content > p{
-
-        font-size:16px;
-
-        margin-bottom:35px;
-    }
-
-    .opportunity{
-
-        grid-template-columns:1fr;
-
-        gap:5px;
-
-        padding:19px 0;
-    }
-
-    .opportunity span{
-
-        font-size:14px;
-    }
-
-
-    /* RESUME */
-
-    .resume-section{
-
-        padding:75px 0;
-    }
-
-    .resume-section h2{
-
-        font-size:clamp(50px,14vw,78px);
-    }
-
-
-    /* FOOTER */
-
-    footer{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:10px;
-    }
-
-}
-
-
-/* =========================
-   REDUCED MOTION
-========================= */
-
-@media(prefers-reduced-motion:reduce){
-
-    html{
-
-        scroll-behavior:auto;
-    }
-
-    .reveal{
-
-        opacity:1;
-
-        transform:none;
-
-        transition:none;
-    }
-
-    *{
-
-        transition:none !important;
-    }
-
-}
-
-</style>
+<title>Contact | Aishwarya Nagchandi</title>
 
 </head>
 
+<body class="page-contact">
 
-<body>
+<a class="skip-link" href="#main">
+Skip to content
+</a>
 
+<nav class="site-nav" aria-label="Primary navigation">
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<div class="nav-inner">
 
-<nav>
+<a href="index.html"
+   class="logo"
+   aria-label="Aishwarya Nagchandi home">
+AN
+</a>
 
-    <a href="index.html" class="logo">
-        AN
-    </a>
-
-    <button
-        class="menu-btn"
+<button class="menu-button"
         type="button"
         aria-label="Open navigation"
-        aria-expanded="false"
-    >
-        ☰
-    </button>
+        aria-controls="navLinks"
+        aria-expanded="false">
+☰
+</button>
 
-    <div class="nav-links">
+<div class="nav-links" id="navLinks">
 
-        <a href="index.html">
-            Home
-        </a>
+<a href="index.html">Home</a>
 
-        <a href="about.html">
-            About
-        </a>
+<a href="about.html">About</a>
 
-        <a href="experience.html">
-            Experience
-        </a>
+<a href="experience.html">Experience</a>
 
-        <a href="projects.html">
-            Projects
-        </a>
+<a href="projects.html">Projects</a>
 
-        <a href="beyond.html">
-            Beyond the Resume
-        </a>
+<a href="beyond.html">Beyond the Resume</a>
 
-        <a href="skills.html">
-            Skills
-        </a>
+<a href="skills.html">Skills</a>
 
-        <a
-            href="contact.html"
-            class="active"
-            aria-current="page"
-        >
-            Contact
-        </a>
+<a href="contact.html"
+   class="active"
+   aria-current="page">
+Contact
+</a>
 
-        <a
-            href="resume.pdf"
-            class="resume-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Resume ↗
-        </a>
+<a class="resume-btn"
+   href="resume.pdf"
+   target="_blank"
+   rel="noopener">
+Resume ↗
+</a>
 
-    </div>
+</div>
+
+</div>
 
 </nav>
 
 
-<main>
+<main id="main">
 
-
-<!-- =========================
-     HERO
-========================= -->
 
 <header class="hero">
 
-    <div class="container hero-grid">
+<div class="container hero-grid">
 
-        <div class="reveal">
+<div class="reveal">
 
-            <div class="eyebrow">
-                01 — Let's Connect
-            </div>
+<div class="eyebrow">
+01 — CONTACT
+</div>
 
-            <h1>
-                Let's<br>
-                talk.
-            </h1>
+<h1>
+Let’s<br>
+talk.
+</h1>
 
-        </div>
+</div>
 
 
-        <div class="hero-copy reveal">
+<div class="hero-copy reveal">
 
-            <p>
-                If you have a problem worth solving, an opportunity
-                worth discussing, or simply want to connect, I'd be
-                happy to hear from you.
-            </p>
+<p>
+If you have a problem worth solving, an opportunity worth
+discussing or simply want to connect, I would be happy to hear
+from you.
+</p>
 
-            <div class="hero-line">
-                Analytics × Finance × Business
-            </div>
+<div class="hero-line">
+A good conversation is a good place to start.
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </header>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<section class="split-section">
 
-<section class="contact-section">
+<div class="container split-grid">
 
-    <div class="container contact-grid">
+<div class="section-label reveal">
+02 — START A CONVERSATION
+</div>
 
+<div class="split-content reveal">
 
-        <div class="contact-intro reveal">
+<h2>
+Get in touch.
+</h2>
 
-            <div class="eyebrow">
-                02 — Get in Touch
-            </div>
+<div class="contact-list">
 
-            <h2>
-                Start a conversation.
-            </h2>
+<a href="mailto:aishwaryanagchandi84@gmail.com">
 
-        </div>
+<span>
+Email
+</span>
 
+<strong>
+aishwaryanagchandi84@gmail.com
+</strong>
 
-        <div class="contact-content reveal">
+<b>
+↗
+</b>
 
-            <p>
-                I am always interested in meeting people working
-                on interesting problems, learning about new
-                opportunities, and having conversations around
-                analytics, finance, business and technology.
-            </p>
-
-
-            <div class="contact-links">
+</a>
 
 
-                <!-- EMAIL -->
+<a href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/"
+   target="_blank"
+   rel="noopener noreferrer">
 
-                <a
-                    href="mailto:aishwaryanagchandi84@gmail.com"
-                    class="contact-link"
-                >
+<span>
+LinkedIn
+</span>
 
-                    <span class="contact-label">
-                        Email
-                    </span>
+<strong>
+Connect on LinkedIn
+</strong>
 
-                    <span class="contact-value">
-                        aishwaryanagchandi84@gmail.com
-                    </span>
+<b>
+↗
+</b>
 
-                    <span class="contact-arrow">
-                        ↗
-                    </span>
-
-                </a>
+</a>
 
 
-                <!-- LINKEDIN -->
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSc33WatLbiZwhdx6RLmS6gNjn_iPeC7ScOtmlJXgJQv566fDw/viewform?usp=dialog"
+   target="_blank"
+   rel="noopener noreferrer">
 
-                <a
-                    href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-link"
-                >
+<span>
+Phone
+</span>
 
-                    <span class="contact-label">
-                        LinkedIn
-                    </span>
+<strong>
+Request my phone number
+</strong>
 
-                    <span class="contact-value">
-                        Connect professionally
-                    </span>
+<b>
+↗
+</b>
 
-                    <span class="contact-arrow">
-                        ↗
-                    </span>
-
-                </a>
+</a>
 
 
-                <!-- PHONE -->
+<a href="https://github.com/AishwaryaNagchandi"
+   target="_blank"
+   rel="noopener noreferrer">
 
-                <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSc33WatLbiZwhdx6RLmS6gNjn_iPeC7ScOtmlJXgJQv566fDw/viewform?usp=dialog"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-link"
-                >
+<span>
+GitHub
+</span>
 
-                    <span class="contact-label">
-                        Phone
-                    </span>
+<strong>
+Explore my work
+</strong>
 
-                    <span class="contact-value">
-                        Request my phone number
-                    </span>
+<b>
+↗
+</b>
 
-                    <span class="contact-arrow">
-                        ↗
-                    </span>
+</a>
 
-                </a>
+</div>
 
+</div>
 
-                <!-- GITHUB -->
-
-                <a
-                    href="https://github.com/AishwaryaNagchandi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact-link"
-                >
-
-                    <span class="contact-label">
-                        GitHub
-                    </span>
-
-                    <span class="contact-value">
-                        AishwaryaNagchandi
-                    </span>
-
-                    <span class="contact-arrow">
-                        ↗
-                    </span>
-
-                </a>
-
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- =========================
-     OPPORTUNITIES
-========================= -->
+<section class="split-section soft">
 
-<section class="opportunities">
+<div class="container split-grid">
 
-    <div class="container opportunity-grid">
+<div class="section-label reveal">
+03 — WHERE I CAN CONTRIBUTE
+</div>
 
+<div class="split-content reveal">
 
-        <div class="reveal">
+<h2>
+Interested in work<br>
+that connects the dots.
+</h2>
 
-            <div class="eyebrow">
-                03 — What I'm Looking For
-            </div>
+<p>
+I’m exploring opportunities where analytical thinking
+and commercial context meet.
+</p>
 
-            <h2>
-                Where I can contribute.
-            </h2>
+<div class="value-grid">
 
-        </div>
+<div>
 
+<h3>
+Analytics
+</h3>
 
-        <div class="opportunity-content reveal">
+<p>
+Finding useful patterns and communicating evidence.
+</p>
 
-            <p>
-                I am particularly interested in opportunities where
-                analytical thinking can influence real business
-                decisions and where I can continue building depth
-                across data, finance and business.
-            </p>
-
-
-            <div class="opportunity-list">
-
-
-                <div class="opportunity">
-
-                    <strong>
-                        Analytics
-                    </strong>
-
-                    <span>
-                        Data & Business Analytics
-                    </span>
-
-                </div>
+</div>
 
 
-                <div class="opportunity">
+<div>
 
-                    <strong>
-                        Business Intelligence
-                    </strong>
+<h3>
+Business Intelligence
+</h3>
 
-                    <span>
-                        BI · Reporting · Decision Support
-                    </span>
+<p>
+Building reports and decision-support workflows.
+</p>
 
-                </div>
-
-
-                <div class="opportunity">
-
-                    <strong>
-                        Finance
-                    </strong>
-
-                    <span>
-                        Financial Analysis · Quantitative Finance
-                    </span>
-
-                </div>
+</div>
 
 
-                <div class="opportunity">
+<div>
 
-                    <strong>
-                        Strategy
-                    </strong>
+<h3>
+Finance
+</h3>
 
-                    <span>
-                        Business Analysis · Strategic Problem Solving
-                    </span>
+<p>
+Modelling, investment analysis and financial evaluation.
+</p>
 
-                </div>
+</div>
 
 
-            </div>
+<div>
 
-        </div>
+<h3>
+Strategy
+</h3>
 
-    </div>
+<p>
+Market questions, process improvement and structured
+problem-solving.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     RESUME CTA
-========================= -->
+<section class="closing">
 
-<section class="resume-section">
+<div class="container closing-grid">
 
-    <div class="container reveal">
+<div class="section-label">
+A LITTLE MORE CONTEXT
+</div>
 
-        <div class="eyebrow">
-            04 — Resume
-        </div>
+<div>
 
-        <h2>
-            Want the short version?
-        </h2>
+<h2>
+Prefer to start<br>
+with my resume?
+</h2>
 
-        <p>
-            My resume brings together my education, experience,
-            projects, skills and achievements in one place.
-        </p>
+<p>
+A concise overview of my education, experience and projects.
+</p>
 
-        <a
-            href="resume.pdf"
-            class="resume-link"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            View Resume ↗
-        </a>
+<a class="text-link"
+   href="resume.pdf"
+   target="_blank"
+   rel="noopener">
+View my resume ↗
+</a>
 
-    </div>
+</div>
+
+</div>
 
 </section>
-
 
 </main>
 
 
-<footer>
+<footer class="site-footer">
 
-    <span>
-        © 2026 Aishwarya Nagchandi
-    </span>
+<div class="container footer-inner">
 
-    <span>
-        Analytics × Finance × Business
-    </span>
+<span>
+© 2026 Aishwarya Nagchandi
+</span>
+
+<div class="footer-links">
+
+<a href="mailto:aishwaryanagchandi84@gmail.com">
+Email
+</a>
+
+<a href="https://www.linkedin.com/in/aishwarya-nagchandani-7272212a5/"
+   target="_blank"
+   rel="noopener noreferrer">
+LinkedIn ↗
+</a>
+
+<a href="https://github.com/AishwaryaNagchandi"
+   target="_blank"
+   rel="noopener noreferrer">
+GitHub ↗
+</a>
+
+</div>
+
+<span>
+Built with curiosity.
+</span>
+
+</div>
 
 </footer>
 
-
-<script>
-
-const menuBtn =
-    document.querySelector(".menu-btn");
-
-const navLinks =
-    document.querySelector(".nav-links");
-
-
-if(menuBtn && navLinks){
-
-    menuBtn.addEventListener("click", () => {
-
-        const open =
-            navLinks.classList.toggle("active");
-
-        menuBtn.setAttribute(
-            "aria-expanded",
-            open ? "true" : "false"
-        );
-
-        menuBtn.setAttribute(
-            "aria-label",
-            open
-                ? "Close navigation"
-                : "Open navigation"
-        );
-
-    });
-
-
-    document
-        .querySelectorAll(".nav-links a")
-        .forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navLinks.classList.remove("active");
-
-                menuBtn.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuBtn.setAttribute(
-                    "aria-label",
-                    "Open navigation"
-                );
-
-            });
-
-        });
-
-}
-
-
-/* =========================
-   REVEAL ANIMATION
-========================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-const revealObserver =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if(entry.isIntersecting){
-
-                    entry.target.classList.add("visible");
-
-                    revealObserver.unobserve(
-                        entry.target
-                    );
-
-                }
-
-            });
-
-        },
-        {
-            threshold:.08
-        }
-    );
-
-
-revealElements.forEach(element => {
-
-    revealObserver.observe(element);
-
-});
-
-</script>
-
-
 </body>
-
 </html>
