@@ -652,7 +652,7 @@ main{
     display:grid;
 
     grid-template-columns:
-        repeat(3,minmax(0,1fr));
+        repeat(2,minmax(0,1fr));
 
     gap:15px;
 }
@@ -673,6 +673,24 @@ main{
         border-color .2s,
         transform .2s;
 }
+
+
+/* =========================================================
+   CENTER THIRD PROJECT
+   ========================================================= */
+
+.project-preview:nth-child(3){
+    grid-column:1 / -1;
+
+    width:calc(50% - 7.5px);
+
+    justify-self:center;
+}
+
+
+/* =========================================================
+   PROJECT HOVER
+   ========================================================= */
 
 .project-preview:hover{
     border-color:var(--accent);
@@ -1501,10 +1519,16 @@ main{
         );
     }
 
+
     .three-grid{
         gap:15px;
     }
 
+
+    /*
+       Keep the two-column project layout
+       until the mobile breakpoint at 600px.
+    */
 
     .project-list{
         grid-template-columns:
@@ -1622,6 +1646,7 @@ main{
             minmax(0,1fr);
     }
 
+
     .three-grid{
         margin-top:25px;
     }
@@ -1629,6 +1654,16 @@ main{
 
     .project-preview{
         min-height:225px;
+    }
+
+
+    /*
+       On mobile the third project becomes
+       a normal full-width card.
+    */
+
+    .project-preview:nth-child(3){
+        width:100%;
     }
 
 
